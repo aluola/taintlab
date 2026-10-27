@@ -1,0 +1,195 @@
+{
+  "kind": "AI_original_resolution_visual_document_review",
+  "created_at_utc": "2026-10-27T06:02:46.340250+00:00",
+  "all_passed": true,
+  "docx_sha256": "666e62d51bb38b7950d4ca7838ce50c1c321dac33e216405d2f24f5e38e67f83",
+  "pdf_sha256": "1911d5c707c6e3c591097df65ddfaf0eb427a2f29068a84548168e42b9f46351",
+  "page_count": 14,
+  "reviewed_pages": [
+    {
+      "page": 1,
+      "sha256": "b7c5bce07b7c43ce208538717a6988afc408237456ed1395b610126aecd185a6",
+      "passed": true,
+      "observation": "封面标题、版本边界和 3672 条记录分布清楚；页眉页脚可读，无裁切。",
+      "review_mode": "sha256_identical_to_previously_original_viewed_page",
+      "prior_review_file": "second_visual_review.json",
+      "prior_review_page": 1
+    },
+    {
+      "page": 2,
+      "sha256": "abe6f5966817eaf68b4a5f86579db6136130400670a8e305789d895d767ea3b9",
+      "passed": true,
+      "observation": "第 1 章标题与要求一致；正文中文、英文参数名和 Qwen 参数数完整。",
+      "review_mode": "sha256_identical_to_previously_original_viewed_page",
+      "prior_review_file": "second_visual_review.json",
+      "prior_review_page": 2
+    },
+    {
+      "page": 3,
+      "sha256": "542046f94b9cbf0d42af1855a8e568a63b1175863e1fd252b4a1919c11832fe7",
+      "passed": true,
+      "observation": "横向架构示意图完整；箭头不覆盖节点文字；明确仅为代码结构示意，非模型内部因果或运行结果。",
+      "review_mode": "sha256_identical_to_previously_original_viewed_page",
+      "prior_review_file": "second_visual_review.json",
+      "prior_review_page": 3
+    },
+    {
+      "page": 4,
+      "sha256": "30070c63a2a75c1942b3f99166c3ff412ce2da6f2f588e48e7b1ff7799d8190e",
+      "passed": true,
+      "observation": "六核心功能表三列可读；正式集、扩展集和历史/当前数量分开；限制段完整。",
+      "review_mode": "sha256_identical_to_previously_original_viewed_page",
+      "prior_review_file": "second_visual_review.json",
+      "prior_review_page": 4
+    },
+    {
+      "page": 5,
+      "sha256": "c6b5770dca14980d8be8a1cb5c1d404822292777bc89327885fb099a7bf6a6f0",
+      "passed": true,
+      "observation": "第 2 章硬件、模型 revision/SHA256、1227700721 字节资源量及模块表完整，长哈希未裁切。",
+      "review_mode": "sha256_identical_to_previously_original_viewed_page",
+      "prior_review_file": "second_visual_review.json",
+      "prior_review_page": 5
+    },
+    {
+      "page": 6,
+      "sha256": "17d0f067a2aef7941b87462c4664eeec5e1490f3ca54d51fb72156b2fa6f2ef0",
+      "passed": true,
+      "observation": "首次安装和启动/status 四行命令完整可读；模型权重不随包分发与平台限制明确。",
+      "review_mode": "sha256_identical_to_previously_original_viewed_page",
+      "prior_review_file": "second_visual_review.json",
+      "prior_review_page": 6
+    },
+    {
+      "page": 7,
+      "sha256": "92ebba4c8bee0213da08a75c02924440869f58c5af29ea4a64aeb03b6e825917",
+      "passed": true,
+      "observation": "第 3 章原开发和公开快照分开；提交表完整，末尾测试表正确延续到下一页。",
+      "review_mode": "sha256_identical_to_previously_original_viewed_page",
+      "prior_review_file": "second_visual_review.json",
+      "prior_review_page": 7
+    },
+    {
+      "page": 8,
+      "sha256": "cd26691c9d17ca2a48b1f61fbba4990f026c8d6cd2cfc6cccff64c96ddfa86a2",
+      "passed": true,
+      "observation": "测试表重复表头清楚；397/413 历史结果与本轮区分；五位置未确认、AI 非成员及非人工工时说明明确。",
+      "review_mode": "sha256_identical_to_previously_original_viewed_page",
+      "prior_review_file": "second_visual_review.json",
+      "prior_review_page": 8
+    },
+    {
+      "page": 9,
+      "sha256": "5660a25ad9bb7ebcaa59cf5385eb2e4599f8f19139192947371b5349f4b5516a",
+      "passed": true,
+      "observation": "第 4 章正式汇总与 JSON total 一致；性能表的空闲中位数与运行采样峰值逐项匹配，MiB 和私有提交含义完整。",
+      "review_mode": "sha256_identical_to_previously_original_viewed_page",
+      "prior_review_file": "second_visual_review.json",
+      "prior_review_page": 9
+    },
+    {
+      "page": 10,
+      "sha256": "f33ce1ab4918961d5b31854211710db746418815496521b0e2cf6813dd37690a",
+      "passed": true,
+      "observation": "四任务 run_id、延迟与工具数完整；GPU 设备级指标边界明确。新增 19/465/10 测试段与 Canary 自检段可读；长命令仅自动换行，无字符截断；正文 0.62/152.00 秒采用真实终端汇总 elapsed，非 JUnit time。",
+      "review_mode": "view_image_original"
+    },
+    {
+      "page": 11,
+      "sha256": "227dbc21f07d2d5d8001f44067176c349c6e4b8a62d4147368789756022e9736",
+      "passed": true,
+      "observation": "第 5 章产物表的实际列宽修订生效，文字与文件名均完整；当前不足两行已合入本页，短末页和意外空白页已消除；页底留有正常边距。",
+      "review_mode": "view_image_original"
+    },
+    {
+      "page": 12,
+      "sha256": "9a534f597bd92b94936e1ffa66262f0277c227df857aa2edeed6974c7b715cb3",
+      "passed": true,
+      "observation": "第 6 章标题、维护流程、限制表完整；ASR 34/180 与 31/180、未证明独立污点收益、无当前阻断后安全完成实例及 Canary 零泄露因果限制均保留；页码 12 正确。",
+      "review_mode": "view_image_original"
+    },
+    {
+      "page": 13,
+      "sha256": "1af969dc4820f6ae4c972573b06c41c8a4d980674478d474ca8752053f1ac0b3",
+      "passed": true,
+      "observation": "五人建议分工表的姓名/学号/实际产物/人工工时全为待补充，状态未确认；明确 AI 辅助非成员和工时，后续课程对照表完整可读。",
+      "review_mode": "view_image_original"
+    },
+    {
+      "page": 14,
+      "sha256": "3968732ee2627d56e12f19cc6d7d0f5cfcfaff95bf7f5815ba16174b46463b5b",
+      "passed": true,
+      "observation": "末页对照续表重复表头、证据索引与第 14 页页码完整，行距和中文清楚；无意外空白或仅一行正文的碎片页。",
+      "review_mode": "view_image_original"
+    }
+  ],
+  "newly_viewed_original_pages": [
+    10,
+    11,
+    12,
+    13,
+    14
+  ],
+  "identical_pages_reusing_actual_prior_review": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "prior_reviews": [
+    {
+      "file": "first_visual_review.json",
+      "sha256": "224c150fc12e8103a8b0697d0c7011cbddb706c5ece17b9dbc81056b3b7cfdba"
+    },
+    {
+      "file": "second_visual_review.json",
+      "sha256": "d6a82dd3138db6bd6c23687e4b5f92204fbd0dc1bc8fa98ad48c766637daa60d"
+    }
+  ],
+  "resolved_issues": [
+    "首轮第 11 页意外空白已消除",
+    "前版短末页的不足段已完整合入当前第 11 页"
+  ],
+  "unresolved_layout_issues": [],
+  "review_method": "首轮已逐张 original 查看 16 页，第二轮再看 9 个变化页；最终 14 页中 9 页以相同 SHA 复用实际已审图，5 页逐张 view_image(detail=\"original\") 重新目视。不是缩略图抽样或仅文本提取。",
+  "reviewer_scope": "AI 视觉检查及事实证据核对，不是人工审核工时；未修改文档正文、生成脚本、冻结核心或服务。",
+  "evidence_cross_checks": {
+    "formal_summary_sha256": "c04e6116c8905cf0f32a3574699e66f66ffbf2a95e99978cc9f14a7840ba1d2a",
+    "performance_summary_sha256": "aef6382720f6a40ae20f860d396813a851803f0821c9c825bc404405a667b635",
+    "formal_total_values_match": true,
+    "memory_and_task_values_match": true,
+    "five_member_template_not_factual_roster": true,
+    "junit_counts": [
+      {
+        "file": "results/core_features/validation/helper_tests.xml",
+        "sha256": "14a1f13eca33208413034b0a7f69fa48013e74fbb6589a6523d9076929e1fae6",
+        "tests": 19,
+        "failures": 0,
+        "errors": 0,
+        "junit_time_seconds": 0.444
+      },
+      {
+        "file": "results/core_features/pytest.xml",
+        "sha256": "37956291501ef3bc27000a879fd3aab97a3d13b0d7e8b62023bf835f644541b2",
+        "tests": 465,
+        "failures": 0,
+        "errors": 0,
+        "junit_time_seconds": 151.941
+      },
+      {
+        "file": "results/core_features/validation/release_docs_tests.xml",
+        "sha256": "e79eb1a2310a590cbe9d76526835afc3d9053c9d74ac587bd0c404811e9f88c2",
+        "tests": 10,
+        "failures": 0,
+        "errors": 0,
+        "junit_time_seconds": 0.341
+      }
+    ],
+    "elapsed_time_scope": "正文 0.62 秒和 152.00 秒为主代理实际执行时看到的 pytest 终端汇总 elapsed（19 passed in 0.62s；465 passed, 1 warning in 152.00s）；本代理另读 JUnit time 0.444/151.941，二者不冒充同一计时口径。"
+  }
+}

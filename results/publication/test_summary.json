@@ -2,17 +2,17 @@
   "publication_summary": true,
   "sources": [
     {
-      "source": "results/publication/pytest.xml",
-      "source_sha256": "5002af07d1a812cc96fea367cc1b382132ae9faa2d6d262bfd9b8bc73162ca0b",
-      "tests": 413,
+      "source": "results/core_features/validation/pytest_release.xml",
+      "source_sha256": "1fb72e87d67eb0861bca0ee57076d7e24109553405eafaef321cea6629d2a822",
+      "tests": 473,
       "failures": 0,
       "errors": 0,
       "skipped": 0
     },
     {
-      "source": "results/publication/packaging_tests.xml",
-      "source_sha256": "9f12bde2fc5567be233df26ee0aef05b311bfad78a52fffbd4bad37978bba971",
-      "tests": 71,
+      "source": "results/core_features/packaging_tests.xml",
+      "source_sha256": "6a3cb11af237fe87c85e47fba450d8ab3693d6d74586bd90c7964ac845e8ab77",
+      "tests": 108,
       "failures": 0,
       "errors": 0,
       "skipped": 0

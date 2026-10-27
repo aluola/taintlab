@@ -1,0 +1,309 @@
+{
+  "schema_version": 1,
+  "review_complete": true,
+  "generated_at": "2026-10-27T06:24:31.992476+00:00",
+  "md_sha256": "910ef2d1913704d4e7c9dcd80aee56fff06ecde969702ab0a74ecd190d9a04d7",
+  "docx_sha256": "d654b197127b701adae8e34349568f2a1334a14b56e304f54acbef7c58fa4bae",
+  "pdf_sha256": "41eb1e25b0c5c68d2421f5f9fe749cee758bcd917396bfa078b9c83ca1f4c9dc",
+  "rendered_page_count": 38,
+  "reviewed_pages": [
+    {
+      "page": 1,
+      "sha256": "2301b84f4c01bf63bfe476d109c404bec36c798ab04f297a2fac6993e3d0e4b8",
+      "passed": true,
+      "observation": "封面标题、发布/核心版本与270秒章节时间线可读，边界说明完整。",
+      "method": "Reused actual original-resolution inspection from second_visual_review.json; identical page SHA256 verified"
+    },
+    {
+      "page": 2,
+      "sha256": "297a5f0e3fd3a418b3af9c585c18bcf8944f10fddafe9b76efaf817142513f7c",
+      "passed": true,
+      "observation": "F01前置条件、材料和四类操作步骤完整；长路径与模型配置未截断。",
+      "method": "Reused actual original-resolution inspection from second_visual_review.json; identical page SHA256 verified"
+    },
+    {
+      "page": 3,
+      "sha256": "a06163d3fda71e50fd990f439912e350e07c36d7d35bb80d252c80e031a1223a",
+      "passed": true,
+      "observation": "读取工具卡、doc_id与15:00/A301事实可读；标号箭头未遮蔽关键内容，横版图注完整。",
+      "method": "Reused actual original-resolution inspection from second_visual_review.json; identical page SHA256 verified"
+    },
+    {
+      "page": 4,
+      "sha256": "3dda429972d04898e39783c1093efa513d7804cc3e634320bcc78a4420a2fd42",
+      "passed": true,
+      "observation": "查询参数及11月8日/11月3日结果可读；首轮空白页已替换为正常横版截图。",
+      "method": "Reused actual original-resolution inspection from second_visual_review.json; identical page SHA256 verified"
+    },
+    {
+      "page": 5,
+      "sha256": "54dba27250d0139b942a23800db1ace2365e2747d1d0d5280dcd33d03faf8db6",
+      "passed": true,
+      "observation": "通知侧栏可见team_A、1条消息、正文和运行版本；纵版图注完整。",
+      "method": "Reused actual original-resolution inspection from second_visual_review.json; identical page SHA256 verified"
+    },
+    {
+      "page": 6,
+      "sha256": "c6e975872717487b07ded284d09e44d298b9756093fef12ad474500cff2f2e4e",
+      "passed": true,
+      "observation": "导出路径、正文、实际下载入口可读；下方观察与验收标准完整，未与页脚重叠。",
+      "method": "Reused actual original-resolution inspection from second_visual_review.json; identical page SHA256 verified"
+    },
+    {
+      "page": 7,
+      "sha256": "79dd9810f9255ef920f17afccf6acd4c5f390d64fa0c15c9e33bbaa4e2528e36",
+      "passed": true,
+      "observation": "F01接口与失败口径两小节完整；章末留白但不是孤立单行或空白页。",
+      "method": "Reused actual original-resolution inspection from second_visual_review.json; identical page SHA256 verified"
+    },
+    {
+      "page": 8,
+      "sha256": "4de8c5191cd432a57397a9d3dd67814cc3a0a372f0b1bcc167e847a274e23e44",
+      "passed": true,
+      "observation": "F02上传步骤与登记图同页；未自动勾选状态及实际doc_id可读，图注未裁切。",
+      "method": "Reused actual original-resolution inspection from second_visual_review.json; identical page SHA256 verified"
+    },
+    {
+      "page": 9,
+      "sha256": "b74c9dfa86ea6b2aef5770d6e81bad7e504e037841ceb7c13da8e26501d99c17",
+      "passed": true,
+      "observation": "来源标签、upload类型、父节点空、内容哈希换行与授权措辞正文清晰；框线不遮蔽关键值。",
+      "method": "Reused actual original-resolution inspection from second_visual_review.json; identical page SHA256 verified"
+    },
+    {
+      "page": 10,
+      "sha256": "3eb4b2b0931a7e2b37ecb79ea234a5eaeab6cc7f024e2ac9806c37fe025fe42b",
+      "passed": true,
+      "observation": "传播说明与上游来源图局部可读；正文明确不同录制的doc_id/run_id，以图索引为准，未混成单一运行。",
+      "method": "Reused actual original-resolution inspection from second_visual_review.json; identical page SHA256 verified"
+    },
+    {
+      "page": 11,
+      "sha256": "523efe8c6b828d7c29d1d7faa267c2fb97d08e295bf1856206d005f1152d15e7",
+      "passed": true,
+      "observation": "F02接口、同会话历史与不同会话隔离界限完整；英文函数名无截断。",
+      "method": "Reused actual original-resolution inspection from second_visual_review.json; identical page SHA256 verified"
+    },
+    {
+      "page": 12,
+      "sha256": "3171752613a53c9cf3b09ccd235b6e0768a4298585ad90b31289776cfdddc0e3",
+      "passed": true,
+      "observation": "F03明确正常任务失败、固定case/mode/seed/run_id及只读历史回放；文字与步骤完整。",
+      "method": "Reused actual original-resolution inspection from second_visual_review.json; identical page SHA256 verified"
+    },
+    {
+      "page": 13,
+      "sha256": "b41614883c260bcec280cda24dc1a608c3ce5b4a28cf735c75ff3d17616046bb",
+      "passed": true,
+      "observation": "F03回放角标、三次阻断及中文信息流原因清晰，敏感参数和最终值已遮蔽；图注完整。",
+      "method": "Reused actual original-resolution inspection from second_visual_review.json; identical page SHA256 verified"
+    },
+    {
+      "page": 14,
+      "sha256": "d9441e4a6bf61553ca2d27b974f7a181d9f68566adaa88948cff8d6a0bd0f40d",
+      "passed": true,
+      "observation": "上游vault敏感节点、确定性派生与虚线/实线说明可辨；本页显示来源图上游局部。",
+      "method": "Reused actual original-resolution inspection from second_visual_review.json; identical page SHA256 verified"
+    },
+    {
+      "page": 15,
+      "sha256": "79941aef134cdcc31bf6bc6062b660bebb8d374d2052bc2c6f59161c053abc87",
+      "passed": true,
+      "observation": "被拒动作选择、潜在上下文说明与secret生成节点可辨；箭头框线未覆盖节点文字。",
+      "method": "Reused actual original-resolution inspection from second_visual_review.json; identical page SHA256 verified"
+    },
+    {
+      "page": 16,
+      "sha256": "da145d38c127ea1a728ae93412e385812ab1acc96bb0d368dd31fa5d6d318b9a",
+      "passed": true,
+      "observation": "同一run_id下0通知/0文件状态清楚，正文完整区分completed与合法成功及原始/API文件形状。",
+      "method": "Reused actual original-resolution inspection from second_visual_review.json; identical page SHA256 verified"
+    },
+    {
+      "page": 17,
+      "sha256": "d0c57149abc237e87bca955753cd9e3eb9d51ee18058039cb0b0281ffcda029a",
+      "passed": true,
+      "observation": "传播实现和可用性代价两节完整；明确不能宣称独立安全收益或成功恢复。",
+      "method": "Reused actual original-resolution inspection from second_visual_review.json; identical page SHA256 verified"
+    },
+    {
+      "page": 18,
+      "sha256": "2cfb6e807cd15f0da510fb5e53e5558a6bb741a5e50282692890f2f29e557e7e",
+      "passed": true,
+      "observation": "F04的可信授权、pending、拒绝和直接注入边界完整；单一动作哈希说明没有截断。",
+      "method": "Reused actual original-resolution inspection from second_visual_review.json; identical page SHA256 verified"
+    },
+    {
+      "page": 19,
+      "sha256": "5d1d047769da55162f3e746e4040f584578ba642f8d92f5e75e936e973a982af",
+      "passed": true,
+      "observation": "确认卡的team_A、待执行正文、来源/run_id/哈希/有效期和两个按钮均可读；无图注裁切。",
+      "method": "Reused actual original-resolution inspection from second_visual_review.json; identical page SHA256 verified"
+    },
+    {
+      "page": 20,
+      "sha256": "bdb1c3b9fc84021a8c2d81540b6a28791f5c97603325a4a83b0aba91ab341fee",
+      "passed": true,
+      "observation": "TaskGrant只读显示、6次额度及2/4已用剩余、确认工具与版本可辨；箭头不挡字段。",
+      "method": "Reused actual original-resolution inspection from second_visual_review.json; identical page SHA256 verified"
+    },
+    {
+      "page": 21,
+      "sha256": "de1cb26b13b87be655830518ed0df7b15ed017f11a37d9140d55bce79ed774cd",
+      "passed": true,
+      "observation": "独立拒绝运行的run_id与0通知/0文件可读，长留白来自实际空状态截图，非空白分页。",
+      "method": "Reused actual original-resolution inspection from second_visual_review.json; identical page SHA256 verified"
+    },
+    {
+      "page": 22,
+      "sha256": "84a8458af29a153f96f98cbcdf081fca088e74813e301d503da531381adeb76d",
+      "passed": true,
+      "observation": "未授权attacker目标和收件人白名单拒绝可读；保留后续允许动作及真实回放角标。",
+      "method": "Reused actual original-resolution inspection from second_visual_review.json; identical page SHA256 verified"
+    },
+    {
+      "page": 23,
+      "sha256": "dfc59d5fac52c43295cd63873c357e5b350c43f376d925f780ec577e93ada2d2",
+      "passed": true,
+      "observation": "确认接口action_hash字段、pending内部hash区别及单次执行/历史只读边界完整，长API路径不溢出。",
+      "method": "Reused actual original-resolution inspection from second_visual_review.json; identical page SHA256 verified"
+    },
+    {
+      "page": 24,
+      "sha256": "6b0c084394da75e07affa145c08bf8e60af1e6ca9973f1f314277f4937523283",
+      "passed": true,
+      "observation": "F05四类预览、入口、seed、模板和正式集边界说明完整；分段接触判定步骤清晰。",
+      "method": "Reused actual original-resolution inspection from second_visual_review.json; identical page SHA256 verified"
+    },
+    {
+      "page": 25,
+      "sha256": "664f4d00d632462e6d2698f3dc1469c5fb9c92853d65f6a3397f808710c265ef",
+      "passed": true,
+      "observation": "已重新original查看：直接预览②/③移至列间短箭头，未授权读取及左栏所有文字恢复无遮挡；注入前后与真实运行入口可读。",
+      "method": "view_image detail=original; re-reviewed after annotation correction"
+    },
+    {
+      "page": 26,
+      "sha256": "37ed13a21e5fda91df6806ac2d0385408a8a3436569d4746ec77032da1032dc5",
+      "passed": true,
+      "observation": "已重新original查看：间接预览②/③改为列间短箭头，不再穿过左侧说明文字；patch注入正文与metadata完整。",
+      "method": "view_image detail=original; re-reviewed after annotation correction"
+    },
+    {
+      "page": 27,
+      "sha256": "8e2b0eaa6ddba1fcbc257f8674b2732250619ab34fbc57dcbb235ba56bad7e46",
+      "passed": true,
+      "observation": "已重新original查看：编码预览标号与短箭头在列间，合法工作流、Base64选择和编码载荷均无遮挡。",
+      "method": "view_image detail=original; re-reviewed after annotation correction"
+    },
+    {
+      "page": 28,
+      "sha256": "949c8de2ef1af1e25e93c90f58b5cee079f0996d4c94c153becc8305c09fc3be",
+      "passed": true,
+      "observation": "已重新original查看：分段预览标号不再跨过攻击手法/合法工作流标签，patch与continuation两段来源及正文清楚。",
+      "method": "view_image detail=original; re-reviewed after annotation correction"
+    },
+    {
+      "page": 29,
+      "sha256": "d1d8be1287d5a57be9d581c15490231fed5b0cf44f3e2be0df1f4db727f32976",
+      "passed": true,
+      "observation": "分段实际读取patch的工具卡清晰；图注限定所展示的是读取行为，完整终态与评测另见保存记录。",
+      "method": "Reused actual original-resolution inspection from second_visual_review.json; identical page SHA256 verified"
+    },
+    {
+      "page": 30,
+      "sha256": "a4e2d846875e3351ee58974cc8e91073b9f7bbd8360b1cd2a848bea8ce8327a0",
+      "passed": true,
+      "observation": "F05五列表格与四次结果完整可读，无切行或越界；直接/分段失败、授权伪造文本残留均明确保留。",
+      "method": "Reused actual original-resolution inspection from second_visual_review.json; identical page SHA256 verified"
+    },
+    {
+      "page": 31,
+      "sha256": "89025d89a2cd243037a700660fc46d5c7e7ffc49b924480784d3a37594185a9e",
+      "passed": true,
+      "observation": "F06自检命令一行完整显示；两层解码、拼接与三层超界阴性和非模型实验边界清楚。",
+      "method": "Reused actual original-resolution inspection from second_visual_review.json; identical page SHA256 verified"
+    },
+    {
+      "page": 32,
+      "sha256": "c410c0d06184202231bc8de063f187dc2282ea4aa3b160afae30badef4e7c6fe",
+      "passed": true,
+      "observation": "真实回放标签、Canary已建立/敏感读取、未发现泄露及legitimate_success=false可辨；敏感原值未显示。",
+      "method": "Reused actual original-resolution inspection from second_visual_review.json; identical page SHA256 verified"
+    },
+    {
+      "page": 33,
+      "sha256": "2fbcb378bafdd793316786774c10db3d19f9886e5911267c37f36b459bb5a561",
+      "passed": true,
+      "observation": "实际终端阳性与相似阴性输出、出口、方法及非模型正式实验声明可读；只有公开合成Canary。",
+      "method": "Reused actual original-resolution inspection from second_visual_review.json; identical page SHA256 verified"
+    },
+    {
+      "page": 34,
+      "sha256": "253c6a8e2b9e14378a79f538e17e9095ee679dbe099041b937954b6048f3dc2f",
+      "passed": true,
+      "observation": "实际终端两层Base64与同/跨出口分片的expected/found、method和segmented字段可读，边界声明完整。",
+      "method": "Reused actual original-resolution inspection from second_visual_review.json; identical page SHA256 verified"
+    },
+    {
+      "page": 35,
+      "sha256": "805735d546fe6dc94b4ca47747b1eec3a4e4b5b2505a0dcb70569314aade6232",
+      "passed": true,
+      "observation": "三层编码未检出、深度/长度/候选上限及7/7结果可读；基线三配置次数与分母可辨，两个图注完整。",
+      "method": "Reused actual original-resolution inspection from second_visual_review.json; identical page SHA256 verified"
+    },
+    {
+      "page": 36,
+      "sha256": "5983aa4bc3872feaac6f180ffddc8ae345fd99bb114a0614dc2c3dbe5176fb94",
+      "passed": true,
+      "observation": "扩展集四配置主指标可读；完整防御与仅权限均34/180，正常能力与零Canary列同时保留。",
+      "method": "Reused actual original-resolution inspection from second_visual_review.json; identical page SHA256 verified"
+    },
+    {
+      "page": 37,
+      "sha256": "efd4a13446daa6985cb2cd8c290f09b606e7e87cf593f2b68f7a58b913870b14",
+      "passed": true,
+      "observation": "外部集接触、失败状态、自动与人工辅助完成表可辨；61/90与6/90分列，没有将辅助完成伪装为自动完成。",
+      "method": "Reused actual original-resolution inspection from second_visual_review.json; identical page SHA256 verified"
+    },
+    {
+      "page": 38,
+      "sha256": "017448dc2db36de09234ccc10793d24f6c1ed6ed0fc2213710f74dd23f8393db",
+      "passed": true,
+      "observation": "F06正式1296/1080及合计3672、合成自检不入分母、独立收益未证明等结论完整；末页不是碎片页。",
+      "method": "Reused actual original-resolution inspection from second_visual_review.json; identical page SHA256 verified"
+    }
+  ],
+  "scope": "AI逐页原始尺寸视觉检查；未查看页面不在reviewed_pages；非人工工时。",
+  "all_passed": true,
+  "actually_reviewed_page_count": 38,
+  "findings": [],
+  "layout_notes": [
+    "本版已逐张original查看全部38页，不是缩略图或仅XML检查。",
+    "首轮第4页空白已修复；本版未发现只有页眉页脚的页面。",
+    "第7/11/17页是各章两个完整收尾小节，留白属章起新页设计，没有孤立单行或空页。",
+    "来源图保留实际横向滚动局部，不宣称单张截图覆盖全部节点。",
+    "本次是AI视觉检查，不能计作成员人工工时。"
+  ],
+  "rechecked_changed_pages": [
+    25,
+    26,
+    27,
+    28
+  ],
+  "reused_identical_page_count": 34,
+  "reviewer": "AI original-resolution visual inspection; not human work hours",
+  "resolved_findings": [
+    {
+      "id": "V01",
+      "description": "首轮第4页正文空白，分节调度修正后38页均非空白。",
+      "evidence": "first_visual_review.json"
+    },
+    {
+      "id": "V02",
+      "description": "四张F05预览图标注箭头原先穿过左栏文字；已移到列间并重新original查看25–28页。",
+      "evidence": "second_visual_review.json"
+    }
+  ],
+  "bound_prior_review_sha256": "2403a0567adc17aa4f1a5d17b2fd4838730f41311e7444d43d9443c789d687fc"
+}

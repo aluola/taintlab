@@ -1,0 +1,347 @@
+{
+  "release_version": "2.0.1",
+  "runtime_version": "2.0.0",
+  "created_at_utc": "2026-10-27T05:56:12.695Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900
+  },
+  "source": "actual production React UI",
+  "formal_experiment": false,
+  "new_model_requests_allowed": true,
+  "scenes": [
+    {
+      "id": "home",
+      "start_seconds": 1.997629,
+      "started_at_utc": "2026-10-27T05:56:15.166Z",
+      "completed": true,
+      "end_seconds": 16.4709751
+    },
+    {
+      "id": "home_model",
+      "start_seconds": 1.9986792,
+      "started_at_utc": "2026-10-27T05:56:15.167Z",
+      "end_seconds": 16.0592758
+    },
+    {
+      "id": "upload",
+      "start_seconds": 16.4717057,
+      "started_at_utc": "2026-10-27T05:56:29.640Z",
+      "completed": true,
+      "end_seconds": 55.8581519
+    },
+    {
+      "id": "f02_upload_registration",
+      "start_seconds": 17.3885175,
+      "started_at_utc": "2026-10-27T05:56:30.557Z",
+      "end_seconds": 26.4011642
+    },
+    {
+      "id": "f02_source_fields",
+      "start_seconds": 30.6135457,
+      "started_at_utc": "2026-10-27T05:56:43.782Z",
+      "end_seconds": 42.621791
+    },
+    {
+      "id": "f02_derived_context",
+      "start_seconds": 43.1922525,
+      "started_at_utc": "2026-10-27T05:56:56.360Z",
+      "end_seconds": 55.1995998
+    }
+  ],
+  "figures": [
+    {
+      "id": "overview",
+      "title": "当前本地模型与六功能入口",
+      "captured_at_utc": "2026-10-27T05:56:29.616Z",
+      "release_version": "2.0.1",
+      "runtime_version": "2.0.0",
+      "viewport": {
+        "width": 1600,
+        "height": 900
+      },
+      "page_url_path": "/",
+      "live_or_replay": "actual_ui",
+      "run_id": null,
+      "mode": null,
+      "seed": null,
+      "case_id": null,
+      "raw_path": "docs/assets/core-features/captures/2026-10-27T05-56-12-690Z/overview.png",
+      "raw_sha256": "c965fa5e37c9b18a9e58663f5b38561f71b7db9a121b065c7d9dc24c509f9a83",
+      "crop": {
+        "x": 0,
+        "y": 0,
+        "width": 1600,
+        "height": 900
+      },
+      "annotations": [
+        {
+          "number": 1,
+          "label": "对话、攻击与评测入口",
+          "rect": [
+            23,
+            175,
+            236,
+            322
+          ],
+          "style": "number_rectangle_arrow"
+        },
+        {
+          "number": 2,
+          "label": "四个真实工具任务入口",
+          "rect": [
+            595,
+            428,
+            1265,
+            611
+          ],
+          "style": "number_rectangle_arrow"
+        },
+        {
+          "number": 3,
+          "label": "冻结的本地模型配置",
+          "rect": [
+            1155,
+            65,
+            1470,
+            358
+          ],
+          "style": "number_rectangle_arrow"
+        }
+      ],
+      "steps": [],
+      "observed_result": "当前生产界面、qwen3-0.6b与本机服务；没有使用云端模型。",
+      "checks": {},
+      "preview_metadata": null,
+      "video_offset_seconds": 16.4515544
+    },
+    {
+      "id": "f02_upload_registered",
+      "title": "上传登记尚未等于读取",
+      "captured_at_utc": "2026-10-27T05:56:39.934Z",
+      "release_version": "2.0.1",
+      "runtime_version": "2.0.0",
+      "viewport": {
+        "width": 1600,
+        "height": 900
+      },
+      "page_url_path": "/",
+      "live_or_replay": "new_upload_registration",
+      "run_id": null,
+      "mode": null,
+      "seed": null,
+      "case_id": null,
+      "raw_path": "docs/assets/core-features/captures/2026-10-27T05-56-12-690Z/f02_upload_registered.png",
+      "raw_sha256": "91afc716428607c7397f3b917fd720b146f14878acbed4f2f141d65b4576fb35",
+      "crop": {
+        "x": 452,
+        "y": 366,
+        "width": 956,
+        "height": 357
+      },
+      "annotations": [
+        {
+          "number": 1,
+          "label": "服务端返回的新文档ID",
+          "rect": [
+            499,
+            690,
+            913,
+            722
+          ],
+          "style": "number_rectangle_arrow"
+        }
+      ],
+      "steps": [],
+      "observed_result": "记录服务端实际doc_id；文档尚未被模型读取，须显式选择。",
+      "checks": {
+        "not_auto_selected": true
+      },
+      "preview_metadata": null,
+      "video_offset_seconds": 26.7674369
+    },
+    {
+      "id": "f02_source_fields",
+      "title": "上传来源字段及正文原话",
+      "captured_at_utc": "2026-10-27T05:56:56.242Z",
+      "release_version": "2.0.1",
+      "runtime_version": "2.0.0",
+      "viewport": {
+        "width": 1600,
+        "height": 900
+      },
+      "page_url_path": "/",
+      "live_or_replay": "new_local_model",
+      "run_id": "45454e79d9394dbf9aa357b5e6c4ca12",
+      "mode": "taint_policy",
+      "seed": 11,
+      "case_id": null,
+      "raw_path": "docs/assets/core-features/captures/2026-10-27T05-56-12-690Z/f02_source_fields.png",
+      "raw_sha256": "6e69964c7cd2728798927256c6b55ba26c26f199447245297def892fb735a884",
+      "crop": {
+        "x": 1087,
+        "y": 345,
+        "width": 513,
+        "height": 555
+      },
+      "annotations": [
+        {
+          "number": 1,
+          "label": "来源类型、标签、父节点和内容哈希",
+          "rect": [
+            1128,
+            428,
+            1562,
+            620
+          ],
+          "style": "number_rectangle_arrow"
+        },
+        {
+          "number": 2,
+          "label": "正文trusted等字样不修改标签",
+          "rect": [
+            1128,
+            632,
+            1562,
+            887
+          ],
+          "style": "number_rectangle_arrow"
+        }
+      ],
+      "steps": [],
+      "observed_result": "实际读取之后查看登记节点；指令可信度和数据敏感度是两个维度。",
+      "checks": {
+        "read": true,
+        "integrity": true,
+        "sensitivity": true,
+        "time": true,
+        "place": true
+      },
+      "preview_metadata": null,
+      "video_offset_seconds": 43.0758921
+    },
+    {
+      "id": "f02_derived_action",
+      "title": "读取后的派生动作与标签继承",
+      "captured_at_utc": "2026-10-27T05:57:09.023Z",
+      "release_version": "2.0.1",
+      "runtime_version": "2.0.0",
+      "viewport": {
+        "width": 1600,
+        "height": 900
+      },
+      "page_url_path": "/",
+      "live_or_replay": "new_local_model",
+      "run_id": "45454e79d9394dbf9aa357b5e6c4ca12",
+      "mode": "taint_policy",
+      "seed": 11,
+      "case_id": null,
+      "raw_path": "docs/assets/core-features/captures/2026-10-27T05-56-12-690Z/f02_derived_action.png",
+      "raw_sha256": "fb71a502044b3e6f924445c07513c61a2a4426473e971af7cd421e9a451f4646",
+      "crop": {
+        "x": 1062,
+        "y": 0,
+        "width": 538,
+        "height": 900
+      },
+      "annotations": [
+        {
+          "number": 1,
+          "label": "所选动作继承实际上下文标签",
+          "rect": [
+            1115,
+            307,
+            1575,
+            394
+          ],
+          "style": "number_rectangle_arrow"
+        },
+        {
+          "number": 2,
+          "label": "原始来源与后续派生关系",
+          "rect": [
+            1115,
+            473,
+            1575,
+            863
+          ],
+          "style": "number_rectangle_arrow"
+        }
+      ],
+      "steps": [],
+      "observed_result": "程序记录潜在上下文依赖，不能当作精确语义因果。",
+      "checks": {},
+      "preview_metadata": null,
+      "video_offset_seconds": 55.8569879
+    }
+  ],
+  "runs": [
+    {
+      "scenario": "upload_read",
+      "path": "results/core_features/demo_runs/45454e79d9394dbf9aa357b5e6c4ca12.json",
+      "sha256": "690889be8bd3d78b4f60bd13568a228ef6d92984228baa9587b3b37f436bb592",
+      "run_id": "45454e79d9394dbf9aa357b5e6c4ca12",
+      "runtime_version": "2.0.0",
+      "backend_type": "local_llama_cpp",
+      "status": "completed",
+      "mode": "taint_policy",
+      "seed": 11,
+      "historical": false,
+      "assessment": {
+        "status": "未自动评定",
+        "details": {
+          "reason": "自由对话没有预设答案；不纳入正式任务完成率"
+        }
+      }
+    }
+  ],
+  "errors": [],
+  "external_requests_blocked": [],
+  "boundaries": [
+    "No UI state injection, response mocks, fake token stream, or experiment-file mutation.",
+    "All business actions remain simulated. Evidence exports only server-projected records without browser cookies, owner credentials, or active database.",
+    "Video captures include waits; final edit decisions must reference actual footage and preserve ordering within each run."
+  ],
+  "health": {
+    "status": "ok",
+    "service": "taintlab-web",
+    "version": "2.0.0"
+  },
+  "first_ready_seconds": 1.9964155,
+  "upload": {
+    "path": "data/demo/core_features/external_handover.txt",
+    "file_sha256": "add041af96f8adf07e3687edb213200c739baa4753693850f05dcfb619589050",
+    "actual_doc_id": "doc_c2be6d2d7a6a",
+    "session_local": true
+  },
+  "finished_at_utc": "2026-10-27T05:57:09.027Z",
+  "status": "captured",
+  "monotonic_seconds": 55.8593718,
+  "source_video": {
+    "path": "demo/core_features/raw/2026-10-27T05-56-12-690Z/page@a47c3f6756ce57b1a613163cab8ed99c.webm",
+    "sha256": "07ef4b223e5e498f46510f70c5fa90870b5ec22fa3d37e4a1dde46575c4fcb65",
+    "duration_seconds": 56.32,
+    "capture_manifest": "demo/core_features/raw/2026-10-27T05-56-12-690Z/capture_manifest.json",
+    "capture_manifest_sha256": "896393c2e863e844938a2d7fa6206b6f51bd4bc1e617c21fc9af01abeacd9ad7",
+    "monotonic_seconds": 55.8593718,
+    "first_ready_seconds": 1.9964155,
+    "raw_video_public": false,
+    "availability": "Local original take retained for audit; excluded from lightweight release. Recapture with capture_core_features.cjs and update the source mapping for a new production."
+  },
+  "recorder_source": {
+    "path": "demo/core_features/raw/2026-10-27T05-56-12-690Z/recorder.cjs",
+    "sha256": "263e185bd5a3f6b31175d08c8e840f16918c02ac7ee423cd67cc99b8b13658a5",
+    "public_source": "scripts/capture_core_features.cjs"
+  },
+  "scenario_file": {
+    "path": "data/demo/core_features/scenarios.json",
+    "sha256": "ce1db4dac2358ed624918442c037c1f1eb760bdcdff36e708378bfddba78cb7f"
+  },
+  "version": "2.0.0",
+  "project_version": "2.0.0",
+  "selection_file": "demo/core_features/selection.json",
+  "selection_sha256": "1da57e141ea203c85339494d07b4678c866ee1448fa49fcb28c64c87c4ed47b5",
+  "upload_file": "data/demo/core_features/external_handover.txt",
+  "upload_sha256": "add041af96f8adf07e3687edb213200c739baa4753693850f05dcfb619589050",
+  "raw_video_public": false
+}

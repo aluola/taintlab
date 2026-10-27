@@ -1,0 +1,7 @@
+{
+  "kind": "programmatic_design_schematic",
+  "runtime_version": "2.0.0",
+  "not_a_runtime_screenshot": true,
+  "sha256": "05d18ad8cb819f5cd78fa7db4f9d7ccb3feb138ad04e5604b9cf54a873f36411",
+  "generated_by": "scripts/build_feature_documents.py --architecture-only"
+}

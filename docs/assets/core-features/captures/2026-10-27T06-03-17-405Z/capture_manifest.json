@@ -1,0 +1,267 @@
+{
+  "release_version": "2.0.1",
+  "runtime_version": "2.0.0",
+  "created_at_utc": "2026-10-27T06:03:17.407Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900
+  },
+  "source": "actual production React UI",
+  "formal_experiment": false,
+  "new_model_requests_allowed": true,
+  "scenes": [
+    {
+      "id": "upload",
+      "start_seconds": 2.2101187,
+      "started_at_utc": "2026-10-27T06:03:20.059Z",
+      "completed": true,
+      "end_seconds": 40.933694
+    },
+    {
+      "id": "f02_upload_registration",
+      "start_seconds": 3.1165002,
+      "started_at_utc": "2026-10-27T06:03:20.966Z",
+      "end_seconds": 12.1288421
+    },
+    {
+      "id": "f02_source_fields",
+      "start_seconds": 15.8819117,
+      "started_at_utc": "2026-10-27T06:03:33.731Z",
+      "end_seconds": 27.8908129
+    },
+    {
+      "id": "f02_derived_context",
+      "start_seconds": 28.4963719,
+      "started_at_utc": "2026-10-27T06:03:46.345Z",
+      "end_seconds": 40.4994808
+    }
+  ],
+  "figures": [
+    {
+      "id": "f02_upload_registered",
+      "title": "上传登记尚未等于读取",
+      "captured_at_utc": "2026-10-27T06:03:30.343Z",
+      "release_version": "2.0.1",
+      "runtime_version": "2.0.0",
+      "viewport": {
+        "width": 1600,
+        "height": 900
+      },
+      "page_url_path": "/",
+      "live_or_replay": "new_upload_registration",
+      "run_id": null,
+      "mode": null,
+      "seed": null,
+      "case_id": null,
+      "raw_path": "docs/assets/core-features/captures/2026-10-27T06-03-17-405Z/f02_upload_registered.png",
+      "raw_sha256": "27a9a99c60006c1f365265b8e19a72d50f956ad8318ec0cd5cac6b7c2b6dcca4",
+      "crop": {
+        "x": 452,
+        "y": 366,
+        "width": 956,
+        "height": 357
+      },
+      "annotations": [
+        {
+          "number": 1,
+          "label": "服务端返回的新文档ID",
+          "rect": [
+            499,
+            613,
+            913,
+            645
+          ],
+          "style": "number_rectangle_arrow"
+        },
+        {
+          "number": 2,
+          "label": "上传登记提示",
+          "rect": [
+            480,
+            366,
+            1380,
+            381
+          ],
+          "style": "number_rectangle_arrow"
+        }
+      ],
+      "steps": [],
+      "observed_result": "记录服务端实际doc_id；文档尚未被模型读取，须显式选择。",
+      "checks": {
+        "not_auto_selected": true
+      },
+      "preview_metadata": null,
+      "video_offset_seconds": 12.4963214
+    },
+    {
+      "id": "f02_source_fields",
+      "title": "上传来源字段及正文原话",
+      "captured_at_utc": "2026-10-27T06:03:46.214Z",
+      "release_version": "2.0.1",
+      "runtime_version": "2.0.0",
+      "viewport": {
+        "width": 1600,
+        "height": 900
+      },
+      "page_url_path": "/",
+      "live_or_replay": "new_local_model",
+      "run_id": "81665601dc9c4c77bbc372817e24fdcc",
+      "mode": "taint_policy",
+      "seed": 11,
+      "case_id": null,
+      "raw_path": "docs/assets/core-features/captures/2026-10-27T06-03-17-405Z/f02_source_fields.png",
+      "raw_sha256": "8b9c41899a338f3b71c030a09a1b7d5339da53f304a4ec53d78ba6eb50bd9fe7",
+      "crop": {
+        "x": 1087,
+        "y": 345,
+        "width": 513,
+        "height": 555
+      },
+      "annotations": [
+        {
+          "number": 1,
+          "label": "来源类型、标签、父节点和内容哈希",
+          "rect": [
+            1128,
+            428,
+            1562,
+            620
+          ],
+          "style": "number_rectangle_arrow"
+        },
+        {
+          "number": 2,
+          "label": "正文trusted等字样不修改标签",
+          "rect": [
+            1128,
+            632,
+            1562,
+            887
+          ],
+          "style": "number_rectangle_arrow"
+        }
+      ],
+      "steps": [],
+      "observed_result": "实际读取之后查看登记节点；指令可信度和数据敏感度是两个维度。",
+      "checks": {
+        "read": true,
+        "integrity": true,
+        "sensitivity": true,
+        "time": true,
+        "place": true
+      },
+      "preview_metadata": null,
+      "video_offset_seconds": 28.3666656
+    },
+    {
+      "id": "f02_derived_action",
+      "title": "读取后的派生动作与标签继承",
+      "captured_at_utc": "2026-10-27T06:03:58.780Z",
+      "release_version": "2.0.1",
+      "runtime_version": "2.0.0",
+      "viewport": {
+        "width": 1600,
+        "height": 900
+      },
+      "page_url_path": "/",
+      "live_or_replay": "new_local_model",
+      "run_id": "81665601dc9c4c77bbc372817e24fdcc",
+      "mode": "taint_policy",
+      "seed": 11,
+      "case_id": null,
+      "raw_path": "docs/assets/core-features/captures/2026-10-27T06-03-17-405Z/f02_derived_action.png",
+      "raw_sha256": "75b478b833292adfaa6102abf960644418a84f742a869fd7a2207ad82a9b7109",
+      "crop": {
+        "x": 1062,
+        "y": 0,
+        "width": 538,
+        "height": 900
+      },
+      "annotations": [
+        {
+          "number": 1,
+          "label": "所选动作继承实际上下文标签",
+          "rect": [
+            1115,
+            307,
+            1575,
+            394
+          ],
+          "style": "number_rectangle_arrow"
+        },
+        {
+          "number": 2,
+          "label": "原始来源与后续派生关系",
+          "rect": [
+            1115,
+            473,
+            1575,
+            863
+          ],
+          "style": "number_rectangle_arrow"
+        }
+      ],
+      "steps": [],
+      "observed_result": "程序记录潜在上下文依赖，不能当作精确语义因果。",
+      "checks": {},
+      "preview_metadata": null,
+      "video_offset_seconds": 40.9328431
+    }
+  ],
+  "runs": [
+    {
+      "scenario": "upload_read",
+      "path": "results/core_features/demo_runs/81665601dc9c4c77bbc372817e24fdcc.json",
+      "sha256": "d5cd8a1193574a22ead27d07e329a1fa23c97a5716595edcb7429b9ebd28331c",
+      "run_id": "81665601dc9c4c77bbc372817e24fdcc",
+      "runtime_version": "2.0.0",
+      "backend_type": "local_llama_cpp",
+      "status": "completed",
+      "mode": "taint_policy",
+      "seed": 11,
+      "historical": false,
+      "assessment": {
+        "status": "未自动评定",
+        "details": {
+          "reason": "自由对话没有预设答案；不纳入正式任务完成率"
+        }
+      }
+    }
+  ],
+  "errors": [],
+  "external_requests_blocked": [],
+  "boundaries": [
+    "No UI state injection, response mocks, fake token stream, or experiment-file mutation.",
+    "All business actions remain simulated. Evidence exports only server-projected records without browser cookies, owner credentials, or active database.",
+    "Video captures include waits; final edit decisions must reference actual footage and preserve ordering within each run."
+  ],
+  "health": {
+    "status": "ok",
+    "service": "taintlab-web",
+    "version": "2.0.0"
+  },
+  "first_ready_seconds": 2.2090595,
+  "upload": {
+    "path": "data/demo/core_features/external_handover.txt",
+    "file_sha256": "add041af96f8adf07e3687edb213200c739baa4753693850f05dcfb619589050",
+    "actual_doc_id": "doc_2c1a4d03459b",
+    "session_local": true
+  },
+  "finished_at_utc": "2026-10-27T06:03:58.783Z",
+  "status": "captured",
+  "monotonic_seconds": 40.9345436,
+  "source_video": {
+    "path": "demo/core_features/raw/2026-10-27T06-03-17-405Z/page@9b18c8cef47269f48b752062ce88feaf.webm",
+    "bytes": 2020441,
+    "sha256": "be2f89783fbd575c8cb67d2dd2c7c9a33f1f9b91e04744fbd78912eb30acfded"
+  },
+  "recorder_source": {
+    "path": "demo/core_features/raw/2026-10-27T06-03-17-405Z/recorder.cjs",
+    "sha256": "980a1742034f2174448ba599dd98bcc49f35c237dc0b02cfdc7c8d27f888f424",
+    "public_source": "scripts/capture_core_features.cjs"
+  },
+  "scenario_file": {
+    "path": "data/demo/core_features/scenarios.json",
+    "sha256": "ce1db4dac2358ed624918442c037c1f1eb760bdcdff36e708378bfddba78cb7f"
+  }
+}

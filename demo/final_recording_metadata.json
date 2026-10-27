@@ -1,34 +1,55 @@
 {
   "project_version": "2.0.0",
-  "recorded_metadata_at_utc": "2026-10-26T18:31:01.965812+00:00",
+  "runtime_version": "2.0.0",
+  "release_version": "2.0.1",
+  "recorded_metadata_at_utc": "2026-10-27T06:30:53.906499+00:00",
   "video": "demo/demo.mp4",
-  "video_sha256": "5c93923145546a05b09f2e9eb6d4f82d25a306fed81badab16eb37a9baa1fc27",
-  "video_bytes": 11725523,
-  "duration_seconds": 240.0,
-  "selected_take": "actual_react_v2_full_take_with_indirect_and_results_pickups",
-  "backend_type": "local_llama_cpp",
-  "composition": "demo/v2/composition_manifest.json",
-  "composition_sha256": "cc7ec7e0ed4673356ad2e630af43eaf7757a04294aaafa0df42072e180a6cacb",
-  "edit_decisions": "demo/v2/edit_decisions.json",
-  "edit_decisions_sha256": "eeb4b504079bc47b01c066c3ad985a816661a3eaeed5a4aacde3ba4be1a76e42",
+  "video_sha256": "b164feb7d3f5816e3de76aba927513c5e4102dcf665d16a06ba2d5d2c37e3e61",
+  "video_bytes": 12478629,
+  "duration_seconds": 270.0,
+  "selected_take": "six_core_features_actual_ui_and_native_detector_console",
+  "backend_type": "local_llama_cpp; detector_console_is_synthetic_non_model",
+  "composition": "demo/core_features/composition_manifest.json",
+  "composition_sha256": "96717dc7a483ffd3d9fdeb997b2b0752ec2895b18c5c28b29c0c2d4054a87856",
+  "edit_decisions": "demo/core_features/edit_decisions.json",
+  "edit_decisions_sha256": "95079b2c4e3e2521544000ebd734e6250d5f99adc51977fc6e6ce499a2254b61",
   "source_recordings": [
     {
-      "file": "demo/v2/recordings/full_take.json",
-      "sha256": "e0127243c45aabb12d1b7bbd6a1c73c63d52ad041371a2e8ff440f5fe0253c5b"
+      "file": "demo/core_features/recordings/attacks.json",
+      "sha256": "ca7a0d88c9fe2bb90ee307a0d051cf4bc201c559700d08d44627c8941f6cbf7d"
     },
     {
-      "file": "demo/v2/recordings/indirect_pickup.json",
-      "sha256": "1fae7e6ab724a5f09c549721f3ddb4baa144b1b4c6f43615590562b113faf378"
+      "file": "demo/core_features/recordings/console.json",
+      "sha256": "c2ef193201d9a4e45360b8ebad5de32e7cc54c03fa7abd3215d4254ba6504e5e"
     },
     {
-      "file": "demo/v2/recordings/results_pickup.json",
-      "sha256": "17d8fca879e2ad88cc7a4f68e12392c453739b78299e711a002adc9d032b5007"
+      "file": "demo/core_features/recordings/flow.json",
+      "sha256": "59015b999cc20aed8b1b7729f50e406d8557a47c088bcd36155714636db64aed"
+    },
+    {
+      "file": "demo/core_features/recordings/home.json",
+      "sha256": "869b9feffa5eb8aecf87b6954733f57530adaa832114d31fe5a144a7390425e5"
+    },
+    {
+      "file": "demo/core_features/recordings/review.json",
+      "sha256": "039deac981bdd221910e4cc0ea2c1b64b5f32129c9de651f962536c13553efd9"
+    },
+    {
+      "file": "demo/core_features/recordings/tools.json",
+      "sha256": "db0b46c7bd62eb34531c2fce3d71b39d9301365fbf169dadb3496d5122a36543"
+    },
+    {
+      "file": "demo/core_features/recordings/upload.json",
+      "sha256": "01ce8fe5695b4c0d324b59956826e392e441b49d95b608bf5a47a98df869ff3c"
     }
   ],
   "selected_run_evidence": "demo/selected_evidence.json",
-  "visual_review": "demo/v2/visual_review.json",
+  "selected_run_evidence_sha256": "cce8fa058445f05ce3f01a3f1d63dff2b5bd4ded0cb5d621a88e2a918dff5330",
+  "visual_review": "demo/core_features/visual_review.json",
   "playback_review": "demo/playback_validation.json",
-  "audio": "Offline Microsoft Huihui Desktop synthesis; technical non-silence and stream checks passed. No human pronunciation-listening review claimed.",
-  "statement": "Actual current UI and clearly marked current real record replays. Four template sections are generation previews; preview is not a new attack run. No development_v3 footage is presented as current acceptance. Waiting/navigation cuts and final caption placement are recorded. No state or metric editing.",
-  "historical_metadata": "dist/history/5c2a75c/demo__final_recording_metadata.json (historical complete archive also preserved)"
+  "video_validation": "demo/video_validation.json",
+  "narration_synthesis": "demo/core_features/narration_synthesis.json",
+  "formal_experiment_mutated": false,
+  "historical_video": "demo/history/v2.0.0_before_core_features_20261027/demo.mp4",
+  "historical_video_in_light_package": false
 }

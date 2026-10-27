@@ -1,6 +1,6 @@
 # 轻量交付包与打包维护
 
-打包器3.0.0默认生成轻量包，按文件职责保留源码、可运行前端、所有正式记录、数据来源与许可、最终报告及视频。不按攻击成绩、文件大小或是否成功选择正式样本。
+打包器3.1.0默认生成轻量包，按文件职责保留源码、可运行前端、所有正式记录、数据来源与许可、最终报告及视频。不按攻击成绩、文件大小或是否成功选择正式样本。
 
 ## 命令及输出
 
@@ -79,14 +79,18 @@ ZIP顶层固定为taintlab_project/，含DELIVERY_MANIFEST.json及PACKAGE_SHA256
 |results/v2/validation/experiment_integrity.json|独立复算完成且all_passed=true|
 |demo/video_validation.json|当前video_sha256、srt_sha256、valid；project_version匹配pyproject|
 |demo/playback_validation.json|当前视频SHA、实际播放all_passed；project_version匹配|
-|demo/v2/visual_review.json|当前video_sha256与明确通过结论；project_version匹配，旧版视觉复核不能满足此项|
-|demo/v2制作证据|edit_decisions与composition哈希绑定；旁白对应当前narration；录制清单的selection/upload来源存在、被纳入且SHA匹配|
+|demo/core_features/visual_review.json|当前video_sha256与明确通过结论；运行版本和发布版本分开，旧版视觉复核不能满足此项|
+|demo/core_features制作证据|edit_decisions与composition哈希绑定；旁白对应当前narration；录制清单selection/upload输入SHA匹配；F01–F06分别绑定操作和结果证据及实际时间段|
 |results/v2/browser/ui_acceptance.json|当前版本与最新检查通过；索引引用的报告必须纳入、存在并匹配声明SHA；排除截图不代表图像重新复核|
 |docs/qa/document_validation.json|DOCX/PDF/source_markdown_sha256正确，视觉复核完成；project_version匹配|
 |docs/v2/qa最终四项稳定入口|与docs/qa的document_validation、structure_validation、visual_review_page_hashes、visual_review完全一致|
 |docs/publication/manual_qa/manual_validation.json|版本、明确视觉通过、页数；当前USER_MANUAL三格式及声明图像/配置SHA匹配|
 |demo/selected_evidence.json|项目版本匹配；递归检查records数组中每条path/sha256；所有引用存在且被纳入；空集合、缺哈希、陈旧哈希或Web私有路径均失败|
 |旧recovery包装|原始记录SHA和development_v3标识保留|
+|CORE_FEATURES_GUIDE与DEVELOPMENT_AND_DELIVERY三格式|各有六个规定二级主章；MD/PDF/DOCX、图像/配置及逐页视觉QA文件的实际SHA匹配；页数与明确通过结论有效|
+|results/core_features/baseline_integrity.json|本轮开始时保存的全部3672正式记录和冻结运行文件逐字节未变；与正式运行验证分开|
+|results/core_features/performance_summary.json|公开样本JSONL哈希和行数相符；每行仅有时间、阶段、角色、驻留内存、私有提交内存；不得带PID/认证/路径字段|
+|results/core_features/canary_selftest.json|现有检测器源码SHA、实际合成阳性/阴性结果与声明相符；明确非模型调用、非正式实验、不计ASR|
 
 这些证据必须来自实际工作，不能只补success字段。ZIP先写临时文件，CRC、条数和逐文件SHA通过后才替换light。文件在打包期间变化会失败，旧ZIP保持；备份仍可回查。不要在编译、正式评测、渲染或录制仍写入时构建最终包。
 
@@ -110,3 +114,23 @@ ZIP顶层固定为taintlab_project/，含DELIVERY_MANIFEST.json及PACKAGE_SHA256
 新必需产物应更新白名单、required_files与有效测试；正文图表应被Markdown实际引用。生命周期验收放validation子目录，活动状态另存；数据新版本保留来源/许可/冻结，新正式运行使用新campaign，不改历史验收。
 
 旧完整包历史事实：最初轻量包改造时taintlab_project.zip为68,838,031字节，SHA256为9f04dd3d6eec16bdd09130f4822a2eb12f157baab7733f644a02b51ece5c71b3。该数值不是v2交付大小或新验收结论。首次模型/依赖准备按README执行；应用进程离线验收不等于整机物理断网。
+
+## v2.0.1 核心功能材料与公开历史同步
+
+公开同步检查另发现 v2.0.0 已发布的两条 Demo 记录需要显式保留：`results/v2/demo_live/records/54c30779a254418f840ae4ff36178026.json` 和 `results/v2/demo_live/records/ef96cc7e861a4098af904ece2ef6eaf0.json`。已核对本机与旧公开 main 的 SHA256 完全一致，并将这两个精确路径固定在历史证据白名单中；它们不计为本轮新运行，也不放宽其他会话资料的排除规则。
+
+本轮发布版本为 v2.0.1，冻结运行核心仍为 2.0.0。默认轻量包新增以下明确角色：
+
+- `docs/CORE_FEATURES_GUIDE.{md,pdf,docx}`、`docs/DEVELOPMENT_AND_DELIVERY.{md,pdf,docx}`、`docs/FEATURE_EVIDENCE_MATRIX.md`、五人建议分工表和本轮计划。未变的项目报告复用其原 QA；综合手册互链更新改变字节时，必须重渲染、复核并重新绑定，不能继续使用陈旧哈希。
+- `docs/assets/core-features` 最终原图、标注图、配置、出处及图像 QA；`docs/assets/development-delivery` 的架构示意和生成配置。captures 下仅保留每轮 capture_manifest.json，不含重复原片。
+- `docs/core_features_qa`、`docs/development_delivery_qa` 的 JSON/Markdown；逐页 PNG、渲染日志不入轻量包。文档检查不把“文件存在”当作“已渲染/逐页复核”。
+- `data/demo/core_features` 的自有模拟输入；`results/core_features/demo_runs` 的安全投影、规则预览及真实模拟导出下载文本；精简 Canary 自检、性能公开摘要/去 PID 样本、验收与测试记录。失败记录不会按展示效果删去。
+- `demo/core_features` 的最终选择、剪辑单、合成清单、旁白、视觉复核及录制 JSON；另必须保留 `source_inventory.json` 和 `recording_timing.json` 两个复现配置，后者与根目录同名时序文件对应。来源清单中的原片路径和哈希为本机制作证据，并明确标记不随包分发；不要求用户日常运行具备这些原片。当前根目录 MP4/SRT/演示稿/播放验证对应本次成片。原片、中间 `composed.mp4`、WAV、逐帧 PNG、demo/history 的旧媒体不重复分发，v2.0.0 Release 保持原样。`demo/v2` 保留的制作元数据属于历史资料，不替代本次六章视频验收。
+
+视频门槛为实测180–300秒，270秒有效；不沿用旧240秒固定值。六章必须按F01–F06顺序，分别引用包内可核验的操作与结果材料，时间区间不能重叠或超过实际视频。声明的路径/哈希通过不替代实际观看；实际播放与视觉复核仍是独立必需证据。
+
+公开更新使用 `prepare_publication.py --staging ... --sync-target ... --sync-plan ...` 的三方比较，再 `--apply-sync`。目标必须是从已获取的 `origin/main` 建立的干净公开分支；保留远端独有文件与修改，双方冲突拒绝覆盖。脚本从不重新初始化公开 Git、不推断删除、不改历史。正式记录任一字节变化直接拒绝。完整命令与提交语义见[公开分发策略](publication/PUBLICATION_POLICY.md)。
+
+在 PR squash merge 后，`--public` 发行打包要求当前 HEAD 等于本机已获取的 origin/main，且工作区已提交干净。维护者仍须实际验证远端 PR 已 merged，不能只依赖本机引用。`PUBLICATION_MANIFEST.source_commit` 记录原工作区提交；ZIP内交付清单的 `git_commit` 绑定已合并公开 main，并单列 `release_version` 与运行 `project_version`。提交后不回写相互递归的哈希。无 Git 的已下载源码仍可默认离线再打包，并明确不声称新的公开提交验证。
+
+规则回归增加了实际三方文件同步的合成仓库测试、270秒视频与六章证据、文档实际SHA/视觉失败、远端修改保护、暂存变化拒绝、未提交工作保护、正式字节不可改以及私有PID字段拒绝。测试临时仓库不触碰实际发布历史，合成媒体不充当真实Demo。

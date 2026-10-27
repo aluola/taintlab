@@ -1,0 +1,14 @@
+{
+  "project_version": "2.0.0",
+  "runtime_version": "2.0.0",
+  "release_version": "2.0.1",
+  "created_at_utc": "2026-10-27T06:16:18.173355+00:00",
+  "edl_path": "demo/core_features/edit_decisions.json",
+  "edl_sha256": "95079b2c4e3e2521544000ebd734e6250d5f99adc51977fc6e6ce499a2254b61",
+  "output": "demo/core_features/composed.mp4",
+  "output_sha256": "36248afc06151da51756601c71c271f0ccd717ce29479335a8f8d2f65c65943f",
+  "duration_seconds": 270,
+  "all_clips_real_recorded_intervals": true,
+  "no_retiming_or_extension": true,
+  "metadata_binding_note": "Final EDL includes portable public operation-evidence paths and local-source availability. Clip pixel intervals and composed output remain exactly the encoded ones."
+}

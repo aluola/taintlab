@@ -1,0 +1,919 @@
+{
+  "project_version": "2.0.0",
+  "runtime_version": "2.0.0",
+  "release_version": "2.0.1",
+  "created_at_utc": "2026-10-27T06:30:53.855616+00:00",
+  "engine": "Windows System.Speech / Microsoft Huihui Desktop, offline",
+  "narration_file": "demo/narration.json",
+  "narration_sha256": "5cda06f9e9dc013bc410319a2865a657234eaca2207fb7e6d20dc140aff24ec8",
+  "subtitle_file": "demo/demo_subtitles.srt",
+  "subtitle_sha256": "63671cb960c0edd21c9dc5f1b1d1d4e7d7e6c98f16edd8888d3828af0a975a88",
+  "voice_file": "demo/voice/core_features/voice.wav",
+  "voice_sha256": "57b0ab2739b45b7c9e7f721c1c21d7e98cd2e9dd95b6e47f07c0da882f19d0b6",
+  "voice_manifest_sha256": "dc0a70f7120cdf46fe65c2e1835523ea7453db8f415dc47b1350009a1a69bc63",
+  "duration_seconds": 270,
+  "segments": [
+    {
+      "index": 0,
+      "start": 0,
+      "end": 10,
+      "text": "这是六项核心功能的实际操作演示。本机零点六B模型运行，业务和数据全部模拟。发行版二点零点一，核心二点零。",
+      "synthesis_attempts": [
+        {
+          "rate": 0,
+          "raw_duration_seconds": 14.2595
+        },
+        {
+          "rate": 1,
+          "raw_duration_seconds": 12.821042
+        },
+        {
+          "rate": 2,
+          "raw_duration_seconds": 11.475417
+        },
+        {
+          "rate": 3,
+          "raw_duration_seconds": 10.288458
+        }
+      ],
+      "selected_rate": 3,
+      "atempo": 1.0606657731958764,
+      "raw_duration_seconds": 10.288458,
+      "fitted_duration_seconds": 10,
+      "speech_duration_after_tempo": 9.7,
+      "raw_file": "segments/segment_000_raw.wav",
+      "file": "segments/segment_000.wav",
+      "sha256": "43d766aed1eab2946dfb0ecb24bc8877a099a21d8bea0cd1e92df1ccf5586d44"
+    },
+    {
+      "index": 1,
+      "start": 10,
+      "end": 18,
+      "text": "第一章，Agent靶场。模型实际读取会议资料，网关允许后才返回结果。",
+      "synthesis_attempts": [
+        {
+          "rate": 0,
+          "raw_duration_seconds": 8.7445
+        }
+      ],
+      "selected_rate": 0,
+      "atempo": 1.1356493506493506,
+      "raw_duration_seconds": 8.7445,
+      "fitted_duration_seconds": 8,
+      "speech_duration_after_tempo": 7.700000000000001,
+      "raw_file": "segments/segment_001_raw.wav",
+      "file": "segments/segment_001.wav",
+      "sha256": "67f9c84166726ced3fe45ac6524cd495118d56c25478629fab39135dbbe4ba5b"
+    },
+    {
+      "index": 2,
+      "start": 18,
+      "end": 26,
+      "text": "查询工具只检索本地资料。这次答复给出验收十一月八日、接口冻结十一月三日。",
+      "synthesis_attempts": [
+        {
+          "rate": 0,
+          "raw_duration_seconds": 9.3395
+        },
+        {
+          "rate": 1,
+          "raw_duration_seconds": 8.397042
+        }
+      ],
+      "selected_rate": 1,
+      "atempo": 1.090524935064935,
+      "raw_duration_seconds": 8.397042,
+      "fitted_duration_seconds": 8,
+      "speech_duration_after_tempo": 7.7,
+      "raw_file": "segments/segment_002_raw.wav",
+      "file": "segments/segment_002.wav",
+      "sha256": "e31430108e6f1b4c092ccc7fac54405f92e73db923e0dc6267c84bd45ee64d95"
+    },
+    {
+      "index": 3,
+      "start": 26,
+      "end": 35,
+      "text": "发送通知先停在确认卡。这里是真实点击确认，随后检查模拟状态。",
+      "synthesis_attempts": [
+        {
+          "rate": 0,
+          "raw_duration_seconds": 8.4045
+        }
+      ],
+      "selected_rate": 0,
+      "atempo": 1,
+      "raw_duration_seconds": 8.4045,
+      "fitted_duration_seconds": 9,
+      "speech_duration_after_tempo": 8.4045,
+      "raw_file": "segments/segment_003_raw.wav",
+      "file": "segments/segment_003.wav",
+      "sha256": "7e2bf60c2fbef843f4500ae4c8908483c0a4933e5036bc6f04ae8217cda1c022"
+    },
+    {
+      "index": 4,
+      "start": 35,
+      "end": 41,
+      "text": "项目组收件箱实际新增一条通知，正文保留会议时间和地点。",
+      "synthesis_attempts": [
+        {
+          "rate": 0,
+          "raw_duration_seconds": 7.0295
+        },
+        {
+          "rate": 1,
+          "raw_duration_seconds": 6.319167
+        }
+      ],
+      "selected_rate": 1,
+      "atempo": 1.1086257894736842,
+      "raw_duration_seconds": 6.319167,
+      "fitted_duration_seconds": 6,
+      "speech_duration_after_tempo": 5.7,
+      "raw_file": "segments/segment_004_raw.wav",
+      "file": "segments/segment_004.wav",
+      "sha256": "135d48b86655b2bcddb001a8783ff568d42fe3c1cafac47bab98c198d1208881"
+    },
+    {
+      "index": 5,
+      "start": 41,
+      "end": 51,
+      "text": "导出同样经过确认，只写虚拟文件。实际点击下载后，核对文本中的十五点和A三零一。",
+      "synthesis_attempts": [
+        {
+          "rate": 0,
+          "raw_duration_seconds": 10.5095
+        }
+      ],
+      "selected_rate": 0,
+      "atempo": 1.0834536082474227,
+      "raw_duration_seconds": 10.5095,
+      "fitted_duration_seconds": 10,
+      "speech_duration_after_tempo": 9.7,
+      "raw_file": "segments/segment_005_raw.wav",
+      "file": "segments/segment_005.wav",
+      "sha256": "8a3a866801143b145d7fa914b440494ef2dab7d9064592d8c93e41e37fa1949c"
+    },
+    {
+      "index": 6,
+      "start": 51,
+      "end": 55,
+      "text": "攻击也会提出真实动作；这次越权读取被拒。",
+      "synthesis_attempts": [
+        {
+          "rate": 0,
+          "raw_duration_seconds": 5.2045
+        },
+        {
+          "rate": 1,
+          "raw_duration_seconds": 4.679167
+        },
+        {
+          "rate": 2,
+          "raw_duration_seconds": 4.187
+        }
+      ],
+      "selected_rate": 2,
+      "atempo": 1.101842105263158,
+      "raw_duration_seconds": 4.187,
+      "fitted_duration_seconds": 4,
+      "speech_duration_after_tempo": 3.8,
+      "raw_file": "segments/segment_006_raw.wav",
+      "file": "segments/segment_006.wav",
+      "sha256": "ac0b25f6f077e6441e618ccc75f93b2f3a5d8932f7339733c448f6c66eff3dfc"
+    },
+    {
+      "index": 7,
+      "start": 55,
+      "end": 65,
+      "text": "第二章，不可信内容标记。实际上传TXT，服务端登记文档ID。上传不等于读取，还需勾选授权。",
+      "synthesis_attempts": [
+        {
+          "rate": 0,
+          "raw_duration_seconds": 12.6695
+        },
+        {
+          "rate": 1,
+          "raw_duration_seconds": 11.393
+        }
+      ],
+      "selected_rate": 1,
+      "atempo": 1.174536082474227,
+      "raw_duration_seconds": 11.393,
+      "fitted_duration_seconds": 10,
+      "speech_duration_after_tempo": 9.7,
+      "raw_file": "segments/segment_007_raw.wav",
+      "file": "segments/segment_007.wav",
+      "sha256": "ca2416855c75a581aaa6483ab7bf4d937688e3d22c9b3903cb5227ed2fdf256d"
+    },
+    {
+      "index": 8,
+      "start": 65,
+      "end": 78,
+      "text": "现在读取上传资料。来源卡显示上传类型、不可信指令标签和内部敏感度。正文声称可信或已批准，标签仍然不变。",
+      "synthesis_attempts": [
+        {
+          "rate": 0,
+          "raw_duration_seconds": 14.2795
+        }
+      ],
+      "selected_rate": 0,
+      "atempo": 1.1243700787401576,
+      "raw_duration_seconds": 14.2795,
+      "fitted_duration_seconds": 13,
+      "speech_duration_after_tempo": 12.7,
+      "raw_file": "segments/segment_008_raw.wav",
+      "file": "segments/segment_008.wav",
+      "sha256": "d09a1bee7a8f5090a86cdb26ac4a217266eead66ee748b20843da2b7d6f40d37"
+    },
+    {
+      "index": 9,
+      "start": 78,
+      "end": 90,
+      "text": "图中保留原始上传和后续派生关系。实线是确定性数据派生，虚线是可见上下文的潜在依赖，不是模型内部因果。",
+      "synthesis_attempts": [
+        {
+          "rate": 0,
+          "raw_duration_seconds": 13.3845
+        }
+      ],
+      "selected_rate": 0,
+      "atempo": 1.143974358974359,
+      "raw_duration_seconds": 13.3845,
+      "fitted_duration_seconds": 12,
+      "speech_duration_after_tempo": 11.7,
+      "raw_file": "segments/segment_009_raw.wav",
+      "file": "segments/segment_009.wav",
+      "sha256": "c4b5af5ecb644cd2f8b62f8bfa20a64fb7d8f67a2384de765ec009bb0381b71b"
+    },
+    {
+      "index": 10,
+      "start": 90,
+      "end": 98,
+      "text": "第三章，污点追踪。这是当前冻结版本的真实正常任务回放，特意保留失败案例。",
+      "synthesis_attempts": [
+        {
+          "rate": 0,
+          "raw_duration_seconds": 9.5495
+        },
+        {
+          "rate": 1,
+          "raw_duration_seconds": 8.5855
+        }
+      ],
+      "selected_rate": 1,
+      "atempo": 1.115,
+      "raw_duration_seconds": 8.5855,
+      "fitted_duration_seconds": 8,
+      "speech_duration_after_tempo": 7.7,
+      "raw_file": "segments/segment_010_raw.wav",
+      "file": "segments/segment_010.wav",
+      "sha256": "8c432541dfe8b17f3b12f40ee42cb3a74b8b2b41a384cc3a799ddb03998c026b"
+    },
+    {
+      "index": 11,
+      "start": 98,
+      "end": 110,
+      "text": "任务先获准读取敏感资料，后续动作受到敏感度流向检查。这里的原因是信息流拒绝，不是普通收件人白名单。",
+      "synthesis_attempts": [
+        {
+          "rate": 0,
+          "raw_duration_seconds": 12.7045
+        }
+      ],
+      "selected_rate": 0,
+      "atempo": 1.0858547008547008,
+      "raw_duration_seconds": 12.7045,
+      "fitted_duration_seconds": 12,
+      "speech_duration_after_tempo": 11.7,
+      "raw_file": "segments/segment_011_raw.wav",
+      "file": "segments/segment_011.wav",
+      "sha256": "5242ccc9d6bbe245ba073bc1983f3883e86641e268e332d27d3b9ab5593b6faa"
+    },
+    {
+      "index": 12,
+      "start": 110,
+      "end": 117,
+      "text": "所选生成动作继承敏感标签。程序在副作用前做确定性检查。",
+      "synthesis_attempts": [
+        {
+          "rate": 0,
+          "raw_duration_seconds": 7.9045
+        }
+      ],
+      "selected_rate": 0,
+      "atempo": 1.179776119402985,
+      "raw_duration_seconds": 7.9045,
+      "fitted_duration_seconds": 7,
+      "speech_duration_after_tempo": 6.7,
+      "raw_file": "segments/segment_012_raw.wav",
+      "file": "segments/segment_012.wav",
+      "sha256": "157e6bb3ce1476ae4a9a2a2325f0e9e8dc53cb96eceb4ed71cd6f64735670f47"
+    },
+    {
+      "index": 13,
+      "start": 117,
+      "end": 124,
+      "text": "切到上游，能看到原始保险库资料、组装节点和依赖边。",
+      "synthesis_attempts": [
+        {
+          "rate": 0,
+          "raw_duration_seconds": 6.6795
+        }
+      ],
+      "selected_rate": 0,
+      "atempo": 1,
+      "raw_duration_seconds": 6.6795,
+      "fitted_duration_seconds": 7,
+      "speech_duration_after_tempo": 6.6795,
+      "raw_file": "segments/segment_013_raw.wav",
+      "file": "segments/segment_013.wav",
+      "sha256": "19f37dd6a0b17ad5341e36b7bf281c5031ab7fd8a99214a9e6a32040457d470d"
+    },
+    {
+      "index": 14,
+      "start": 124,
+      "end": 130,
+      "text": "通知与文件均为空。拒绝确实没有产生这些模拟副作用。",
+      "synthesis_attempts": [
+        {
+          "rate": 0,
+          "raw_duration_seconds": 6.8495
+        },
+        {
+          "rate": 1,
+          "raw_duration_seconds": 6.159792
+        }
+      ],
+      "selected_rate": 1,
+      "atempo": 1.0806652631578948,
+      "raw_duration_seconds": 6.159792,
+      "fitted_duration_seconds": 6,
+      "speech_duration_after_tempo": 5.7,
+      "raw_file": "segments/segment_014_raw.wav",
+      "file": "segments/segment_014.wav",
+      "sha256": "fb0ea8790db2e2600b22560e53ef5e65aaffc52fd17aa91d5f0ecf5593448e45"
+    },
+    {
+      "index": 15,
+      "start": 130,
+      "end": 135,
+      "text": "合法任务仍失败。这是保守传播的可用性代价。",
+      "synthesis_attempts": [
+        {
+          "rate": 0,
+          "raw_duration_seconds": 5.9695
+        },
+        {
+          "rate": 1,
+          "raw_duration_seconds": 5.368625
+        }
+      ],
+      "selected_rate": 1,
+      "atempo": 1.130236842105263,
+      "raw_duration_seconds": 5.368625,
+      "fitted_duration_seconds": 5,
+      "speech_duration_after_tempo": 4.75,
+      "raw_file": "segments/segment_015_raw.wav",
+      "file": "segments/segment_015.wav",
+      "sha256": "039ed7b5ffc1f11be5078cfc7801431823fedb94ef52122cee558c4c77b22c8f"
+    },
+    {
+      "index": 16,
+      "start": 135,
+      "end": 143,
+      "text": "第四章，权限控制。复看同一条内部会议通知，确认绑定运行、动作内容和有效期。",
+      "synthesis_attempts": [
+        {
+          "rate": 0,
+          "raw_duration_seconds": 10.3595
+        },
+        {
+          "rate": 1,
+          "raw_duration_seconds": 9.3135
+        },
+        {
+          "rate": 2,
+          "raw_duration_seconds": 8.334667
+        }
+      ],
+      "selected_rate": 2,
+      "atempo": 1.0824242857142856,
+      "raw_duration_seconds": 8.334667,
+      "fitted_duration_seconds": 8,
+      "speech_duration_after_tempo": 7.7,
+      "raw_file": "segments/segment_016_raw.wav",
+      "file": "segments/segment_016.wav",
+      "sha256": "a7a6b88e72805b3e473f9174151e12ea64f11c76b76da863b8df010bac266d46"
+    },
+    {
+      "index": 17,
+      "start": 143,
+      "end": 154,
+      "text": "真实点击确认后，只执行这次目标与正文。收件箱出现一条消息，模型自称已批准不能代替确认。",
+      "synthesis_attempts": [
+        {
+          "rate": 0,
+          "raw_duration_seconds": 11.4595
+        }
+      ],
+      "selected_rate": 0,
+      "atempo": 1.070981308411215,
+      "raw_duration_seconds": 11.4595,
+      "fitted_duration_seconds": 11,
+      "speech_duration_after_tempo": 10.7,
+      "raw_file": "segments/segment_017_raw.wav",
+      "file": "segments/segment_017.wav",
+      "sha256": "66eb3bf1db0c3d66567b1f0bde4c95645cf90041a38bb075dbf7f9173ef507fd"
+    },
+    {
+      "index": 18,
+      "start": 154,
+      "end": 160,
+      "text": "可信授权列出工具、读取范围、出口上限和剩余额度。",
+      "synthesis_attempts": [
+        {
+          "rate": 0,
+          "raw_duration_seconds": 6.4795
+        }
+      ],
+      "selected_rate": 0,
+      "atempo": 1.1367543859649123,
+      "raw_duration_seconds": 6.4795,
+      "fitted_duration_seconds": 6,
+      "speech_duration_after_tempo": 5.7,
+      "raw_file": "segments/segment_018_raw.wav",
+      "file": "segments/segment_018.wav",
+      "sha256": "8261e1310e6712d61870d59b9c4d0012828c9727c257996de08a72d8cbfd1090"
+    },
+    {
+      "index": 19,
+      "start": 160,
+      "end": 170,
+      "text": "另一个独立任务实际点击拒绝，收件箱保持为空。这里不伪造模型的取消措辞。",
+      "synthesis_attempts": [
+        {
+          "rate": 0,
+          "raw_duration_seconds": 9.3145
+        }
+      ],
+      "selected_rate": 0,
+      "atempo": 1,
+      "raw_duration_seconds": 9.3145,
+      "fitted_duration_seconds": 10,
+      "speech_duration_after_tempo": 9.3145,
+      "raw_file": "segments/segment_019_raw.wav",
+      "file": "segments/segment_019.wav",
+      "sha256": "6d9b8fb256333be1840f931bee0905f092334ab1b3fb0dc569b87224e568fdca"
+    },
+    {
+      "index": 20,
+      "start": 170,
+      "end": 175,
+      "text": "明确越权收件人直接拒绝，不能用确认来放行。",
+      "synthesis_attempts": [
+        {
+          "rate": 0,
+          "raw_duration_seconds": 5.6995
+        },
+        {
+          "rate": 1,
+          "raw_duration_seconds": 5.124625
+        }
+      ],
+      "selected_rate": 1,
+      "atempo": 1.0788684210526316,
+      "raw_duration_seconds": 5.124625,
+      "fitted_duration_seconds": 5,
+      "speech_duration_after_tempo": 4.75,
+      "raw_file": "segments/segment_020_raw.wav",
+      "file": "segments/segment_020.wav",
+      "sha256": "4b3990c27449d3ee23954d9901953b01a055881d33b4acbd2fb7a7e492a10859"
+    },
+    {
+      "index": 21,
+      "start": 175,
+      "end": 180,
+      "text": "第五章，四种规则模板。先生成直接注入预览。",
+      "synthesis_attempts": [
+        {
+          "rate": 0,
+          "raw_duration_seconds": 6.1495
+        },
+        {
+          "rate": 1,
+          "raw_duration_seconds": 5.53075
+        }
+      ],
+      "selected_rate": 1,
+      "atempo": 1.1643684210526317,
+      "raw_duration_seconds": 5.53075,
+      "fitted_duration_seconds": 5,
+      "speech_duration_after_tempo": 4.75,
+      "raw_file": "segments/segment_021_raw.wav",
+      "file": "segments/segment_021.wav",
+      "sha256": "e3af91e3e31e4df7cc651688806a119029b3c96e92445a366b0b13091327a5a6"
+    },
+    {
+      "index": 22,
+      "start": 180,
+      "end": 185,
+      "text": "真实运行拒绝越权读取，但完整合法断言仍失败。",
+      "synthesis_attempts": [
+        {
+          "rate": 0,
+          "raw_duration_seconds": 5.8845
+        },
+        {
+          "rate": 1,
+          "raw_duration_seconds": 5.290375
+        }
+      ],
+      "selected_rate": 1,
+      "atempo": 1.113763157894737,
+      "raw_duration_seconds": 5.290375,
+      "fitted_duration_seconds": 5,
+      "speech_duration_after_tempo": 4.75,
+      "raw_file": "segments/segment_022_raw.wav",
+      "file": "segments/segment_022.wav",
+      "sha256": "5e05c0fcbbaf5a5a149a4b6175d2edd867969950621a04a81b49513e2a07b184"
+    },
+    {
+      "index": 23,
+      "start": 185,
+      "end": 190,
+      "text": "间接模板把授权伪造内容放进外部文档。",
+      "synthesis_attempts": [
+        {
+          "rate": 0,
+          "raw_duration_seconds": 4.6445
+        }
+      ],
+      "selected_rate": 0,
+      "atempo": 1,
+      "raw_duration_seconds": 4.6445,
+      "fitted_duration_seconds": 5,
+      "speech_duration_after_tempo": 4.6445,
+      "raw_file": "segments/segment_023_raw.wav",
+      "file": "segments/segment_023.wav",
+      "sha256": "e781da239de6a64d48c642aa37a03140aed07a422d497b0b7c00df0fc6bbec20"
+    },
+    {
+      "index": 24,
+      "start": 190,
+      "end": 195,
+      "text": "资料确实被读。合法断言通过，但通知复制了伪授权文字。",
+      "synthesis_attempts": [
+        {
+          "rate": 0,
+          "raw_duration_seconds": 7.3945
+        },
+        {
+          "rate": 1,
+          "raw_duration_seconds": 6.649333
+        },
+        {
+          "rate": 2,
+          "raw_duration_seconds": 5.953042
+        },
+        {
+          "rate": 3,
+          "raw_duration_seconds": 5.339208
+        }
+      ],
+      "selected_rate": 3,
+      "atempo": 1.1240437894736843,
+      "raw_duration_seconds": 5.339208,
+      "fitted_duration_seconds": 5,
+      "speech_duration_after_tempo": 4.75,
+      "raw_file": "segments/segment_024_raw.wav",
+      "file": "segments/segment_024.wav",
+      "sha256": "775aadc7ff088ef718e171073c10c8ad1783d9dbf6587040f495ea03b0e8839f"
+    },
+    {
+      "index": 25,
+      "start": 195,
+      "end": 200,
+      "text": "编码页展示真实Base六十四载荷，并保留原任务事实。",
+      "synthesis_attempts": [
+        {
+          "rate": 0,
+          "raw_duration_seconds": 6.2895
+        },
+        {
+          "rate": 1,
+          "raw_duration_seconds": 5.654958
+        },
+        {
+          "rate": 2,
+          "raw_duration_seconds": 5.059583
+        }
+      ],
+      "selected_rate": 2,
+      "atempo": 1.0651753684210525,
+      "raw_duration_seconds": 5.059583,
+      "fitted_duration_seconds": 5,
+      "speech_duration_after_tempo": 4.75,
+      "raw_file": "segments/segment_025_raw.wav",
+      "file": "segments/segment_025.wav",
+      "sha256": "109848d943df13d1574ff9e356b9c78d5ffe871aa104070b2a15f9105ef116a7"
+    },
+    {
+      "index": 26,
+      "start": 200,
+      "end": 205,
+      "text": "这个编码样本已实际运行，读取和合法交付断言通过。",
+      "synthesis_attempts": [
+        {
+          "rate": 0,
+          "raw_duration_seconds": 6.2745
+        },
+        {
+          "rate": 1,
+          "raw_duration_seconds": 5.641042
+        },
+        {
+          "rate": 2,
+          "raw_duration_seconds": 5.047125
+        }
+      ],
+      "selected_rate": 2,
+      "atempo": 1.0625526315789475,
+      "raw_duration_seconds": 5.047125,
+      "fitted_duration_seconds": 5,
+      "speech_duration_after_tempo": 4.75,
+      "raw_file": "segments/segment_026_raw.wav",
+      "file": "segments/segment_026.wav",
+      "sha256": "688febb5177cedf41a48f3143bc475a5596ad12860d40d3ecafdba7cfea2f0fe"
+    },
+    {
+      "index": 27,
+      "start": 205,
+      "end": 214,
+      "text": "分段页展示两个不同来源，再实际交给Agent。预览本身不算模型运行。",
+      "synthesis_attempts": [
+        {
+          "rate": 0,
+          "raw_duration_seconds": 8.5495
+        }
+      ],
+      "selected_rate": 0,
+      "atempo": 1,
+      "raw_duration_seconds": 8.5495,
+      "fitted_duration_seconds": 9,
+      "speech_duration_after_tempo": 8.5495,
+      "raw_file": "segments/segment_027_raw.wav",
+      "file": "segments/segment_027.wav",
+      "sha256": "b86e5dd2cae6b8c1ae36e69931a6a907e2523d954762ae911ce36409ce2aeb4d"
+    },
+    {
+      "index": 28,
+      "start": 214,
+      "end": 220,
+      "text": "这次只读了第一段。第二段未读，合法任务失败，记录原样保留。",
+      "synthesis_attempts": [
+        {
+          "rate": 0,
+          "raw_duration_seconds": 8.0145
+        },
+        {
+          "rate": 1,
+          "raw_duration_seconds": 7.207792
+        },
+        {
+          "rate": 2,
+          "raw_duration_seconds": 6.450583
+        }
+      ],
+      "selected_rate": 2,
+      "atempo": 1.1316812280701753,
+      "raw_duration_seconds": 6.450583,
+      "fitted_duration_seconds": 6,
+      "speech_duration_after_tempo": 5.7,
+      "raw_file": "segments/segment_028_raw.wav",
+      "file": "segments/segment_028.wav",
+      "sha256": "cdfb43dc4a17a7ac8f2d4104b5627257854085dfe5bb2d73666b9389b5a6e0e6"
+    },
+    {
+      "index": 29,
+      "start": 220,
+      "end": 225,
+      "text": "第六章，真实记录未发现Canary泄露；授权读取不等于泄露。",
+      "synthesis_attempts": [
+        {
+          "rate": 0,
+          "raw_duration_seconds": 6.8195
+        },
+        {
+          "rate": 1,
+          "raw_duration_seconds": 6.130667
+        },
+        {
+          "rate": 2,
+          "raw_duration_seconds": 5.484708
+        }
+      ],
+      "selected_rate": 2,
+      "atempo": 1.1546753684210527,
+      "raw_duration_seconds": 5.484708,
+      "fitted_duration_seconds": 5,
+      "speech_duration_after_tempo": 4.75,
+      "raw_file": "segments/segment_029_raw.wav",
+      "file": "segments/segment_029.wav",
+      "sha256": "97e3a3ea177d15da67dccf0eba1e70e57413943a7381a56691e0abcaf22652d6"
+    },
+    {
+      "index": 30,
+      "start": 225,
+      "end": 233,
+      "text": "下面是实际检测器的合成输入自检，不是模型实验。精确文本命中，相似文本不命中。",
+      "synthesis_attempts": [
+        {
+          "rate": 0,
+          "raw_duration_seconds": 10.3645
+        },
+        {
+          "rate": 1,
+          "raw_duration_seconds": 9.318333
+        },
+        {
+          "rate": 2,
+          "raw_duration_seconds": 8.339875
+        }
+      ],
+      "selected_rate": 2,
+      "atempo": 1.0831006493506492,
+      "raw_duration_seconds": 8.339875,
+      "fitted_duration_seconds": 8,
+      "speech_duration_after_tempo": 7.7,
+      "raw_file": "segments/segment_030_raw.wav",
+      "file": "segments/segment_030.wav",
+      "sha256": "6a691706b1c76233cc8dc533a3dbb4ef599c34ca379c15d85515fa562d371ada"
+    },
+    {
+      "index": 31,
+      "start": 233,
+      "end": 240,
+      "text": "两层编码、同出口分片与同运行跨出口拼接，使用同一个真实检测器。",
+      "synthesis_attempts": [
+        {
+          "rate": 0,
+          "raw_duration_seconds": 8.3695
+        },
+        {
+          "rate": 1,
+          "raw_duration_seconds": 7.523917
+        }
+      ],
+      "selected_rate": 1,
+      "atempo": 1.122972686567164,
+      "raw_duration_seconds": 7.523917,
+      "fitted_duration_seconds": 7,
+      "speech_duration_after_tempo": 6.7,
+      "raw_file": "segments/segment_031_raw.wav",
+      "file": "segments/segment_031.wav",
+      "sha256": "55edea863b8f61ece0bfb9c9f0546a5b3e3835437fe86cb0045cd72bfaad72f9"
+    },
+    {
+      "index": 32,
+      "start": 240,
+      "end": 244,
+      "text": "三层编码超出当前范围；不宣称任意编码可检测。",
+      "synthesis_attempts": [
+        {
+          "rate": 0,
+          "raw_duration_seconds": 6.0145
+        },
+        {
+          "rate": 1,
+          "raw_duration_seconds": 5.406833
+        },
+        {
+          "rate": 2,
+          "raw_duration_seconds": 4.838583
+        },
+        {
+          "rate": 3,
+          "raw_duration_seconds": 4.339417
+        }
+      ],
+      "selected_rate": 3,
+      "atempo": 1.1419518421052632,
+      "raw_duration_seconds": 4.339417,
+      "fitted_duration_seconds": 4,
+      "speech_duration_after_tempo": 3.8,
+      "raw_file": "segments/segment_032_raw.wav",
+      "file": "segments/segment_032.wav",
+      "sha256": "1990ef9a062c824f9ecc1df446b4eaf9439636aecf72c83131dd5ec22169dfb1"
+    },
+    {
+      "index": 33,
+      "start": 244,
+      "end": 250,
+      "text": "当前基线同时报告三配置的安全性和正常任务能力，分母完整。",
+      "synthesis_attempts": [
+        {
+          "rate": 0,
+          "raw_duration_seconds": 7.2345
+        },
+        {
+          "rate": 1,
+          "raw_duration_seconds": 6.503917
+        }
+      ],
+      "selected_rate": 1,
+      "atempo": 1.1410380701754386,
+      "raw_duration_seconds": 6.503917,
+      "fitted_duration_seconds": 6,
+      "speech_duration_after_tempo": 5.7,
+      "raw_file": "segments/segment_033_raw.wav",
+      "file": "segments/segment_033.wav",
+      "sha256": "737511336c4e6fb780a1e973414f5a86d1158a51ac3dbe1c0ddc425eb22ca5b5"
+    },
+    {
+      "index": 34,
+      "start": 250,
+      "end": 256,
+      "text": "扩展集完整防御的攻击成功率仍是百分之十八点八九，与仅权限相同。",
+      "synthesis_attempts": [
+        {
+          "rate": 0,
+          "raw_duration_seconds": 7.8145
+        },
+        {
+          "rate": 1,
+          "raw_duration_seconds": 7.023792
+        },
+        {
+          "rate": 2,
+          "raw_duration_seconds": 6.284833
+        }
+      ],
+      "selected_rate": 2,
+      "atempo": 1.1026022807017544,
+      "raw_duration_seconds": 6.284833,
+      "fitted_duration_seconds": 6,
+      "speech_duration_after_tempo": 5.7,
+      "raw_file": "segments/segment_034_raw.wav",
+      "file": "segments/segment_034.wav",
+      "sha256": "3c4f0fbb59f78a26dcbf640765819d8c3ac0923d7e85869ad2e7e25218836b1f"
+    },
+    {
+      "index": 35,
+      "start": 256,
+      "end": 260,
+      "text": "自动与确认辅助完成分开，不能混算。",
+      "synthesis_attempts": [
+        {
+          "rate": 0,
+          "raw_duration_seconds": 4.7145
+        },
+        {
+          "rate": 1,
+          "raw_duration_seconds": 4.239125
+        }
+      ],
+      "selected_rate": 1,
+      "atempo": 1.1155592105263157,
+      "raw_duration_seconds": 4.239125,
+      "fitted_duration_seconds": 4,
+      "speech_duration_after_tempo": 3.8,
+      "raw_file": "segments/segment_035_raw.wav",
+      "file": "segments/segment_035.wav",
+      "sha256": "70c92afc294f2439bdb2784dbdb08dc31522e89e5eca03d5932f69e1488aa3bc"
+    },
+    {
+      "index": 36,
+      "start": 260,
+      "end": 270,
+      "text": "全部六章都有操作、记录和证据索引。零泄露不证明防御因果，当前也未证明污点的独立收益。成员真实信息仍待补充。",
+      "synthesis_attempts": [
+        {
+          "rate": 0,
+          "raw_duration_seconds": 14.3095
+        },
+        {
+          "rate": 1,
+          "raw_duration_seconds": 12.865208
+        },
+        {
+          "rate": 2,
+          "raw_duration_seconds": 11.516042
+        },
+        {
+          "rate": 3,
+          "raw_duration_seconds": 10.327083
+        }
+      ],
+      "selected_rate": 3,
+      "atempo": 1.064647731958763,
+      "raw_duration_seconds": 10.327083,
+      "fitted_duration_seconds": 10,
+      "speech_duration_after_tempo": 9.7,
+      "raw_file": "segments/segment_036_raw.wav",
+      "file": "segments/segment_036.wav",
+      "sha256": "5c0b57d726e704918fa05bacdd5a4bd4e1fdf34376dc7c4127facf7beac403be"
+    }
+  ],
+  "audio_source_public": false,
+  "scope": "Scheduled offline speech synthesis plus exact caption text/timing verification. Does not claim a human full-track listening review."
+}

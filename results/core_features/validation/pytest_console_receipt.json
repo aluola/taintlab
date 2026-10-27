@@ -1,0 +1,21 @@
+{
+  "source": "Actual exec tool stdout; transcript excerpt recorded by the assistant, not synthetic test output",
+  "scope": "pytest terminal elapsed differs from JUnit suite time",
+  "commands": [
+    {
+      "command": "python -m pytest tests/test_feature_documents.py tests/test_runtime_memory_sampler.py tests/test_demo_canary_selfcheck.py -q --junitxml=results/core_features/pytest_new_helpers.xml",
+      "terminal_summary": "19 passed in 0.62s",
+      "junit_time_seconds": 0.444
+    },
+    {
+      "command": "python -m pytest -q --junitxml=results/core_features/pytest.xml",
+      "terminal_summary": "465 passed, 1 warning in 152.00s (0:02:32)",
+      "junit_time_seconds": 151.941
+    },
+    {
+      "command": "python -m pytest tests/test_release_download_target.py tests/test_feature_documents.py -q --junitxml=results/core_features/validation/release_docs_tests.xml",
+      "terminal_summary": "10 passed in 0.50s"
+    }
+  ],
+  "not_formal_experiments": true
+}

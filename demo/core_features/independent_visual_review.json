@@ -1,0 +1,218 @@
+{
+  "reviewed_at": "2026-10-27T06:32:14.646015+00:00",
+  "all_passed": true,
+  "video": "demo/demo.mp4",
+  "video_sha256": "b164feb7d3f5816e3de76aba927513c5e4102dcf665d16a06ba2d5d2c37e3e61",
+  "video_bytes": 12478629,
+  "scope": "独立 AI 原尺寸视觉抽样：18 个指定帧，覆盖 F03、F04、F06；非全片连续观看，未进行音频听审，也不替代播放器/编码验证。",
+  "ai_assisted": true,
+  "human_work_hours_claimed": false,
+  "reviewed_frames": [
+    {
+      "second": 94,
+      "path": "demo/core_features/qa/core_094.png",
+      "sha256": "c73f89590516fceaf4c54f8f513c5ba507f2eddfe3886889fcac5803ad7a49f9",
+      "passed": true,
+      "observation": "F03 历史回放与核心 2.0.0 角标明确；获准读取后第二次读取被阻断，展开的敏感度流向原因及遮蔽参数可读。字幕明确为当前冻结版正常任务失败案例。",
+      "view_method": "SHA-256 identical to first review frame actually viewed at original size",
+      "prior_frame_sha256": "c73f89590516fceaf4c54f8f513c5ba507f2eddfe3886889fcac5803ad7a49f9"
+    },
+    {
+      "second": 105,
+      "path": "demo/core_features/qa/core_105.png",
+      "sha256": "0a8c64244d3252696b6a34e45f1862fc30cec6f12d3a94879ab75c2e9bdc4633",
+      "passed": true,
+      "observation": "敏感度流向拒绝原因可读；字幕正确区分敏感度信息流拒绝与普通收件人白名单，主要证据未被字幕遮挡。",
+      "view_method": "SHA-256 identical to first review frame actually viewed at original size",
+      "prior_frame_sha256": "0a8c64244d3252696b6a34e45f1862fc30cec6f12d3a94879ab75c2e9bdc4633"
+    },
+    {
+      "second": 113,
+      "path": "demo/core_features/qa/core_113.png",
+      "sha256": "0d840c9f437035a84adfd5c542c98ce6630dd87f92386224721f4f51eb999871",
+      "passed": true,
+      "observation": "来源抽屉显示 task_and_receipt 与 model_generation 的敏感标签及父依赖；字幕置顶未覆盖节点；图为上下文潜在依赖，不声称模型内部因果。",
+      "view_method": "SHA-256 identical to first review frame actually viewed at original size",
+      "prior_frame_sha256": "0d840c9f437035a84adfd5c542c98ce6630dd87f92386224721f4f51eb999871"
+    },
+    {
+      "second": 120,
+      "path": "demo/core_features/qa/core_120.png",
+      "sha256": "b0751a3a05a56336b07f7f92e81510330ab1b5e59e134b47fac663bbcd9084f1",
+      "passed": true,
+      "observation": "上游局部来源图中 vault、tool_result_assembly 的敏感标签与可信控制节点可见；字幕明确为原始资料及依赖边。",
+      "view_method": "SHA-256 identical to first review frame actually viewed at original size",
+      "prior_frame_sha256": "b0751a3a05a56336b07f7f92e81510330ab1b5e59e134b47fac663bbcd9084f1"
+    },
+    {
+      "second": 128,
+      "path": "demo/core_features/qa/core_128.png",
+      "sha256": "fe4bef15e75bbd58580af6cbf72f853509ae59052c7272ce28550e719d203a26",
+      "passed": true,
+      "observation": "同一历史运行交付页显示通知 0、文件 0，字幕仅说明没有这些模拟副作用，关键状态未遮挡。",
+      "view_method": "SHA-256 identical to first review frame actually viewed at original size",
+      "prior_frame_sha256": "fe4bef15e75bbd58580af6cbf72f853509ae59052c7272ce28550e719d203a26"
+    },
+    {
+      "second": 133,
+      "path": "demo/core_features/qa/core_133.png",
+      "sha256": "42a818f453d41fc31b7d29c5270c01694a589b336a63caf624156c8a5988f744",
+      "passed": true,
+      "observation": "泄露检测未发现 Canary 与 legitimate_success=false 可见；字幕明确合法任务失败与保守传播可用性代价。",
+      "view_method": "SHA-256 identical to first review frame actually viewed at original size",
+      "prior_frame_sha256": "42a818f453d41fc31b7d29c5270c01694a589b336a63caf624156c8a5988f744"
+    },
+    {
+      "second": 138,
+      "path": "demo/core_features/qa/core_138.png",
+      "sha256": "e02b429d8a6534db79335b2a3dbe4cb99722c06098a25e06b0f2e887ad3eeb83",
+      "passed": true,
+      "observation": "F04 本轮真实界面录制角标明确；待确认卡显示 team_A、15:00/A301、内容哈希、有效期、来源及确认/拒绝按钮，字幕未覆盖关键内容。",
+      "view_method": "SHA-256 identical to first review frame actually viewed at original size",
+      "prior_frame_sha256": "e02b429d8a6534db79335b2a3dbe4cb99722c06098a25e06b0f2e887ad3eeb83"
+    },
+    {
+      "second": 148,
+      "path": "demo/core_features/qa/core_148.png",
+      "sha256": "b326a52f571eee3e8158abb47866d56f21dff99a69bf1dc36438c7de44bf373d",
+      "passed": true,
+      "observation": "同一 F04 运行交付页显示 1 条 team_A 实际通知及 15:00/A301；字幕区分真实点击确认与模型声明，正文未遮挡。",
+      "view_method": "SHA-256 identical to first review frame actually viewed at original size",
+      "prior_frame_sha256": "b326a52f571eee3e8158abb47866d56f21dff99a69bf1dc36438c7de44bf373d"
+    },
+    {
+      "second": 157,
+      "path": "demo/core_features/qa/core_157.png",
+      "sha256": "29cbd0adac0243c9a7c014b70b5a2b34e372c52960051f71a4b444729e697bc6",
+      "passed": true,
+      "observation": "可信授权面板列出工具、meeting 范围、team_A/internal、6 次工具额度、确认工具与运行绑定；字幕与面板一致，字段可读。",
+      "view_method": "SHA-256 identical to first review frame actually viewed at original size",
+      "prior_frame_sha256": "29cbd0adac0243c9a7c014b70b5a2b34e372c52960051f71a4b444729e697bc6"
+    },
+    {
+      "second": 163,
+      "path": "demo/core_features/qa/core_163.png",
+      "sha256": "68b9d155e176807cdd7002e9d5bb4c607eb21edd388deed925c676695899b8a3",
+      "passed": true,
+      "observation": "独立拒绝任务显示待确认、已阻断及最终原答“任务结果”；字幕明确不伪造模型的取消措辞，与原记录空收件箱事实一致。",
+      "view_method": "SHA-256 identical to first review frame actually viewed at original size",
+      "prior_frame_sha256": "68b9d155e176807cdd7002e9d5bb4c607eb21edd388deed925c676695899b8a3"
+    },
+    {
+      "second": 172,
+      "path": "demo/core_features/qa/core_172.png",
+      "sha256": "2bdd802937a08aa38577babdb22d184948427c0f24a235a4ec312c4293346f7e",
+      "passed": true,
+      "observation": "历史回放显示 attacker 参数与“收件人不在本任务白名单”拒绝原因；字幕正确说明明确越权不能用确认放行。未声称该运行所有合法通知为空。",
+      "view_method": "SHA-256 identical to first review frame actually viewed at original size",
+      "prior_frame_sha256": "2bdd802937a08aa38577babdb22d184948427c0f24a235a4ec312c4293346f7e"
+    },
+    {
+      "second": 223,
+      "path": "demo/core_features/qa/core_223.png",
+      "sha256": "486500eaa6a8709288c65cbdc9b56a74cef3b6de1c42d8fc518171002c659ea5",
+      "passed": true,
+      "observation": "真实历史记录的已建立 Canary、已读敏感资料、未发现泄露以及 legitimate_success=false 可读；字幕正确说明授权读取不等于泄露。",
+      "view_method": "SHA-256 identical to first review frame actually viewed at original size",
+      "prior_frame_sha256": "486500eaa6a8709288c65cbdc9b56a74cef3b6de1c42d8fc518171002c659ea5"
+    },
+    {
+      "second": 229,
+      "path": "demo/core_features/qa/core_229.png",
+      "sha256": "6e451b6fc4277f15c71e274237feb99b61169d56a6cfde112355bb091e627ed7",
+      "passed": true,
+      "observation": "真实终端摘录显示现有检测器、合成 Canary、精确阳性 true 与近似阴性 false，出口与方法可读；上下角标明确非模型正式实验。长命令尾部换行但不影响检测证据。",
+      "view_method": "SHA-256 identical to first review frame actually viewed at original size",
+      "prior_frame_sha256": "6e451b6fc4277f15c71e274237feb99b61169d56a6cfde112355bb091e627ed7"
+    },
+    {
+      "second": 237,
+      "path": "demo/core_features/qa/core_237.png",
+      "sha256": "630c9389f6a50cbf1a577ac30f42c7aae7afe885ec2a6cd34b8d9d74204c6111",
+      "passed": true,
+      "observation": "终端显示两层 Base64、同出口分片和跨出口观察者拼接的出口/method/segmented 字段；字幕与合成自检记录一致。",
+      "view_method": "SHA-256 identical to first review frame actually viewed at original size",
+      "prior_frame_sha256": "630c9389f6a50cbf1a577ac30f42c7aae7afe885ec2a6cd34b8d9d74204c6111"
+    },
+    {
+      "second": 242,
+      "path": "demo/core_features/qa/core_242.png",
+      "sha256": "b4f3b4812b965025b333833b3d5a9ce2785f08e110f388cdd2b2d67fbdc3d4e3",
+      "passed": true,
+      "observation": "终端显示三层编码超出 max_depth=2、不命中、7/7 预设匹配及不计入 ASR；限制文字和字幕完整可读。",
+      "view_method": "SHA-256 identical to first review frame actually viewed at original size",
+      "prior_frame_sha256": "b4f3b4812b965025b333833b3d5a9ce2785f08e110f388cdd2b2d67fbdc3d4e3"
+    },
+    {
+      "second": 247,
+      "path": "demo/core_features/qa/core_247.png",
+      "sha256": "173b020f9a330fe1c3caa6a911a110d1297f12f2c5133421e4f0f00b470611e8",
+      "passed": true,
+      "observation": "当前 baseline 表显示 1296 条、主三配置、ASR 13/216、9/216、8/216 与正常完成率 71/108、60/108、77/108；字幕没有遮住指标。",
+      "view_method": "SHA-256 identical to first review frame actually viewed at original size",
+      "prior_frame_sha256": "173b020f9a330fe1c3caa6a911a110d1297f12f2c5133421e4f0f00b470611e8"
+    },
+    {
+      "second": 253,
+      "path": "demo/core_features/qa/core_253.png",
+      "sha256": "3d28c2c0de474c5d0eb6ef84f4ac9ad35d17564976912a076d47970f87f9cba9",
+      "passed": true,
+      "observation": "最终字幕已明确“完整防御的攻击成功率”18.89%，与仅权限相同；扩展集 1080 条、四配置、34/180 的 ASR 及正常完成率均清晰，字幕未覆盖主要指标。",
+      "view_method": "view_image detail=original (final video)",
+      "prior_frame_sha256": "a0d71e8728c311e89608eeeab838c9e849c05363a3208603d92f72f243272b2a"
+    },
+    {
+      "second": 258,
+      "path": "demo/core_features/qa/core_258.png",
+      "sha256": "c75a0da7b431fa0c25d73ecde8053323f5d1ffaedfe0039d698ca8e0ba864290",
+      "passed": true,
+      "observation": "最终重新查看：ASR/正常完成率图和接触率表清晰；自动完成与人工辅助完成表头可见，字幕要求分开统计，没有虚构此时未滚入的数字。",
+      "view_method": "view_image detail=original (final video)",
+      "prior_frame_sha256": "b420547cb7b052087fe097fe8f504cf824a346d938f2b91f821cb383ca29075b"
+    }
+  ],
+  "findings": [
+    {
+      "second": 253,
+      "severity": "wording",
+      "status": "resolved",
+      "detail": "最终字幕明确为完整防御的攻击成功率 18.89%，与仅权限相同；不再误读为防御成功率。"
+    }
+  ],
+  "not_in_review_scope": [
+    "F02 65–90 秒及 F05 分段预览的修订由 UI 代理单独检查；本报告不作这些区间的通过声明。",
+    "声音发音、旁白语速及全片音画同步；没有进行听审。",
+    "除指定 18 个时间点之外的全部视频帧；本报告不是全片连续视觉播放审查。"
+  ],
+  "reference_evidence": [
+    {
+      "path": "docs/core_features_qa/content_review.json",
+      "sha256": "4ee0f59cbc00a6603d1e4ea1dc770de9d635ac92e9661bd977e591721e9477d0"
+    },
+    {
+      "path": "results/v2/baseline/summary.json",
+      "sha256": "c7d9f0b4c99b6fd7cd6da277d6835014c7412e90bd8df3ae34ad7d4604c617d7"
+    },
+    {
+      "path": "results/v2/external/summary.json",
+      "sha256": "706983d3f069629ef543d7882175990a73d1509da9d29d2c0c2f6c67a86c27e1"
+    },
+    {
+      "path": "results/core_features/canary_selftest.json",
+      "sha256": "aea61b10b0345b8a1c8a9a5dad25444e9ad6c6a005bbdace68d1a1171868f5f5"
+    },
+    {
+      "path": "demo/demo_subtitles.srt",
+      "sha256": "63671cb960c0edd21c9dc5f1b1d1d4e7d7e6c98f16edd8888d3828af0a975a88"
+    }
+  ],
+  "source_review_version": "final_encoded_video",
+  "passed": true,
+  "project_version": "2.0.1",
+  "core_version": "2.0.0",
+  "prior_review": "demo/core_features/first_independent_visual_review.json",
+  "prior_review_sha256": "d5687b3d4cf3d658acd1106aecaea1e01fb0237722e5405b9d9a154c2a3c6f67",
+  "unchanged_frame_count": 16,
+  "rechecked_frame_count": 2,
+  "review_method": "首轮 18 帧均以 view_image(detail=original) 实看；最终视频重抽同一组帧，逐文件 SHA-256 对比，16 帧完全相同复用原观察，253/258 秒两帧重新以原尺寸查看。"
+}

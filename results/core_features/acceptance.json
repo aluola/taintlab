@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "created_at_utc": "2026-10-27T06:36:45.518660+00:00",
+  "release_version": "2.0.1",
+  "runtime_version": "2.0.0",
+  "phase": "completed_local_materials_before_public_PR_merge",
+  "all_passed": true,
+  "checks": {
+    "core_document": true,
+    "development_document": true,
+    "user_manual": true,
+    "video_decode_and_encoding": true,
+    "real_browser_playback": true,
+    "video_visual_review": true,
+    "same_video_in_all_reviews": true,
+    "full_pytest": true,
+    "all_protected_bytes": true,
+    "formal_recomputation": true,
+    "runtime_fingerprint_unchanged": true,
+    "canary_synthetic_controls": true
+  },
+  "evidence": {
+    "docs/core_features_qa/validation.json": "3fffa621aa9bdd39add66a8b2363412c9666f263303f57632372eea874c6fecd",
+    "docs/core_features_qa/visual_review.json": "9c0bcc3d21ba208835b43944524ed7c73dd745d94e3b404c3d10598c667c9d91",
+    "docs/core_features_qa/content_review.json": "4ee0f59cbc00a6603d1e4ea1dc770de9d635ac92e9661bd977e591721e9477d0",
+    "docs/development_delivery_qa/validation.json": "6a5e877ea1db65ebb0990ff0b78a9990f80d1f27903198056ff6db346e4d58b6",
+    "docs/development_delivery_qa/visual_review.json": "6f5c9ed9b8e492e41d332457040ca15dcf9ca63c0aaeebc9646fb52ffb5455a5",
+    "docs/publication/manual_qa/manual_validation.json": "1dd023088d4b5c01695275280851cf8ecb4176d111c26982f6b309a903536ca6",
+    "docs/publication/manual_qa/visual_review.json": "30cf8aaadee4f720ff63c59e318280a0b5e314b7f871ed90156fcf62f15fb3d0",
+    "docs/assets/core-features/visual_review.json": "20265c8b4a187c73d5559003df2d3ad7716c082c26e7b501d6cdb80d47f83adc",
+    "demo/video_validation.json": "a65f2d86b3214f7ef1a89bc421bef571c6649f0413b174a2339decb1e39d5c23",
+    "demo/playback_validation.json": "430be72e3ba39ec08da47a0fb5cd78489a1bb1527e62039902dd5d3f5af428c2",
+    "demo/core_features/visual_review.json": "ebdb1b25fdbe650698d289c2e725aa2e4f8f84a2dee3cbecb49f04e72bb6236e",
+    "demo/core_features/independent_visual_review.json": "d7683739b489ae19c7741dcf63ff30e496e0531fd82578a56465f15d66e05ab1",
+    "results/core_features/validation/pytest_release.xml": "1fb72e87d67eb0861bca0ee57076d7e24109553405eafaef321cea6629d2a822",
+    "results/core_features/validation/test_summary_priority.xml": "0c8ccf37f4727f1f47580dad5b72c228c0aa0d41093190fb5d27216cb2255fd8",
+    "results/core_features/packaging_tests.xml": "6a3cb11af237fe87c85e47fba450d8ab3693d6d74586bd90c7964ac845e8ab77",
+    "results/core_features/final_integrity.json": "13db2c8ad6c49610fb42bc648d6fe179c3882a225cedd8c426a76fd18b722d86",
+    "results/core_features/validation/integrity_validation.json": "c92f98760d35371183de26c5802379d9ce5823dfa778b0ae8c11421f29423bf8",
+    "results/core_features/canary_selftest.json": "aea61b10b0345b8a1c8a9a5dad25444e9ad6c6a005bbdace68d1a1171868f5f5",
+    "results/core_features/performance_summary.json": "aef6382720f6a40ae20f860d396813a851803f0821c9c825bc404405a667b635",
+    "docs/FEATURE_EVIDENCE_MATRIX.md": "98294df9dc38e72ce16106287b49cfe8a9a8974b38aba6c1757c3753174056e0"
+  },
+  "formal_records": 3672,
+  "new_formal_experiments": 0,
+  "current_formal_records_recomputed": 2376,
+  "runtime_sha256": "920e27e30483f7f62ea38a7252d400ff0fb903435eaaefce50df582e37218cec",
+  "tests": {
+    "name": "pytest",
+    "errors": "0",
+    "failures": "0",
+    "skipped": "0",
+    "tests": "473",
+    "time": "168.218",
+    "timestamp": "2026-10-27T14:21:52.964980+08:00"
+  },
+  "documents": {
+    "CORE_FEATURES_GUIDE": 38,
+    "DEVELOPMENT_AND_DELIVERY": 14,
+    "USER_MANUAL": 32
+  },
+  "video": {
+    "bytes": 12478629,
+    "sha256": "b164feb7d3f5816e3de76aba927513c5e4102dcf665d16a06ba2d5d2c37e3e61",
+    "duration_seconds": 270,
+    "playback_positions": 32,
+    "key_frames": 36,
+    "human_complete_audio_review": false
+  },
+  "new_operations": "Four actual normal tools, actual upload and provenance, confirmation and refusal, four generated attack views and actual local runs. F03 is a failed normal-task replay. See evidence matrix for per-run facts and preserved failures.",
+  "memory_sampling": "Four warmed-service tasks, 88 process samples; not a new computer or cold-start benchmark.",
+  "installation_scope": "No new fresh-machine installation in this documentation round; v2.0.0 cached new-venv evidence remains explicitly historical.",
+  "publication_scope": "Source/merge/tag/package/anonymous download receipts are written separately after publication; this local receipt does not claim a remote merge or download.",
+  "limitations": [
+    "Public adaptation subsets are not full official benchmark reproductions.",
+    "No demonstrated independent taint benefit; no post-block fully safe legitimate-task completion.",
+    "Zero Canary leakage also in none is not causal defense evidence.",
+    "Five member identities, actual contributions and human hours remain to be supplied.",
+    "No full human audio review; objective audio checks and actual muted browser playback are distinguished."
+  ],
+  "evidence_hash_scope": "Locally validated source files before explicit public projection. For summarized JUnit or manual QA records compare this hash with the published original_evidence_sha256; PUBLICATION_MANIFEST gives the actual published file SHA256.",
+  "additional_targeted_regressions": {
+    "source": "results/core_features/validation/public_reference_projection_tests.xml",
+    "source_sha256": "04a07769a907aabdf6406d8bdcaab7ae54b87886ff263848c44de1851289f1a5",
+    "passed": 4,
+    "scope": "Public evidence reference projection fix; overlaps the full suite and is not summed as a new full-suite count."
+  }
+}

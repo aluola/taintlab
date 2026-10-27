@@ -1,0 +1,765 @@
+{
+  "project_version": "2.0.0",
+  "runtime_version": "2.0.0",
+  "release_version": "2.0.1",
+  "created_at_utc": "2026-10-27T06:17:12.524845+00:00",
+  "duration_seconds": 270,
+  "clips": [
+    {
+      "index": 0,
+      "source_key": "home",
+      "source_path": "demo/core_features/raw/2026-10-27T05-56-12-690Z/page@a47c3f6756ce57b1a613163cab8ed99c.webm",
+      "source_sha256": "07ef4b223e5e498f46510f70c5fa90870b5ec22fa3d37e4a1dde46575c4fcb65",
+      "source_start_seconds": 3,
+      "duration_seconds": 10,
+      "output_start_seconds": 0,
+      "output_end_seconds": 10,
+      "chapter": "INTRO",
+      "description": "本地模型配置与真实界面",
+      "kind": "actual_ui_recording",
+      "crop": null,
+      "speed": 1.0,
+      "freeze_extension": false
+    },
+    {
+      "index": 1,
+      "source_key": "tools",
+      "source_path": "demo/core_features/raw/2026-10-27T05-35-28-123Z/page@9bd63cc1f524b09fab6e36cf1282e13c.webm",
+      "source_sha256": "6c56aae6ca3601910bd4478d6f343224d597cdc9eb22387e7e90912a442efb15",
+      "source_start_seconds": 5.8,
+      "duration_seconds": 8,
+      "output_start_seconds": 10,
+      "output_end_seconds": 18,
+      "chapter": "F01",
+      "description": "真实读取动作",
+      "kind": "actual_ui_recording",
+      "crop": null,
+      "speed": 1.0,
+      "freeze_extension": false
+    },
+    {
+      "index": 2,
+      "source_key": "tools",
+      "source_path": "demo/core_features/raw/2026-10-27T05-35-28-123Z/page@9bd63cc1f524b09fab6e36cf1282e13c.webm",
+      "source_sha256": "6c56aae6ca3601910bd4478d6f343224d597cdc9eb22387e7e90912a442efb15",
+      "source_start_seconds": 15,
+      "duration_seconds": 8,
+      "output_start_seconds": 18,
+      "output_end_seconds": 26,
+      "chapter": "F01",
+      "description": "真实查询动作",
+      "kind": "actual_ui_recording",
+      "crop": null,
+      "speed": 1.0,
+      "freeze_extension": false
+    },
+    {
+      "index": 3,
+      "source_key": "tools",
+      "source_path": "demo/core_features/raw/2026-10-27T05-35-28-123Z/page@9bd63cc1f524b09fab6e36cf1282e13c.webm",
+      "source_sha256": "6c56aae6ca3601910bd4478d6f343224d597cdc9eb22387e7e90912a442efb15",
+      "source_start_seconds": 29.5,
+      "duration_seconds": 15,
+      "output_start_seconds": 26,
+      "output_end_seconds": 41,
+      "chapter": "F01",
+      "description": "通知pending、点击确认、真实收件箱",
+      "kind": "actual_ui_recording",
+      "crop": null,
+      "speed": 1.0,
+      "freeze_extension": false
+    },
+    {
+      "index": 4,
+      "source_key": "tools",
+      "source_path": "demo/core_features/raw/2026-10-27T05-35-28-123Z/page@9bd63cc1f524b09fab6e36cf1282e13c.webm",
+      "source_sha256": "6c56aae6ca3601910bd4478d6f343224d597cdc9eb22387e7e90912a442efb15",
+      "source_start_seconds": 58.2,
+      "duration_seconds": 10,
+      "output_start_seconds": 41,
+      "output_end_seconds": 51,
+      "chapter": "F01",
+      "description": "确认导出、实际点击下载",
+      "kind": "actual_ui_recording",
+      "crop": null,
+      "speed": 1.0,
+      "freeze_extension": false
+    },
+    {
+      "index": 5,
+      "source_key": "attacks",
+      "source_path": "demo/core_features/raw/2026-10-27T05-39-57-717Z/page@1cf45c6ce58e24dafdfb19a742b20157.webm",
+      "source_sha256": "8e681f7254aff8cd63d428cacc527cdba07eee1800f3e3f4ef1a7a2998021d6b",
+      "source_start_seconds": 16,
+      "duration_seconds": 4,
+      "output_start_seconds": 51,
+      "output_end_seconds": 55,
+      "chapter": "F01",
+      "description": "实际攻击提出vault读取并被拒",
+      "kind": "actual_ui_recording",
+      "crop": null,
+      "speed": 1.0,
+      "freeze_extension": false
+    },
+    {
+      "index": 6,
+      "source_key": "upload",
+      "source_path": "demo/core_features/raw/2026-10-27T06-03-17-405Z/page@9b18c8cef47269f48b752062ce88feaf.webm",
+      "source_sha256": "be2f89783fbd575c8cb67d2dd2c7c9a33f1f9b91e04744fbd78912eb30acfded",
+      "source_start_seconds": 3,
+      "duration_seconds": 35,
+      "output_start_seconds": 55,
+      "output_end_seconds": 90,
+      "chapter": "F02",
+      "description": "本轮上传81665601：登记、勾选、实际读取、来源与父链",
+      "kind": "actual_ui_recording",
+      "crop": null,
+      "speed": 1.0,
+      "freeze_extension": false
+    },
+    {
+      "index": 7,
+      "source_key": "review",
+      "source_path": "demo/core_features/raw/2026-10-27T05-33-38-488Z/page@2df351c88e6f84337a2efc3fe6d09b31.webm",
+      "source_sha256": "5cc59484fa73452e4afda20784024a66aa7ca868e311ff0b6fa4dd238c666b77",
+      "source_start_seconds": 19.6,
+      "duration_seconds": 8,
+      "output_start_seconds": 90,
+      "output_end_seconds": 98,
+      "chapter": "F03",
+      "description": "同一正常失败02e896c7真实回放",
+      "kind": "real_record_replay",
+      "crop": null,
+      "speed": 1.0,
+      "freeze_extension": false
+    },
+    {
+      "index": 8,
+      "source_key": "flow",
+      "source_path": "demo/core_features/raw/2026-10-27T05-40-08-159Z/page@944910090c3156a74caa073403186ad1.webm",
+      "source_sha256": "042495a40c34e02c1ee413e11d09b95fa149f14262b71c0d7fa2c39146cc038e",
+      "source_start_seconds": 4.6,
+      "duration_seconds": 37,
+      "output_start_seconds": 98,
+      "output_end_seconds": 135,
+      "chapter": "F03",
+      "description": "重新打开同一真实记录，flow拒绝、动作、上游、空状态与失败断言",
+      "kind": "real_record_replay",
+      "crop": null,
+      "speed": 1.0,
+      "freeze_extension": false
+    },
+    {
+      "index": 9,
+      "source_key": "tools",
+      "source_path": "demo/core_features/raw/2026-10-27T05-35-28-123Z/page@9bd63cc1f524b09fab6e36cf1282e13c.webm",
+      "source_sha256": "6c56aae6ca3601910bd4478d6f343224d597cdc9eb22387e7e90912a442efb15",
+      "source_start_seconds": 26.6,
+      "duration_seconds": 8,
+      "output_start_seconds": 135,
+      "output_end_seconds": 143,
+      "chapter": "F04",
+      "description": "同一通知pending绑定复看",
+      "kind": "actual_ui_recording",
+      "crop": null,
+      "speed": 1.0,
+      "freeze_extension": false
+    },
+    {
+      "index": 10,
+      "source_key": "tools",
+      "source_path": "demo/core_features/raw/2026-10-27T05-35-28-123Z/page@9bd63cc1f524b09fab6e36cf1282e13c.webm",
+      "source_sha256": "6c56aae6ca3601910bd4478d6f343224d597cdc9eb22387e7e90912a442efb15",
+      "source_start_seconds": 34,
+      "duration_seconds": 11,
+      "output_start_seconds": 143,
+      "output_end_seconds": 154,
+      "chapter": "F04",
+      "description": "同一通知确认操作与收件箱复看",
+      "kind": "actual_ui_recording",
+      "crop": null,
+      "speed": 1.0,
+      "freeze_extension": false
+    },
+    {
+      "index": 11,
+      "source_key": "tools",
+      "source_path": "demo/core_features/raw/2026-10-27T05-35-28-123Z/page@9bd63cc1f524b09fab6e36cf1282e13c.webm",
+      "source_sha256": "6c56aae6ca3601910bd4478d6f343224d597cdc9eb22387e7e90912a442efb15",
+      "source_start_seconds": 45,
+      "duration_seconds": 6,
+      "output_start_seconds": 154,
+      "output_end_seconds": 160,
+      "chapter": "F04",
+      "description": "实际授权与额度",
+      "kind": "actual_ui_recording",
+      "crop": null,
+      "speed": 1.0,
+      "freeze_extension": false
+    },
+    {
+      "index": 12,
+      "source_key": "tools",
+      "source_path": "demo/core_features/raw/2026-10-27T05-35-28-123Z/page@9bd63cc1f524b09fab6e36cf1282e13c.webm",
+      "source_sha256": "6c56aae6ca3601910bd4478d6f343224d597cdc9eb22387e7e90912a442efb15",
+      "source_start_seconds": 94.8,
+      "duration_seconds": 10,
+      "output_start_seconds": 160,
+      "output_end_seconds": 170,
+      "chapter": "F04",
+      "description": "独立6924078b实际点击拒绝且无副作用",
+      "kind": "actual_ui_recording",
+      "crop": null,
+      "speed": 1.0,
+      "freeze_extension": false
+    },
+    {
+      "index": 13,
+      "source_key": "review",
+      "source_path": "demo/core_features/raw/2026-10-27T05-33-38-488Z/page@2df351c88e6f84337a2efc3fe6d09b31.webm",
+      "source_sha256": "5cc59484fa73452e4afda20784024a66aa7ca868e311ff0b6fa4dd238c666b77",
+      "source_start_seconds": 50.2,
+      "duration_seconds": 5,
+      "output_start_seconds": 170,
+      "output_end_seconds": 175,
+      "chapter": "F04",
+      "description": "direct_11越权收件人直接拒绝的真实回放",
+      "kind": "real_record_replay",
+      "crop": null,
+      "speed": 1.0,
+      "freeze_extension": false
+    },
+    {
+      "index": 14,
+      "source_key": "attacks",
+      "source_path": "demo/core_features/raw/2026-10-27T05-39-57-717Z/page@1cf45c6ce58e24dafdfb19a742b20157.webm",
+      "source_sha256": "8e681f7254aff8cd63d428cacc527cdba07eee1800f3e3f4ef1a7a2998021d6b",
+      "source_start_seconds": 1.8,
+      "duration_seconds": 5,
+      "output_start_seconds": 175,
+      "output_end_seconds": 180,
+      "chapter": "F05",
+      "description": "直接模板真实生成预览",
+      "kind": "actual_ui_recording",
+      "crop": null,
+      "speed": 1.0,
+      "freeze_extension": false
+    },
+    {
+      "index": 15,
+      "source_key": "attacks",
+      "source_path": "demo/core_features/raw/2026-10-27T05-39-57-717Z/page@1cf45c6ce58e24dafdfb19a742b20157.webm",
+      "source_sha256": "8e681f7254aff8cd63d428cacc527cdba07eee1800f3e3f4ef1a7a2998021d6b",
+      "source_start_seconds": 14.8,
+      "duration_seconds": 5,
+      "output_start_seconds": 180,
+      "output_end_seconds": 185,
+      "chapter": "F05",
+      "description": "直接模板实际运行结果",
+      "kind": "actual_ui_recording",
+      "crop": null,
+      "speed": 1.0,
+      "freeze_extension": false
+    },
+    {
+      "index": 16,
+      "source_key": "attacks",
+      "source_path": "demo/core_features/raw/2026-10-27T05-39-57-717Z/page@1cf45c6ce58e24dafdfb19a742b20157.webm",
+      "source_sha256": "8e681f7254aff8cd63d428cacc527cdba07eee1800f3e3f4ef1a7a2998021d6b",
+      "source_start_seconds": 21.5,
+      "duration_seconds": 5,
+      "output_start_seconds": 185,
+      "output_end_seconds": 190,
+      "chapter": "F05",
+      "description": "间接模板真实生成预览",
+      "kind": "actual_ui_recording",
+      "crop": null,
+      "speed": 1.0,
+      "freeze_extension": false
+    },
+    {
+      "index": 17,
+      "source_key": "attacks",
+      "source_path": "demo/core_features/raw/2026-10-27T05-39-57-717Z/page@1cf45c6ce58e24dafdfb19a742b20157.webm",
+      "source_sha256": "8e681f7254aff8cd63d428cacc527cdba07eee1800f3e3f4ef1a7a2998021d6b",
+      "source_start_seconds": 32,
+      "duration_seconds": 5,
+      "output_start_seconds": 190,
+      "output_end_seconds": 195,
+      "chapter": "F05",
+      "description": "间接模板实际读取结果",
+      "kind": "actual_ui_recording",
+      "crop": null,
+      "speed": 1.0,
+      "freeze_extension": false
+    },
+    {
+      "index": 18,
+      "source_key": "attacks",
+      "source_path": "demo/core_features/raw/2026-10-27T05-39-57-717Z/page@1cf45c6ce58e24dafdfb19a742b20157.webm",
+      "source_sha256": "8e681f7254aff8cd63d428cacc527cdba07eee1800f3e3f4ef1a7a2998021d6b",
+      "source_start_seconds": 38.7,
+      "duration_seconds": 5,
+      "output_start_seconds": 195,
+      "output_end_seconds": 200,
+      "chapter": "F05",
+      "description": "编码模板真实生成预览",
+      "kind": "actual_ui_recording",
+      "crop": null,
+      "speed": 1.0,
+      "freeze_extension": false
+    },
+    {
+      "index": 19,
+      "source_key": "attacks",
+      "source_path": "demo/core_features/raw/2026-10-27T05-39-57-717Z/page@1cf45c6ce58e24dafdfb19a742b20157.webm",
+      "source_sha256": "8e681f7254aff8cd63d428cacc527cdba07eee1800f3e3f4ef1a7a2998021d6b",
+      "source_start_seconds": 49,
+      "duration_seconds": 5,
+      "output_start_seconds": 200,
+      "output_end_seconds": 205,
+      "chapter": "F05",
+      "description": "编码模板实际读取结果",
+      "kind": "actual_ui_recording",
+      "crop": null,
+      "speed": 1.0,
+      "freeze_extension": false
+    },
+    {
+      "index": 20,
+      "source_key": "attacks",
+      "source_path": "demo/core_features/raw/2026-10-27T05-39-57-717Z/page@1cf45c6ce58e24dafdfb19a742b20157.webm",
+      "source_sha256": "8e681f7254aff8cd63d428cacc527cdba07eee1800f3e3f4ef1a7a2998021d6b",
+      "source_start_seconds": 55.8,
+      "duration_seconds": 9,
+      "output_start_seconds": 205,
+      "output_end_seconds": 214,
+      "chapter": "F05",
+      "description": "分段模板两来源预览并实际点击运行",
+      "kind": "actual_ui_recording",
+      "crop": null,
+      "speed": 1.0,
+      "freeze_extension": false
+    },
+    {
+      "index": 21,
+      "source_key": "attacks",
+      "source_path": "demo/core_features/raw/2026-10-27T05-39-57-717Z/page@1cf45c6ce58e24dafdfb19a742b20157.webm",
+      "source_sha256": "8e681f7254aff8cd63d428cacc527cdba07eee1800f3e3f4ef1a7a2998021d6b",
+      "source_start_seconds": 66,
+      "duration_seconds": 6,
+      "output_start_seconds": 214,
+      "output_end_seconds": 220,
+      "chapter": "F05",
+      "description": "分段模板仅读patch的实际结果",
+      "kind": "actual_ui_recording",
+      "crop": null,
+      "speed": 1.0,
+      "freeze_extension": false
+    },
+    {
+      "index": 22,
+      "source_key": "flow",
+      "source_path": "demo/core_features/raw/2026-10-27T05-40-08-159Z/page@944910090c3156a74caa073403186ad1.webm",
+      "source_sha256": "042495a40c34e02c1ee413e11d09b95fa149f14262b71c0d7fa2c39146cc038e",
+      "source_start_seconds": 35.7,
+      "duration_seconds": 5,
+      "output_start_seconds": 220,
+      "output_end_seconds": 225,
+      "chapter": "F06",
+      "description": "真实记录Canary状态，敏感读取不等于泄露",
+      "kind": "real_record_replay",
+      "crop": null,
+      "speed": 1.0,
+      "freeze_extension": false
+    },
+    {
+      "index": 23,
+      "source_key": "console",
+      "source_path": "demo/core_features/raw/console_20261027T055111Z/console.mp4",
+      "source_sha256": "f1644ced11e7cff82dc540c1f244cc78ffc5f7d9025bbfbf12b75993439bdd60",
+      "source_start_seconds": 4,
+      "duration_seconds": 8,
+      "output_start_seconds": 225,
+      "output_end_seconds": 233,
+      "chapter": "F06",
+      "description": "实际检测器合成阳性/阴性自检",
+      "kind": "synthetic_detector_selfcheck",
+      "crop": [
+        0,
+        0,
+        1740,
+        480
+      ],
+      "speed": 1.0,
+      "freeze_extension": false
+    },
+    {
+      "index": 24,
+      "source_key": "console",
+      "source_path": "demo/core_features/raw/console_20261027T055111Z/console.mp4",
+      "source_sha256": "f1644ced11e7cff82dc540c1f244cc78ffc5f7d9025bbfbf12b75993439bdd60",
+      "source_start_seconds": 17,
+      "duration_seconds": 7,
+      "output_start_seconds": 233,
+      "output_end_seconds": 240,
+      "chapter": "F06",
+      "description": "实际两层编码与分片自检",
+      "kind": "synthetic_detector_selfcheck",
+      "crop": [
+        0,
+        0,
+        1740,
+        480
+      ],
+      "speed": 1.0,
+      "freeze_extension": false
+    },
+    {
+      "index": 25,
+      "source_key": "console",
+      "source_path": "demo/core_features/raw/console_20261027T055111Z/console.mp4",
+      "source_sha256": "f1644ced11e7cff82dc540c1f244cc78ffc5f7d9025bbfbf12b75993439bdd60",
+      "source_start_seconds": 29,
+      "duration_seconds": 4,
+      "output_start_seconds": 240,
+      "output_end_seconds": 244,
+      "chapter": "F06",
+      "description": "实际三层编码覆盖边界",
+      "kind": "synthetic_detector_selfcheck",
+      "crop": [
+        0,
+        0,
+        1740,
+        480
+      ],
+      "speed": 1.0,
+      "freeze_extension": false
+    },
+    {
+      "index": 26,
+      "source_key": "review",
+      "source_path": "demo/core_features/raw/2026-10-27T05-33-38-488Z/page@2df351c88e6f84337a2efc3fe6d09b31.webm",
+      "source_sha256": "5cc59484fa73452e4afda20784024a66aa7ca868e311ff0b6fa4dd238c666b77",
+      "source_start_seconds": 62.6,
+      "duration_seconds": 6,
+      "output_start_seconds": 244,
+      "output_end_seconds": 250,
+      "chapter": "F06",
+      "description": "当前正式基线三配置次数与分母",
+      "kind": "real_record_replay",
+      "crop": null,
+      "speed": 1.0,
+      "freeze_extension": false
+    },
+    {
+      "index": 27,
+      "source_key": "review",
+      "source_path": "demo/core_features/raw/2026-10-27T05-33-38-488Z/page@2df351c88e6f84337a2efc3fe6d09b31.webm",
+      "source_sha256": "5cc59484fa73452e4afda20784024a66aa7ca868e311ff0b6fa4dd238c666b77",
+      "source_start_seconds": 70.4,
+      "duration_seconds": 6,
+      "output_start_seconds": 250,
+      "output_end_seconds": 256,
+      "chapter": "F06",
+      "description": "当前扩展三配置及消融，34/180",
+      "kind": "real_record_replay",
+      "crop": null,
+      "speed": 1.0,
+      "freeze_extension": false
+    },
+    {
+      "index": 28,
+      "source_key": "review",
+      "source_path": "demo/core_features/raw/2026-10-27T05-33-38-488Z/page@2df351c88e6f84337a2efc3fe6d09b31.webm",
+      "source_sha256": "5cc59484fa73452e4afda20784024a66aa7ca868e311ff0b6fa4dd238c666b77",
+      "source_start_seconds": 78.2,
+      "duration_seconds": 4,
+      "output_start_seconds": 256,
+      "output_end_seconds": 260,
+      "chapter": "F06",
+      "description": "当前自动和辅助完成拆分",
+      "kind": "real_record_replay",
+      "crop": null,
+      "speed": 1.0,
+      "freeze_extension": false
+    },
+    {
+      "index": 29,
+      "source_key": "home",
+      "source_path": "demo/core_features/raw/2026-10-27T05-56-12-690Z/page@a47c3f6756ce57b1a613163cab8ed99c.webm",
+      "source_sha256": "07ef4b223e5e498f46510f70c5fa90870b5ec22fa3d37e4a1dde46575c4fcb65",
+      "source_start_seconds": 3,
+      "duration_seconds": 10,
+      "output_start_seconds": 260,
+      "output_end_seconds": 270,
+      "chapter": "OUTRO",
+      "description": "同一首页录制片段作为结束页，非新增运行",
+      "kind": "actual_ui_recording",
+      "crop": null,
+      "speed": 1.0,
+      "freeze_extension": false
+    }
+  ],
+  "feature_chapters": [
+    {
+      "id": "F01",
+      "start_seconds": 10,
+      "end_seconds": 55,
+      "operation_evidence": [
+        {
+          "path": "docs/assets/core-features/captures/2026-10-27T05-35-28-123Z/capture_manifest.json",
+          "sha256": "e3acad05741dacea37c2771852333daf32f51dc9ab8e3c8f058bf7b8e9df9731"
+        },
+        {
+          "path": "docs/assets/core-features/captures/2026-10-27T05-39-57-717Z/capture_manifest.json",
+          "sha256": "5d5ac053ffb2e1149def834e52bde929fa7fd121b79d0d7a0774b58c5b6e2e67"
+        }
+      ],
+      "result_evidence": [
+        {
+          "path": "results/core_features/demo_runs/0067a37dafcc42a596d3aaddafb82c5a.json",
+          "sha256": "73874ebd79877e6c405214d81dc0a36d64fcd07ba18838557bc962e4950024c8"
+        },
+        {
+          "path": "results/core_features/demo_runs/9d78bb66a8e946e78c0c91fae6e74774.json",
+          "sha256": "dff4dded6dd4c54defc2b9b7b122734b49d9a80ef832ab56967d27d8257c1028"
+        },
+        {
+          "path": "results/core_features/demo_runs/e3a863e65ed147c497279253555f423f.json",
+          "sha256": "3c010eaa21a183c7086a3d2c80154707a22895a9b0a8a2aff25ee878e84268c2"
+        },
+        {
+          "path": "results/core_features/demo_runs/7c0b679ff6144abf9fb16222052d108e.json",
+          "sha256": "4fe40271907fe8b489cdf2a761b38d0d62dd8e39325a827ab55e9eab24d5b3a7"
+        },
+        {
+          "path": "results/core_features/demo_runs/13e8e74e39964b0d86cbb802f7d7ed56.json",
+          "sha256": "09976a5538b4f03a9f32027e8c0894f5e54dacf0ad6778b6ee563b13e2fff72b"
+        }
+      ]
+    },
+    {
+      "id": "F02",
+      "start_seconds": 55,
+      "end_seconds": 90,
+      "operation_evidence": [
+        {
+          "path": "docs/assets/core-features/captures/2026-10-27T06-03-17-405Z/capture_manifest.json",
+          "sha256": "9d0eacae2dfc8ae5fe9b2a5e086a63579501a8494722b9f9484d79ebd1ceb2ad"
+        }
+      ],
+      "result_evidence": [
+        {
+          "path": "results/core_features/demo_runs/81665601dc9c4c77bbc372817e24fdcc.json",
+          "sha256": "d5cd8a1193574a22ead27d07e329a1fa23c97a5716595edcb7429b9ebd28331c"
+        }
+      ]
+    },
+    {
+      "id": "F03",
+      "start_seconds": 90,
+      "end_seconds": 135,
+      "operation_evidence": [
+        {
+          "path": "docs/assets/core-features/captures/2026-10-27T05-33-38-488Z/capture_manifest.json",
+          "sha256": "1e513503f9f421991e4cb7dbcde5a839e13eab05a131f75563ec825aa09281fb"
+        },
+        {
+          "path": "docs/assets/core-features/captures/2026-10-27T05-40-08-159Z/capture_manifest.json",
+          "sha256": "cd9ea17d5cd6b23d93e439256a15961493c94c83300a777b7972f90bbd17ebd0"
+        }
+      ],
+      "result_evidence": [
+        {
+          "path": "results/core_features/demo_runs/02e896c79a27f017d77ac413.json",
+          "sha256": "a2ba7c5ee91c27b919bb10bb10ca565b435bfe79a5ad78ad86ccf1925614df00"
+        }
+      ]
+    },
+    {
+      "id": "F04",
+      "start_seconds": 135,
+      "end_seconds": 175,
+      "operation_evidence": [
+        {
+          "path": "docs/assets/core-features/captures/2026-10-27T05-35-28-123Z/capture_manifest.json",
+          "sha256": "e3acad05741dacea37c2771852333daf32f51dc9ab8e3c8f058bf7b8e9df9731"
+        },
+        {
+          "path": "docs/assets/core-features/captures/2026-10-27T05-33-38-488Z/capture_manifest.json",
+          "sha256": "1e513503f9f421991e4cb7dbcde5a839e13eab05a131f75563ec825aa09281fb"
+        }
+      ],
+      "result_evidence": [
+        {
+          "path": "results/core_features/demo_runs/e3a863e65ed147c497279253555f423f_pending.json",
+          "sha256": "cd8c2b374ac6e10a7ec0d5bea6c9989139d780e2cb77fdc309a736a7cf877700"
+        },
+        {
+          "path": "results/core_features/demo_runs/e3a863e65ed147c497279253555f423f.json",
+          "sha256": "3c010eaa21a183c7086a3d2c80154707a22895a9b0a8a2aff25ee878e84268c2"
+        },
+        {
+          "path": "results/core_features/demo_runs/6924078b8cf046c5b73c7098835a196e.json",
+          "sha256": "96c9776b515c3e4a454ebd897e7444213d914eb879dc01be3b7c3b752c775151"
+        },
+        {
+          "path": "results/core_features/demo_runs/b727ecd1317c41711cd49c98.json",
+          "sha256": "04d314a4b9b72415e4cff218a1417e434af23101630e9bce4e2590750a837e75"
+        }
+      ]
+    },
+    {
+      "id": "F05",
+      "start_seconds": 175,
+      "end_seconds": 220,
+      "operation_evidence": [
+        {
+          "path": "docs/assets/core-features/captures/2026-10-27T05-39-57-717Z/capture_manifest.json",
+          "sha256": "5d5ac053ffb2e1149def834e52bde929fa7fd121b79d0d7a0774b58c5b6e2e67"
+        }
+      ],
+      "result_evidence": [
+        {
+          "path": "results/core_features/demo_runs/13e8e74e39964b0d86cbb802f7d7ed56.json",
+          "sha256": "09976a5538b4f03a9f32027e8c0894f5e54dacf0ad6778b6ee563b13e2fff72b"
+        },
+        {
+          "path": "results/core_features/demo_runs/fea661ce276242058e9db166f7cb07a2.json",
+          "sha256": "454c0d8136e0c8ee7ffc33178b247dbdccaa91ea581620237e464410686db6fb"
+        },
+        {
+          "path": "results/core_features/demo_runs/f669a5e3fb324d6cb911480de1ccdca4.json",
+          "sha256": "680d7742f012d62f710ae1be602381ca24edb58b1aea23b363122a29e84abf5d"
+        },
+        {
+          "path": "results/core_features/demo_runs/adcc853ff57c476b9c896b49d523be18.json",
+          "sha256": "c6480398d43333e5e6a56057b8884f2256294dd7a4e7bc31abcd2324204e3520"
+        }
+      ]
+    },
+    {
+      "id": "F06",
+      "start_seconds": 220,
+      "end_seconds": 260,
+      "operation_evidence": [
+        {
+          "path": "docs/assets/core-features/captures/2026-10-27T05-40-08-159Z/capture_manifest.json",
+          "sha256": "cd9ea17d5cd6b23d93e439256a15961493c94c83300a777b7972f90bbd17ebd0"
+        },
+        {
+          "path": "docs/assets/core-features/captures/console_20261027T055111Z/capture_manifest.json",
+          "sha256": "76179ac8762fca19aaca8fa0bc794afb7802d9e00e867367333516974d8ec82c"
+        },
+        {
+          "path": "docs/assets/core-features/captures/2026-10-27T05-33-38-488Z/capture_manifest.json",
+          "sha256": "1e513503f9f421991e4cb7dbcde5a839e13eab05a131f75563ec825aa09281fb"
+        }
+      ],
+      "result_evidence": [
+        {
+          "path": "results/core_features/demo_runs/02e896c79a27f017d77ac413.json",
+          "sha256": "a2ba7c5ee91c27b919bb10bb10ca565b435bfe79a5ad78ad86ccf1925614df00"
+        },
+        {
+          "path": "results/core_features/canary/demo_selfcheck_console_20261027T055111Z.json",
+          "sha256": "a1ff6368de9cda47aa7650c47c79982eced63f59b5c6e8f6159ce5a17b5bcaef"
+        },
+        {
+          "path": "results/v2/baseline/summary.json",
+          "sha256": "c7d9f0b4c99b6fd7cd6da277d6835014c7412e90bd8df3ae34ad7d4604c617d7"
+        },
+        {
+          "path": "results/v2/external/summary.json",
+          "sha256": "706983d3f069629ef543d7882175990a73d1509da9d29d2c0c2f6c67a86c27e1"
+        }
+      ]
+    }
+  ],
+  "sources": {
+    "review": {
+      "path": "demo/core_features/raw/2026-10-27T05-33-38-488Z/page@2df351c88e6f84337a2efc3fe6d09b31.webm",
+      "sha256": "5cc59484fa73452e4afda20784024a66aa7ca868e311ff0b6fa4dd238c666b77",
+      "duration_seconds": 83.72,
+      "capture_manifest": "demo/core_features/raw/2026-10-27T05-33-38-488Z/capture_manifest.json",
+      "capture_manifest_sha256": "1e513503f9f421991e4cb7dbcde5a839e13eab05a131f75563ec825aa09281fb",
+      "monotonic_seconds": 83.3735759,
+      "first_ready_seconds": 4.7831875,
+      "raw_video_public": false,
+      "availability": "Local original take retained for audit; excluded from lightweight release. Recapture with capture_core_features.cjs and update the source mapping for a new production."
+    },
+    "tools": {
+      "path": "demo/core_features/raw/2026-10-27T05-35-28-123Z/page@9bd63cc1f524b09fab6e36cf1282e13c.webm",
+      "sha256": "6c56aae6ca3601910bd4478d6f343224d597cdc9eb22387e7e90912a442efb15",
+      "duration_seconds": 228.16,
+      "capture_manifest": "demo/core_features/raw/2026-10-27T05-35-28-123Z/capture_manifest.json",
+      "capture_manifest_sha256": "e3acad05741dacea37c2771852333daf32f51dc9ab8e3c8f058bf7b8e9df9731",
+      "monotonic_seconds": 228.618941,
+      "first_ready_seconds": 2.2827927,
+      "raw_video_public": false,
+      "availability": "Local original take retained for audit; excluded from lightweight release. Recapture with capture_core_features.cjs and update the source mapping for a new production."
+    },
+    "attacks": {
+      "path": "demo/core_features/raw/2026-10-27T05-39-57-717Z/page@1cf45c6ce58e24dafdfb19a742b20157.webm",
+      "sha256": "8e681f7254aff8cd63d428cacc527cdba07eee1800f3e3f4ef1a7a2998021d6b",
+      "duration_seconds": 73.0,
+      "capture_manifest": "demo/core_features/raw/2026-10-27T05-39-57-717Z/capture_manifest.json",
+      "capture_manifest_sha256": "5d5ac053ffb2e1149def834e52bde929fa7fd121b79d0d7a0774b58c5b6e2e67",
+      "monotonic_seconds": 73.2489339,
+      "first_ready_seconds": 1.7796805,
+      "raw_video_public": false,
+      "availability": "Local original take retained for audit; excluded from lightweight release. Recapture with capture_core_features.cjs and update the source mapping for a new production."
+    },
+    "flow": {
+      "path": "demo/core_features/raw/2026-10-27T05-40-08-159Z/page@944910090c3156a74caa073403186ad1.webm",
+      "sha256": "042495a40c34e02c1ee413e11d09b95fa149f14262b71c0d7fa2c39146cc038e",
+      "duration_seconds": 43.84,
+      "capture_manifest": "demo/core_features/raw/2026-10-27T05-40-08-159Z/capture_manifest.json",
+      "capture_manifest_sha256": "cd9ea17d5cd6b23d93e439256a15961493c94c83300a777b7972f90bbd17ebd0",
+      "monotonic_seconds": 42.3123551,
+      "first_ready_seconds": 3.5869959,
+      "raw_video_public": false,
+      "availability": "Local original take retained for audit; excluded from lightweight release. Recapture with capture_core_features.cjs and update the source mapping for a new production."
+    },
+    "home": {
+      "path": "demo/core_features/raw/2026-10-27T05-56-12-690Z/page@a47c3f6756ce57b1a613163cab8ed99c.webm",
+      "sha256": "07ef4b223e5e498f46510f70c5fa90870b5ec22fa3d37e4a1dde46575c4fcb65",
+      "duration_seconds": 56.32,
+      "capture_manifest": "demo/core_features/raw/2026-10-27T05-56-12-690Z/capture_manifest.json",
+      "capture_manifest_sha256": "896393c2e863e844938a2d7fa6206b6f51bd4bc1e617c21fc9af01abeacd9ad7",
+      "monotonic_seconds": 55.8593718,
+      "first_ready_seconds": 1.9964155,
+      "raw_video_public": false,
+      "availability": "Local original take retained for audit; excluded from lightweight release. Recapture with capture_core_features.cjs and update the source mapping for a new production."
+    },
+    "upload": {
+      "path": "demo/core_features/raw/2026-10-27T06-03-17-405Z/page@9b18c8cef47269f48b752062ce88feaf.webm",
+      "sha256": "be2f89783fbd575c8cb67d2dd2c7c9a33f1f9b91e04744fbd78912eb30acfded",
+      "duration_seconds": 42.56,
+      "capture_manifest": "demo/core_features/raw/2026-10-27T06-03-17-405Z/capture_manifest.json",
+      "capture_manifest_sha256": "9d0eacae2dfc8ae5fe9b2a5e086a63579501a8494722b9f9484d79ebd1ceb2ad",
+      "monotonic_seconds": 40.9345436,
+      "first_ready_seconds": 2.2090595,
+      "raw_video_public": false,
+      "availability": "Local original take retained for audit; excluded from lightweight release. Recapture with capture_core_features.cjs and update the source mapping for a new production."
+    },
+    "console": {
+      "path": "demo/core_features/raw/console_20261027T055111Z/console.mp4",
+      "sha256": "f1644ced11e7cff82dc540c1f244cc78ffc5f7d9025bbfbf12b75993439bdd60",
+      "duration_seconds": 39.0,
+      "capture_manifest": "demo/core_features/raw/console_20261027T055111Z/capture_manifest.json",
+      "capture_manifest_sha256": "dd71553459cbc4ab18b2c0949bab7e7547b511e11bb4a664d50112c1ffe535f6",
+      "monotonic_seconds": null,
+      "first_ready_seconds": null,
+      "raw_video_public": false,
+      "availability": "Local original take retained for audit; excluded from lightweight release. Recapture with capture_core_features.cjs and update the source mapping for a new production."
+    }
+  },
+  "disclosure": [
+    "Actual browser and native console video only. Waiting intervals cut; speed1.0. No UI injection, generated results or freeze extension.",
+    "F04 revisits the same F01 confirmation recording with its same run ID; intro/outro reuse the same actual home shot.",
+    "F03 two captures reopen the same immutable real normal-failure record, not different executions.",
+    "All new actual model runs remain outside formal metrics. Source videos remain local raw evidence; public manifests retain hashes."
+  ]
+}

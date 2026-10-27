@@ -1,0 +1,79 @@
+{
+  "review": {
+    "path": "demo/core_features/raw/2026-10-27T05-33-38-488Z/page@2df351c88e6f84337a2efc3fe6d09b31.webm",
+    "sha256": "5cc59484fa73452e4afda20784024a66aa7ca868e311ff0b6fa4dd238c666b77",
+    "duration_seconds": 83.72,
+    "capture_manifest": "demo/core_features/raw/2026-10-27T05-33-38-488Z/capture_manifest.json",
+    "capture_manifest_sha256": "1e513503f9f421991e4cb7dbcde5a839e13eab05a131f75563ec825aa09281fb",
+    "monotonic_seconds": 83.3735759,
+    "first_ready_seconds": 4.7831875,
+    "raw_video_public": false,
+    "availability": "Local original take retained for audit; excluded from lightweight release. Recapture with capture_core_features.cjs and update the source mapping for a new production."
+  },
+  "tools": {
+    "path": "demo/core_features/raw/2026-10-27T05-35-28-123Z/page@9bd63cc1f524b09fab6e36cf1282e13c.webm",
+    "sha256": "6c56aae6ca3601910bd4478d6f343224d597cdc9eb22387e7e90912a442efb15",
+    "duration_seconds": 228.16,
+    "capture_manifest": "demo/core_features/raw/2026-10-27T05-35-28-123Z/capture_manifest.json",
+    "capture_manifest_sha256": "e3acad05741dacea37c2771852333daf32f51dc9ab8e3c8f058bf7b8e9df9731",
+    "monotonic_seconds": 228.618941,
+    "first_ready_seconds": 2.2827927,
+    "raw_video_public": false,
+    "availability": "Local original take retained for audit; excluded from lightweight release. Recapture with capture_core_features.cjs and update the source mapping for a new production."
+  },
+  "attacks": {
+    "path": "demo/core_features/raw/2026-10-27T05-39-57-717Z/page@1cf45c6ce58e24dafdfb19a742b20157.webm",
+    "sha256": "8e681f7254aff8cd63d428cacc527cdba07eee1800f3e3f4ef1a7a2998021d6b",
+    "duration_seconds": 73.0,
+    "capture_manifest": "demo/core_features/raw/2026-10-27T05-39-57-717Z/capture_manifest.json",
+    "capture_manifest_sha256": "5d5ac053ffb2e1149def834e52bde929fa7fd121b79d0d7a0774b58c5b6e2e67",
+    "monotonic_seconds": 73.2489339,
+    "first_ready_seconds": 1.7796805,
+    "raw_video_public": false,
+    "availability": "Local original take retained for audit; excluded from lightweight release. Recapture with capture_core_features.cjs and update the source mapping for a new production."
+  },
+  "flow": {
+    "path": "demo/core_features/raw/2026-10-27T05-40-08-159Z/page@944910090c3156a74caa073403186ad1.webm",
+    "sha256": "042495a40c34e02c1ee413e11d09b95fa149f14262b71c0d7fa2c39146cc038e",
+    "duration_seconds": 43.84,
+    "capture_manifest": "demo/core_features/raw/2026-10-27T05-40-08-159Z/capture_manifest.json",
+    "capture_manifest_sha256": "cd9ea17d5cd6b23d93e439256a15961493c94c83300a777b7972f90bbd17ebd0",
+    "monotonic_seconds": 42.3123551,
+    "first_ready_seconds": 3.5869959,
+    "raw_video_public": false,
+    "availability": "Local original take retained for audit; excluded from lightweight release. Recapture with capture_core_features.cjs and update the source mapping for a new production."
+  },
+  "home": {
+    "path": "demo/core_features/raw/2026-10-27T05-56-12-690Z/page@a47c3f6756ce57b1a613163cab8ed99c.webm",
+    "sha256": "07ef4b223e5e498f46510f70c5fa90870b5ec22fa3d37e4a1dde46575c4fcb65",
+    "duration_seconds": 56.32,
+    "capture_manifest": "demo/core_features/raw/2026-10-27T05-56-12-690Z/capture_manifest.json",
+    "capture_manifest_sha256": "896393c2e863e844938a2d7fa6206b6f51bd4bc1e617c21fc9af01abeacd9ad7",
+    "monotonic_seconds": 55.8593718,
+    "first_ready_seconds": 1.9964155,
+    "raw_video_public": false,
+    "availability": "Local original take retained for audit; excluded from lightweight release. Recapture with capture_core_features.cjs and update the source mapping for a new production."
+  },
+  "upload": {
+    "path": "demo/core_features/raw/2026-10-27T06-03-17-405Z/page@9b18c8cef47269f48b752062ce88feaf.webm",
+    "sha256": "be2f89783fbd575c8cb67d2dd2c7c9a33f1f9b91e04744fbd78912eb30acfded",
+    "duration_seconds": 42.56,
+    "capture_manifest": "demo/core_features/raw/2026-10-27T06-03-17-405Z/capture_manifest.json",
+    "capture_manifest_sha256": "9d0eacae2dfc8ae5fe9b2a5e086a63579501a8494722b9f9484d79ebd1ceb2ad",
+    "monotonic_seconds": 40.9345436,
+    "first_ready_seconds": 2.2090595,
+    "raw_video_public": false,
+    "availability": "Local original take retained for audit; excluded from lightweight release. Recapture with capture_core_features.cjs and update the source mapping for a new production."
+  },
+  "console": {
+    "path": "demo/core_features/raw/console_20261027T055111Z/console.mp4",
+    "sha256": "f1644ced11e7cff82dc540c1f244cc78ffc5f7d9025bbfbf12b75993439bdd60",
+    "duration_seconds": 39.0,
+    "capture_manifest": "demo/core_features/raw/console_20261027T055111Z/capture_manifest.json",
+    "capture_manifest_sha256": "dd71553459cbc4ab18b2c0949bab7e7547b511e11bb4a664d50112c1ffe535f6",
+    "monotonic_seconds": null,
+    "first_ready_seconds": null,
+    "raw_video_public": false,
+    "availability": "Local original take retained for audit; excluded from lightweight release. Recapture with capture_core_features.cjs and update the source mapping for a new production."
+  }
+}

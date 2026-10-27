@@ -1,0 +1,130 @@
+{
+  "kind": "AI_original_resolution_visual_document_review",
+  "created_at_utc": "2026-10-27T05:48:44.058361+00:00",
+  "all_passed": false,
+  "docx_sha256": "9d92d6e67eea2803013b3074b3612688efc6e3ada5068fc33014698caf691cda",
+  "pdf_sha256": "c4af0c2912e3771a71fc40647920889ecbe77988d7aad635ae640bfb8850240e",
+  "review_method": "逐张调用 view_image(detail=\"original\") 查看全部 16 页；非缩略图抽样，非文本提取代替视觉检查。",
+  "reviewer_scope": "AI 视觉检查及证据数值核对，不代表人工审核工时；未修改正文、脚本或服务。",
+  "page_count": 16,
+  "reviewed_pages": [
+    {
+      "page": 1,
+      "sha256": "b7c5bce07b7c43ce208538717a6988afc408237456ed1395b610126aecd185a6",
+      "passed": true,
+      "observation": "封面标题、版本边界和 3672 条记录分布清楚；页眉页脚可读，无裁切。"
+    },
+    {
+      "page": 2,
+      "sha256": "ae459e6d8cf231c4cda7dcd826b7ef11d91c40bec182e3b80af6ffdc1e461194",
+      "passed": true,
+      "observation": "第 1 章标题与要求一致；正文中文、英文参数名和 Qwen 参数数完整。"
+    },
+    {
+      "page": 3,
+      "sha256": "542046f94b9cbf0d42af1855a8e568a63b1175863e1fd252b4a1919c11832fe7",
+      "passed": true,
+      "observation": "横向架构示意图完整；箭头不覆盖节点文字；明确仅为代码结构示意，非模型内部因果或运行结果。"
+    },
+    {
+      "page": 4,
+      "sha256": "30070c63a2a75c1942b3f99166c3ff412ce2da6f2f588e48e7b1ff7799d8190e",
+      "passed": true,
+      "observation": "六核心功能表三列可读；正式集、扩展集和历史/当前数量分开；限制段完整。"
+    },
+    {
+      "page": 5,
+      "sha256": "a5ec7a6ca4c016e89d4f397770a1545b2ff478ce6b7e2db6427856e0ea63eedc",
+      "passed": true,
+      "observation": "第 2 章硬件、模型 revision/SHA256、1227700721 字节资源量及模块表完整，长哈希未裁切。"
+    },
+    {
+      "page": 6,
+      "sha256": "17d0f067a2aef7941b87462c4664eeec5e1490f3ca54d51fb72156b2fa6f2ef0",
+      "passed": true,
+      "observation": "首次安装和启动/status 四行命令完整可读；模型权重不随包分发与平台限制明确。"
+    },
+    {
+      "page": 7,
+      "sha256": "c1ee46ae40afbec524d3d4e01ff4ec955badac1e897a8a15699aef31dad2cdb6",
+      "passed": true,
+      "observation": "第 3 章原开发和公开快照分开；提交表完整，末尾测试表正确延续到下一页。"
+    },
+    {
+      "page": 8,
+      "sha256": "cd26691c9d17ca2a48b1f61fbba4990f026c8d6cd2cfc6cccff64c96ddfa86a2",
+      "passed": true,
+      "observation": "测试表重复表头清楚；397/413 历史结果与本轮区分；五位置未确认、AI 非成员及非人工工时说明明确。"
+    },
+    {
+      "page": 9,
+      "sha256": "f80da258a68da9b855d3778c817d0df3ff89cc202a87db423636a5cf23569f7c",
+      "passed": true,
+      "observation": "第 4 章正式汇总与 JSON total 一致；性能表的空闲中位数与运行采样峰值逐项匹配，MiB 和私有提交含义完整。"
+    },
+    {
+      "page": 10,
+      "sha256": "e0393473613575463d1a953ff822933b9c185f4478bfc3dc85df111838e14bf2",
+      "passed": true,
+      "observation": "四个新任务 run_id 完整换行无缺字，延迟/工具量与性能摘要一致；长命令自动换行但未裁切；GPU 设备级边界、19 项定向测试和 7 个合成自检清楚。"
+    },
+    {
+      "page": 11,
+      "sha256": "15b6d0d86178f1b75d87346e56d16e7fa4732672064df66b9dd6aef77cca34f3",
+      "passed": false,
+      "observation": "缺陷：整页正文为空，仅页眉与第 11 页页码；位于第 4 章与第 5 章之间，应消除多余分页。"
+    },
+    {
+      "page": 12,
+      "sha256": "6f5f11d5ebaadced74be7c43f3d252bfbc91ead02eb31cb42b35519e5811747f",
+      "passed": true,
+      "observation": "第 5 章产物表和来源链接可读；缓存安装/复用哈希资源边界明确；无文字覆盖。"
+    },
+    {
+      "page": 13,
+      "sha256": "2462fc19429e9d9185dc2e0ecec5da06c4ef0726adfb61ba68ced34e5c177cb2",
+      "passed": true,
+      "observation": "短的当前不足段落独占一页，文字无裁切；建议与上页合并以减少大面积留白，非内容缺失。"
+    },
+    {
+      "page": 14,
+      "sha256": "bb36cc431e378e5f0843d7be1205bab65329143df4d53f9d728e5e5bef9d3219",
+      "passed": true,
+      "observation": "第 6 章标题、发布流程和限制表可读；事实污染、独立污点收益未证实、缺少阻断后完成实例及零泄露边界保留。"
+    },
+    {
+      "page": 15,
+      "sha256": "f5ec1aacac75c9f7f9e6e50243f82da63cb7bab0738e0ed5a16a8320f5973374",
+      "passed": true,
+      "observation": "五人建议分工表列宽足够、所有姓名/学号/产物/人工工时待补充、状态未确认；课程交付对照表清楚。"
+    },
+    {
+      "page": 16,
+      "sha256": "f37e19fb5778dfb9cc86cb3f3115ec16b6bab108c37d75774a8d959206724066",
+      "passed": true,
+      "observation": "对照表续页表头与证据索引完整；页码连续；无图文覆盖或裁切。"
+    }
+  ],
+  "issues": [
+    {
+      "page": 11,
+      "severity": "required_fix",
+      "code": "unexpected_blank_page",
+      "description": "缺陷：整页正文为空，仅页眉与第 11 页页码；位于第 4 章与第 5 章之间，应消除多余分页。"
+    },
+    {
+      "page": 13,
+      "severity": "layout_suggestion",
+      "code": "sparse_section_tail",
+      "description": "短的当前不足段落独占一页，文字无裁切；建议与上页合并以减少大面积留白，非内容缺失。"
+    }
+  ],
+  "evidence_cross_checks": {
+    "formal_summary_sha256": "c04e6116c8905cf0f32a3574699e66f66ffbf2a95e99978cc9f14a7840ba1d2a",
+    "performance_summary_sha256": "aef6382720f6a40ae20f860d396813a851803f0821c9c825bc404405a667b635",
+    "formal_total_values_match": true,
+    "memory_and_task_values_match": true,
+    "five_member_template_not_factual_roster": true
+  },
+  "next_step": "根代理修复分页并重新渲染后，按图像 SHA 比较复查；本首轮失败记录保留。"
+}

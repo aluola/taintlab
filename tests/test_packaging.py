@@ -39,6 +39,21 @@ def test_default_light_has_separate_outputs_and_full_requires_explicit_profile(t
     assert set(light.values()).isdisjoint(full.values())
 
 
+def test_previous_public_demo_records_remain_explicitly_pinned(tmp_path):
+    names = {
+        "results/v2/demo_live/records/54c30779a254418f840ae4ff36178026.json",
+        "results/v2/demo_live/records/ef96cc7e861a4098af904ece2ef6eaf0.json",
+    }
+    unknown = "results/v2/demo_live/records/unreviewed.json"
+    for name in names | {unknown}:
+        dump(tmp_path, name, {"backend_type": "synthetic_test_fixture"})
+    assert names <= selected(tmp_path)
+    assert unknown not in selected(tmp_path)
+    for name in names:
+        assert package.light_reason(Path(name), set()) == "pinned_historical_demo_evidence"
+    assert package.light_reason(Path(unknown), set()) is None
+
+
 def test_semantic_allowlist_retains_referenced_figures_but_omits_intermediates(tmp_path):
     keep = {"README.md", "AGENTS.md", "启动项目.cmd", "关闭项目.cmd", "scripts/start.py", "src/taintlab/app.py", "tests/test_example.py", "configs/model.lock.json", "configs/members.json", "requirements.lock.txt", "data/test.jsonl", "data/dev.jsonl", "data/frozen_manifest.json", ".streamlit/config.toml", "dist/project_report.pdf", "dist/project_report.docx", "demo/demo.mp4", "demo/demo_subtitles.srt", "demo/qa/visual_review.md", "docs/qa/figures/chart.png", "docs/qa/ui.png", "results/main/records/a.json", "results/ablation/records/b.json", "members/workload.csv"}
     omit = {".env", "src/.env.local", ".streamlit/secrets.toml", "models/weights.gguf", "vendor/server.exe", ".venv/pyvenv.cfg", "src/taintlab/__pycache__/app.pyc", "demo/voice/segments/001.wav", "demo/voice/voice.wav", "demo/qa/frame_001.png", "docs/qa/render/page-1.png", "docs/qa/figures/unreferenced.png", "docs/qa/tools/renderer.exe", "results/development_final/records/old.json", "results/environment/model.pid", "results/launcher/state.json", "results/launcher/service.log", "results/launcher/nested/data.json", "results/launcher/validation/browser.png", "results/launcher/validation/output.log", "scripts/debug.log", "dist/taintlab_project.zip", "dist/delivery_manifest.json"}
@@ -142,6 +157,7 @@ def test_complete_fixture_build_can_be_extracted_and_repacked_without_git(tmp_pa
     make_frontend_fixture(tmp_path)
     make_production_fixture(tmp_path, "0.0.0")
     make_manual_fixture(tmp_path, "0.0.0")
+    make_feature_fixture(tmp_path, "0.0.0")
     result = package.build(tmp_path)
     unpacked = tmp_path / "unpacked"
     with zipfile.ZipFile(tmp_path / result["path"]) as archive:
@@ -363,6 +379,40 @@ def make_manual_fixture(root, version="2.0.0"):
     dump(root, "docs/publication/manual_qa/manual_validation.json", value)
 
 
+def make_feature_fixture(root, version="2.0.0"):
+    """Synthetic documents/media evidence only, never a real acceptance claim."""
+    for stem, (folder, titles) in package.FEATURE_DOCUMENTS.items():
+        put(root, f"docs/{stem}.md", "# Synthetic fixture\n\n" + "\n\n".join("## " + title + "\nSynthetic test content." for title in titles))
+        for suffix in ("pdf", "docx"):
+            put(root, f"docs/{stem}.{suffix}", "synthetic container placeholder only")
+        review = dump(root, f"docs/{folder}/visual_review.json", {"all_passed": True, "reviewed_pages": [1], "scope": "synthetic test fixture only"})
+        dump(root, f"docs/{folder}/validation.json", {"runtime_version": version, "release_version": "2.0.1", "all_passed": True, "visual_review": "passed", "pages": 1, "artifact_sha256": {f"docs/{stem}.{suffix}": package.sha(root / f"docs/{stem}.{suffix}") for suffix in ("md", "pdf", "docx")}, "assets": {}, "review_sha256": package.sha(root / f"docs/{folder}/visual_review.json")})
+    for name in ("docs/FEATURE_EVIDENCE_MATRIX.md", "data/demo/core_features/scenarios.json", "data/demo/core_features/external_handover.txt", "results/core_features/formal_summary.json"):
+        put(root, name, "{}" if name.endswith(".json") else "synthetic fixture only")
+    records = [p for group in package.FORMAL_COUNTS for p in (root / f"results/{group}/records").glob("*.json")]
+    dump(root, "results/core_features/baseline_integrity.json", {"formal_records": sum(package.FORMAL_COUNTS.values()), "files": {p.relative_to(root).as_posix(): package.sha(p) for p in records}})
+    proof = put(root, "results/core_features/demo_runs/synthetic.json", '{"formal_experiment":false,"evidence_type":"synthetic_unit_fixture"}')
+    put(root, "demo/core_features/selection.json", '{"scope":"synthetic unit fixture"}')
+    dump(root, "demo/core_features/source_inventory.json", {"synthetic": {"raw_video_public": False, "scope": "Synthetic unit fixture; no real recording"}})
+    dump(root, "demo/core_features/recording_timing.json", {"duration": 270, "scope": "Synthetic unit fixture; no real recording"})
+    evidence = {"path": proof.relative_to(root).as_posix(), "sha256": package.sha(proof)}
+    chapters = [{"id": f"F{i:02d}", "start_seconds": 10 + (i-1)*40, "end_seconds": 10 + i*40, "operation_evidence": [evidence], "result_evidence": [evidence]} for i in range(1, 7)]
+    dump(root, "demo/core_features/edit_decisions.json", {"project_version": version, "release_version": "2.0.1", "feature_chapters": chapters})
+    dump(root, "demo/core_features/composition_manifest.json", {"project_version": version, "edl_sha256": package.sha(root / "demo/core_features/edit_decisions.json")})
+    dump(root, "demo/core_features/narration_synthesis.json", {"narration_sha256": package.sha(root / "demo/narration.json")})
+    dump(root, "demo/core_features/visual_review.json", {"project_version": version, "release_version": "2.0.1", "all_passed": True, "video_sha256": package.sha(root / "demo/demo.mp4")})
+    dump(root, "demo/core_features/recordings/synthetic.json", {"version": version, "selection_file": "demo/core_features/selection.json", "selection_sha256": package.sha(root / "demo/core_features/selection.json"), "upload_file": "data/demo/core_features/external_handover.txt", "upload_sha256": package.sha(root / "data/demo/core_features/external_handover.txt")})
+    video = package.read_json(root / "demo/video_validation.json")
+    video["actual_duration"] = 270
+    dump(root, "demo/video_validation.json", video)
+    samples = put(root, "results/core_features/process_memory_public.jsonl", json.dumps({"seconds_from_start": 0.1, "phase": "idle", "role": "model", "working_set_bytes": 12, "private_commit_bytes": 34}) + "\n")
+    dump(root, "results/core_features/performance_summary.json", {"formal_experiment": False, "included_in_ASR": False, "public_samples_sha256": package.sha(samples), "projection": {"rows": 1}})
+    detector = root / "src/taintlab/evaluation/canary.py"
+    if not detector.exists():
+        put(root, detector.relative_to(root), "# Synthetic fixture, not a detector implementation\n")
+    dump(root, "results/core_features/canary_selftest.json", {"all_passed": True, "formal_experiment": False, "included_in_ASR": False, "model_called": False, "detector": {"source_sha256": package.sha(detector)}, "cases": [{"expected_found": flag, "detector_result": {"found": flag}, "matches_synthetic_expectation": True} for flag in (True, False)]})
+
+
 def test_user_manual_originals_annotations_configuration_and_qa_are_kept(tmp_path):
     keep = {"docs/USER_MANUAL.md", "docs/USER_MANUAL.pdf", "docs/USER_MANUAL.docx", "docs/assets/user-manual/originals/screen.png", "docs/assets/user-manual/annotated/screen.png", "docs/assets/user-manual/annotations.json", "docs/assets/user-manual/README.md", "docs/publication/manual_qa/manual_validation.json", "docs/publication/manual_qa/review.md", "results/publication/test_summary.json"}
     omit = {"docs/publication/manual_qa/render/page-1.png", "docs/publication/manual_qa/render.log", "results/publication/private_history_audit.json", "results/publication/public_git_pathspec.nul"}
@@ -426,3 +476,116 @@ def test_browser_index_cannot_point_to_missing_or_unapproved_evidence(tmp_path):
     dump(tmp_path, "results/v2/browser/ui_acceptance.json", {"version": "2.0.0", "all_targeted_checks_passed_latest_evidence": True, "browser_reports": [{"path": "results/v2/browser/ui_followup_2026-10-26T17-00-00-000Z.json", "sha256": "0" * 64}]})
     with pytest.raises(ValueError, match="reference missing or excluded"):
         package.validate_browser_evidence(tmp_path, selected(tmp_path), "2.0.0")
+
+
+def test_core_feature_allowlist_keeps_final_inputs_evidence_and_figures_not_runtime_or_takes(tmp_path):
+    keep = {f"docs/{stem}.{suffix}" for stem in package.FEATURE_DOCUMENTS for suffix in ("md", "pdf", "docx")}
+    keep |= {"docs/FEATURE_EVIDENCE_MATRIX.md", "docs/assets/core-features/raw/F01.png", "docs/assets/core-features/annotated/F01.png", "docs/assets/core-features/annotation_config.json", "docs/assets/core-features/captures/take/capture_manifest.json", "docs/assets/development-delivery/architecture.png", "docs/assets/development-delivery/architecture_config.json", "docs/core_features_qa/validation.json", "docs/development_delivery_qa/visual_review.json", "docs/releases/v2.0.1/PLAN.md", "data/demo/core_features/scenarios.json", "data/demo/core_features/external_handover.txt", "results/core_features/demo_runs/read.json", "results/core_features/demo_runs/export_download.txt", "results/core_features/canary_selftest.json", "results/core_features/performance_summary.json", "results/core_features/process_memory_public.jsonl", "demo/core_features/selection.json", "demo/core_features/recordings/take.json", "demo/core_features/visual_review.json"}
+    omit = {"docs/assets/core-features/captures/take/repeated.png", "docs/core_features_qa/render/page-1.png", "docs/development_delivery_qa/render.log", "results/core_features/demo_runs/sessions/active.json", "results/core_features/performance/run_01/measurement.json", "results/core_features/performance/run_01/process_memory.jsonl", "results/core_features/raw/process.json", "results/core_features/validation/active.pid", "demo/history/v2.0.0_before_core_features/old.mp4", "demo/core_features/raw/take.webm", "demo/core_features/qa/frame.png", "demo/core_features/intermediate/composed.mp4"}
+    keep |= {"demo/core_features/source_inventory.json", "demo/core_features/recording_timing.json", "demo/core_features/independent_visual_review.json", "demo/core_features/first_independent_visual_review.json", "demo/core_features/first_encode_visual_review.json"}
+    omit |= {"demo/core_features/composed.mp4", "demo/core_features/voice.wav"}
+    for name in keep | omit:
+        put(tmp_path, name, "{}" if name.endswith(".json") else "synthetic fixture")
+    chosen = selected(tmp_path)
+    assert keep <= chosen
+    assert not omit & chosen
+
+
+@pytest.mark.parametrize("name", ["source_inventory.json", "recording_timing.json"])
+def test_feature_video_cannot_drop_reproduction_configuration(tmp_path, name):
+    make_production_fixture(tmp_path)
+    dump(tmp_path, "demo/video_validation.json", {})
+    make_feature_fixture(tmp_path)
+    assert package.validate_production_evidence(tmp_path, selected(tmp_path), "2.0.0")["passed"]
+    (tmp_path / "demo/core_features" / name).unlink()
+    with pytest.raises(ValueError, match="reproduction metadata is missing"):
+        package.validate_production_evidence(tmp_path, selected(tmp_path), "2.0.0")
+
+
+@pytest.mark.parametrize("failure", ["artifact", "review", "failed_review", "missing_chapter", "wrong_runtime"])
+def test_feature_document_gate_requires_six_actual_chapters_and_current_qa_hashes(tmp_path, failure):
+    make_production_fixture(tmp_path)
+    dump(tmp_path, "demo/video_validation.json", {})
+    make_feature_fixture(tmp_path)
+    chosen = selected(tmp_path)
+    assert len(package.validate_feature_documents(tmp_path, chosen, "2.0.0")) == 2
+    qa_name = "docs/core_features_qa/validation.json"
+    qa = package.read_json(tmp_path / qa_name)
+    if failure == "artifact":
+        put(tmp_path, "docs/CORE_FEATURES_GUIDE.pdf", "changed after review")
+    elif failure == "review":
+        put(tmp_path, "docs/core_features_qa/visual_review.json", '{"all_passed":true,"changed":true}')
+    elif failure == "failed_review":
+        review = put(tmp_path, "docs/core_features_qa/visual_review.json", '{"all_passed":false}')
+        qa["review_sha256"] = package.sha(review)
+    elif failure == "missing_chapter":
+        source = put(tmp_path, "docs/CORE_FEATURES_GUIDE.md", "# Only a title\nNo main chapters")
+        qa["artifact_sha256"][source.relative_to(tmp_path).as_posix()] = package.sha(source)
+    else:
+        qa["runtime_version"] = "large-model-replacement"
+    dump(tmp_path, qa_name, qa)
+    with pytest.raises(ValueError):
+        package.validate_feature_documents(tmp_path, chosen, "2.0.0")
+
+
+@pytest.mark.parametrize("failure", ["too_long", "missing_result", "stale_result", "overlap", "missing_feature"])
+def test_270_second_feature_video_needs_six_actual_operation_result_bindings(tmp_path, failure):
+    make_production_fixture(tmp_path)
+    dump(tmp_path, "demo/video_validation.json", {})
+    make_feature_fixture(tmp_path)
+    chosen = selected(tmp_path)
+    assert package.validate_production_evidence(tmp_path, chosen, "2.0.0")["feature_chapters"]["actual_duration"] == 270
+    name = "demo/core_features/edit_decisions.json"
+    edit = package.read_json(tmp_path / name)
+    if failure == "too_long":
+        dump(tmp_path, "demo/video_validation.json", {"actual_duration": 301})
+    elif failure == "missing_result":
+        edit["feature_chapters"][2]["result_evidence"] = []
+    elif failure == "stale_result":
+        put(tmp_path, "results/core_features/demo_runs/synthetic.json", '{"changed":true}')
+    elif failure == "overlap":
+        edit["feature_chapters"][3]["start_seconds"] = 15
+    else:
+        edit["feature_chapters"].pop()
+    dump(tmp_path, name, edit)
+    dump(tmp_path, "demo/core_features/composition_manifest.json", {"project_version": "2.0.0", "edl_sha256": package.sha(tmp_path / name)})
+    with pytest.raises(ValueError):
+        package.validate_production_evidence(tmp_path, chosen, "2.0.0")
+
+
+def test_formal_update_baseline_detects_changed_bytes_even_when_run_id_is_preserved(tmp_path, monkeypatch):
+    monkeypatch.setattr(package, "FORMAL_COUNTS", {"main": 1})
+    record = put(tmp_path, "results/main/records/example.json", '{"run_id":"example","value":"initial"}')
+    dump(tmp_path, "results/core_features/baseline_integrity.json", {"formal_records": 1, "files": {record.relative_to(tmp_path).as_posix(): package.sha(record)}})
+    assert package.validate_preserved_feature_baseline(tmp_path, selected(tmp_path))["formal_records"] == 1
+    record.write_text('{"run_id":"example","value":"changed"}', encoding="utf-8")
+    with pytest.raises(ValueError, match="Preserved formal/runtime bytes changed"):
+        package.validate_preserved_feature_baseline(tmp_path, selected(tmp_path))
+
+
+@pytest.mark.parametrize("failure", ["pid_leaked", "samples_changed", "formal_label", "false_positive_control", "detector_changed"])
+def test_feature_measurement_gate_rejects_private_fields_or_mislabeled_mechanism_claims(tmp_path, failure):
+    make_production_fixture(tmp_path)
+    dump(tmp_path, "demo/video_validation.json", {})
+    make_feature_fixture(tmp_path)
+    assert package.validate_feature_measurement(tmp_path)["memory_rows"] == 1
+    if failure in {"pid_leaked", "samples_changed"}:
+        samples = tmp_path / "results/core_features/process_memory_public.jsonl"
+        row = json.loads(samples.read_text(encoding="utf-8"))
+        row["pid" if failure == "pid_leaked" else "working_set_bytes"] = 999
+        samples.write_text(json.dumps(row) + "\n", encoding="utf-8")
+        if failure == "pid_leaked":
+            report = package.read_json(tmp_path / "results/core_features/performance_summary.json")
+            report["public_samples_sha256"] = package.sha(samples)
+            dump(tmp_path, "results/core_features/performance_summary.json", report)
+    elif failure == "detector_changed":
+        put(tmp_path, "src/taintlab/evaluation/canary.py", "# changed after self-test")
+    else:
+        report = package.read_json(tmp_path / "results/core_features/canary_selftest.json")
+        if failure == "formal_label":
+            report["included_in_ASR"] = True
+        else:
+            report["cases"][1]["detector_result"]["found"] = True
+        dump(tmp_path, "results/core_features/canary_selftest.json", report)
+    with pytest.raises(ValueError):
+        package.validate_feature_measurement(tmp_path)

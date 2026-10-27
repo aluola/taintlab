@@ -17,7 +17,7 @@ import zipfile
 from datetime import datetime, timezone
 
 REPO = 'aluola/taintlab'
-TAG = 'v2.0.0'
+TAG = 'v2.0.1'
 
 def request(url):
     # No CookieJar, Authorization, netrc, gh or credential helper.
@@ -52,16 +52,18 @@ def extract(archive, destination):
     if len(roots) != 1: raise ValueError('Unexpected source root')
     return roots[0]
 
-def verify(destination):
+def verify(destination, tag=TAG):
+    if not re.fullmatch(r'v\d+\.\d+\.\d+(?:-[A-Za-z0-9.-]+)?', tag):
+        raise ValueError('Expected a release tag such as v2.0.1')
     destination.mkdir(parents=True, exist_ok=False)
-    report = {'checked_at_utc': datetime.now(timezone.utc).isoformat(), 'repository': REPO, 'tag': TAG,
+    report = {'checked_at_utc': datetime.now(timezone.utc).isoformat(), 'repository': REPO, 'tag': tag,
               'authentication': 'Anonymous HTTP, no cookies or authorization headers; no gh token read', 'all_passed': False,
               'installation_or_model_execution': 'not performed by this downloader; separate Windows acceptance required'}
     try:
         with request(f'https://api.github.com/repos/{REPO}') as response: repository = json.load(response)
         if repository['private']: raise ValueError('Repository is private')
-        with request(f'https://api.github.com/repos/{REPO}/releases/tags/{TAG}') as response: release = json.load(response)
-        if release['draft'] or release['tag_name'] != TAG: raise ValueError('Expected published release')
+        with request(f'https://api.github.com/repos/{REPO}/releases/tags/{tag}') as response: release = json.load(response)
+        if release['draft'] or release['tag_name'] != tag: raise ValueError('Expected published release')
         report['public_repository'] = True
         report['release'] = {'url': release['html_url'], 'id': release['id'], 'draft': release['draft'], 'published_at': release['published_at']}
         assets = release['assets']
@@ -83,7 +85,7 @@ def verify(destination):
             checked.append(match[2])
         report['checksum_verified_assets'] = checked
         source = destination / 'source.zip'
-        report['source_archive'] = download(f'https://github.com/{REPO}/archive/refs/tags/{TAG}.zip', source)
+        report['source_archive'] = download(f'https://github.com/{REPO}/archive/refs/tags/{tag}.zip', source)
         root = extract(source, destination / 'source')
         manifest = json.loads((root / 'PUBLICATION_MANIFEST.json').read_text(encoding='utf-8'))
         for name, item in manifest['files'].items():
@@ -96,9 +98,20 @@ def verify(destination):
         if record_counts != {'main':972,'ablation':324,'v2/baseline':1296,'v2/external':1080}: raise ValueError('Formal records missing')
         report['formal_record_counts'] = record_counts
         must = ['README.md','启动项目.cmd','关闭项目.cmd','frontend/dist/index.html','docs/USER_MANUAL.md','docs/USER_MANUAL.pdf','docs/USER_MANUAL.docx','docs/assets/user-manual/raw/01_home.png','demo/demo.mp4','dist/project_report.pdf','dist/project_report.docx']
+        if tag != 'v2.0.0':
+            must += [f'docs/{stem}.{suffix}' for stem in ('CORE_FEATURES_GUIDE','DEVELOPMENT_AND_DELIVERY') for suffix in ('md','pdf','docx')]
+            must += ['docs/FEATURE_EVIDENCE_MATRIX.md']
+            # Check every image referenced by the new documents, not one chosen thumbnail.
+            for stem in ('CORE_FEATURES_GUIDE','DEVELOPMENT_AND_DELIVERY'):
+                for target in re.findall(r'!\[[^\]]*\]\(([^)]+)\)', (root / f'docs/{stem}.md').read_text('utf-8')):
+                    path=(root / 'docs' / target).resolve()
+                    if not path.is_relative_to(root.resolve()) or not path.is_file():
+                        raise ValueError('New guide image missing or outside source: ' + target)
+                    must.append(path.relative_to(root).as_posix())
+        must=list(dict.fromkeys(must))
         checks=[]
         for name in must:
-            url = f'https://raw.githubusercontent.com/{REPO}/{TAG}/' + urllib.parse.quote(name, safe='/')
+            url = f'https://raw.githubusercontent.com/{REPO}/{tag}/' + urllib.parse.quote(name, safe='/')
             with request(url) as response:
                 raw = response.read(); status = response.status
             equal = hashlib.sha256(raw).hexdigest() == sha(root / name)
@@ -113,5 +126,5 @@ def verify(destination):
     return report['all_passed']
 
 if __name__ == '__main__':
-    parser=argparse.ArgumentParser();parser.add_argument('--destination',type=Path,required=True);args=parser.parse_args()
-    raise SystemExit(0 if verify(args.destination.resolve()) else 1)
+    parser=argparse.ArgumentParser();parser.add_argument('--destination',type=Path,required=True);parser.add_argument('--tag',default=TAG);args=parser.parse_args()
+    raise SystemExit(0 if verify(args.destination.resolve(),args.tag) else 1)

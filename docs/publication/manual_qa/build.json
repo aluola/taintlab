@@ -1,9 +1,9 @@
 {
   "publication_summary": true,
   "source_evidence_path": "docs/publication/manual_qa/build.json",
-  "original_evidence_sha256": "61f6dc2279c21c99747c9f0d50580c4b1935e1b7034ab6b896a9a33ccc07ab33",
+  "original_evidence_sha256": "d0b644bc80db71da19a25a8497417e3cc1152ff04605e3a2f1c36b8610c7366e",
   "disclosure": "Explicit public summary of saved local evidence. Machine paths, process identities, browser credentials and uploaded runtime bodies are not redistributed. This is not a newly executed acceptance test.",
   "project_version": "2.0.0",
-  "source_markdown_sha256": "3120e58fbbf2a0b7859b5e2a571d6afaaaea8344bf0c9bc6008f9e7f61894dd9",
-  "docx_sha256": "0d2e537b544d4b72cd9724559453b5db6fdf5362532ee57b8d9131b9d91e6634"
+  "source_markdown_sha256": "179e675087effd45b3d50ff76d473514fee5b502fbaabb4b0292d5ba6f1925b0",
+  "docx_sha256": "12e1e1cbdea9d98f887f0c879c050fe3730ccb536ab50490cb738816da67ae08"
 }

@@ -1,0 +1,248 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-10-27T06:12:58.395860+00:00",
+  "all_passed": false,
+  "review_type": "AI visual inspection of original-resolution page images; not human work hours",
+  "md_sha256": "910ef2d1913704d4e7c9dcd80aee56fff06ecde969702ab0a74ecd190d9a04d7",
+  "docx_sha256": "6f3145aa4363806615fbf39672ed005d5e56468ef79b498632142730a15d5842",
+  "pdf_sha256": "cbf1fb21da815ae23468bee155114e7a585883be3428e0b07ce6c89a1d930194",
+  "rendered_page_count": 45,
+  "actually_reviewed_page_count": 1,
+  "reviewed_pages": [
+    {
+      "page": 4,
+      "sha256": "e5e89e58f4ec9e4107e07e0854ede81e4b55e0ba2a5476c5cc4e40edfd5b0211",
+      "passed": false,
+      "observation": "原始尺寸实际查看：仅有页眉和第4页页脚，正文区域全空白，是分页缺陷。"
+    }
+  ],
+  "unreviewed_pages": [
+    1,
+    2,
+    3,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45
+  ],
+  "render_snapshot": [
+    {
+      "page": 1,
+      "sha256": "2301b84f4c01bf63bfe476d109c404bec36c798ab04f297a2fac6993e3d0e4b8"
+    },
+    {
+      "page": 2,
+      "sha256": "297a5f0e3fd3a418b3af9c585c18bcf8944f10fddafe9b76efaf817142513f7c"
+    },
+    {
+      "page": 3,
+      "sha256": "a06163d3fda71e50fd990f439912e350e07c36d7d35bb80d252c80e031a1223a"
+    },
+    {
+      "page": 4,
+      "sha256": "e5e89e58f4ec9e4107e07e0854ede81e4b55e0ba2a5476c5cc4e40edfd5b0211"
+    },
+    {
+      "page": 5,
+      "sha256": "d19d220d223ab9cf06acc5fe2347cab0a3048e0a7aa960c40ed4ef1ca8ade530"
+    },
+    {
+      "page": 6,
+      "sha256": "7f9921ce1fac0c73d963f00cb5f81ac3c9f9b2baef9c2f7acbb6f2ce4ad2a919"
+    },
+    {
+      "page": 7,
+      "sha256": "f3782560df6b49104d9469d0e202c8bc6db875fb7f014affea13f7a4dbc3428b"
+    },
+    {
+      "page": 8,
+      "sha256": "44600be56162e549df161015e757686c15a643cbea35bad2f4395e443de9d022"
+    },
+    {
+      "page": 9,
+      "sha256": "b5dd0214e262b3bf059e7da4cfeac7a56e998368bfcfb17c4cc4eb9573ddb3fe"
+    },
+    {
+      "page": 10,
+      "sha256": "52c65ee4abc1a259032fcceb54861025c432ecd542e0e3f1fbe4e18772398e04"
+    },
+    {
+      "page": 11,
+      "sha256": "e1e42bde142bd5659b515c81a2846ca52d7f5e2bb3586d95c0ff2f8fc35c869a"
+    },
+    {
+      "page": 12,
+      "sha256": "260fcec114a45a4a2e161d935d189910e6d89a91bef7636b381b0603f1c7e955"
+    },
+    {
+      "page": 13,
+      "sha256": "9d256172479a0db5a15cdd57060deeb79b6fff1171941ea883801993b2634334"
+    },
+    {
+      "page": 14,
+      "sha256": "8ec8e90b054f0b3713fc1a867741be805af06f6402469b049831dec81b2b068d"
+    },
+    {
+      "page": 15,
+      "sha256": "b2a09fb48c9028a030e2467174cf17894e996e58167e4baf5eea760caa00dfbd"
+    },
+    {
+      "page": 16,
+      "sha256": "7eb083b1a5fbef1b5038dd604c5ca3cef65e9eb5cb1ff08dbaba8f0334bec052"
+    },
+    {
+      "page": 17,
+      "sha256": "cb97ac6298992a666f8d3f5822d9dd510cbfe60280f3301394aae10cba711eb3"
+    },
+    {
+      "page": 18,
+      "sha256": "9269007b11a0bee23c952e660d00f3a93d82c29ddc3de8ba442f3ea6709393c2"
+    },
+    {
+      "page": 19,
+      "sha256": "ecdc163255158a7d45519c1cab40bfd2e51144a4d2e8efddcbf22450f3ca6a90"
+    },
+    {
+      "page": 20,
+      "sha256": "477f88f31f6ff3f051f00c8586b3783581ef158919ee7e6631a9238f55cae399"
+    },
+    {
+      "page": 21,
+      "sha256": "4f5a2b249698fb7fb34ed6b4d69954c366c376401ebcfda9fc23ea03ecf7319c"
+    },
+    {
+      "page": 22,
+      "sha256": "2eb4cd918396efce9caf401685fda2bd20b8c0e00acfb14267aa9a2f2a880af2"
+    },
+    {
+      "page": 23,
+      "sha256": "7c5f4a173319af022e4708ee518d129e4e6c80dfcb3a12bf9bbe5bbc29659cac"
+    },
+    {
+      "page": 24,
+      "sha256": "fd5b648bb52dd39e75912d67c505fc29ee5e54ee9d4f91ede66a29a1607facd7"
+    },
+    {
+      "page": 25,
+      "sha256": "98fa59e14595b3358567399f3281cc0f5888908c65b4d975459178dff033bbb5"
+    },
+    {
+      "page": 26,
+      "sha256": "5ade79cd600330c713ca8c017edb80471fe9a94359da3be49cb511535d2658f9"
+    },
+    {
+      "page": 27,
+      "sha256": "b28e94e52a5d3f544114664ae705811558cc706c3204acf21f327abd483fb2c2"
+    },
+    {
+      "page": 28,
+      "sha256": "51f4b7ae6e4c09a7004370909c1978e29482fc999ee9da978eb8101febd10700"
+    },
+    {
+      "page": 29,
+      "sha256": "42ccd3f1e6ea2a95e15042368cbec823d2e193a06d2426ab1000eebfc09b7019"
+    },
+    {
+      "page": 30,
+      "sha256": "1d4224f5bc403d9d6eb67921c015ab8ab2fc58eb02c871021e62a02534b52d74"
+    },
+    {
+      "page": 31,
+      "sha256": "f9565d9d7c6c49b66ec879c26d6e7e3010a91c0309809673fe3fb2d6ae7bcfc1"
+    },
+    {
+      "page": 32,
+      "sha256": "6cb35baa4e853d4bc1047d107095204d072aa936879e07229a098e2b0c2be4c9"
+    },
+    {
+      "page": 33,
+      "sha256": "e7f57dd49bffe0fe0bdba6f4fb1b3a4429c79f1f7d0e466930230684a50efb6d"
+    },
+    {
+      "page": 34,
+      "sha256": "9a0958dd50962d2e06767ad39706aadda56413a747f3cad6698ab4dd779b1088"
+    },
+    {
+      "page": 35,
+      "sha256": "2b9c28336acd0dd51d63f21bc47acf4f9ab37bcd56769efb82b1f8a72bbf95e9"
+    },
+    {
+      "page": 36,
+      "sha256": "6d39dfda551f701dd393082358502b0bf8bc3cbd8b5bb39515ebdb30ed017279"
+    },
+    {
+      "page": 37,
+      "sha256": "6111548ee6de9e794faa7d0368c6085eb574a976a4153a1486e803b7a08ab4a2"
+    },
+    {
+      "page": 38,
+      "sha256": "edc5a89ddd8b58a1943eef99bf6e35fabea6d442e8017762145655419ce00e5f"
+    },
+    {
+      "page": 39,
+      "sha256": "62a5dbf0664feaa5b79f921fc5af355ab60359e66f5a95d8debae75b5eae7e9b"
+    },
+    {
+      "page": 40,
+      "sha256": "b74c8c8ba7b135bbf424ba77181edc33ea0ed686615760fd3b9a89aa676b6166"
+    },
+    {
+      "page": 41,
+      "sha256": "e9e038fb38e97bc0612b8c838968d1891713e99748ef4421af4445b24e826139"
+    },
+    {
+      "page": 42,
+      "sha256": "c5f69497089a8fcc5e3aaf96aad5a7fd43aca84b144a0e23276d3fc8af4c7130"
+    },
+    {
+      "page": 43,
+      "sha256": "ad57ea35d7addde51c0cb4e3f2427d9da3754536119add96fad7c61975638319"
+    },
+    {
+      "page": 44,
+      "sha256": "11af216ecdd260c49126222f19eb40f44320419594ec845077da21a0502ae8a4"
+    },
+    {
+      "page": 45,
+      "sha256": "4b77a09c8857e817709cdc2843e564f8a7d4bec2e1473a37441e25164e51af73"
+    }
+  ],
+  "scope_note": "其他44页仅登记哈希，不声称视觉检查；根据主代理发现暂停本轮全面QA，等待分页修复后重新渲染。"
+}

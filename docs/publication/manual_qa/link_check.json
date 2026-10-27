@@ -1,7 +1,10 @@
 {
   "publication_summary": true,
   "source_evidence_path": "docs/publication/manual_qa/link_check.json",
-  "original_evidence_sha256": "c4e920c5a20531da6f07afebd77242d207616207b6936a1c41c759d0a6fff353",
+  "original_evidence_sha256": "8caca4536a729c82e94d492eafa30eb5e300db462a892764506bfb4bffdce36f",
   "disclosure": "Explicit public summary of saved local evidence. Machine paths, process identities, browser credentials and uploaded runtime bodies are not redistributed. This is not a newly executed acceptance test.",
+  "project_version": "2.0.0",
+  "scope": "Local filesystem existence of Markdown links in docs/USER_MANUAL.md; not remote HTTP reachability or PDF click testing",
+  "source_markdown_sha256": "179e675087effd45b3d50ff76d473514fee5b502fbaabb4b0292d5ba6f1925b0",
   "all_passed": true
 }

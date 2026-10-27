@@ -38,3 +38,19 @@ docs/v2/qa/prior_render/
 docs/publication/manual_qa/render/
 docs/publication/manual_qa/render.log
 docs/assets/user-manual/captures/
+
+# Six-feature delivery: keep final sources/assets; recording and render intermediates stay local.
+docs/core_features_qa/render/
+docs/core_features_qa/prior_render/
+docs/core_features_qa/render.log
+docs/development_delivery_qa/render/
+docs/development_delivery_qa/prior_render/
+docs/development_delivery_qa/render.log
+docs/assets/core-features/captures/
+demo/core_features/raw/
+demo/core_features/qa/
+demo/core_features/intermediate/
+demo/core_features/*.mp4
+demo/core_features/*.wav
+demo/core_features/*.log
+demo/history/

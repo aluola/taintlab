@@ -27,7 +27,7 @@ from PIL import Image
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / 'docs/USER_MANUAL.md'
 QA = ROOT / 'docs/publication/manual_qa'
-BASE = 'https://github.com/aluola/taintlab/blob/v2.0.0/docs/'
+BASE = 'https://github.com/aluola/taintlab/blob/v2.0.1/docs/'
 
 def sha(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()

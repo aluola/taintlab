@@ -1,0 +1,62 @@
+{
+  "release_version": "2.0.1",
+  "runtime_version": "2.0.0",
+  "created_at_utc": "2026-10-27T06:20:20.216563+00:00",
+  "assurance": "Actual production UI capture. Only crop, white margin, numbered arrows and rectangles added. Source PNGs retained with hashes. No owner/cookie/active database is published.",
+  "takes": [
+    {
+      "path": "docs/assets/core-features/captures/2026-10-27T05-33-38-488Z/capture_manifest.json",
+      "sha256": "1e513503f9f421991e4cb7dbcde5a839e13eab05a131f75563ec825aa09281fb",
+      "errors": []
+    },
+    {
+      "path": "docs/assets/core-features/captures/2026-10-27T05-35-28-123Z/capture_manifest.json",
+      "sha256": "e3acad05741dacea37c2771852333daf32f51dc9ab8e3c8f058bf7b8e9df9731",
+      "errors": [
+        {
+          "scenario": "direct",
+          "error": "TimeoutError: locator.selectOption: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByLabel('攻击手法', { exact: true })\u001b[22m\n"
+        },
+        {
+          "scenario": "indirect",
+          "error": "TimeoutError: locator.selectOption: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByLabel('攻击手法', { exact: true })\u001b[22m\n"
+        },
+        {
+          "scenario": "encoding",
+          "error": "TimeoutError: locator.selectOption: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByLabel('攻击手法', { exact: true })\u001b[22m\n"
+        },
+        {
+          "scenario": "segmented",
+          "error": "TimeoutError: locator.selectOption: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByLabel('攻击手法', { exact: true })\u001b[22m\n"
+        }
+      ]
+    },
+    {
+      "path": "docs/assets/core-features/captures/2026-10-27T05-39-57-717Z/capture_manifest.json",
+      "sha256": "5d5ac053ffb2e1149def834e52bde929fa7fd121b79d0d7a0774b58c5b6e2e67",
+      "errors": []
+    },
+    {
+      "path": "docs/assets/core-features/captures/2026-10-27T05-40-08-159Z/capture_manifest.json",
+      "sha256": "cd9ea17d5cd6b23d93e439256a15961493c94c83300a777b7972f90bbd17ebd0",
+      "errors": []
+    },
+    {
+      "path": "docs/assets/core-features/captures/2026-10-27T05-56-12-690Z/capture_manifest.json",
+      "sha256": "896393c2e863e844938a2d7fa6206b6f51bd4bc1e617c21fc9af01abeacd9ad7",
+      "errors": []
+    },
+    {
+      "path": "docs/assets/core-features/captures/2026-10-27T06-03-17-405Z/capture_manifest.json",
+      "sha256": "9d0eacae2dfc8ae5fe9b2a5e086a63579501a8494722b9f9484d79ebd1ceb2ad",
+      "errors": []
+    },
+    {
+      "path": "docs/assets/core-features/captures/console_20261027T055111Z/capture_manifest.json",
+      "sha256": "76179ac8762fca19aaca8fa0bc794afb7802d9e00e867367333516974d8ec82c",
+      "errors": []
+    }
+  ],
+  "figure_index": "docs/assets/core-features/figure_index.json",
+  "figure_count": 31
+}
