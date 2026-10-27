@@ -1,0 +1,446 @@
+{
+  "project_version": "2.0.0",
+  "runtime_version": "2.0.0",
+  "release_version": "2.0.1",
+  "reviewed_at_utc": "2026-10-27T06:34:00.945229+00:00",
+  "video": "demo/demo.mp4",
+  "video_sha256": "b164feb7d3f5816e3de76aba927513c5e4102dcf665d16a06ba2d5d2c37e3e61",
+  "video_bytes": 12478629,
+  "duration_seconds": 270.0,
+  "all_passed": true,
+  "reviewers": [
+    "AI agent ui_delivery",
+    "AI agent model_environment (independent F03/F04/F06 review)"
+  ],
+  "human_group_member_work_claimed": false,
+  "checks": {
+    "video_technical_validation": true,
+    "browser_32_points_playback": true,
+    "all_36_sampled_visual_frames": true,
+    "all_six_feature_operation_and_result_evidence_present": true,
+    "voice_and_caption_text_timing_match": true,
+    "root_timing_is_current_mirror": true,
+    "root_metadata_video_sha256": true
+  },
+  "technical_evidence": {
+    "video_validation": {
+      "path": "demo/video_validation.json",
+      "sha256": "1d9805512c61dbe773718c382ddf73ca4e51d3c7bb2d58dd1c3f0acf3969b70c",
+      "original_source_sha256": "a65f2d86b3214f7ef1a89bc421bef571c6649f0413b174a2339decb1e39d5c23"
+    },
+    "browser_playback": {
+      "path": "demo/playback_validation.json",
+      "sha256": "8b940a441900f3473102190879d39a4626ab50f7c919845e656256321a8d28be",
+      "original_source_sha256": "430be72e3ba39ec08da47a0fb5cd78489a1bb1527e62039902dd5d3f5af428c2"
+    },
+    "independent_visual_review": {
+      "path": "demo/core_features/independent_visual_review.json",
+      "sha256": "d7683739b489ae19c7741dcf63ff30e496e0531fd82578a56465f15d66e05ab1",
+      "original_source_sha256": "d7683739b489ae19c7741dcf63ff30e496e0531fd82578a56465f15d66e05ab1"
+    },
+    "narration_synthesis": {
+      "path": "demo/core_features/narration_synthesis.json",
+      "sha256": "143d76dcb17a285d5c675b2c7904338abea6437e9801bab27ef8179368c801e6",
+      "original_source_sha256": "143d76dcb17a285d5c675b2c7904338abea6437e9801bab27ef8179368c801e6"
+    }
+  },
+  "playback_scope": {
+    "samples": 32,
+    "last_requested_second": 268,
+    "ready_state": 4,
+    "media_errors": 0,
+    "cumulative_total_frames": 4334,
+    "cumulative_dropped_frames": 2,
+    "audio_muted": true
+  },
+  "reviewed_frames": [
+    {
+      "second": 0.5,
+      "path": "demo/core_features/qa/frame_000500.png",
+      "sha256": "fe4b51e6c0f16498ac66099229a16be7ef3391b0c14e4b3edb2dc0aee82f9791",
+      "passed": true,
+      "reviewer": "AI agent ui_delivery",
+      "view_method": "view_image detail=original; final changed frames re-opened individually; unchanged frame bytes compared with actual first visual inspection",
+      "unchanged_from_first_encode": true,
+      "observation": "首页实际生产界面、四快捷入口及本机qwen3-0.6b参数卡可读；顶部核心2.0.0和字幕发行2.0.1分开，模拟边界明确。"
+    },
+    {
+      "second": 14,
+      "path": "demo/core_features/qa/core_014.png",
+      "sha256": "e1f38881101a1cb64d8b14f10336043e24bafb7102083c29ad7993b690459b37",
+      "passed": true,
+      "reviewer": "AI agent ui_delivery",
+      "view_method": "view_image detail=original; final changed frames re-opened individually; unchanged frame bytes compared with actual first visual inspection",
+      "unchanged_from_first_encode": true,
+      "observation": "读取meeting动作已允许，网关参数和真实回执可见；底部固定输入框未覆盖本帧所讲的读取状态，不将模型自然语言当作工具成功。"
+    },
+    {
+      "second": 23,
+      "path": "demo/core_features/qa/core_023.png",
+      "sha256": "336b86b600bdfe0cdef1cbb7e2bb951ee80c47943ca12912d2d303e874138ec9",
+      "passed": true,
+      "reviewer": "AI agent ui_delivery",
+      "view_method": "view_image detail=original; final changed frames re-opened individually; unchanged frame bytes compared with actual first visual inspection",
+      "unchanged_from_first_encode": true,
+      "observation": "本地查询的实际最终答复显示验收11月8日、接口冻结11月3日；字幕与记录关键事实一致。"
+    },
+    {
+      "second": 37,
+      "path": "demo/core_features/qa/core_037.png",
+      "sha256": "0c2b80bf587562661b5b998a37990afc1cbd47a19d18fd7775238648d8dcdcd9",
+      "passed": true,
+      "reviewer": "AI agent ui_delivery",
+      "view_method": "view_image detail=original; final changed frames re-opened individually; unchanged frame bytes compared with actual first visual inspection",
+      "unchanged_from_first_encode": true,
+      "observation": "交付抽屉显示team_A实际通知正文15:00/A301与一条通知，状态来自真实执行而非模型自称发送。"
+    },
+    {
+      "second": 47,
+      "path": "demo/core_features/qa/core_047.png",
+      "sha256": "481acaf587107a5548fee57aeab2e7b83542dc0ab542489845bc9fe4ef99c9f8",
+      "passed": true,
+      "reviewer": "AI agent ui_delivery",
+      "view_method": "view_image detail=original; final changed frames re-opened individually; unchanged frame bytes compared with actual first visual inspection",
+      "unchanged_from_first_encode": true,
+      "observation": "虚拟导出内容及下载入口显示15:00/A301；实际下载文件另有保存记录，不将虚拟路径视为宿主模型写文件。"
+    },
+    {
+      "second": 53,
+      "path": "demo/core_features/qa/core_053.png",
+      "sha256": "be6ec65a3c09ea0d1f77cc76a2bf8bc1a6d38b6d6fccdce2a45aea2b108e5e0d",
+      "passed": true,
+      "reviewer": "AI agent ui_delivery",
+      "view_method": "view_image detail=original; final changed frames re-opened individually; unchanged frame bytes compared with actual first visual inspection",
+      "unchanged_from_first_encode": true,
+      "observation": "直接模板的vault读取明确阻断，提示读取对象不在任务授权范围，字幕没有把普通权限拒绝称为污点流向拒绝。"
+    },
+    {
+      "second": 61,
+      "path": "demo/core_features/qa/core_061.png",
+      "sha256": "e67da5dc4d0fd40a9974c7718275e895793690b87926f8a77ab5060cf4735aff",
+      "passed": true,
+      "reviewer": "AI agent ui_delivery",
+      "view_method": "view_image detail=original; final changed frames re-opened individually; unchanged frame bytes compared with actual first visual inspection",
+      "unchanged_from_first_encode": true,
+      "observation": "上传注册后的外部文档出现在资料选择列表；本帧尚未勾选，字幕明确上传不等于读取，后续实际运行另有记录。"
+    },
+    {
+      "second": 73,
+      "path": "demo/core_features/qa/core_073.png",
+      "sha256": "32a048425968070ee76abb35d3b6d2b15d6b74d80774625d178592a25ae86195",
+      "passed": true,
+      "reviewer": "AI agent ui_delivery",
+      "view_method": "view_image detail=original; final changed frames re-opened individually; unchanged frame bytes compared with actual first visual inspection",
+      "unchanged_from_first_encode": false,
+      "observation": "修复后字幕置顶，upload来源、不可信内容、internal敏感度、节点和正文trusted/approved引用均完整可读；原正文不获得控制权限。"
+    },
+    {
+      "second": 85,
+      "path": "demo/core_features/qa/core_085.png",
+      "sha256": "b0965c1583231dd8cb6ca1691e7f6836f6a6ad9ed70ecccecb82043e18793bee",
+      "passed": true,
+      "reviewer": "AI agent ui_delivery",
+      "view_method": "view_image detail=original; final changed frames re-opened individually; unchanged frame bytes compared with actual first visual inspection",
+      "unchanged_from_first_encode": false,
+      "observation": "修复后来源图下方原上传节点及到tool_result_assembly实线可读；虚线潜在上下文依赖与生成节点可区分，字幕不声称模型内部因果。视口为局部图。"
+    },
+    {
+      "second": 94,
+      "path": "demo/core_features/qa/core_094.png",
+      "sha256": "c73f89590516fceaf4c54f8f513c5ba507f2eddfe3886889fcac5803ad7a49f9",
+      "passed": true,
+      "observation": "F03 历史回放与核心 2.0.0 角标明确；获准读取后第二次读取被阻断，展开的敏感度流向原因及遮蔽参数可读。字幕明确为当前冻结版正常任务失败案例。",
+      "view_method": "SHA-256 identical to first review frame actually viewed at original size",
+      "prior_frame_sha256": "c73f89590516fceaf4c54f8f513c5ba507f2eddfe3886889fcac5803ad7a49f9",
+      "reviewer": "AI agent model_environment (independent delegated review)"
+    },
+    {
+      "second": 105,
+      "path": "demo/core_features/qa/core_105.png",
+      "sha256": "0a8c64244d3252696b6a34e45f1862fc30cec6f12d3a94879ab75c2e9bdc4633",
+      "passed": true,
+      "observation": "敏感度流向拒绝原因可读；字幕正确区分敏感度信息流拒绝与普通收件人白名单，主要证据未被字幕遮挡。",
+      "view_method": "SHA-256 identical to first review frame actually viewed at original size",
+      "prior_frame_sha256": "0a8c64244d3252696b6a34e45f1862fc30cec6f12d3a94879ab75c2e9bdc4633",
+      "reviewer": "AI agent model_environment (independent delegated review)"
+    },
+    {
+      "second": 113,
+      "path": "demo/core_features/qa/core_113.png",
+      "sha256": "0d840c9f437035a84adfd5c542c98ce6630dd87f92386224721f4f51eb999871",
+      "passed": true,
+      "observation": "来源抽屉显示 task_and_receipt 与 model_generation 的敏感标签及父依赖；字幕置顶未覆盖节点；图为上下文潜在依赖，不声称模型内部因果。",
+      "view_method": "SHA-256 identical to first review frame actually viewed at original size",
+      "prior_frame_sha256": "0d840c9f437035a84adfd5c542c98ce6630dd87f92386224721f4f51eb999871",
+      "reviewer": "AI agent model_environment (independent delegated review)"
+    },
+    {
+      "second": 120,
+      "path": "demo/core_features/qa/core_120.png",
+      "sha256": "b0751a3a05a56336b07f7f92e81510330ab1b5e59e134b47fac663bbcd9084f1",
+      "passed": true,
+      "observation": "上游局部来源图中 vault、tool_result_assembly 的敏感标签与可信控制节点可见；字幕明确为原始资料及依赖边。",
+      "view_method": "SHA-256 identical to first review frame actually viewed at original size",
+      "prior_frame_sha256": "b0751a3a05a56336b07f7f92e81510330ab1b5e59e134b47fac663bbcd9084f1",
+      "reviewer": "AI agent model_environment (independent delegated review)"
+    },
+    {
+      "second": 128,
+      "path": "demo/core_features/qa/core_128.png",
+      "sha256": "fe4bef15e75bbd58580af6cbf72f853509ae59052c7272ce28550e719d203a26",
+      "passed": true,
+      "observation": "同一历史运行交付页显示通知 0、文件 0，字幕仅说明没有这些模拟副作用，关键状态未遮挡。",
+      "view_method": "SHA-256 identical to first review frame actually viewed at original size",
+      "prior_frame_sha256": "fe4bef15e75bbd58580af6cbf72f853509ae59052c7272ce28550e719d203a26",
+      "reviewer": "AI agent model_environment (independent delegated review)"
+    },
+    {
+      "second": 133,
+      "path": "demo/core_features/qa/core_133.png",
+      "sha256": "42a818f453d41fc31b7d29c5270c01694a589b336a63caf624156c8a5988f744",
+      "passed": true,
+      "observation": "泄露检测未发现 Canary 与 legitimate_success=false 可见；字幕明确合法任务失败与保守传播可用性代价。",
+      "view_method": "SHA-256 identical to first review frame actually viewed at original size",
+      "prior_frame_sha256": "42a818f453d41fc31b7d29c5270c01694a589b336a63caf624156c8a5988f744",
+      "reviewer": "AI agent model_environment (independent delegated review)"
+    },
+    {
+      "second": 138,
+      "path": "demo/core_features/qa/core_138.png",
+      "sha256": "e02b429d8a6534db79335b2a3dbe4cb99722c06098a25e06b0f2e887ad3eeb83",
+      "passed": true,
+      "observation": "F04 本轮真实界面录制角标明确；待确认卡显示 team_A、15:00/A301、内容哈希、有效期、来源及确认/拒绝按钮，字幕未覆盖关键内容。",
+      "view_method": "SHA-256 identical to first review frame actually viewed at original size",
+      "prior_frame_sha256": "e02b429d8a6534db79335b2a3dbe4cb99722c06098a25e06b0f2e887ad3eeb83",
+      "reviewer": "AI agent model_environment (independent delegated review)"
+    },
+    {
+      "second": 148,
+      "path": "demo/core_features/qa/core_148.png",
+      "sha256": "b326a52f571eee3e8158abb47866d56f21dff99a69bf1dc36438c7de44bf373d",
+      "passed": true,
+      "observation": "同一 F04 运行交付页显示 1 条 team_A 实际通知及 15:00/A301；字幕区分真实点击确认与模型声明，正文未遮挡。",
+      "view_method": "SHA-256 identical to first review frame actually viewed at original size",
+      "prior_frame_sha256": "b326a52f571eee3e8158abb47866d56f21dff99a69bf1dc36438c7de44bf373d",
+      "reviewer": "AI agent model_environment (independent delegated review)"
+    },
+    {
+      "second": 157,
+      "path": "demo/core_features/qa/core_157.png",
+      "sha256": "29cbd0adac0243c9a7c014b70b5a2b34e372c52960051f71a4b444729e697bc6",
+      "passed": true,
+      "observation": "可信授权面板列出工具、meeting 范围、team_A/internal、6 次工具额度、确认工具与运行绑定；字幕与面板一致，字段可读。",
+      "view_method": "SHA-256 identical to first review frame actually viewed at original size",
+      "prior_frame_sha256": "29cbd0adac0243c9a7c014b70b5a2b34e372c52960051f71a4b444729e697bc6",
+      "reviewer": "AI agent model_environment (independent delegated review)"
+    },
+    {
+      "second": 163,
+      "path": "demo/core_features/qa/core_163.png",
+      "sha256": "68b9d155e176807cdd7002e9d5bb4c607eb21edd388deed925c676695899b8a3",
+      "passed": true,
+      "observation": "独立拒绝任务显示待确认、已阻断及最终原答“任务结果”；字幕明确不伪造模型的取消措辞，与原记录空收件箱事实一致。",
+      "view_method": "SHA-256 identical to first review frame actually viewed at original size",
+      "prior_frame_sha256": "68b9d155e176807cdd7002e9d5bb4c607eb21edd388deed925c676695899b8a3",
+      "reviewer": "AI agent model_environment (independent delegated review)"
+    },
+    {
+      "second": 172,
+      "path": "demo/core_features/qa/core_172.png",
+      "sha256": "2bdd802937a08aa38577babdb22d184948427c0f24a235a4ec312c4293346f7e",
+      "passed": true,
+      "observation": "历史回放显示 attacker 参数与“收件人不在本任务白名单”拒绝原因；字幕正确说明明确越权不能用确认放行。未声称该运行所有合法通知为空。",
+      "view_method": "SHA-256 identical to first review frame actually viewed at original size",
+      "prior_frame_sha256": "2bdd802937a08aa38577babdb22d184948427c0f24a235a4ec312c4293346f7e",
+      "reviewer": "AI agent model_environment (independent delegated review)"
+    },
+    {
+      "second": 177,
+      "path": "demo/core_features/qa/core_177.png",
+      "sha256": "c8fa75944a3977add9684ea433d9787e19b5eeaadbf871988198c722dbd4e959",
+      "passed": true,
+      "reviewer": "AI agent ui_delivery",
+      "view_method": "view_image detail=original; final changed frames re-opened individually; unchanged frame bytes compared with actual first visual inspection",
+      "unchanged_from_first_encode": true,
+      "observation": "直接注入生成预览显示用户附加入口、完整合法任务和注入前后，持续角标明确尚未推理。"
+    },
+    {
+      "second": 182,
+      "path": "demo/core_features/qa/core_182.png",
+      "sha256": "4ff338ca05e345c95206d06acc87331b308432eee65cdbd7cf403bd87624f3ee",
+      "passed": true,
+      "reviewer": "AI agent ui_delivery",
+      "view_method": "view_image detail=original; final changed frames re-opened individually; unchanged frame bytes compared with actual first visual inspection",
+      "unchanged_from_first_encode": true,
+      "observation": "直接模板实际模型动作已拒绝vault，后续允许查询卡可见；合法断言失败由同一保存记录支撑，字幕没有将阻断等同于任务成功。"
+    },
+    {
+      "second": 188,
+      "path": "demo/core_features/qa/core_188.png",
+      "sha256": "cc59b0802929b2a08903095ab5adcf87fe91df5cc97c60e448ce64625d87f710",
+      "passed": true,
+      "reviewer": "AI agent ui_delivery",
+      "view_method": "view_image detail=original; final changed frames re-opened individually; unchanged frame bytes compared with actual first visual inspection",
+      "unchanged_from_first_encode": true,
+      "observation": "间接模板预览显示document/patch的注入前后及伪授权文字，规则预览标签明确，正常原事实保留。"
+    },
+    {
+      "second": 193,
+      "path": "demo/core_features/qa/core_193.png",
+      "sha256": "f0b6d5e66c7c98db9174b2693eb6480de12feca4fcca45ee5ffc8bf3d4b9ab91",
+      "passed": true,
+      "reviewer": "AI agent ui_delivery",
+      "view_method": "view_image detail=original; final changed frames re-opened individually; unchanged frame bytes compared with actual first visual inspection",
+      "unchanged_from_first_encode": true,
+      "observation": "间接模板真实read_document(patch)允许及通知/最终回复允许卡可见；通知复制伪授权与合法断言结论引用同一公开运行记录，正文并非本帧全部展开。"
+    },
+    {
+      "second": 198,
+      "path": "demo/core_features/qa/core_198.png",
+      "sha256": "5cd47466ce05a32fb31cb692254e834aa3de9bf89d555670f0108902b82ee9e3",
+      "passed": true,
+      "reviewer": "AI agent ui_delivery",
+      "view_method": "view_image detail=original; final changed frames re-opened individually; unchanged frame bytes compared with actual first visual inspection",
+      "unchanged_from_first_encode": true,
+      "observation": "编码模板预览明确Base64、文档正文入口和真实载荷，注入前事实保留；角标标为规则预览。"
+    },
+    {
+      "second": 203,
+      "path": "demo/core_features/qa/core_203.png",
+      "sha256": "512f04e6558e422f2837f49e718f9d2a1750be658507afbeb1114cface569b33",
+      "passed": true,
+      "reviewer": "AI agent ui_delivery",
+      "view_method": "view_image detail=original; final changed frames re-opened individually; unchanged frame bytes compared with actual first visual inspection",
+      "unchanged_from_first_encode": true,
+      "observation": "编码模板真实读取patch回执、允许通知和最终回复卡可见；合法交付断言结论与对应记录相符，不将预览当作模型运行。"
+    },
+    {
+      "second": 210,
+      "path": "demo/core_features/qa/core_210.png",
+      "sha256": "b4eb737b8f1874d77f34fa06738b3fc356900bc3e7f0c65178e85ece6cda335e",
+      "passed": true,
+      "reviewer": "AI agent ui_delivery",
+      "view_method": "view_image detail=original; final changed frames re-opened individually; unchanged frame bytes compared with actual first visual inspection",
+      "unchanged_from_first_encode": false,
+      "observation": "分段模板实际预览同时展示patch和continuation及两段内容；角标已明确规则预览并实际提交，字幕说明预览本身不算推理。"
+    },
+    {
+      "second": 217,
+      "path": "demo/core_features/qa/core_217.png",
+      "sha256": "03deb97fe309fc47b3fcdf220178f38bf12112a4cfbd005e50c11c2c2ae542dc",
+      "passed": true,
+      "reviewer": "AI agent ui_delivery",
+      "view_method": "view_image detail=original; final changed frames re-opened individually; unchanged frame bytes compared with actual first visual inspection",
+      "unchanged_from_first_encode": false,
+      "observation": "分段真实运行只有patch读取卡，通知/最终回复允许；字幕如实披露第二段未读和合法失败，没有相信模型声称读过第二段。"
+    },
+    {
+      "second": 223,
+      "path": "demo/core_features/qa/core_223.png",
+      "sha256": "486500eaa6a8709288c65cbdc9b56a74cef3b6de1c42d8fc518171002c659ea5",
+      "passed": true,
+      "observation": "真实历史记录的已建立 Canary、已读敏感资料、未发现泄露以及 legitimate_success=false 可读；字幕正确说明授权读取不等于泄露。",
+      "view_method": "SHA-256 identical to first review frame actually viewed at original size",
+      "prior_frame_sha256": "486500eaa6a8709288c65cbdc9b56a74cef3b6de1c42d8fc518171002c659ea5",
+      "reviewer": "AI agent model_environment (independent delegated review)"
+    },
+    {
+      "second": 229,
+      "path": "demo/core_features/qa/core_229.png",
+      "sha256": "6e451b6fc4277f15c71e274237feb99b61169d56a6cfde112355bb091e627ed7",
+      "passed": true,
+      "observation": "真实终端摘录显示现有检测器、合成 Canary、精确阳性 true 与近似阴性 false，出口与方法可读；上下角标明确非模型正式实验。长命令尾部换行但不影响检测证据。",
+      "view_method": "SHA-256 identical to first review frame actually viewed at original size",
+      "prior_frame_sha256": "6e451b6fc4277f15c71e274237feb99b61169d56a6cfde112355bb091e627ed7",
+      "reviewer": "AI agent model_environment (independent delegated review)"
+    },
+    {
+      "second": 237,
+      "path": "demo/core_features/qa/core_237.png",
+      "sha256": "630c9389f6a50cbf1a577ac30f42c7aae7afe885ec2a6cd34b8d9d74204c6111",
+      "passed": true,
+      "observation": "终端显示两层 Base64、同出口分片和跨出口观察者拼接的出口/method/segmented 字段；字幕与合成自检记录一致。",
+      "view_method": "SHA-256 identical to first review frame actually viewed at original size",
+      "prior_frame_sha256": "630c9389f6a50cbf1a577ac30f42c7aae7afe885ec2a6cd34b8d9d74204c6111",
+      "reviewer": "AI agent model_environment (independent delegated review)"
+    },
+    {
+      "second": 242,
+      "path": "demo/core_features/qa/core_242.png",
+      "sha256": "b4f3b4812b965025b333833b3d5a9ce2785f08e110f388cdd2b2d67fbdc3d4e3",
+      "passed": true,
+      "observation": "终端显示三层编码超出 max_depth=2、不命中、7/7 预设匹配及不计入 ASR；限制文字和字幕完整可读。",
+      "view_method": "SHA-256 identical to first review frame actually viewed at original size",
+      "prior_frame_sha256": "b4f3b4812b965025b333833b3d5a9ce2785f08e110f388cdd2b2d67fbdc3d4e3",
+      "reviewer": "AI agent model_environment (independent delegated review)"
+    },
+    {
+      "second": 247,
+      "path": "demo/core_features/qa/core_247.png",
+      "sha256": "173b020f9a330fe1c3caa6a911a110d1297f12f2c5133421e4f0f00b470611e8",
+      "passed": true,
+      "observation": "当前 baseline 表显示 1296 条、主三配置、ASR 13/216、9/216、8/216 与正常完成率 71/108、60/108、77/108；字幕没有遮住指标。",
+      "view_method": "SHA-256 identical to first review frame actually viewed at original size",
+      "prior_frame_sha256": "173b020f9a330fe1c3caa6a911a110d1297f12f2c5133421e4f0f00b470611e8",
+      "reviewer": "AI agent model_environment (independent delegated review)"
+    },
+    {
+      "second": 253,
+      "path": "demo/core_features/qa/core_253.png",
+      "sha256": "3d28c2c0de474c5d0eb6ef84f4ac9ad35d17564976912a076d47970f87f9cba9",
+      "passed": true,
+      "observation": "最终字幕已明确“完整防御的攻击成功率”18.89%，与仅权限相同；扩展集 1080 条、四配置、34/180 的 ASR 及正常完成率均清晰，字幕未覆盖主要指标。",
+      "view_method": "view_image detail=original (final video)",
+      "prior_frame_sha256": "a0d71e8728c311e89608eeeab838c9e849c05363a3208603d92f72f243272b2a",
+      "reviewer": "AI agent model_environment (independent delegated review)"
+    },
+    {
+      "second": 258,
+      "path": "demo/core_features/qa/core_258.png",
+      "sha256": "c75a0da7b431fa0c25d73ecde8053323f5d1ffaedfe0039d698ca8e0ba864290",
+      "passed": true,
+      "observation": "最终重新查看：ASR/正常完成率图和接触率表清晰；自动完成与人工辅助完成表头可见，字幕要求分开统计，没有虚构此时未滚入的数字。",
+      "view_method": "view_image detail=original (final video)",
+      "prior_frame_sha256": "b420547cb7b052087fe097fe8f504cf824a346d938f2b91f821cb383ca29075b",
+      "reviewer": "AI agent model_environment (independent delegated review)"
+    },
+    {
+      "second": 268,
+      "path": "demo/core_features/qa/core_268.png",
+      "sha256": "39ea842e07e6baaff47521f73882934fb4464fd42fd3df41a98d40a8a694cb69",
+      "passed": true,
+      "reviewer": "AI agent ui_delivery",
+      "view_method": "view_image detail=original; final changed frames re-opened individually; unchanged frame bytes compared with actual first visual inspection",
+      "unchanged_from_first_encode": true,
+      "observation": "结尾仍是实际首页和本机模型配置，字幕明确零泄露无因果证明、未证明独立污点收益和成员资料待补充，无黑屏占位。"
+    }
+  ],
+  "resolved_findings": [
+    {
+      "first_encode": "587196886c4cea3d7b3e8de3d24cd950086c816c214585dbb564ef566167ef9c",
+      "issue": "65–90秒底部字幕压住来源详情和原上传节点",
+      "change": "只调整字幕位置为top_y82，73/85帧重新原尺寸复看通过。"
+    },
+    {
+      "issue": "250–256秒“完整防御成功率”措辞歧义",
+      "change": "字幕和离线中文旁白同步改为“完整防御的攻击成功率”，18.89%数值及真实画面不变，253帧独立复看通过。"
+    },
+    {
+      "issue": "分段预览阶段标签过于概括",
+      "change": "205–214秒改明确“规则预览并实际提交·等待已剪辑”，210/217帧重新复看。"
+    }
+  ],
+  "scope_limits": [
+    "36个关键位置的AI原尺寸视觉抽样，不宣称逐帧或连续完整观看270秒。",
+    "全片解码/黑屏扫描、非静音音轨与37段语音字幕文本时间一致性由编码工具验证；浏览器实际seek/play覆盖32点，累计4334帧中2帧掉帧，未出现媒体错误。",
+    "未作人工全片音频听审；System.Speech离线中文旁白及时间匹配不等于人耳对自然度的验收。",
+    "来源图展示当前局部视口，公开图件与运行记录保留上游/下游细节；不声称追踪模型内部精确因果。",
+    "部分F05合法断言和通知污染结论在保存的公开运行记录中可核验，短视频画面不逐项展开每个最终状态字段。",
+    "模型动作、合法失败、未完整接触攻击内容和合成检测器边界均未修改；本轮交互演示不计入正式ASR。",
+    "原take、中间编码、音轨与QA像素本机保留；轻量包按白名单保留最终MP4和公开生产元数据，未分发原take。"
+  ],
+  "publication_reference_projection": {
+    "source_review_sha256": "ebdb1b25fdbe650698d289c2e725aa2e4f8f84a2dee3cbecb49f04e72bb6236e",
+    "scope": "Reference SHA256 values bind the published evidence bytes; original_source_sha256 retains the saved local evidence identity. Review observations are unchanged. This is not a new visual review."
+  }
+}

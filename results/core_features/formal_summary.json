@@ -1,0 +1,269 @@
+{
+  "kind": "read_only_aggregation_of_historical_frozen_v2_records",
+  "created_at_utc": "2026-10-27T05:29:50.623463+00:00",
+  "release_version": "2.0.1",
+  "runtime_core_version": "2.0.0",
+  "new_model_calls": 0,
+  "formal_records_modified": false,
+  "interpretation": "Per-run elapsed_seconds are saved observation latencies, not total wall-clock time or controlled performance comparisons. P95 is nearest rank. Run terminal completed is distinct from legitimate_success.",
+  "campaigns": {
+    "baseline": {
+      "none": {
+        "runs": 324,
+        "backend_counts": {
+          "local_llama_cpp": 324
+        },
+        "status_counts": {
+          "completed": 305,
+          "exhausted": 19
+        },
+        "usage": {
+          "model_calls": 1030,
+          "model_attempts": 1030,
+          "tool_calls": 706,
+          "prompt_tokens": 644664,
+          "completion_tokens": 28878,
+          "parse_failures": 0
+        },
+        "elapsed_seconds": {
+          "sum_of_record_latencies": 1239.295,
+          "mean": 3.8249845679012346,
+          "median": 3.453,
+          "p95_nearest_rank": 8.11,
+          "maximum": 12.609
+        },
+        "normal_legal_complete": 71,
+        "normal_runs": 108,
+        "confirmation_events": 0
+      },
+      "input_filter": {
+        "runs": 324,
+        "backend_counts": {
+          "local_llama_cpp": 324
+        },
+        "status_counts": {
+          "completed": 298,
+          "exhausted": 26
+        },
+        "usage": {
+          "model_calls": 1025,
+          "model_attempts": 1025,
+          "tool_calls": 701,
+          "prompt_tokens": 641056,
+          "completion_tokens": 27305,
+          "parse_failures": 0
+        },
+        "elapsed_seconds": {
+          "sum_of_record_latencies": 1213.159,
+          "mean": 3.744317901234568,
+          "median": 3.406,
+          "p95_nearest_rank": 8.187,
+          "maximum": 12.609
+        },
+        "normal_legal_complete": 60,
+        "normal_runs": 108,
+        "confirmation_events": 0
+      },
+      "taint_policy": {
+        "runs": 324,
+        "backend_counts": {
+          "local_llama_cpp": 324
+        },
+        "status_counts": {
+          "completed": 305,
+          "exhausted": 19
+        },
+        "usage": {
+          "model_calls": 1030,
+          "model_attempts": 1030,
+          "tool_calls": 706,
+          "prompt_tokens": 645284,
+          "completion_tokens": 28855,
+          "parse_failures": 0
+        },
+        "elapsed_seconds": {
+          "sum_of_record_latencies": 1229.31,
+          "mean": 3.7941666666666665,
+          "median": 3.492,
+          "p95_nearest_rank": 8.219,
+          "maximum": 9.937
+        },
+        "normal_legal_complete": 77,
+        "normal_runs": 108,
+        "confirmation_events": 8
+      },
+      "policy_only": {
+        "runs": 324,
+        "backend_counts": {
+          "local_llama_cpp": 324
+        },
+        "status_counts": {
+          "exhausted": 20,
+          "completed": 304
+        },
+        "usage": {
+          "model_calls": 1031,
+          "model_attempts": 1031,
+          "tool_calls": 707,
+          "prompt_tokens": 646466,
+          "completion_tokens": 28723,
+          "parse_failures": 0
+        },
+        "elapsed_seconds": {
+          "sum_of_record_latencies": 1224.292,
+          "mean": 3.778679012345679,
+          "median": 3.4684999999999997,
+          "p95_nearest_rank": 8.297,
+          "maximum": 9.969
+        },
+        "normal_legal_complete": 78,
+        "normal_runs": 108,
+        "confirmation_events": 9
+      }
+    },
+    "external": {
+      "none": {
+        "runs": 270,
+        "backend_counts": {
+          "local_llama_cpp": 270
+        },
+        "status_counts": {
+          "completed": 259,
+          "exhausted": 11
+        },
+        "usage": {
+          "model_calls": 825,
+          "model_attempts": 825,
+          "tool_calls": 555,
+          "prompt_tokens": 488606,
+          "completion_tokens": 24966,
+          "parse_failures": 0
+        },
+        "elapsed_seconds": {
+          "sum_of_record_latencies": 987.714,
+          "mean": 3.6582,
+          "median": 3.3594999999999997,
+          "p95_nearest_rank": 7.14,
+          "maximum": 13.0
+        },
+        "normal_legal_complete": 67,
+        "normal_runs": 90,
+        "confirmation_events": 0
+      },
+      "input_filter": {
+        "runs": 270,
+        "backend_counts": {
+          "local_llama_cpp": 270
+        },
+        "status_counts": {
+          "completed": 252,
+          "exhausted": 18
+        },
+        "usage": {
+          "model_calls": 835,
+          "model_attempts": 835,
+          "tool_calls": 565,
+          "prompt_tokens": 492146,
+          "completion_tokens": 23259,
+          "parse_failures": 0
+        },
+        "elapsed_seconds": {
+          "sum_of_record_latencies": 957.176,
+          "mean": 3.5450962962962964,
+          "median": 3.2655000000000003,
+          "p95_nearest_rank": 7.063,
+          "maximum": 8.422
+        },
+        "normal_legal_complete": 59,
+        "normal_runs": 90,
+        "confirmation_events": 0
+      },
+      "taint_policy": {
+        "runs": 270,
+        "backend_counts": {
+          "local_llama_cpp": 270
+        },
+        "status_counts": {
+          "completed": 260,
+          "exhausted": 10
+        },
+        "usage": {
+          "model_calls": 831,
+          "model_attempts": 831,
+          "tool_calls": 561,
+          "prompt_tokens": 493682,
+          "completion_tokens": 25347,
+          "parse_failures": 0
+        },
+        "elapsed_seconds": {
+          "sum_of_record_latencies": 998.78,
+          "mean": 3.6991851851851854,
+          "median": 3.461,
+          "p95_nearest_rank": 7.328,
+          "maximum": 10.422
+        },
+        "normal_legal_complete": 67,
+        "normal_runs": 90,
+        "confirmation_events": 6
+      },
+      "policy_only": {
+        "runs": 270,
+        "backend_counts": {
+          "local_llama_cpp": 270
+        },
+        "status_counts": {
+          "completed": 261,
+          "exhausted": 9
+        },
+        "usage": {
+          "model_calls": 828,
+          "model_attempts": 828,
+          "tool_calls": 558,
+          "prompt_tokens": 489380,
+          "completion_tokens": 25162,
+          "parse_failures": 0
+        },
+        "elapsed_seconds": {
+          "sum_of_record_latencies": 983.7379999999999,
+          "mean": 3.643474074074074,
+          "median": 3.3594999999999997,
+          "p95_nearest_rank": 6.891,
+          "maximum": 13.14
+        },
+        "normal_legal_complete": 66,
+        "normal_runs": 90,
+        "confirmation_events": 6
+      }
+    }
+  },
+  "total": {
+    "runs": 2376,
+    "backend_counts": {
+      "local_llama_cpp": 2376
+    },
+    "status_counts": {
+      "completed": 2244,
+      "exhausted": 132
+    },
+    "usage": {
+      "model_calls": 7435,
+      "model_attempts": 7435,
+      "tool_calls": 5059,
+      "prompt_tokens": 4541284,
+      "completion_tokens": 212495,
+      "parse_failures": 0
+    },
+    "elapsed_seconds": {
+      "sum_of_record_latencies": 8833.464,
+      "mean": 3.717787878787879,
+      "median": 3.422,
+      "p95_nearest_rank": 7.844,
+      "maximum": 13.14
+    },
+    "normal_legal_complete": 545,
+    "normal_runs": 792,
+    "confirmation_events": 29
+  },
+  "source_records_sha256": "42035f8fd877e2918e3c531d9e79c84d04bafc144340b004a85fd8c8acffee61",
+  "source_file_count": 2376
+}

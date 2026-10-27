@@ -242,3 +242,73 @@ def test_independent_current_reviews_bind_final_video_and_browser_report_referen
         source.unlink()
     with pytest.raises(ValueError):
         verify.verify_current_reviews(tmp_path)
+
+
+def feature_fixture(root):
+    spec = importlib.util.spec_from_file_location("synthetic_feature_artifacts", Path(__file__).with_name("test_packaging.py"))
+    helper = importlib.util.module_from_spec(spec); spec.loader.exec_module(helper)
+    helper.put(root, "pyproject.toml", '[project]\nversion="2.0.0"\n')
+    helper.make_production_fixture(root)
+    helper.dump(root, "demo/video_validation.json", {})
+    helper.make_feature_fixture(root)
+    return helper
+
+
+@pytest.mark.parametrize("failure", ["changed_pdf", "chapter_removed", "review_failed"])
+def test_independent_feature_docs_verify_real_hashes_chapters_and_review(tmp_path, failure):
+    helper = feature_fixture(tmp_path)
+    assert len(verify.verify_feature_documents(tmp_path)) == 2
+    name = "docs/CORE_FEATURES_GUIDE.pdf"
+    qa_name = "docs/core_features_qa/validation.json"
+    qa = verify.read_json(tmp_path / qa_name)
+    if failure == "changed_pdf":
+        helper.put(tmp_path, name, "changed reviewed artifact")
+    elif failure == "chapter_removed":
+        name = "docs/CORE_FEATURES_GUIDE.md"
+        helper.put(tmp_path, name, "# Synthetic document without its required chapters")
+        qa["artifact_sha256"][name] = verify.sha(tmp_path / name)
+    else:
+        name = "docs/core_features_qa/visual_review.json"
+        helper.dump(tmp_path, name, {"all_passed": False})
+        qa["review_sha256"] = verify.sha(tmp_path / name)
+    helper.dump(tmp_path, qa_name, qa)
+    with pytest.raises(ValueError):
+        verify.verify_feature_documents(tmp_path)
+
+
+def test_independent_feature_media_accepts_270_seconds_but_requires_actual_result_evidence(tmp_path):
+    helper = feature_fixture(tmp_path)
+    result = verify.verify_current_reviews(tmp_path)
+    assert result["feature_chapters"]["actual_duration"] == 270
+    assert result["video_visual_review"] == "demo/core_features/visual_review.json"
+    helper.put(tmp_path, "results/core_features/demo_runs/synthetic.json", '{"changed":true}')
+    with pytest.raises(ValueError, match="evidence hash mismatch"):
+        verify.verify_current_reviews(tmp_path)
+
+
+@pytest.mark.parametrize("name", ["source_inventory.json", "recording_timing.json"])
+def test_independent_feature_media_rejects_missing_reproduction_configuration(tmp_path, name):
+    feature_fixture(tmp_path)
+    assert verify.verify_feature_video(tmp_path)["passed"]
+    (tmp_path / "demo/core_features" / name).unlink()
+    with pytest.raises(ValueError, match="reproduction metadata is missing"):
+        verify.verify_feature_video(tmp_path)
+
+
+def test_independent_public_measurement_rejects_pid_even_if_summary_hash_is_rebound(tmp_path):
+    helper = feature_fixture(tmp_path)
+    assert verify.verify_feature_measurement(tmp_path)["canary_controls"] == 2
+    name = "results/core_features/process_memory_public.jsonl"
+    row = json.loads((tmp_path / name).read_text(encoding="utf-8")); row["pid"] = 123
+    helper.put(tmp_path, name, json.dumps(row) + "\n")
+    qa = verify.read_json(tmp_path / "results/core_features/performance_summary.json")
+    qa["public_samples_sha256"] = verify.sha(tmp_path / name)
+    helper.dump(tmp_path, "results/core_features/performance_summary.json", qa)
+    with pytest.raises(ValueError, match="private fields"):
+        verify.verify_feature_measurement(tmp_path)
+
+
+@pytest.mark.parametrize("relative", ["results/core_features/performance/run/measurement.json", "results/core_features/demo_runs/sessions/current.json", "vendor/model/runtime.dll"])
+def test_independent_archive_privacy_rejects_raw_feature_runtime_and_binaries(relative):
+    with pytest.raises(ValueError):
+        verify.enforce_light_privacy(verify.PurePosixPath("taintlab_project") / relative)

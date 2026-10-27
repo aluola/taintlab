@@ -1,0 +1,207 @@
+{
+  "video_sha256": "587196886c4cea3d7b3e8de3d24cd950086c816c214585dbb564ef566167ef9c",
+  "reviewed_at_utc": "2026-10-27T06:28:46.777977+00:00",
+  "reviewer": "AI agent ui_delivery; independent 18 frames reviewed by AI model_environment",
+  "all_passed": false,
+  "status": "requires_caption_layout_and_terminology_adjustment",
+  "issues": [
+    {
+      "interval": [
+        65,
+        90
+      ],
+      "observation": "Bottom captions at 73/85 seconds overlap the lower source card and upload graph node; move captions to top_y=82."
+    },
+    {
+      "interval": [
+        250,
+        256
+      ],
+      "observation": "The phrase complete-defence success rate is ambiguous; explicitly name attack success rate, with the unchanged value 18.89%."
+    }
+  ],
+  "additional_label_improvement": "Label the 205–214 second segmented preview and submit sequence explicitly as preview plus actual submission.",
+  "frames": [
+    {
+      "path": "core_014.png",
+      "sha256": "e1f38881101a1cb64d8b14f10336043e24bafb7102083c29ad7993b690459b37"
+    },
+    {
+      "path": "core_023.png",
+      "sha256": "336b86b600bdfe0cdef1cbb7e2bb951ee80c47943ca12912d2d303e874138ec9"
+    },
+    {
+      "path": "core_037.png",
+      "sha256": "0c2b80bf587562661b5b998a37990afc1cbd47a19d18fd7775238648d8dcdcd9"
+    },
+    {
+      "path": "core_047.png",
+      "sha256": "481acaf587107a5548fee57aeab2e7b83542dc0ab542489845bc9fe4ef99c9f8"
+    },
+    {
+      "path": "core_053.png",
+      "sha256": "be6ec65a3c09ea0d1f77cc76a2bf8bc1a6d38b6d6fccdce2a45aea2b108e5e0d"
+    },
+    {
+      "path": "core_061.png",
+      "sha256": "e67da5dc4d0fd40a9974c7718275e895793690b87926f8a77ab5060cf4735aff"
+    },
+    {
+      "path": "core_073.png",
+      "sha256": "2f42eaa7e1b0081ca72a8e7fd0ed9afc58928cda6b358c4c2b38825c212001b5"
+    },
+    {
+      "path": "core_085.png",
+      "sha256": "cc334ce7fb66cf666d3dfd840e1b93693d63b4e5604d8870a72cb9c357ac8c3b"
+    },
+    {
+      "path": "core_094.png",
+      "sha256": "c73f89590516fceaf4c54f8f513c5ba507f2eddfe3886889fcac5803ad7a49f9"
+    },
+    {
+      "path": "core_105.png",
+      "sha256": "0a8c64244d3252696b6a34e45f1862fc30cec6f12d3a94879ab75c2e9bdc4633"
+    },
+    {
+      "path": "core_113.png",
+      "sha256": "0d840c9f437035a84adfd5c542c98ce6630dd87f92386224721f4f51eb999871"
+    },
+    {
+      "path": "core_120.png",
+      "sha256": "b0751a3a05a56336b07f7f92e81510330ab1b5e59e134b47fac663bbcd9084f1"
+    },
+    {
+      "path": "core_128.png",
+      "sha256": "fe4bef15e75bbd58580af6cbf72f853509ae59052c7272ce28550e719d203a26"
+    },
+    {
+      "path": "core_133.png",
+      "sha256": "42a818f453d41fc31b7d29c5270c01694a589b336a63caf624156c8a5988f744"
+    },
+    {
+      "path": "core_138.png",
+      "sha256": "e02b429d8a6534db79335b2a3dbe4cb99722c06098a25e06b0f2e887ad3eeb83"
+    },
+    {
+      "path": "core_148.png",
+      "sha256": "b326a52f571eee3e8158abb47866d56f21dff99a69bf1dc36438c7de44bf373d"
+    },
+    {
+      "path": "core_157.png",
+      "sha256": "29cbd0adac0243c9a7c014b70b5a2b34e372c52960051f71a4b444729e697bc6"
+    },
+    {
+      "path": "core_163.png",
+      "sha256": "68b9d155e176807cdd7002e9d5bb4c607eb21edd388deed925c676695899b8a3"
+    },
+    {
+      "path": "core_172.png",
+      "sha256": "2bdd802937a08aa38577babdb22d184948427c0f24a235a4ec312c4293346f7e"
+    },
+    {
+      "path": "core_177.png",
+      "sha256": "c8fa75944a3977add9684ea433d9787e19b5eeaadbf871988198c722dbd4e959"
+    },
+    {
+      "path": "core_182.png",
+      "sha256": "4ff338ca05e345c95206d06acc87331b308432eee65cdbd7cf403bd87624f3ee"
+    },
+    {
+      "path": "core_188.png",
+      "sha256": "cc59b0802929b2a08903095ab5adcf87fe91df5cc97c60e448ce64625d87f710"
+    },
+    {
+      "path": "core_193.png",
+      "sha256": "f0b6d5e66c7c98db9174b2693eb6480de12feca4fcca45ee5ffc8bf3d4b9ab91"
+    },
+    {
+      "path": "core_198.png",
+      "sha256": "5cd47466ce05a32fb31cb692254e834aa3de9bf89d555670f0108902b82ee9e3"
+    },
+    {
+      "path": "core_203.png",
+      "sha256": "512f04e6558e422f2837f49e718f9d2a1750be658507afbeb1114cface569b33"
+    },
+    {
+      "path": "core_210.png",
+      "sha256": "07a61b7dde996960373ceb653576bc8cbe8af58f9ca16c7839d190fb4bc58602"
+    },
+    {
+      "path": "core_217.png",
+      "sha256": "4fccb7516d51e13da787122753b96607d2996ace43a316ce56574c8c36b6cc96"
+    },
+    {
+      "path": "core_223.png",
+      "sha256": "486500eaa6a8709288c65cbdc9b56a74cef3b6de1c42d8fc518171002c659ea5"
+    },
+    {
+      "path": "core_229.png",
+      "sha256": "6e451b6fc4277f15c71e274237feb99b61169d56a6cfde112355bb091e627ed7"
+    },
+    {
+      "path": "core_237.png",
+      "sha256": "630c9389f6a50cbf1a577ac30f42c7aae7afe885ec2a6cd34b8d9d74204c6111"
+    },
+    {
+      "path": "core_242.png",
+      "sha256": "b4f3b4812b965025b333833b3d5a9ce2785f08e110f388cdd2b2d67fbdc3d4e3"
+    },
+    {
+      "path": "core_247.png",
+      "sha256": "173b020f9a330fe1c3caa6a911a110d1297f12f2c5133421e4f0f00b470611e8"
+    },
+    {
+      "path": "core_253.png",
+      "sha256": "a0d71e8728c311e89608eeeab838c9e849c05363a3208603d92f72f243272b2a"
+    },
+    {
+      "path": "core_258.png",
+      "sha256": "b420547cb7b052087fe097fe8f504cf824a346d938f2b91f821cb383ca29075b"
+    },
+    {
+      "path": "core_268.png",
+      "sha256": "39ea842e07e6baaff47521f73882934fb4464fd42fd3df41a98d40a8a694cb69"
+    },
+    {
+      "path": "frame_000500.png",
+      "sha256": "fe4b51e6c0f16498ac66099229a16be7ef3391b0c14e4b3edb2dc0aee82f9791"
+    },
+    {
+      "path": "frame_025000.png",
+      "sha256": "438dc01f99b43e9464af6954a2d4e85aa9730c3040a22f734562df0584534735"
+    },
+    {
+      "path": "frame_065000.png",
+      "sha256": "8a710f939600d71aa9db10362c24bae2c1af215a48ff911a3b7d467881fa2064"
+    },
+    {
+      "path": "frame_075000.png",
+      "sha256": "bee9f5ce13c965a9d733e51e65173f69b16d185497851283ff65dba4a4634d4b"
+    },
+    {
+      "path": "frame_115000.png",
+      "sha256": "f170d3f95443b0c020115f42edf04b29b008184b52ec460e80c153a7527f6095"
+    },
+    {
+      "path": "frame_135000.png",
+      "sha256": "2e2b218970f2d5680c51990722e3c543f99c3f0ab9e8db035f5ea497064ff6e0"
+    },
+    {
+      "path": "frame_150000.png",
+      "sha256": "29268283a59d28de8f9ed250ed01dedc6a12cc5aaa361213af0b459e5acdb66b"
+    },
+    {
+      "path": "frame_169000.png",
+      "sha256": "6d524b6eece7f62140fa2601b7a1ef97f06ed71bb4d047901c7f90f6d33ec114"
+    },
+    {
+      "path": "frame_190000.png",
+      "sha256": "a0f9c16567e1cc059d71ce49bddb1d3e5f078ca83b8a609be7a47aab3aa14f93"
+    },
+    {
+      "path": "frame_269000.png",
+      "sha256": "46ba15cc6c2cf21c709be0948a679b15faf6c0f3884e1f9e5bb96e377fc37373"
+    }
+  ],
+  "scope": "Visual review by agents, technical playback and segment timing checks. No claim of human full-track listening review."
+}

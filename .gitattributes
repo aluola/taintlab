@@ -23,5 +23,16 @@ docs/USER_MANUAL.* -text
 docs/assets/user-manual/** -text
 docs/publication/** -text
 
+# v2.0.1 documentation, screenshots and independent evidence are hash-bound.
+docs/CORE_FEATURES_GUIDE.* -text
+docs/DEVELOPMENT_AND_DELIVERY.* -text
+docs/FEATURE_EVIDENCE_MATRIX.md -text
+docs/assets/core-features/** -text
+docs/assets/development-delivery/** -text
+docs/core_features_qa/** -text
+docs/development_delivery_qa/** -text
+data/demo/core_features/** -text
+results/core_features/** -text
+
 # Publication snapshot: preserve all manifest-bound bytes
 * -text

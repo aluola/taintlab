@@ -1,0 +1,967 @@
+{
+  "release_version": "2.0.1",
+  "runtime_version": "2.0.0",
+  "created_at_utc": "2026-10-27T05:35:28.125Z",
+  "viewport": {
+    "width": 1600,
+    "height": 900
+  },
+  "source": "actual production React UI",
+  "formal_experiment": false,
+  "new_model_requests_allowed": true,
+  "scenes": [
+    {
+      "id": "read",
+      "start_seconds": 2.284086,
+      "started_at_utc": "2026-10-27T05:35:31.071Z",
+      "completed": true,
+      "end_seconds": 14.5990207
+    },
+    {
+      "id": "f01_read_input",
+      "start_seconds": 2.4909209,
+      "started_at_utc": "2026-10-27T05:35:31.277Z",
+      "end_seconds": 5.4973905
+    },
+    {
+      "id": "f01_read_result",
+      "start_seconds": 8.2312946,
+      "started_at_utc": "2026-10-27T05:35:37.018Z",
+      "end_seconds": 14.2379133
+    },
+    {
+      "id": "query",
+      "start_seconds": 14.5999284,
+      "started_at_utc": "2026-10-27T05:35:43.386Z",
+      "completed": true,
+      "end_seconds": 23.6999954
+    },
+    {
+      "id": "f01_query_result",
+      "start_seconds": 17.3453231,
+      "started_at_utc": "2026-10-27T05:35:46.132Z",
+      "end_seconds": 23.3499797
+    },
+    {
+      "id": "notification",
+      "start_seconds": 23.7006375,
+      "started_at_utc": "2026-10-27T05:35:52.487Z",
+      "completed": true,
+      "end_seconds": 52.006915
+    },
+    {
+      "id": "f04_confirmation_pending",
+      "start_seconds": 26.7341058,
+      "started_at_utc": "2026-10-27T05:35:55.521Z",
+      "end_seconds": 33.7365421
+    },
+    {
+      "id": "f04_confirm_click",
+      "start_seconds": 34.1392537,
+      "started_at_utc": "2026-10-27T05:36:02.926Z",
+      "end_seconds": 37.5044314
+    },
+    {
+      "id": "notification_confirmation_outcomes",
+      "confirmation_clicks": 1,
+      "final_status": "completed",
+      "policy": "At most the first proposal approved; repeats refused. No unconditional test-answer-driven approval."
+    },
+    {
+      "id": "f01_notification_inbox",
+      "start_seconds": 37.984308,
+      "started_at_utc": "2026-10-27T05:36:06.771Z",
+      "end_seconds": 44.9982825
+    },
+    {
+      "id": "f04_grant_actual",
+      "start_seconds": 45.5321258,
+      "started_at_utc": "2026-10-27T05:36:14.319Z",
+      "end_seconds": 51.5348155
+    },
+    {
+      "id": "export",
+      "start_seconds": 52.008083,
+      "started_at_utc": "2026-10-27T05:36:20.795Z",
+      "completed": true,
+      "end_seconds": 69.1179207
+    },
+    {
+      "id": "f01_export_pending",
+      "start_seconds": 55.4619469,
+      "started_at_utc": "2026-10-27T05:36:24.248Z",
+      "end_seconds": 58.4777082
+    },
+    {
+      "id": "export_confirmation_outcomes",
+      "confirmation_clicks": 1,
+      "final_status": "completed",
+      "policy": "At most the first proposal approved; repeats refused. No unconditional test-answer-driven approval."
+    },
+    {
+      "id": "f01_export_before_download",
+      "start_seconds": 60.1276197,
+      "started_at_utc": "2026-10-27T05:36:28.914Z",
+      "end_seconds": 63.1322958
+    },
+    {
+      "id": "f01_export_downloaded",
+      "start_seconds": 63.639757,
+      "started_at_utc": "2026-10-27T05:36:32.426Z",
+      "end_seconds": 68.6526321
+    },
+    {
+      "id": "upload",
+      "start_seconds": 69.1186701,
+      "started_at_utc": "2026-10-27T05:36:37.905Z",
+      "completed": true,
+      "end_seconds": 92.0279511
+    },
+    {
+      "id": "f02_upload_registration",
+      "start_seconds": 70.0613481,
+      "started_at_utc": "2026-10-27T05:36:38.847Z",
+      "end_seconds": 75.0713046
+    },
+    {
+      "id": "f02_source_fields",
+      "start_seconds": 78.9752606,
+      "started_at_utc": "2026-10-27T05:36:47.761Z",
+      "end_seconds": 84.980309
+    },
+    {
+      "id": "f02_derived_context",
+      "start_seconds": 85.5638193,
+      "started_at_utc": "2026-10-27T05:36:54.350Z",
+      "end_seconds": 91.571893
+    },
+    {
+      "id": "reject",
+      "start_seconds": 92.0286444,
+      "started_at_utc": "2026-10-27T05:37:00.815Z",
+      "completed": true,
+      "end_seconds": 107.7711719
+    },
+    {
+      "id": "f04_refusal_click",
+      "start_seconds": 95.5309386,
+      "started_at_utc": "2026-10-27T05:37:04.317Z",
+      "end_seconds": 100.9533998
+    },
+    {
+      "id": "rejection_confirmation_outcomes",
+      "confirmation_clicks": 1,
+      "final_status": "completed",
+      "policy": "At most the first proposal approved; repeats refused. No unconditional test-answer-driven approval."
+    },
+    {
+      "id": "f04_refusal_no_effect",
+      "start_seconds": 101.2552586,
+      "started_at_utc": "2026-10-27T05:37:10.041Z",
+      "end_seconds": 107.270896
+    },
+    {
+      "id": "direct",
+      "start_seconds": 107.7719892,
+      "started_at_utc": "2026-10-27T05:37:16.558Z",
+      "completed": false,
+      "error": "TimeoutError: locator.selectOption: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByLabel('攻击手法', { exact: true })\u001b[22m\n",
+      "end_seconds": 138.0752367
+    },
+    {
+      "id": "indirect",
+      "start_seconds": 138.0762167,
+      "started_at_utc": "2026-10-27T05:37:46.863Z",
+      "completed": false,
+      "error": "TimeoutError: locator.selectOption: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByLabel('攻击手法', { exact: true })\u001b[22m\n",
+      "end_seconds": 168.246036
+    },
+    {
+      "id": "encoding",
+      "start_seconds": 168.2469514,
+      "started_at_utc": "2026-10-27T05:38:17.033Z",
+      "completed": false,
+      "error": "TimeoutError: locator.selectOption: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByLabel('攻击手法', { exact: true })\u001b[22m\n",
+      "end_seconds": 198.4259234
+    },
+    {
+      "id": "segmented",
+      "start_seconds": 198.4271057,
+      "started_at_utc": "2026-10-27T05:38:47.213Z",
+      "completed": false,
+      "error": "TimeoutError: locator.selectOption: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByLabel('攻击手法', { exact: true })\u001b[22m\n",
+      "end_seconds": 228.6179198
+    }
+  ],
+  "figures": [
+    {
+      "id": "f01_read",
+      "title": "真实读取事件与关键事实",
+      "captured_at_utc": "2026-10-27T05:35:43.383Z",
+      "release_version": "2.0.1",
+      "runtime_version": "2.0.0",
+      "viewport": {
+        "width": 1600,
+        "height": 900
+      },
+      "page_url_path": "/",
+      "live_or_replay": "new_local_model",
+      "run_id": "0067a37dafcc42a596d3aaddafb82c5a",
+      "mode": "taint_policy",
+      "seed": 11,
+      "case_id": null,
+      "raw_path": "docs/assets/core-features/captures/2026-10-27T05-35-28-123Z/f01_read.png",
+      "raw_sha256": "f038c03c2acd282a3eab8415ebd445984df12385f9c18c8a555246bd07f3e2e4",
+      "crop": {
+        "x": 452,
+        "y": 58,
+        "width": 956,
+        "height": 646
+      },
+      "annotations": [
+        {
+          "number": 1,
+          "label": "实际read_document与网关结果",
+          "rect": [
+            524,
+            226,
+            1380,
+            551
+          ],
+          "style": "number_rectangle_arrow"
+        }
+      ],
+      "steps": [
+        "新建对话→读取文档。",
+        "选择项目会议记录，发送scenarios.json中的read文本。",
+        "展开读取事件，检查meeting读取和答复。"
+      ],
+      "observed_result": "以实际读取集合和关键事实校验，不能仅凭模型说完成。",
+      "checks": {
+        "read_meeting": true,
+        "time": true,
+        "place": true
+      },
+      "preview_metadata": null,
+      "video_offset_seconds": 14.5979696
+    },
+    {
+      "id": "f01_query",
+      "title": "本地查询参数、来源与答复",
+      "captured_at_utc": "2026-10-27T05:35:52.484Z",
+      "release_version": "2.0.1",
+      "runtime_version": "2.0.0",
+      "viewport": {
+        "width": 1600,
+        "height": 900
+      },
+      "page_url_path": "/",
+      "live_or_replay": "new_local_model",
+      "run_id": "9d78bb66a8e946e78c0c91fae6e74774",
+      "mode": "taint_policy",
+      "seed": 11,
+      "case_id": null,
+      "raw_path": "docs/assets/core-features/captures/2026-10-27T05-35-28-123Z/f01_query.png",
+      "raw_sha256": "a2989b7312206c4c298a43c40d923688dfb2bd2acb6741f4c3769ff32cc08e81",
+      "crop": {
+        "x": 452,
+        "y": 89,
+        "width": 956,
+        "height": 646
+      },
+      "annotations": [
+        {
+          "number": 1,
+          "label": "实际检索query参数",
+          "rect": [
+            524,
+            257,
+            1380,
+            582
+          ],
+          "style": "number_rectangle_arrow"
+        }
+      ],
+      "steps": [
+        "新建对话→查询资料。",
+        "输入给定日期查询任务并发送。",
+        "展开search_info，核对参数和来源。"
+      ],
+      "observed_result": "查询仅访问固定本地条目与网页快照。",
+      "checks": {
+        "query_executed": true,
+        "date1": true,
+        "date2": true
+      },
+      "preview_metadata": null,
+      "video_offset_seconds": 23.6991492
+    },
+    {
+      "id": "f04_confirmation",
+      "title": "待确认内容与真实绑定",
+      "captured_at_utc": "2026-10-27T05:36:02.923Z",
+      "release_version": "2.0.1",
+      "runtime_version": "2.0.0",
+      "viewport": {
+        "width": 1600,
+        "height": 900
+      },
+      "page_url_path": "/",
+      "live_or_replay": "new_local_model_pending",
+      "run_id": "e3a863e65ed147c497279253555f423f",
+      "mode": "taint_policy",
+      "seed": 11,
+      "case_id": null,
+      "raw_path": "docs/assets/core-features/captures/2026-10-27T05-35-28-123Z/f04_confirmation.png",
+      "raw_sha256": "df72256303bde65074ee17809b68179e54b05c265af4adc35b74cf8ec2ab26f6",
+      "crop": {
+        "x": 496,
+        "y": 232,
+        "width": 912,
+        "height": 466
+      },
+      "annotations": [
+        {
+          "number": 1,
+          "label": "允许的目标",
+          "rect": [
+            542,
+            334,
+            1362,
+            352
+          ],
+          "style": "number_rectangle_arrow"
+        },
+        {
+          "number": 2,
+          "label": "待执行正文",
+          "rect": [
+            542,
+            362,
+            1362,
+            432
+          ],
+          "style": "number_rectangle_arrow"
+        },
+        {
+          "number": 3,
+          "label": "运行/哈希/有效期",
+          "rect": [
+            542,
+            473,
+            1362,
+            581
+          ],
+          "style": "number_rectangle_arrow"
+        },
+        {
+          "number": 4,
+          "label": "真实确认或拒绝",
+          "rect": [
+            542,
+            596,
+            1362,
+            628
+          ],
+          "style": "number_rectangle_arrow"
+        }
+      ],
+      "steps": [],
+      "observed_result": "pending时收件箱为空；尚未产生通知。",
+      "checks": {},
+      "preview_metadata": null,
+      "video_offset_seconds": 34.1382723
+    },
+    {
+      "id": "f01_notify_inbox",
+      "title": "确认后实际模拟收件箱",
+      "captured_at_utc": "2026-10-27T05:36:14.276Z",
+      "release_version": "2.0.1",
+      "runtime_version": "2.0.0",
+      "viewport": {
+        "width": 1600,
+        "height": 900
+      },
+      "page_url_path": "/",
+      "live_or_replay": "new_local_model",
+      "run_id": "e3a863e65ed147c497279253555f423f",
+      "mode": "taint_policy",
+      "seed": 11,
+      "case_id": null,
+      "raw_path": "docs/assets/core-features/captures/2026-10-27T05-35-28-123Z/f01_notify_inbox.png",
+      "raw_sha256": "a72812f041e239345492c2483bb03d161964cddadfdfe96f42346f7e85c29b56",
+      "crop": {
+        "x": 1062,
+        "y": 0,
+        "width": 538,
+        "height": 900
+      },
+      "annotations": [
+        {
+          "number": 1,
+          "label": "已执行通知的实际正文",
+          "rect": [
+            1115,
+            272,
+            1575,
+            374
+          ],
+          "style": "number_rectangle_arrow"
+        },
+        {
+          "number": 2,
+          "label": "本次运行与版本",
+          "rect": [
+            1090,
+            92,
+            1600,
+            173
+          ],
+          "style": "number_rectangle_arrow"
+        }
+      ],
+      "steps": [],
+      "observed_result": "检查真实inbox条数、目标和正文；没有真实邮件连接。",
+      "checks": {
+        "exactly_one": true,
+        "recipient": true,
+        "content": true
+      },
+      "preview_metadata": null,
+      "video_offset_seconds": 45.4912279
+    },
+    {
+      "id": "f04_grant",
+      "title": "真实任务授权与调用额度",
+      "captured_at_utc": "2026-10-27T05:36:20.791Z",
+      "release_version": "2.0.1",
+      "runtime_version": "2.0.0",
+      "viewport": {
+        "width": 1600,
+        "height": 900
+      },
+      "page_url_path": "/",
+      "live_or_replay": "new_local_model",
+      "run_id": "e3a863e65ed147c497279253555f423f",
+      "mode": "taint_policy",
+      "seed": 11,
+      "case_id": null,
+      "raw_path": "docs/assets/core-features/captures/2026-10-27T05-35-28-123Z/f04_grant.png",
+      "raw_sha256": "9af1e7b6a72bbd9a269f3e3d5fd660da9baf69c3cbd2da4e73da7e161de6793c",
+      "crop": {
+        "x": 1062,
+        "y": 0,
+        "width": 538,
+        "height": 900
+      },
+      "annotations": [
+        {
+          "number": 1,
+          "label": "只读TaskGrant及额度",
+          "rect": [
+            1115,
+            341,
+            1575,
+            845
+          ],
+          "style": "number_rectangle_arrow"
+        },
+        {
+          "number": 2,
+          "label": "本次实际决策计数",
+          "rect": [
+            1115,
+            235,
+            1575,
+            319
+          ],
+          "style": "number_rectangle_arrow"
+        }
+      ],
+      "steps": [],
+      "observed_result": "程序签发的工具、读取范围、出口敏感度、确认工具与运行绑定。",
+      "checks": {},
+      "preview_metadata": null,
+      "video_offset_seconds": 52.0060945
+    },
+    {
+      "id": "f01_export_download",
+      "title": "虚拟导出与实际下载",
+      "captured_at_utc": "2026-10-27T05:36:37.901Z",
+      "release_version": "2.0.1",
+      "runtime_version": "2.0.0",
+      "viewport": {
+        "width": 1600,
+        "height": 900
+      },
+      "page_url_path": "/",
+      "live_or_replay": "new_local_model",
+      "run_id": "7c0b679ff6144abf9fb16222052d108e",
+      "mode": "taint_policy",
+      "seed": 11,
+      "case_id": null,
+      "raw_path": "docs/assets/core-features/captures/2026-10-27T05-35-28-123Z/f01_export_download.png",
+      "raw_sha256": "ce2e0135fbb5e5704d2e370346a0974a409bf617862efa46be9b8af2bac6e49d",
+      "crop": {
+        "x": 1062,
+        "y": 0,
+        "width": 538,
+        "height": 900
+      },
+      "annotations": [
+        {
+          "number": 1,
+          "label": "实际虚拟文件与内容",
+          "rect": [
+            1115,
+            382,
+            1575,
+            535
+          ],
+          "style": "number_rectangle_arrow"
+        },
+        {
+          "number": 2,
+          "label": "已实际点击下载",
+          "rect": [
+            1130,
+            486,
+            1273,
+            520
+          ],
+          "style": "number_rectangle_arrow"
+        }
+      ],
+      "steps": [],
+      "observed_result": "主动下载已执行的虚拟导出物，下载文件单独保存哈希。",
+      "checks": {
+        "files": true,
+        "path": true,
+        "content": true
+      },
+      "preview_metadata": null,
+      "video_offset_seconds": 69.1170207
+    },
+    {
+      "id": "f02_upload_registered",
+      "title": "上传登记尚未等于读取",
+      "captured_at_utc": "2026-10-27T05:36:44.226Z",
+      "release_version": "2.0.1",
+      "runtime_version": "2.0.0",
+      "viewport": {
+        "width": 1600,
+        "height": 900
+      },
+      "page_url_path": "/",
+      "live_or_replay": "new_upload_registration",
+      "run_id": null,
+      "mode": null,
+      "seed": null,
+      "case_id": null,
+      "raw_path": "docs/assets/core-features/captures/2026-10-27T05-35-28-123Z/f02_upload_registered.png",
+      "raw_sha256": "3893c01c8fd6d5013236cdd4373cfb35d091089fd1539890281f90fd425ddf1a",
+      "crop": {
+        "x": 452,
+        "y": 366,
+        "width": 956,
+        "height": 357
+      },
+      "annotations": [
+        {
+          "number": 1,
+          "label": "服务端返回的新文档ID",
+          "rect": [
+            499,
+            690,
+            913,
+            722
+          ],
+          "style": "number_rectangle_arrow"
+        }
+      ],
+      "steps": [],
+      "observed_result": "记录服务端实际doc_id；文档尚未被模型读取，须显式选择。",
+      "checks": {
+        "not_auto_selected": true
+      },
+      "preview_metadata": null,
+      "video_offset_seconds": 75.4414777
+    },
+    {
+      "id": "f02_source_fields",
+      "title": "上传来源字段及正文原话",
+      "captured_at_utc": "2026-10-27T05:36:54.254Z",
+      "release_version": "2.0.1",
+      "runtime_version": "2.0.0",
+      "viewport": {
+        "width": 1600,
+        "height": 900
+      },
+      "page_url_path": "/",
+      "live_or_replay": "new_local_model",
+      "run_id": "96d64da9d8674bdfab4a9aa1095fccc1",
+      "mode": "taint_policy",
+      "seed": 11,
+      "case_id": null,
+      "raw_path": "docs/assets/core-features/captures/2026-10-27T05-35-28-123Z/f02_source_fields.png",
+      "raw_sha256": "88603a87a21d097da9e57444ac431e5ac29ab70106b36fc2e56c23ee30fdebe4",
+      "crop": {
+        "x": 1087,
+        "y": 345,
+        "width": 513,
+        "height": 555
+      },
+      "annotations": [
+        {
+          "number": 1,
+          "label": "来源类型、标签、父节点和内容哈希",
+          "rect": [
+            1128,
+            428,
+            1562,
+            620
+          ],
+          "style": "number_rectangle_arrow"
+        },
+        {
+          "number": 2,
+          "label": "正文trusted等字样不修改标签",
+          "rect": [
+            1128,
+            632,
+            1562,
+            887
+          ],
+          "style": "number_rectangle_arrow"
+        }
+      ],
+      "steps": [],
+      "observed_result": "实际读取之后查看登记节点；指令可信度和数据敏感度是两个维度。",
+      "checks": {
+        "read": true,
+        "integrity": true,
+        "sensitivity": true,
+        "time": true,
+        "place": true
+      },
+      "preview_metadata": null,
+      "video_offset_seconds": 85.4696832
+    },
+    {
+      "id": "f02_derived_action",
+      "title": "读取后的派生动作与标签继承",
+      "captured_at_utc": "2026-10-27T05:37:00.811Z",
+      "release_version": "2.0.1",
+      "runtime_version": "2.0.0",
+      "viewport": {
+        "width": 1600,
+        "height": 900
+      },
+      "page_url_path": "/",
+      "live_or_replay": "new_local_model",
+      "run_id": "96d64da9d8674bdfab4a9aa1095fccc1",
+      "mode": "taint_policy",
+      "seed": 11,
+      "case_id": null,
+      "raw_path": "docs/assets/core-features/captures/2026-10-27T05-35-28-123Z/f02_derived_action.png",
+      "raw_sha256": "7cd1c204b9fda46a2c9aa048c8c6d2ecc5401dcbb4eda9f68ad121c222d97574",
+      "crop": {
+        "x": 1062,
+        "y": 0,
+        "width": 538,
+        "height": 900
+      },
+      "annotations": [
+        {
+          "number": 1,
+          "label": "所选动作继承实际上下文标签",
+          "rect": [
+            1115,
+            307,
+            1575,
+            394
+          ],
+          "style": "number_rectangle_arrow"
+        },
+        {
+          "number": 2,
+          "label": "原始来源与后续派生关系",
+          "rect": [
+            1115,
+            473,
+            1575,
+            863
+          ],
+          "style": "number_rectangle_arrow"
+        }
+      ],
+      "steps": [],
+      "observed_result": "程序记录潜在上下文依赖，不能当作精确语义因果。",
+      "checks": {},
+      "preview_metadata": null,
+      "video_offset_seconds": 92.0269332
+    },
+    {
+      "id": "f04_rejection",
+      "title": "拒绝后收件箱仍为空",
+      "captured_at_utc": "2026-10-27T05:37:16.555Z",
+      "release_version": "2.0.1",
+      "runtime_version": "2.0.0",
+      "viewport": {
+        "width": 1600,
+        "height": 900
+      },
+      "page_url_path": "/",
+      "live_or_replay": "new_local_model",
+      "run_id": "6924078b8cf046c5b73c7098835a196e",
+      "mode": "taint_policy",
+      "seed": 11,
+      "case_id": null,
+      "raw_path": "docs/assets/core-features/captures/2026-10-27T05-35-28-123Z/f04_rejection.png",
+      "raw_sha256": "9e43ea5527965098aece8733e70fdfb3fdccece72be025ea6e5a297d5b72e63e",
+      "crop": {
+        "x": 1062,
+        "y": 0,
+        "width": 538,
+        "height": 900
+      },
+      "annotations": [
+        {
+          "number": 1,
+          "label": "拒绝所在独立运行",
+          "rect": [
+            1090,
+            92,
+            1600,
+            173
+          ],
+          "style": "number_rectangle_arrow"
+        },
+        {
+          "number": 2,
+          "label": "检查真实模拟状态为空",
+          "rect": [
+            1090,
+            212,
+            1600,
+            900
+          ],
+          "style": "number_rectangle_arrow"
+        }
+      ],
+      "steps": [],
+      "observed_result": "用户在本次确认卡实际点击拒绝；重复提议仍拒绝，不伪造取消输出。",
+      "checks": {
+        "rejected": true,
+        "no_inbox": true
+      },
+      "preview_metadata": null,
+      "video_offset_seconds": 107.7703321
+    }
+  ],
+  "runs": [
+    {
+      "scenario": "read",
+      "path": "results/core_features/demo_runs/0067a37dafcc42a596d3aaddafb82c5a.json",
+      "sha256": "73874ebd79877e6c405214d81dc0a36d64fcd07ba18838557bc962e4950024c8",
+      "run_id": "0067a37dafcc42a596d3aaddafb82c5a",
+      "runtime_version": "2.0.0",
+      "backend_type": "local_llama_cpp",
+      "status": "completed",
+      "mode": "taint_policy",
+      "seed": 11,
+      "historical": false,
+      "assessment": {
+        "status": "未自动评定",
+        "details": {
+          "reason": "自由对话没有预设答案；不纳入正式任务完成率"
+        }
+      }
+    },
+    {
+      "scenario": "query",
+      "path": "results/core_features/demo_runs/9d78bb66a8e946e78c0c91fae6e74774.json",
+      "sha256": "dff4dded6dd4c54defc2b9b7b122734b49d9a80ef832ab56967d27d8257c1028",
+      "run_id": "9d78bb66a8e946e78c0c91fae6e74774",
+      "runtime_version": "2.0.0",
+      "backend_type": "local_llama_cpp",
+      "status": "completed",
+      "mode": "taint_policy",
+      "seed": 11,
+      "historical": false,
+      "assessment": {
+        "status": "未自动评定",
+        "details": {
+          "reason": "自由对话没有预设答案；不纳入正式任务完成率"
+        }
+      }
+    },
+    {
+      "scenario": "notification_pending",
+      "path": "results/core_features/demo_runs/e3a863e65ed147c497279253555f423f_pending.json",
+      "sha256": "cd8c2b374ac6e10a7ec0d5bea6c9989139d780e2cb77fdc309a736a7cf877700",
+      "run_id": "e3a863e65ed147c497279253555f423f",
+      "runtime_version": "2.0.0",
+      "backend_type": "local_llama_cpp",
+      "status": "pending",
+      "mode": "taint_policy",
+      "seed": 11,
+      "historical": false,
+      "assessment": {
+        "status": "未自动评定",
+        "details": {
+          "reason": "自由对话没有预设答案；不纳入正式任务完成率"
+        }
+      },
+      "initial_export_sha256": "6e37ffd1e27bf0225d476969998fbefa3b1480e70d8b6127f2fc35bc77d155dc",
+      "initial_path": "results/core_features/demo_runs/e3a863e65ed147c497279253555f423f.json",
+      "export_correction": "Actual pending server event recovered because initial exporter reused final run path. Original initial hash retained here."
+    },
+    {
+      "scenario": "notification_final",
+      "path": "results/core_features/demo_runs/e3a863e65ed147c497279253555f423f.json",
+      "sha256": "3c010eaa21a183c7086a3d2c80154707a22895a9b0a8a2aff25ee878e84268c2",
+      "run_id": "e3a863e65ed147c497279253555f423f",
+      "runtime_version": "2.0.0",
+      "backend_type": "local_llama_cpp",
+      "status": "completed",
+      "mode": "taint_policy",
+      "seed": 11,
+      "historical": false,
+      "assessment": {
+        "status": "未自动评定",
+        "details": {
+          "reason": "自由对话没有预设答案；不纳入正式任务完成率"
+        }
+      }
+    },
+    {
+      "scenario": "export",
+      "path": "results/core_features/demo_runs/7c0b679ff6144abf9fb16222052d108e.json",
+      "sha256": "4fe40271907fe8b489cdf2a761b38d0d62dd8e39325a827ab55e9eab24d5b3a7",
+      "run_id": "7c0b679ff6144abf9fb16222052d108e",
+      "runtime_version": "2.0.0",
+      "backend_type": "local_llama_cpp",
+      "status": "completed",
+      "mode": "taint_policy",
+      "seed": 11,
+      "historical": false,
+      "assessment": {
+        "status": "未自动评定",
+        "details": {
+          "reason": "自由对话没有预设答案；不纳入正式任务完成率"
+        }
+      }
+    },
+    {
+      "scenario": "upload_read",
+      "path": "results/core_features/demo_runs/96d64da9d8674bdfab4a9aa1095fccc1.json",
+      "sha256": "8bd11849b82a5b9e30b74c968e3acbb881d5660feaff98def11367fa7636074c",
+      "run_id": "96d64da9d8674bdfab4a9aa1095fccc1",
+      "runtime_version": "2.0.0",
+      "backend_type": "local_llama_cpp",
+      "status": "completed",
+      "mode": "taint_policy",
+      "seed": 11,
+      "historical": false,
+      "assessment": {
+        "status": "未自动评定",
+        "details": {
+          "reason": "自由对话没有预设答案；不纳入正式任务完成率"
+        }
+      }
+    },
+    {
+      "scenario": "rejection",
+      "path": "results/core_features/demo_runs/6924078b8cf046c5b73c7098835a196e.json",
+      "sha256": "96c9776b515c3e4a454ebd897e7444213d914eb879dc01be3b7c3b752c775151",
+      "run_id": "6924078b8cf046c5b73c7098835a196e",
+      "runtime_version": "2.0.0",
+      "backend_type": "local_llama_cpp",
+      "status": "completed",
+      "mode": "taint_policy",
+      "seed": 11,
+      "historical": false,
+      "assessment": {
+        "status": "未自动评定",
+        "details": {
+          "reason": "自由对话没有预设答案；不纳入正式任务完成率"
+        }
+      }
+    }
+  ],
+  "errors": [
+    {
+      "scenario": "direct",
+      "error": "TimeoutError: locator.selectOption: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByLabel('攻击手法', { exact: true })\u001b[22m\n"
+    },
+    {
+      "scenario": "indirect",
+      "error": "TimeoutError: locator.selectOption: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByLabel('攻击手法', { exact: true })\u001b[22m\n"
+    },
+    {
+      "scenario": "encoding",
+      "error": "TimeoutError: locator.selectOption: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByLabel('攻击手法', { exact: true })\u001b[22m\n"
+    },
+    {
+      "scenario": "segmented",
+      "error": "TimeoutError: locator.selectOption: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByLabel('攻击手法', { exact: true })\u001b[22m\n"
+    }
+  ],
+  "external_requests_blocked": [],
+  "boundaries": [
+    "No UI state injection, response mocks, fake token stream, or experiment-file mutation.",
+    "All business actions remain simulated. Evidence exports only server-projected records without browser cookies, owner credentials, or active database.",
+    "Video captures include waits; final edit decisions must reference actual footage and preserve ordering within each run."
+  ],
+  "health": {
+    "status": "ok",
+    "service": "taintlab-web",
+    "version": "2.0.0"
+  },
+  "first_ready_seconds": 2.2827927,
+  "download": {
+    "run_id": "7c0b679ff6144abf9fb16222052d108e",
+    "path": "results/core_features/demo_runs/7c0b679ff6144abf9fb16222052d108e_download.txt",
+    "bytes": 144,
+    "sha256": "0281eee06ce2b4b818fcc1c4e7cce8f2b3098fedeb7489ba0b127c13929f73f6",
+    "safe_filename": "approved_export.txt",
+    "actual_download": true
+  },
+  "upload": {
+    "path": "data/demo/core_features/external_handover.txt",
+    "file_sha256": "add041af96f8adf07e3687edb213200c739baa4753693850f05dcfb619589050",
+    "actual_doc_id": "doc_c8bff9203e11",
+    "session_local": true
+  },
+  "finished_at_utc": "2026-10-27T05:39:17.405Z",
+  "status": "completed_with_recorded_failures",
+  "monotonic_seconds": 228.618941,
+  "source_video": {
+    "path": "demo/core_features/raw/2026-10-27T05-35-28-123Z/page@9bd63cc1f524b09fab6e36cf1282e13c.webm",
+    "sha256": "6c56aae6ca3601910bd4478d6f343224d597cdc9eb22387e7e90912a442efb15",
+    "duration_seconds": 228.16,
+    "capture_manifest": "demo/core_features/raw/2026-10-27T05-35-28-123Z/capture_manifest.json",
+    "capture_manifest_sha256": "e3acad05741dacea37c2771852333daf32f51dc9ab8e3c8f058bf7b8e9df9731",
+    "monotonic_seconds": 228.618941,
+    "first_ready_seconds": 2.2827927,
+    "raw_video_public": false,
+    "availability": "Local original take retained for audit; excluded from lightweight release. Recapture with capture_core_features.cjs and update the source mapping for a new production."
+  },
+  "recorder_source": {
+    "local_snapshot": "demo/core_features/raw/2026-10-27T05-35-28-123Z/recorder.cjs",
+    "sha256": "deddc352c394808e9e6771cd2768fb26ff37c43799d93a541cc274a02f3ecf81",
+    "source_path": "scripts/capture_core_features.cjs"
+  },
+  "scenario_input": {
+    "path": "data/demo/core_features/scenarios.json",
+    "sha256": "ce1db4dac2358ed624918442c037c1f1eb760bdcdff36e708378bfddba78cb7f"
+  },
+  "version": "2.0.0",
+  "project_version": "2.0.0",
+  "selection_file": "demo/core_features/selection.json",
+  "selection_sha256": "1da57e141ea203c85339494d07b4678c866ee1448fa49fcb28c64c87c4ed47b5",
+  "upload_file": "data/demo/core_features/external_handover.txt",
+  "upload_sha256": "add041af96f8adf07e3687edb213200c739baa4753693850f05dcfb619589050",
+  "raw_video_public": false
+}

@@ -1,0 +1,223 @@
+{
+  "release_version": "2.0.1",
+  "runtime_version": "2.0.0",
+  "created_at_utc": "2026-10-27T06:04:43.183616+00:00",
+  "source": "actual native console pixels extracted from verified recording",
+  "figures": [
+    {
+      "id": "f06_selfcheck_positive",
+      "title": "实际检测器机制自检：positive",
+      "captured_at_utc": "2026-10-27T06:01:43.822836+00:00",
+      "release_version": "2.0.1",
+      "runtime_version": "2.0.0",
+      "viewport": {
+        "width": 1740,
+        "height": 960
+      },
+      "page_url_path": null,
+      "live_or_replay": "synthetic_detector_selfcheck_actual_console",
+      "run_id": null,
+      "mode": null,
+      "seed": null,
+      "case_id": null,
+      "raw_path": "docs/assets/core-features/captures/console_20261027T055111Z/f06_selfcheck_positive.png",
+      "raw_sha256": "e8ced3d20dcc48c156e633f874fff91ab0d5aa3bf3c41aaaf2d3594ebb922efc",
+      "crop": {
+        "x": 0,
+        "y": 0,
+        "width": 1740,
+        "height": 450
+      },
+      "annotations": [
+        {
+          "number": 1,
+          "label": "实际阳性输入与检测依据",
+          "rect": [
+            0,
+            192,
+            1170,
+            288
+          ],
+          "style": "number_rectangle_arrow"
+        },
+        {
+          "number": 2,
+          "label": "近似阴性与空检测依据",
+          "rect": [
+            0,
+            288,
+            850,
+            384
+          ],
+          "style": "number_rectangle_arrow"
+        },
+        {
+          "number": 3,
+          "label": "非模型正式实验声明",
+          "rect": [
+            0,
+            120,
+            1050,
+            192
+          ],
+          "style": "number_rectangle_arrow"
+        }
+      ],
+      "steps": [
+        "实际执行 scripts/demo_canary_selfcheck.py，显示实际stdout分段。"
+      ],
+      "observed_result": "检测器机制自检 / 合成输入 / 非模型正式实验。真实调用既有detect_observables；不计ASR。",
+      "checks": {
+        "cli_exit_code": 0,
+        "completed_pages": 3
+      },
+      "video_offset_seconds": 8,
+      "source_video": {
+        "path": "demo/core_features/raw/console_20261027T055111Z/console.mp4",
+        "sha256": "f1644ced11e7cff82dc540c1f244cc78ffc5f7d9025bbfbf12b75993439bdd60"
+      }
+    },
+    {
+      "id": "f06_selfcheck_encoded",
+      "title": "实际检测器机制自检：encoded",
+      "captured_at_utc": "2026-10-27T06:01:43.822836+00:00",
+      "release_version": "2.0.1",
+      "runtime_version": "2.0.0",
+      "viewport": {
+        "width": 1740,
+        "height": 960
+      },
+      "page_url_path": null,
+      "live_or_replay": "synthetic_detector_selfcheck_actual_console",
+      "run_id": null,
+      "mode": null,
+      "seed": null,
+      "case_id": null,
+      "raw_path": "docs/assets/core-features/captures/console_20261027T055111Z/f06_selfcheck_encoded.png",
+      "raw_sha256": "71bd26079db8340d894393d4a61fdb415ae1a9eb1c962c0a8d565856beda89b4",
+      "crop": {
+        "x": 0,
+        "y": 0,
+        "width": 1740,
+        "height": 475
+      },
+      "annotations": [
+        {
+          "number": 1,
+          "label": "两层Base64实际检测",
+          "rect": [
+            0,
+            120,
+            1245,
+            216
+          ],
+          "style": "number_rectangle_arrow"
+        },
+        {
+          "number": 2,
+          "label": "同出口与跨出口分片检测",
+          "rect": [
+            0,
+            216,
+            1245,
+            408
+          ],
+          "style": "number_rectangle_arrow"
+        },
+        {
+          "number": 3,
+          "label": "仅机制自检声明",
+          "rect": [
+            0,
+            432,
+            1190,
+            464
+          ],
+          "style": "number_rectangle_arrow"
+        }
+      ],
+      "steps": [
+        "实际执行 scripts/demo_canary_selfcheck.py，显示实际stdout分段。"
+      ],
+      "observed_result": "检测器机制自检 / 合成输入 / 非模型正式实验。真实调用既有detect_observables；不计ASR。",
+      "checks": {
+        "cli_exit_code": 0,
+        "completed_pages": 3
+      },
+      "video_offset_seconds": 20,
+      "source_video": {
+        "path": "demo/core_features/raw/console_20261027T055111Z/console.mp4",
+        "sha256": "f1644ced11e7cff82dc540c1f244cc78ffc5f7d9025bbfbf12b75993439bdd60"
+      }
+    },
+    {
+      "id": "f06_selfcheck_limits",
+      "title": "实际检测器机制自检：limits",
+      "captured_at_utc": "2026-10-27T06:01:43.822836+00:00",
+      "release_version": "2.0.1",
+      "runtime_version": "2.0.0",
+      "viewport": {
+        "width": 1740,
+        "height": 960
+      },
+      "page_url_path": null,
+      "live_or_replay": "synthetic_detector_selfcheck_actual_console",
+      "run_id": null,
+      "mode": null,
+      "seed": null,
+      "case_id": null,
+      "raw_path": "docs/assets/core-features/captures/console_20261027T055111Z/f06_selfcheck_limits.png",
+      "raw_sha256": "3e48e8cb3a266480daedbeaac4cd2a82c03814c5f2a8042002d0c68ad94eb07b",
+      "crop": {
+        "x": 0,
+        "y": 0,
+        "width": 1740,
+        "height": 400
+      },
+      "annotations": [
+        {
+          "number": 1,
+          "label": "三层编码超界阴性",
+          "rect": [
+            0,
+            120,
+            1280,
+            240
+          ],
+          "style": "number_rectangle_arrow"
+        },
+        {
+          "number": 2,
+          "label": "检测上限与7项结论",
+          "rect": [
+            0,
+            240,
+            1065,
+            336
+          ],
+          "style": "number_rectangle_arrow"
+        }
+      ],
+      "steps": [
+        "实际执行 scripts/demo_canary_selfcheck.py，显示实际stdout分段。"
+      ],
+      "observed_result": "检测器机制自检 / 合成输入 / 非模型正式实验。真实调用既有detect_observables；不计ASR。",
+      "checks": {
+        "cli_exit_code": 0,
+        "completed_pages": 3
+      },
+      "video_offset_seconds": 32,
+      "source_video": {
+        "path": "demo/core_features/raw/console_20261027T055111Z/console.mp4",
+        "sha256": "f1644ced11e7cff82dc540c1f244cc78ffc5f7d9025bbfbf12b75993439bdd60"
+      }
+    }
+  ],
+  "errors": [],
+  "source_video": {
+    "path": "demo/core_features/raw/console_20261027T055111Z/console.mp4",
+    "sha256": "f1644ced11e7cff82dc540c1f244cc78ffc5f7d9025bbfbf12b75993439bdd60"
+  },
+  "actual_cli_output": "results/core_features/canary/demo_selfcheck_console_20261027T055111Z.json",
+  "not_model_experiment": true
+}

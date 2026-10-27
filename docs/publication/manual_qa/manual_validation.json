@@ -1,16 +1,16 @@
 {
   "publication_summary": true,
   "source_evidence_path": "docs/publication/manual_qa/manual_validation.json",
-  "original_evidence_sha256": "947331f763b73674ad4c7ec0ee7fa32f349bf035e930aab52e806aeead141c31",
+  "original_evidence_sha256": "1dd023088d4b5c01695275280851cf8ecb4176d111c26982f6b309a903536ca6",
   "disclosure": "Explicit public summary of saved local evidence. Machine paths, process identities, browser credentials and uploaded runtime bodies are not redistributed. This is not a newly executed acceptance test.",
   "project_version": "2.0.0",
-  "checked_at": "2026-10-27T02:25:48.442610+00:00",
+  "checked_at": "2026-10-27T06:04:41.615948+00:00",
   "all_passed": true,
   "pages": 32,
-  "source_markdown_sha256": "3120e58fbbf2a0b7859b5e2a571d6afaaaea8344bf0c9bc6008f9e7f61894dd9",
-  "docx_sha256": "0d2e537b544d4b72cd9724559453b5db6fdf5362532ee57b8d9131b9d91e6634",
-  "pdf_sha256": "e66a283ce458840463342dfa6b58c757ee672ec133bb94e0702b73bf96c27677",
-  "visual_review": "32 pages individually inspected at original resolution; final changes 1/2 re-inspected; other 30 PNG bytes identical. See visual_review.json.",
+  "source_markdown_sha256": "179e675087effd45b3d50ff76d473514fee5b502fbaabb4b0292d5ba6f1925b0",
+  "docx_sha256": "12e1e1cbdea9d98f887f0c879c050fe3730ccb536ab50490cb738816da67ae08",
+  "pdf_sha256": "d23adb43c4344c172177347694f81e046a8ef609ee3f185003b898fa2ec2295f",
+  "visual_review": "All 32 pages inspected at original resolution in the v2.0.1 navigation review; page 32 re-inspected after its final wording correction; the other 31 pages are byte-identical to the individually inspected pages. See visual_review.json.",
   "assets": {
     "docs/assets/user-manual/annotation_config.json": "21f335f15b766ee77789c0b796c9ad2718d107436dbc3adfd568cb6053f8f0b4",
     "docs/assets/user-manual/capture_manifest.json": "6087978f6c654ee6e2e764a6c6d3971f617d168914baae9e6eb5bcde6f5c98d6",
@@ -69,11 +69,16 @@
     "all_23_numbered_images_and_originals_present": true,
     "all_pages_rendered_and_reviewed": true,
     "no_decorative_title_border": true,
-    "page_fields_and_bookmarks_checked": true
+    "page_fields_and_bookmarks_checked": true,
+    "final_build_source_docx_pdf_bindings_match": true,
+    "existing_51_asset_hashes_unchanged": true,
+    "historical_video_reference_distinguished": true
   },
   "limitations": [
-    "AI-assisted visual QA; not attributed to any student member.",
-    "Screenshot 10 registration and screenshot 11 reading are separate documented sessions.",
-    "Template previews are not counted as attack runs."
+    "AI-assisted independent visual QA; not attributed to any student member.",
+    "Screenshots retain their v2.0.0 original scope; this is a navigation/document revision, not new runtime acceptance.",
+    "Screenshot 10 registration and screenshot 11 reading remain separate documented sessions.",
+    "Template previews are not counted as attack runs.",
+    "Local-link checks establish existence only; no claim of anonymous remote release download testing or desktop Word opening."
   ]
 }

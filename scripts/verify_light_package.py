@@ -48,10 +48,12 @@ def safe_member(name: str) -> PurePosixPath:
 def enforce_light_privacy(path: PurePosixPath) -> None:
     lower = [p.casefold() for p in path.parts]
     name = lower[-1]
-    if any(p in {"web_private", "node_modules", ".git", "__pycache__", ".validation-build"} or p.startswith(".venv") for p in lower):
+    if any(p in {"web_private", "node_modules", "vendor", "models", ".git", "__pycache__", ".validation-build"} or p.startswith(".venv") for p in lower):
         raise ValueError("Private/runtime dependency found in light archive: " + str(path))
     if name in {".env", "secrets.toml", ".validation-target.txt"} or name.startswith(".env.") or name.endswith((".sqlite", ".sqlite3", ".db", ".sqlite-wal", ".sqlite-shm", ".pid", ".lock", ".lck", ".tsbuildinfo")):
         raise ValueError("Private/runtime state found in light archive: " + str(path))
+    if lower[1:3] == ["results", "core_features"] and (any(p in {"session", "sessions", "runtime", "raw", "logs", "recordings", "captures", "private", "checkpoints"} for p in lower[3:-1]) or name in {"measurement.json", "process_memory.jsonl", "gpu_device.jsonl"}):
+        raise ValueError("Raw/private feature measurement or runtime state found in light archive")
 
 
 def extract_and_verify(archive_path: Path, destination: Path) -> tuple[Path, dict, list[dict]]:
@@ -237,7 +239,7 @@ def verify_demo_evidence(root: Path) -> dict:
         relative = path.relative_to(root).as_posix()
         parts = PurePosixPath(relative).parts
         enforce_light_privacy(PurePosixPath(PACKAGE_ROOT) / relative)
-        if parts[0] != "results" or path.suffix.lower() != ".json" or not ("records" in parts or parts[:3] in {("results", "v2", "acceptance"), ("results", "v2", "demo")}):
+        if parts[0] != "results" or path.suffix.lower() != ".json" or not ("records" in parts or parts[:3] in {("results", "v2", "acceptance"), ("results", "v2", "demo"), ("results", "core_features", "demo_runs")}):
             raise ValueError("Selected demo path is outside approved evidence roles")
         declared = item.get("sha256")
         if (modern or declared is not None) and (not isinstance(declared, str) or not re.fullmatch(r"[0-9a-fA-F]{64}", declared)):
@@ -251,7 +253,8 @@ def verify_demo_evidence(root: Path) -> dict:
 
 def verify_current_reviews(root: Path) -> dict:
     version = tomllib.loads((root / "pyproject.toml").read_text(encoding="utf-8"))["project"]["version"]
-    visual = read_json(root / "demo/v2/visual_review.json")
+    visual_name = "demo/core_features/visual_review.json" if (root / "demo/core_features/visual_review.json").exists() else "demo/v2/visual_review.json"
+    visual = read_json(root / visual_name)
     passed = visual.get("all_passed") is True or visual.get("passed") is True
     if visual.get("project_version") != version or not passed or visual.get("all_passed") is False or visual.get("passed") is False or visual.get("video_sha256") != sha(root / "demo/demo.mp4"):
         raise ValueError("Current video visual review is failed, stale or has a different version")
@@ -286,7 +289,105 @@ def verify_current_reviews(root: Path) -> dict:
                     if expected is not None and expected != actual:
                         raise ValueError("Browser acceptance referenced report hash mismatch")
                     references[name] = actual
-    return {"passed": True, "video_visual_review": "demo/v2/visual_review.json", "video_sha256": visual["video_sha256"], "document_qa_mirrors": mirrors, "browser_reports": references, "scope": "Saved current review and report references; excluded QA PNG/raw recordings are not claimed to be redistributed."}
+    chapters = verify_feature_video(root) if "core_features" in visual_name else None
+    return {"passed": True, "video_visual_review": visual_name, "video_sha256": visual["video_sha256"], "document_qa_mirrors": mirrors, "browser_reports": references, "feature_chapters": chapters, "scope": "Saved current review and report references; excluded QA PNG/raw recordings are not claimed to be redistributed."}
+
+
+def verify_feature_video(root: Path) -> dict:
+    for name in ("source_inventory.json", "recording_timing.json"):
+        target = root / "demo/core_features" / name
+        if not target.is_file() or not read_json(target):
+            raise ValueError("Feature video reproduction metadata is missing: " + name)
+    edit = read_json(root / "demo/core_features/edit_decisions.json")
+    composition = read_json(root / "demo/core_features/composition_manifest.json")
+    if composition.get("edl_sha256") != sha(root / "demo/core_features/edit_decisions.json"):
+        raise ValueError("Feature video composition is stale")
+    duration = read_json(root / "demo/video_validation.json").get("actual_duration")
+    if not isinstance(duration, (int, float)) or not 180 <= duration <= 300:
+        raise ValueError("Feature video duration is outside 180–300 seconds")
+    chapters = edit.get("feature_chapters", [])
+    if [item.get("id") for item in chapters if isinstance(item, dict)] != [f"F{i:02d}" for i in range(1, 7)]:
+        raise ValueError("Feature video does not have six ordered chapters")
+    previous = 0
+    for chapter in chapters:
+        start, end = chapter.get("start_seconds"), chapter.get("end_seconds")
+        if not isinstance(start, (int, float)) or not isinstance(end, (int, float)) or not previous <= start < end <= duration:
+            raise ValueError("Feature video chapter timing is invalid")
+        previous = end
+        for field in ("operation_evidence", "result_evidence"):
+            rows = chapter.get(field)
+            if not isinstance(rows, list) or not rows:
+                raise ValueError("Feature video lacks operation or result evidence")
+            for row in rows:
+                name = row.get("path", "")
+                target = (root / name).resolve()
+                if not name or not target.is_relative_to(root.resolve()) or not target.is_file():
+                    raise ValueError("Feature video evidence is missing or escaping")
+                enforce_light_privacy(PurePosixPath(PACKAGE_ROOT) / target.relative_to(root).as_posix())
+                if row.get("sha256") != sha(target):
+                    raise ValueError("Feature video operation/result evidence hash mismatch")
+    return {"passed": True, "chapters": [item["id"] for item in chapters], "actual_duration": duration}
+
+
+def verify_feature_documents(root: Path) -> dict:
+    documents = {
+        "CORE_FEATURES_GUIDE": ("core_features_qa", ["Agent 攻防靶场", "不可信内容标记", "污点追踪", "权限策略控制", "自动化攻击测试", "泄露检测与综合评测"]),
+        "DEVELOPMENT_AND_DELIVERY": ("development_delivery_qa", ["需求分析与技术选型", "环境搭建与结构化设计", "迭代开发与代码规范", "集成测试与优化", "打包部署与文档编写", "持续维护与迭代"]),
+    }
+    version = tomllib.loads((root / "pyproject.toml").read_text(encoding="utf-8"))["project"]["version"]
+    result = {}
+    for stem, (folder, titles) in documents.items():
+        qa = read_json(root / f"docs/{folder}/validation.json")
+        if qa.get("all_passed") is not True or qa.get("visual_review") != "passed" or qa.get("runtime_version") != version or not qa.get("release_version"):
+            raise ValueError("Feature document quality/version declaration is incomplete")
+        artifacts = qa.get("artifact_sha256", {})
+        if set(artifacts) != {f"docs/{stem}.{suffix}" for suffix in ("md", "pdf", "docx")}:
+            raise ValueError("Feature document QA does not bind all three formats")
+        for name, expected in {**artifacts, **qa.get("assets", {})}.items():
+            target = (root / name).resolve()
+            if not target.is_relative_to(root.resolve()) or not target.is_file() or sha(target) != expected:
+                raise ValueError("Feature document artifact/asset hash mismatch")
+        review = root / f"docs/{folder}/visual_review.json"
+        if not review.is_file() or qa.get("review_sha256") != sha(review) or read_json(review).get("all_passed") is not True:
+            raise ValueError("Feature document visual review is incomplete or stale")
+        headings = re.findall(r"^##\s+(.+?)\s*$", (root / f"docs/{stem}.md").read_text(encoding="utf-8-sig"), re.M)
+        if len(headings) != 6 or any(title not in heading for title, heading in zip(titles, headings)):
+            raise ValueError("Feature document six main chapters are missing or out of order")
+        if not isinstance(qa.get("pages"), int) or qa["pages"] < 1:
+            raise ValueError("Feature document page count is invalid")
+        result[stem] = {"passed": True, "pages": qa["pages"], "chapters": headings, "artifacts": artifacts}
+    return result
+
+
+def verify_preserved_baseline(root: Path) -> dict:
+    baseline = read_json(root / "results/core_features/baseline_integrity.json")
+    expected = {p.relative_to(root).as_posix() for group in FORMAL_COUNTS for p in (root / f"results/{group}/records").glob("*.json")}
+    if baseline.get("formal_records") != sum(FORMAL_COUNTS.values()) or not expected <= set(baseline.get("files", {})):
+        raise ValueError("Core feature baseline does not cover all formal records")
+    for name, value in baseline["files"].items():
+        target = (root / name).resolve()
+        if not target.is_relative_to(root.resolve()) or not target.is_file() or sha(target) != value:
+            raise ValueError("Frozen formal/runtime bytes differ from the pre-update baseline")
+    return {"passed": True, "formal_records": len(expected), "bound_files": len(baseline["files"])}
+
+
+def verify_feature_measurement(root: Path) -> dict:
+    summary = read_json(root / "results/core_features/performance_summary.json")
+    path = root / "results/core_features/process_memory_public.jsonl"
+    if summary.get("formal_experiment") is not False or summary.get("included_in_ASR") is not False or sha(path) != summary.get("public_samples_sha256"):
+        raise ValueError("Public performance sample hash or scope mismatch")
+    rows = [json.loads(line) for line in path.read_text(encoding="utf-8").splitlines() if line.strip()]
+    if not rows or summary.get("projection", {}).get("rows") != len(rows) or any(set(row) != {"seconds_from_start", "phase", "role", "working_set_bytes", "private_commit_bytes"} for row in rows):
+        raise ValueError("Public performance rows include private fields or count mismatch")
+    controls = read_json(root / "results/core_features/canary_selftest.json")
+    cases = controls.get("cases", [])
+    if controls.get("all_passed") is not True or any(controls.get(field) is not False for field in ("formal_experiment", "included_in_ASR", "model_called")):
+        raise ValueError("Canary self-test is not clearly separated from formal model evidence")
+    if not {True, False} <= {case.get("expected_found") for case in cases} or any(case.get("matches_synthetic_expectation") is not True or case.get("expected_found") != case.get("detector_result", {}).get("found") for case in cases):
+        raise ValueError("Canary positive/negative controls disagree with saved actual detector results")
+    if controls.get("detector", {}).get("source_sha256") != sha(root / "src/taintlab/evaluation/canary.py"):
+        raise ValueError("Canary self-test detector has changed")
+    return {"passed": True, "memory_rows": len(rows), "canary_controls": len(cases), "formal_experiment": False}
 
 
 def verify_user_manual(root: Path) -> dict:
@@ -396,7 +497,18 @@ manual=PdfReader(r/'docs/USER_MANUAL.pdf'); assert len(manual.pages)>0
 mi=sorted(set([0,len(manual.pages)//2,len(manual.pages)-1]))
 ms=[{'page':i+1,'characters':len(manual.pages[i].extract_text() or '')} for i in mi]
 assert all(s['characters']>30 for s in ms)
-print(json.dumps({'docx':{'zip_crc':True,'document_xml_parsed':True,'chinese_text_present':True},'pdf':{'pages':len(reader.pages),'text_samples':samples},'manual':{'docx_zip_xml_chinese_checked':True,'pages':len(manual.pages),'text_samples':ms},'scope':'Container/XML/PDF text parsing only; no new human page-layout review.'}))
+features={}
+for stem in ('CORE_FEATURES_GUIDE','DEVELOPMENT_AND_DELIVERY'):
+ with zipfile.ZipFile(r/('docs/'+stem+'.docx')) as z:
+  assert z.testzip() is None
+  ft=ET.fromstring(z.read('word/document.xml'))
+  assert any('\\u4e00'<=c<='\\u9fff' for c in ''.join(ft.itertext()))
+ fr=PdfReader(r/('docs/'+stem+'.pdf')); assert len(fr.pages)>0
+ indices=sorted(set([0,len(fr.pages)//2,len(fr.pages)-1]))
+ fs=[{'page':i+1,'characters':len(fr.pages[i].extract_text() or '')} for i in indices]
+ assert all(s['characters']>30 for s in fs)
+ features[stem]={'docx_zip_xml_chinese_checked':True,'pages':len(fr.pages),'text_samples':fs}
+print(json.dumps({'docx':{'zip_crc':True,'document_xml_parsed':True,'chinese_text_present':True},'pdf':{'pages':len(reader.pages),'text_samples':samples},'manual':{'docx_zip_xml_chinese_checked':True,'pages':len(manual.pages),'text_samples':ms},'feature_documents':features,'scope':'Container/XML/PDF text parsing only; no new human page-layout review.'}))
 """
 
 
@@ -416,6 +528,9 @@ def check_media(root: Path, ffprobe: Path, document_python: Path, log: Path) -> 
         raise ValueError("PDF page count differs from the saved document validation")
     if documents["manual"]["pages"] != read_json(root / "docs/publication/manual_qa/manual_validation.json")["pages"]:
         raise ValueError("User manual PDF page count differs from its saved validation")
+    for stem, folder in (("CORE_FEATURES_GUIDE", "core_features_qa"), ("DEVELOPMENT_AND_DELIVERY", "development_delivery_qa")):
+        if documents["feature_documents"][stem]["pages"] != read_json(root / f"docs/{folder}/validation.json")["pages"]:
+            raise ValueError("Feature document PDF page count differs from its saved validation")
     return {"video": {"duration": duration, "resolution": [v["width"], v["height"]], "video_codec": v["codec_name"], "audio_codec": a["codec_name"], "full_decode_passed": True}, "documents": documents, "tools": {"ffprobe": str(ffprobe), "document_python": str(document_python)}}
 
 
@@ -456,6 +571,9 @@ def main(argv=None):
         report["demo_evidence"] = verify_demo_evidence(extracted)
         report["current_reviews"] = verify_current_reviews(extracted)
         report["user_manual"] = verify_user_manual(extracted)
+        report["feature_documents"] = verify_feature_documents(extracted)
+        report["preserved_formal_runtime"] = verify_preserved_baseline(extracted)
+        report["feature_measurement"] = verify_feature_measurement(extracted)
         report["portable_paths"] = portable_paths(extracted, ROOT)
         report["installation"] = fresh_install(extracted, log, args.run_packaging_tests) if args.install == "offline" else {"mode": "not_requested"}
         report["media"] = {"status": "explicitly_skipped"} if args.skip_media else check_media(extracted, args.ffprobe.resolve(), args.document_python.resolve(), log)

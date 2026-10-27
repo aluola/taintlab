@@ -1,7 +1,8 @@
 {
   "public_distribution": true,
-  "source_commit": "feae6c7a0fff4a7ee6da796d2de53ae1cc9f7d06",
-  "history_strategy": "independent_allowlist_snapshot_original_history_preserved",
+  "source_commit": "51ba54d809edfa94e71e462c4543fb4b6bf62ccc",
+  "history_strategy": "allowlist_staging_for_existing_public_history",
   "default_repackage": ".venv/Scripts/python.exe scripts/build_package.py",
-  "source_audit": "results/publication/history_audit_public.json"
+  "source_audit": "results/publication/history_audit_public.json",
+  "release_commit_binding": "The delivery manifest records the existing merged public main commit; source_commit continues to identify the original source checkout."
 }

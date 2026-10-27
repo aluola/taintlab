@@ -6,6 +6,9 @@ const crypto = require('node:crypto');
 const { chromium } = require('./browser_dependencies.cjs');
 const root = path.resolve(__dirname, '..');
 const media = path.join(root, 'demo/demo.mp4');
+const timing=JSON.parse(fs.readFileSync(path.join(root,'demo/recording_timing.json'),'utf8'));
+const expectedDuration=Number(process.env.TAINTLAB_PLAYBACK_DURATION || timing.duration);
+if(!Number.isFinite(expectedDuration) || expectedDuration<180 || expectedDuration>300) throw new Error('A validated 180–300 second planned duration is required.');
 const size = fs.statSync(media).size;
 const server = http.createServer((req, res) => {
   if (req.url === '/') {
@@ -35,7 +38,8 @@ async function main() {
     await page.waitForFunction(() => document.querySelector('#v').readyState >= 2, null, {timeout: 15000});
     const metadata = await page.$eval('#v', v => ({duration:v.duration,width:v.videoWidth,height:v.videoHeight,h264Support:v.canPlayType('video/mp4; codecs="avc1.42E01E, mp4a.40.2"')}));
     const samples=[];
-    for(const position of [0.5,75,130,169,190,238]) {
+    const positions=expectedDuration===270?[0.5,14,23,37,47,61,73,85,94,113,120,128,138,148,163,172,177,182,188,193,198,203,210,217,223,229,237,242,247,253,258,268]:[0.5,expectedDuration/4,expectedDuration/2,expectedDuration*3/4,expectedDuration-2];
+    for(const position of positions) {
       await page.$eval('#v', (v,t) => {v.pause();v.currentTime=t;}, position);
       await page.waitForFunction(t => {const v=document.querySelector('#v');return !v.seeking && Math.abs(v.currentTime-t)<0.2 && v.readyState>=2;}, position);
       await page.$eval('#v',v=>v.play());
@@ -43,8 +47,9 @@ async function main() {
       const state=await page.$eval('#v',v=>({time:v.currentTime,readyState:v.readyState,paused:v.paused,error:v.error?.message||null,quality:v.getVideoPlaybackQuality().toJSON?.()||{totalVideoFrames:v.getVideoPlaybackQuality().totalVideoFrames,droppedVideoFrames:v.getVideoPlaybackQuality().droppedVideoFrames}}));
       samples.push({requested:position,...state});
     }
-    const result={checked_at:new Date().toISOString(),kind:'actual_isolated_browser_playback',metadata,samples,blocked_external_origins:blocked,video_sha256:crypto.createHash('sha256').update(fs.readFileSync(media)).digest('hex'),all_passed:metadata.duration===240 && samples.every(s=>!s.error && s.readyState>=2 && s.time>s.requested+0.5)};
+    const result={checked_at:new Date().toISOString(),kind:'actual_isolated_browser_playback',expected_duration:expectedDuration,metadata,samples,blocked_external_origins:blocked,video_sha256:crypto.createHash('sha256').update(fs.readFileSync(media)).digest('hex'),all_passed:Math.abs(metadata.duration-expectedDuration)<0.1 && samples.every(s=>!s.error && s.readyState>=2 && s.time>s.requested+0.5),scope:'Actual local browser seeks and plays video at every core feature operation/result and ending. Muted browser test does not constitute auditory or human full-film review.'};
     result.project_version = process.env.TAINTLAB_PROJECT_VERSION || 'unspecified';
+    result.runtime_version='2.0.0';result.release_version='2.0.1';
     const output = path.resolve(root, process.env.TAINTLAB_PLAYBACK_REPORT || 'demo/playback_validation.json');
     fs.mkdirSync(path.dirname(output), {recursive: true});
     fs.writeFileSync(output,JSON.stringify(result,null,2));

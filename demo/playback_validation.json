@@ -1,11 +1,11 @@
 {
   "publication_summary": true,
   "source_evidence_path": "demo/playback_validation.json",
-  "original_evidence_sha256": "fb6543070c6b01ae7d74e3255125c07f254765757b4336607e39fb1e073e650f",
+  "original_evidence_sha256": "430be72e3ba39ec08da47a0fb5cd78489a1bb1527e62039902dd5d3f5af428c2",
   "disclosure": "Explicit public summary of saved local evidence. Machine paths, process identities, browser credentials and uploaded runtime bodies are not redistributed. This is not a newly executed acceptance test.",
-  "checked_at": "2026-10-26T18:20:39.612Z",
+  "checked_at": "2026-10-27T06:31:17.771Z",
   "metadata": {
-    "duration": 240,
+    "duration": 270,
     "width": 1600,
     "height": 900,
     "h264Support": "probably"
@@ -13,73 +13,359 @@
   "samples": [
     {
       "requested": 0.5,
-      "time": 1.020618,
+      "time": 1.020181,
       "readyState": 4,
       "paused": false,
       "error": null,
       "quality": {
-        "totalVideoFrames": 35,
+        "totalVideoFrames": 36,
         "droppedVideoFrames": 0
       }
     },
     {
-      "requested": 75,
-      "time": 75.516542,
+      "requested": 14,
+      "time": 14.512026,
       "readyState": 4,
       "paused": false,
       "error": null,
       "quality": {
-        "totalVideoFrames": 57,
+        "totalVideoFrames": 227,
         "droppedVideoFrames": 0
       }
     },
     {
-      "requested": 130,
-      "time": 130.508028,
+      "requested": 23,
+      "time": 23.520127,
       "readyState": 4,
       "paused": false,
       "error": null,
       "quality": {
-        "totalVideoFrames": 128,
+        "totalVideoFrames": 438,
         "droppedVideoFrames": 0
       }
     },
     {
-      "requested": 169,
-      "time": 169.510036,
+      "requested": 37,
+      "time": 37.511187,
       "readyState": 4,
       "paused": false,
       "error": null,
       "quality": {
-        "totalVideoFrames": 369,
+        "totalVideoFrames": 569,
         "droppedVideoFrames": 0
       }
     },
     {
-      "requested": 190,
-      "time": 190.513236,
+      "requested": 47,
+      "time": 47.520819,
       "readyState": 4,
       "paused": false,
       "error": null,
       "quality": {
-        "totalVideoFrames": 490,
+        "totalVideoFrames": 770,
         "droppedVideoFrames": 0
       }
     },
     {
-      "requested": 238,
-      "time": 238.508964,
+      "requested": 61,
+      "time": 61.511271,
       "readyState": 4,
       "paused": false,
       "error": null,
       "quality": {
-        "totalVideoFrames": 651,
+        "totalVideoFrames": 891,
         "droppedVideoFrames": 0
+      }
+    },
+    {
+      "requested": 73,
+      "time": 73.506748,
+      "readyState": 4,
+      "paused": false,
+      "error": null,
+      "quality": {
+        "totalVideoFrames": 1122,
+        "droppedVideoFrames": 0
+      }
+    },
+    {
+      "requested": 85,
+      "time": 85.522164,
+      "readyState": 4,
+      "paused": false,
+      "error": null,
+      "quality": {
+        "totalVideoFrames": 1212,
+        "droppedVideoFrames": 0
+      }
+    },
+    {
+      "requested": 94,
+      "time": 94.510374,
+      "readyState": 4,
+      "paused": false,
+      "error": null,
+      "quality": {
+        "totalVideoFrames": 1353,
+        "droppedVideoFrames": 2
+      }
+    },
+    {
+      "requested": 113,
+      "time": 113.508856,
+      "readyState": 4,
+      "paused": false,
+      "error": null,
+      "quality": {
+        "totalVideoFrames": 1574,
+        "droppedVideoFrames": 2
+      }
+    },
+    {
+      "requested": 120,
+      "time": 120.508619,
+      "readyState": 4,
+      "paused": false,
+      "error": null,
+      "quality": {
+        "totalVideoFrames": 1754,
+        "droppedVideoFrames": 2
+      }
+    },
+    {
+      "requested": 128,
+      "time": 128.509654,
+      "readyState": 4,
+      "paused": false,
+      "error": null,
+      "quality": {
+        "totalVideoFrames": 1925,
+        "droppedVideoFrames": 2
+      }
+    },
+    {
+      "requested": 138,
+      "time": 138.519876,
+      "readyState": 4,
+      "paused": false,
+      "error": null,
+      "quality": {
+        "totalVideoFrames": 2036,
+        "droppedVideoFrames": 2
+      }
+    },
+    {
+      "requested": 148,
+      "time": 148.509401,
+      "readyState": 4,
+      "paused": false,
+      "error": null,
+      "quality": {
+        "totalVideoFrames": 2197,
+        "droppedVideoFrames": 2
+      }
+    },
+    {
+      "requested": 163,
+      "time": 163.525253,
+      "readyState": 4,
+      "paused": false,
+      "error": null,
+      "quality": {
+        "totalVideoFrames": 2308,
+        "droppedVideoFrames": 2
+      }
+    },
+    {
+      "requested": 172,
+      "time": 172.50819,
+      "readyState": 4,
+      "paused": false,
+      "error": null,
+      "quality": {
+        "totalVideoFrames": 2389,
+        "droppedVideoFrames": 2
+      }
+    },
+    {
+      "requested": 177,
+      "time": 177.510197,
+      "readyState": 4,
+      "paused": false,
+      "error": null,
+      "quality": {
+        "totalVideoFrames": 2469,
+        "droppedVideoFrames": 2
+      }
+    },
+    {
+      "requested": 182,
+      "time": 182.50902,
+      "readyState": 4,
+      "paused": false,
+      "error": null,
+      "quality": {
+        "totalVideoFrames": 2550,
+        "droppedVideoFrames": 2
+      }
+    },
+    {
+      "requested": 188,
+      "time": 188.508828,
+      "readyState": 4,
+      "paused": false,
+      "error": null,
+      "quality": {
+        "totalVideoFrames": 2661,
+        "droppedVideoFrames": 2
+      }
+    },
+    {
+      "requested": 193,
+      "time": 193.508202,
+      "readyState": 4,
+      "paused": false,
+      "error": null,
+      "quality": {
+        "totalVideoFrames": 2772,
+        "droppedVideoFrames": 2
+      }
+    },
+    {
+      "requested": 198,
+      "time": 198.507948,
+      "readyState": 4,
+      "paused": false,
+      "error": null,
+      "quality": {
+        "totalVideoFrames": 2883,
+        "droppedVideoFrames": 2
+      }
+    },
+    {
+      "requested": 203,
+      "time": 203.50935,
+      "readyState": 4,
+      "paused": false,
+      "error": null,
+      "quality": {
+        "totalVideoFrames": 2994,
+        "droppedVideoFrames": 2
+      }
+    },
+    {
+      "requested": 210,
+      "time": 210.505867,
+      "readyState": 4,
+      "paused": false,
+      "error": null,
+      "quality": {
+        "totalVideoFrames": 3165,
+        "droppedVideoFrames": 2
+      }
+    },
+    {
+      "requested": 217,
+      "time": 217.508049,
+      "readyState": 4,
+      "paused": false,
+      "error": null,
+      "quality": {
+        "totalVideoFrames": 3296,
+        "droppedVideoFrames": 2
+      }
+    },
+    {
+      "requested": 223,
+      "time": 223.507619,
+      "readyState": 4,
+      "paused": false,
+      "error": null,
+      "quality": {
+        "totalVideoFrames": 3407,
+        "droppedVideoFrames": 2
+      }
+    },
+    {
+      "requested": 229,
+      "time": 229.507555,
+      "readyState": 4,
+      "paused": false,
+      "error": null,
+      "quality": {
+        "totalVideoFrames": 3548,
+        "droppedVideoFrames": 2
+      }
+    },
+    {
+      "requested": 237,
+      "time": 237.516496,
+      "readyState": 4,
+      "paused": false,
+      "error": null,
+      "quality": {
+        "totalVideoFrames": 3689,
+        "droppedVideoFrames": 2
+      }
+    },
+    {
+      "requested": 242,
+      "time": 242.508402,
+      "readyState": 4,
+      "paused": false,
+      "error": null,
+      "quality": {
+        "totalVideoFrames": 3730,
+        "droppedVideoFrames": 2
+      }
+    },
+    {
+      "requested": 247,
+      "time": 247.508397,
+      "readyState": 4,
+      "paused": false,
+      "error": null,
+      "quality": {
+        "totalVideoFrames": 3841,
+        "droppedVideoFrames": 2
+      }
+    },
+    {
+      "requested": 253,
+      "time": 253.508358,
+      "readyState": 4,
+      "paused": false,
+      "error": null,
+      "quality": {
+        "totalVideoFrames": 3882,
+        "droppedVideoFrames": 2
+      }
+    },
+    {
+      "requested": 258,
+      "time": 258.508163,
+      "readyState": 4,
+      "paused": false,
+      "error": null,
+      "quality": {
+        "totalVideoFrames": 4073,
+        "droppedVideoFrames": 2
+      }
+    },
+    {
+      "requested": 268,
+      "time": 268.511232,
+      "readyState": 4,
+      "paused": false,
+      "error": null,
+      "quality": {
+        "totalVideoFrames": 4334,
+        "droppedVideoFrames": 2
       }
     }
   ],
   "blocked_external_origins": [],
-  "video_sha256": "5c93923145546a05b09f2e9eb6d4f82d25a306fed81badab16eb37a9baa1fc27",
+  "video_sha256": "b164feb7d3f5816e3de76aba927513c5e4102dcf665d16a06ba2d5d2c37e3e61",
   "all_passed": true,
   "project_version": "2.0.0"
 }

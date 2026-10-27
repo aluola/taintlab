@@ -6,6 +6,8 @@
 
 阅读顺序：先完成首次准备，再做读取/查询，随后学习通知、导出和确认；来源、污点和 Canary 在安全详情里展开。攻击预览不等于运行，任务结束不等于任务成功。所有业务对象均模拟，不输入真实机密。图内编号对应下方操作提示；矩形与箭头只指示原图位置。
 
+本轮 v2.0.1 增补专题入口：[六项核心功能操作与验证手册](CORE_FEATURES_GUIDE.md)、[开发与交付过程说明](DEVELOPMENT_AND_DELIVERY.md)、[功能证据矩阵](FEATURE_EVIDENCE_MATRIX.md)。本综合手册的原截图及 240 秒视频说明属于 v2.0.0 已发布记录；当前六章节 Demo 与新操作证据请从上述专题和项目首页进入。运行核心仍为 2.0.0，旧截图不冒充本轮重新运行。
+
 ## 01 首次安装与项目根目录
 
 ![图01 项目根目录中的日常入口](assets/user-manual/annotated/00_project_files.png)
@@ -341,7 +343,7 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\install.ps1
 
 本手册图像原图、裁剪和矩形/箭头/编号配置在 [docs/assets/user-manual](assets/user-manual/)。每张图的时间、视口、版本、页面、场景以及适用 case/run 在 capture_manifest 与 annotation 配置中记录；用于当前截图的干净模拟会话与正式实验分开，未增加正式分母。DOCX/PDF采用纵向说明页与横向大图页，便于阅读宽界面。正文相对链接与页面检查见 [手册 QA](publication/manual_qa/)。
 
-可编辑文档由 [build_user_manual.py](../scripts/build_user_manual.py) 从本 Markdown 生成，DOCX 经真实渲染得到 PDF；原图不经生成式补画。标注代码只添加程序化图形。视频是此前已完成的 2.0 240 秒 Demo，本轮核验后原样发布，见 [演示稿与字幕](../demo/README.md)。
+可编辑文档由 [build_user_manual.py](../scripts/build_user_manual.py) 从本 Markdown 生成，DOCX 经真实渲染得到 PDF；原图不经生成式补画。标注代码只添加程序化图形。原 240 秒视频保存在 [v2.0.0 Release](https://github.com/aluola/taintlab/releases/tag/v2.0.0)。v2.0.1 改为六章节 Demo，当前操作证据见[核心功能手册](CORE_FEATURES_GUIDE.md)，演示稿、字幕及实际时长见[当前制作说明](../demo/README.md)；旧截图不代表新视频重新执行了同一任务。
 
 前端交互 → 同源 API → 服务端 TaskGrant/会话 → 本地模型动作提议 → 来源登记 → 统一网关 → 模拟工具或获准回复 → 独立评测 → 安全投影/SSE。该顺序是程序控制流程示意，不是模型内部推理链。前端不取得完整 checkpoint、确认凭据库或未授权秘密正文。
 

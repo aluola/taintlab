@@ -1,0 +1,8 @@
+{
+  "captured_at": "2026-10-27T13:39:27.0717218+08:00",
+  "cpu_name": "13th Gen Intel(R) Core(TM) i7-13620H",
+  "cpu_cores": 10,
+  "logical_processors": 16,
+  "installed_RAM_capacity_bytes": 16961822720,
+  "scope": "Hardware capacity metadata collected after sampling; not measured process occupancy"
+}

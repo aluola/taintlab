@@ -1,0 +1,271 @@
+{
+  "created_at_utc": "2026-10-27T05:39:27.497526+00:00",
+  "kind": "public_projection_of_real_small_memory_measurement",
+  "formal_experiment": false,
+  "included_in_ASR": false,
+  "source_measurement_sha256": "94930f061ff7580780eb3ec99225998c054c145b651321e436a255e336fec56b",
+  "source_raw_sha256": "2148e2f5b18f059dc2b8060e7e5c448ffc8cd26229fc1064dae5dff354503bdc",
+  "source_gpu_raw_sha256": "57e166116f7cdd951dbc7b4fb13c08db49c51245439b56454859f8c28b207625",
+  "sampler_script_sha256": "d9db6d6feae47314ed330885f06483eb41e7fa4d820f2e8355bac7c05fc281bd",
+  "public_samples_sha256": "3a4fbf64530dbc1f6bd56aeb4468136cb9364e00dad9fd75545bca7b15ef415a",
+  "projection": {
+    "removed_fields": [
+      "pid"
+    ],
+    "same_row_order_and_numeric_values": true,
+    "new_inference_performed_for_projection": false,
+    "rows": 88,
+    "no_private_session_database_or_credentials_exported": true
+  },
+  "sampling": {
+    "started_at_utc": "2026-10-27T05:31:35.250626+00:00",
+    "finished_at_utc": "2026-10-27T05:32:03.152237+00:00",
+    "memory_interval_nominal_seconds": 0.5,
+    "memory_interval_actual_seconds": {
+      "min": 0.4999999999999999,
+      "median": 0.5150000000000006,
+      "max": 0.5160000000000018
+    },
+    "gpu_device_interval_nominal_seconds": 1.0,
+    "gpu_device_interval_actual_seconds": {
+      "min": 1.0939999999999994,
+      "median": 1.109,
+      "observed_peak": 1.1719999999999997
+    },
+    "idle_seconds_each": 4.0,
+    "memory_rows": 88,
+    "memory_timepoints": 44,
+    "gpu_rows": 20
+  },
+  "environment": {
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+    "cpu_name": "13th Gen Intel(R) Core(TM) i7-13620H",
+    "logical_processors": 16,
+    "RAM_capacity_bytes_metadata_only": 16961822720,
+    "GPU_device_name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+    "GPU_driver": "616.56",
+    "GPU_capacity_mib_metadata_only": 6141.0,
+    "model": "Qwen3-0.6B Q8_0",
+    "llama_release": "b11889",
+    "runtime_sha256": "920e27e30483f7f62ea38a7252d400ff0fb903435eaaefce50df582e37218cec"
+  },
+  "metric_definitions": {
+    "working_set_bytes": "PROCESS_MEMORY_COUNTERS_EX.WorkingSetSize: current resident working set, includes potentially shared pages",
+    "private_commit_bytes": "PROCESS_MEMORY_COUNTERS_EX.PrivateUsage: private committed bytes; not the resident subset",
+    "observed_peak": "Maximum measured current value in this phase, not process-lifetime peak and not a guarantee of the instantaneous maximum",
+    "device_memory_used_mib": "nvidia-smi total GPU-device occupancy, may include other applications; NOT model process VRAM"
+  },
+  "process_scope": "Actual listening Python UI process and llama-server only; excludes venv redirector, browser and sampler process",
+  "process_memory": {
+    "model": {
+      "idle_before": {
+        "samples": 8,
+        "working_set_bytes": {
+          "min": 713428992,
+          "median": 713428992.0,
+          "observed_peak": 713445376
+        },
+        "private_commit_bytes": {
+          "min": 3289051136,
+          "median": 3289051136.0,
+          "observed_peak": 3289079808
+        }
+      },
+      "active_tasks": {
+        "samples": 25,
+        "working_set_bytes": {
+          "min": 713461760,
+          "median": 943157248,
+          "observed_peak": 1036976128
+        },
+        "private_commit_bytes": {
+          "min": 3289063424,
+          "median": 3483238400,
+          "observed_peak": 3578519552
+        }
+      },
+      "idle_after": {
+        "samples": 8,
+        "working_set_bytes": {
+          "min": 1037426688,
+          "median": 1037426688.0,
+          "observed_peak": 1037533184
+        },
+        "private_commit_bytes": {
+          "min": 3578662912,
+          "median": 3578662912.0,
+          "observed_peak": 3578781696
+        }
+      }
+    },
+    "ui": {
+      "idle_before": {
+        "samples": 8,
+        "working_set_bytes": {
+          "min": 39866368,
+          "median": 39866368.0,
+          "observed_peak": 39866368
+        },
+        "private_commit_bytes": {
+          "min": 52453376,
+          "median": 52453376.0,
+          "observed_peak": 52453376
+        }
+      },
+      "active_tasks": {
+        "samples": 25,
+        "working_set_bytes": {
+          "min": 41152512,
+          "median": 43847680,
+          "observed_peak": 45019136
+        },
+        "private_commit_bytes": {
+          "min": 52490240,
+          "median": 54005760,
+          "observed_peak": 55115776
+        }
+      },
+      "idle_after": {
+        "samples": 8,
+        "working_set_bytes": {
+          "min": 44199936,
+          "median": 44199936.0,
+          "observed_peak": 44199936
+        },
+        "private_commit_bytes": {
+          "min": 54214656,
+          "median": 54214656.0,
+          "observed_peak": 54214656
+        }
+      }
+    }
+  },
+  "gpu_device_memory": [
+    {
+      "phase": "idle_before",
+      "device_samples": 4,
+      "device_memory_used_mib": {
+        "min": 3934.0,
+        "median": 3934.0,
+        "observed_peak": 3934.0
+      }
+    },
+    {
+      "phase": "active_tasks",
+      "device_samples": 12,
+      "device_memory_used_mib": {
+        "min": 3934.0,
+        "median": 3934.0,
+        "observed_peak": 3938.0
+      }
+    },
+    {
+      "phase": "idle_after",
+      "device_samples": 3,
+      "device_memory_used_mib": {
+        "min": 3938.0,
+        "median": 3938.0,
+        "observed_peak": 3938.0
+      }
+    }
+  ],
+  "gpu_process_memory_measured": false,
+  "tasks": [
+    {
+      "kind": "read",
+      "run_id": "81cdb1f9a72147858790fd1aac9c13df",
+      "seed": 11,
+      "status": "completed",
+      "backend_type": "local_llama_cpp",
+      "wall_seconds_including_API_polling_and_automatic_confirmation": 2.656,
+      "confirmation_events": 0,
+      "usage": {
+        "prompt_tokens": 863,
+        "completion_tokens": 67,
+        "model_calls": 2,
+        "model_attempts": 2,
+        "tool_calls": 1,
+        "parse_failures": 0
+      },
+      "task_verified_by_actual_state_and_content": true,
+      "error_type": null
+    },
+    {
+      "kind": "query",
+      "run_id": "966fa7bba99a441ebdc85619d1225e07",
+      "seed": 11,
+      "status": "completed",
+      "backend_type": "local_llama_cpp",
+      "wall_seconds_including_API_polling_and_automatic_confirmation": 2.359,
+      "confirmation_events": 0,
+      "usage": {
+        "prompt_tokens": 855,
+        "completion_tokens": 51,
+        "model_calls": 2,
+        "model_attempts": 2,
+        "tool_calls": 1,
+        "parse_failures": 0
+      },
+      "task_verified_by_actual_state_and_content": true,
+      "error_type": null
+    },
+    {
+      "kind": "notification",
+      "run_id": "1f5a18f519114a4eacd137faf2b8bcb3",
+      "seed": 11,
+      "status": "completed",
+      "backend_type": "local_llama_cpp",
+      "wall_seconds_including_API_polling_and_automatic_confirmation": 3.672,
+      "confirmation_events": 1,
+      "usage": {
+        "prompt_tokens": 1671,
+        "completion_tokens": 92,
+        "model_calls": 3,
+        "model_attempts": 3,
+        "tool_calls": 2,
+        "parse_failures": 0
+      },
+      "task_verified_by_actual_state_and_content": true,
+      "error_type": null
+    },
+    {
+      "kind": "export",
+      "run_id": "313331c11db947ceab813040a27dfa74",
+      "seed": 11,
+      "status": "completed",
+      "backend_type": "local_llama_cpp",
+      "wall_seconds_including_API_polling_and_automatic_confirmation": 3.859,
+      "confirmation_events": 1,
+      "usage": {
+        "prompt_tokens": 1761,
+        "completion_tokens": 92,
+        "model_calls": 3,
+        "model_attempts": 3,
+        "tool_calls": 2,
+        "parse_failures": 0
+      },
+      "task_verified_by_actual_state_and_content": true,
+      "error_type": null
+    }
+  ],
+  "confirmation_scope": "Automatic real API approvals of already-authorized pending actions; not human effort or human response-time measurement",
+  "checks": {
+    "all_four_real_tasks_verified": true,
+    "no_process_sample_errors": true,
+    "all_gpu_samples_succeeded": true,
+    "formal_records_unchanged": true,
+    "runtime_fingerprint_unchanged": true,
+    "same_services_healthy": true,
+    "public_projection_exact_except_removed_pid": true
+  },
+  "limitations": [
+    "Warm already-running services; not cold startup or minimum memory requirement.",
+    "Only four sequential tasks on one host; no statistical performance guarantee or before/after optimization gain.",
+    "Memory peaks are sampled maxima and can miss shorter spikes; Windows PrivateUsage is committed memory, not resident memory.",
+    "GPU figures cover the whole device and can include unrelated applications; not model-process VRAM.",
+    "Wall time includes local API polling and automatic confirmation; not pure generation time or member labor.",
+    "The active private session database and authentication data remain local. New records are not added to any formal campaign."
+  ],
+  "all_passed": true
+}

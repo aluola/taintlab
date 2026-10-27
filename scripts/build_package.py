@@ -21,7 +21,7 @@ from urllib.parse import unquote, urlsplit
 import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
-BUILDER_VERSION = "3.0.0"
+BUILDER_VERSION = "3.1.0"
 ARCHIVE_ROOT = "taintlab_project"
 EXCLUDED_DIRS = {".git", ".pytest_cache", "__pycache__", "node_modules", "vendor", "models", ".cache", ".mypy_cache", ".ruff_cache", ".tox", "web_private", ".validation-build"}
 ROOT_FILES = {"README.md", "AGENTS.md", "MAINTENANCE.md", "维护说明.md", "pyproject.toml", "requirements.lock.txt", ".gitignore", ".gitattributes", "LICENSE", "LICENSE.md", "启动项目.cmd", "关闭项目.cmd"}
@@ -33,11 +33,23 @@ FORMAL_BACKEND_TYPES = {"local_llama_cpp"}
 FRONTEND_FILES = {"package.json", "package-lock.json", "index.html", "tsconfig.json", "vite.config.ts", "build_manifest.json", ".gitignore"}
 FRONTEND_QA_FILES = {"clean_install_validation.json", "clean_install_tests.json", "unit_tests.json"}
 PINNED_HISTORICAL_EVIDENCE = {"results/demo/records/development_recovery.json", "results/development_v3/records/18f1f34fcc3ae112629d286a.json", "results/development_v3/experiment_manifest.json", "results/development_v3/summary.json"}
+PINNED_HISTORICAL_EVIDENCE.update({
+    "results/v2/demo_live/records/54c30779a254418f840ae4ff36178026.json",
+    "results/v2/demo_live/records/ef96cc7e861a4098af904ece2ef6eaf0.json",
+})
 DEMO_FILES = {"demo.mp4", "demo_subtitles.srt", "demo_script.md", "README.md", "narration.json", "selected_evidence.json", "video_validation.json", "playback_validation.json", "final_recording_metadata.json", "recording_timing.json"}
 DEMO_V2_FILES = {"demo_upload.md", "edit_decisions.json", "composition_manifest.json", "narration_synthesis.json", "visual_review.json"}
+DEMO_CORE_FILES = {"selection.json", "edit_decisions.json", "composition_manifest.json", "narration_synthesis.json", "visual_review.json", "independent_visual_review.json", "first_independent_visual_review.json", "first_encode_visual_review.json", "source_inventory.json", "recording_timing.json", "README.md", "subtitles.ass"}
 DOC_QA_FILES = {"document_validation.json", "structure_validation.json", "renderer_environment.json", "visual_review_page_hashes.json", "visual_review.md", "README.md", "prepare_renderer.py", "verify_documents.py"}
 DOC_CURRENT_MIRRORS = {"document_validation.json", "structure_validation.json", "visual_review_page_hashes.json", "visual_review.md"}
 MANUAL_FILES = {"USER_MANUAL.md", "USER_MANUAL.docx", "USER_MANUAL.pdf"}
+FEATURE_DOCUMENTS = {
+    "CORE_FEATURES_GUIDE": ("core_features_qa", ("Agent 攻防靶场", "不可信内容标记", "污点追踪", "权限策略控制", "自动化攻击测试", "泄露检测与综合评测")),
+    "DEVELOPMENT_AND_DELIVERY": ("development_delivery_qa", ("需求分析与技术选型", "环境搭建与结构化设计", "迭代开发与代码规范", "集成测试与优化", "打包部署与文档编写", "持续维护与迭代")),
+}
+FEATURE_ASSET_GROUPS = {"core-features", "development-delivery"}
+FEATURE_RESULT_DIRS = {"records", "demo_runs", "selftest", "performance", "validation", "acceptance", "browser", "canary", "demo"}
+FEATURE_RESULT_FILES = {"baseline_integrity.json", "final_integrity.json", "formal_summary.json", "evidence_manifest.json", "acceptance.json", "validation.json", "canary_selftest.json", "performance_summary.json", "process_memory_public.jsonl", "pytest.xml", "packaging_tests.xml", "README.md"}
 PUBLIC_SUMMARY_FILES = {"history_audit_public.json", "public_audit.json", "test_summary.json", "environment_summary.json", "acceptance_summary.json", "publication_validation.json"}
 BROWSER_FILES = {"ui_e2e.json", "ui_followup.json", "layout_check.json", "ui_acceptance.json", "ui_visual_review.md", "model-offline-lifecycle.json", "model-offline-visual-review.json", "model-offline.json", "model-restored.json", "focused-source-graph-v2.json"}
 BROWSER_TIMING_FILES = {"frame_alignment.json", "timing_review.md"}
@@ -172,19 +184,21 @@ def validate_browser_evidence(root: Path, chosen: set[str], expected_version: st
 
 
 def validate_production_evidence(root: Path, chosen: set[str], expected_version: str) -> dict:
-    review = read_json(root / "demo/v2/visual_review.json")
+    current = "core_features" if (root / "demo/core_features/visual_review.json").is_file() else "v2"
+    prefix = "demo/" + current
+    review = read_json(root / prefix / "visual_review.json")
     if review.get("project_version") != expected_version or not (review.get("all_passed") is True or review.get("passed") is True) or review.get("passed") is False or review.get("all_passed") is False:
         raise ValueError("Current video visual review version or conclusion is invalid")
     if review.get("video_sha256") != sha(root / "demo/demo.mp4"):
         raise ValueError("Current video visual review SHA256 is stale")
-    composition = read_json(root / "demo/v2/composition_manifest.json")
-    edit = read_json(root / "demo/v2/edit_decisions.json")
-    if any(item.get("project_version") != expected_version for item in (composition, edit)) or composition.get("edl_sha256") != sha(root / "demo/v2/edit_decisions.json"):
+    composition = read_json(root / prefix / "composition_manifest.json")
+    edit = read_json(root / prefix / "edit_decisions.json")
+    if any(item.get("project_version") != expected_version for item in (composition, edit)) or composition.get("edl_sha256") != sha(root / prefix / "edit_decisions.json"):
         raise ValueError("Current video composition/edit-decision evidence is stale")
-    narration = read_json(root / "demo/v2/narration_synthesis.json")
+    narration = read_json(root / prefix / "narration_synthesis.json")
     if narration.get("narration_sha256") != sha(root / "demo/narration.json"):
         raise ValueError("Current narration synthesis evidence is stale")
-    recordings = sorted(name for name in chosen if Path(name).parts[:3] == ("demo", "v2", "recordings") and Path(name).suffix == ".json")
+    recordings = sorted(name for name in chosen if Path(name).parts[:3] == ("demo", current, "recordings") and Path(name).suffix == ".json")
     if not recordings:
         raise ValueError("No current video recording metadata selected")
     for name in recordings:
@@ -198,7 +212,40 @@ def validate_production_evidence(root: Path, chosen: set[str], expected_version:
     for name in DOC_CURRENT_MIRRORS:
         if sha(root / "docs/qa" / name) != sha(root / "docs/v2/qa" / name):
             raise ValueError("Current document QA mirrors disagree: " + name)
-    return {"passed": True, "video_sha256": review["video_sha256"], "recording_reports": recordings, "document_qa_mirrors": sorted(DOC_CURRENT_MIRRORS)}
+    feature_chapters = validate_feature_video(root, chosen, edit, review) if current == "core_features" else None
+    return {"passed": True, "production_directory": prefix, "video_sha256": review["video_sha256"], "recording_reports": recordings, "document_qa_mirrors": sorted(DOC_CURRENT_MIRRORS), "feature_chapters": feature_chapters}
+
+
+def validate_feature_video(root: Path, chosen: set[str], edit: dict, review: dict) -> dict:
+    for name in ("source_inventory.json", "recording_timing.json"):
+        relative = "demo/core_features/" + name
+        if relative not in chosen or not (root / relative).is_file() or not read_json(root / relative):
+            raise ValueError("Feature video reproduction metadata is missing: " + relative)
+    duration = read_json(root / "demo/video_validation.json").get("actual_duration")
+    if not isinstance(duration, (int, float)) or not 180 <= duration <= 300:
+        raise ValueError("Current feature video must have an actually measured 180–300 second duration")
+    chapters = edit.get("feature_chapters", [])
+    if not isinstance(chapters, list) or [item.get("id") for item in chapters if isinstance(item, dict)] != [f"F{i:02d}" for i in range(1, 7)]:
+        raise ValueError("Current feature video needs six ordered F01–F06 operation/result chapters")
+    previous_end = 0.0
+    for chapter in chapters:
+        start, end = chapter.get("start_seconds"), chapter.get("end_seconds")
+        if not isinstance(start, (int, float)) or not isinstance(end, (int, float)) or not previous_end <= start < end <= duration:
+            raise ValueError("Feature video chapter timing is invalid or exceeds the actual video")
+        previous_end = end
+        for field in ("operation_evidence", "result_evidence"):
+            references = chapter.get(field)
+            if not isinstance(references, list) or not references:
+                raise ValueError("Feature video chapter lacks " + field)
+            for reference in references:
+                if not isinstance(reference, dict):
+                    raise ValueError("Invalid feature video evidence reference")
+                rel = local_reference(root, reference.get("path", ""))
+                if rel is None or rel.as_posix() not in chosen or reference.get("sha256") != sha(root / rel):
+                    raise ValueError("Feature video operation/result evidence is missing or stale")
+    if not review.get("release_version") or review.get("release_version") != edit.get("release_version"):
+        raise ValueError("Feature video release and runtime versions must be explicitly distinguished")
+    return {"passed": True, "actual_duration": duration, "chapters": [item["id"] for item in chapters], "release_version": review["release_version"], "scope": "Validates declared actual operation/result evidence and timing; does not replace viewing the completed video."}
 
 
 def selected_demo_records(document: dict) -> list[dict]:
@@ -232,7 +279,7 @@ def selected_demo_records(document: dict) -> list[dict]:
 
 
 def demo_record_allowed(rel: Path) -> bool:
-    return bool(rel.parts and rel.parts[0] == "results" and rel.suffix.lower() == ".json" and ("records" in rel.parts or rel.parts[:3] in {("results", "v2", "acceptance"), ("results", "v2", "demo")}) and not global_file_exclusion(rel))
+    return bool(rel.parts and rel.parts[0] == "results" and rel.suffix.lower() == ".json" and ("records" in rel.parts or rel.parts[:3] in {("results", "v2", "acceptance"), ("results", "v2", "demo"), ("results", "core_features", "demo_runs")}) and not global_file_exclusion(rel))
 
 
 def validate_demo_evidence(root: Path, chosen: set[str] | None = None, expected_version: str | None = None) -> dict:
@@ -290,6 +337,8 @@ def light_reason(rel: Path, references: set[Path]) -> str | None:
     parts, name = rel.parts, rel.name
     if rel.suffix.lower() == ".log":
         return None
+    if rel.as_posix() in PINNED_HISTORICAL_EVIDENCE:
+        return "pinned_historical_demo_evidence"
     if rel in references:
         return "referenced_document_image_or_selected_evidence"
     if len(parts) == 1 and name in ROOT_FILES:
@@ -306,11 +355,19 @@ def light_reason(rel: Path, references: set[Path]) -> str | None:
         return "frozen_or_development_dataset"
     if parts[:2] == ("data", "v2") and rel.suffix.lower() in {".json", ".jsonl", ".txt", ".md", ".xml", ".csv"}:
         return "v2_frozen_dataset_source_license_or_generation_evidence"
+    if parts[:3] == ("data", "demo", "core_features") and rel.suffix.lower() in {".json", ".jsonl", ".txt", ".md", ".csv", ".pdf", ".docx"}:
+        return "independent_core_feature_mock_examples_not_formal_dataset"
     if parts[0] == "docs":
         if len(parts) == 2 and name in MANUAL_FILES:
             return "current_user_manual"
         if parts[:3] == ("docs", "assets", "user-manual") and rel.suffix.lower() in {".png", ".jpg", ".jpeg", ".webp", ".svg", ".json", ".md", ".yaml", ".yml", ".drawio"}:
             return "user_manual_original_annotated_images_and_build_configuration"
+        if len(parts) == 2 and any(name == stem + "." + suffix for stem in FEATURE_DOCUMENTS for suffix in ("md", "pdf", "docx")):
+            return "six_chapter_feature_or_development_document"
+        if parts[:2] == ("docs", "assets") and len(parts) > 3 and parts[2] in FEATURE_ASSET_GROUPS and rel.suffix.lower() in {".png", ".jpg", ".jpeg", ".webp", ".svg", ".json", ".md", ".yaml", ".yml", ".drawio", ".py"}:
+            return "core_feature_final_figures_and_reproduction_configuration"
+        if len(parts) > 2 and parts[1] in {item[0] for item in FEATURE_DOCUMENTS.values()} and rel.suffix.lower() in {".json", ".md"}:
+            return "six_chapter_document_quality_evidence"
         if parts[:3] == ("docs", "publication", "manual_qa") and rel.suffix.lower() in {".json", ".md"}:
             return "user_manual_final_quality_evidence"
         if len(parts) == 2 and rel.suffix.lower() in {".md", ".csv"}:
@@ -328,9 +385,15 @@ def light_reason(rel: Path, references: set[Path]) -> str | None:
             return "final_demo_and_provenance"
         if parts[:2] == ("demo", "v2") and ((len(parts) == 3 and name in DEMO_V2_FILES) or (parts[2:3] == ("recordings",) and len(parts) == 4 and rel.suffix == ".json")):
             return "current_v2_demo_production_evidence"
+        if parts[:2] == ("demo", "core_features") and ((len(parts) == 3 and name in DEMO_CORE_FILES) or (parts[2:3] == ("recordings",) and len(parts) == 4 and rel.suffix == ".json")):
+            return "six_feature_demo_current_production_evidence"
         if rel.as_posix() in {"demo/v2/qa/subtitles.ass", "demo/v2/qa/final_frame_comparison.json"}:
             return "current_v2_demo_subtitle_source_or_frame_comparison"
     if parts[0] == "results":
+        if parts[:2] == ("results", "core_features") and ((len(parts) == 3 and name in FEATURE_RESULT_FILES) or (len(parts) >= 4 and parts[2] in FEATURE_RESULT_DIRS and rel.suffix.lower() in {".json", ".csv", ".md", ".xml"})):
+            return "independent_feature_demonstration_selftest_performance_or_acceptance"
+        if parts[:3] == ("results", "core_features", "demo_runs") and name.endswith("_download.txt"):
+            return "actual_simulated_export_download_evidence"
         if parts[:2] == ("results", "publication") and len(parts) == 3 and name in PUBLIC_SUMMARY_FILES:
             return "explicit_publication_summary"
         if parts[:3] == ("results", "launcher", "validation") and rel.suffix.lower() in {".json", ".md", ".xml"}:
@@ -376,6 +439,9 @@ def select_files(root: Path, profile: str = "light") -> tuple[list[Path], list[d
             rel = full.relative_to(root)
             skip = excluded_directory(directory) or full.is_symlink() or getattr(os.path, "isjunction", lambda _: False)(full)
             skip |= rel.as_posix() in {"docs/qa/tools", "demo/raw", "demo/pickups", "dist/package_verify", "dist/package_light_verify", "dist/history", "results/runtime"}
+            # Only the two report files directly under dist are distribution
+            # inputs. Do not traverse previous staging/extraction trees.
+            skip |= rel.parts[:1] == ("dist",) and len(rel.parts) > 1
             skip |= rel.parts[:2] == ("results", "launcher") and len(rel.parts) >= 3 and rel.parts[2] != "validation"
             skip |= rel.parts[:3] == ("results", "v2", "launcher") and len(rel.parts) >= 4 and rel.parts[3] != "validation"
             if skip:
@@ -387,8 +453,12 @@ def select_files(root: Path, profile: str = "light") -> tuple[list[Path], list[d
             reason = "symlink" if path.is_symlink() else global_file_exclusion(rel)
             if reason is None and public_allowlist is not None and rel.as_posix() not in public_allowlist:
                 reason = "outside_explicit_publication_allowlist"
-            if reason is None and profile == "light" and rel.parts[:4] == ("docs", "assets", "user-manual", "captures") and rel.name != "capture_manifest.json":
+            if reason is None and profile == "light" and rel.parts[:2] == ("docs", "assets") and rel.parts[2:3] in (("user-manual",), ("core-features",), ("development-delivery",)) and rel.parts[3:4] == ("captures",) and rel.name != "capture_manifest.json":
                 reason = "intermediate_manual_capture_pixels_or_debug_data"
+            if reason is None and rel.parts[:2] == ("results", "core_features") and any(part.lower() in {"session", "sessions", "runtime", "raw", "logs", "recordings", "captures", "private", "checkpoints"} for part in rel.parts[2:-1]):
+                reason = "active_or_intermediate_feature_demonstration_state"
+            if reason is None and rel.parts[:3] == ("results", "core_features", "performance") and rel.name in {"measurement.json", "process_memory.jsonl", "gpu_device.jsonl"}:
+                reason = "raw_process_measurement_represented_by_public_summary"
             if reason is None and rel.parts[:2] == ("results", "launcher") and (rel.parts[:3] != ("results", "launcher", "validation") or rel.suffix.lower() not in {".json", ".md", ".xml"}):
                 reason = "transient_launcher_state_or_log"
             if reason is None and rel.parts[:3] == ("results", "v2", "launcher") and (rel.parts[:4] != ("results", "v2", "launcher", "validation") or rel.suffix.lower() not in {".json", ".md", ".xml"}):
@@ -580,6 +650,11 @@ def required_files(profile: str) -> list[str]:
     paths += ["results/v2/launcher/validation/actual_windows_validation.json"]
     paths += ["docs/" + name for name in MANUAL_FILES]
     paths += ["docs/publication/manual_qa/manual_validation.json", "docs/publication/PUBLICATION_POLICY.md"]
+    paths += [f"docs/{stem}.{suffix}" for stem in FEATURE_DOCUMENTS for suffix in ("md", "pdf", "docx")]
+    paths += [f"docs/{folder}/{name}" for folder, _ in FEATURE_DOCUMENTS.values() for name in ("validation.json", "visual_review.json")]
+    paths += ["docs/FEATURE_EVIDENCE_MATRIX.md", "data/demo/core_features/scenarios.json", "data/demo/core_features/external_handover.txt", "results/core_features/baseline_integrity.json", "results/core_features/formal_summary.json"]
+    paths += ["results/core_features/" + name for name in ("canary_selftest.json", "performance_summary.json", "process_memory_public.jsonl")]
+    paths += ["demo/core_features/" + name for name in ("selection.json", "edit_decisions.json", "composition_manifest.json", "narration_synthesis.json", "visual_review.json", "source_inventory.json", "recording_timing.json")]
     paths += [f"results/{group}/{name}" for group in FORMAL_COUNTS for name in FORMAL_FILES]
     return sorted(set(paths))
 
@@ -599,6 +674,68 @@ def validate_manual(root: Path, chosen: set[str], expected_version: str) -> dict
         if rel is None or rel.parts[:3] != ("docs", "assets", "user-manual") or rel.as_posix() not in chosen or sha(root / rel) != expected:
             raise ValueError("Current user manual image/configuration is missing or stale")
     return {"passed": True, "pages": report["pages"], "artifacts": {suffix: report[field] for suffix, field in (("md", "source_markdown_sha256"), ("docx", "docx_sha256"), ("pdf", "pdf_sha256"))}, "asset_count": len(report.get("assets", {}))}
+
+
+def validate_feature_documents(root: Path, chosen: set[str], expected_version: str) -> dict:
+    checked = {}
+    for stem, (folder, titles) in FEATURE_DOCUMENTS.items():
+        report = read_json(root / "docs" / folder / "validation.json")
+        if report.get("runtime_version") != expected_version or not report.get("release_version") or report.get("all_passed") is not True or report.get("visual_review") != "passed":
+            raise ValueError("Six-chapter document QA is incomplete or version metadata is invalid: " + stem)
+        if not isinstance(report.get("pages"), int) or report["pages"] < 1:
+            raise ValueError("Six-chapter document page count is invalid: " + stem)
+        artifacts = report.get("artifact_sha256", {})
+        expected_names = {f"docs/{stem}.{suffix}" for suffix in ("md", "pdf", "docx")}
+        if set(artifacts) != expected_names:
+            raise ValueError("Six-chapter document QA must bind exactly its three actual formats: " + stem)
+        for name, expected in {**artifacts, **report.get("assets", {})}.items():
+            rel = local_reference(root, name)
+            if rel is None or rel.as_posix() not in chosen or sha(root / rel) != expected:
+                raise ValueError("Six-chapter document artifact or asset is missing or stale: " + name)
+        review_name = f"docs/{folder}/visual_review.json"
+        if review_name not in chosen or report.get("review_sha256") != sha(root / review_name):
+            raise ValueError("Six-chapter document visual review binding is stale: " + stem)
+        if read_json(root / review_name).get("all_passed") is not True:
+            raise ValueError("Six-chapter document visual review has not passed: " + stem)
+        headings = re.findall(r"^##\s+(.+?)\s*$", (root / f"docs/{stem}.md").read_text(encoding="utf-8-sig"), re.M)
+        if len(headings) != 6 or any(title not in heading for title, heading in zip(titles, headings)):
+            raise ValueError("Six-chapter document needs the six required main headings in order: " + stem)
+        checked[stem] = {"passed": True, "pages": report["pages"], "chapters": headings, "artifacts": artifacts, "assets_checked": len(report.get("assets", {})), "release_version": report["release_version"]}
+    return checked
+
+
+def validate_preserved_feature_baseline(root: Path, chosen: set[str]) -> dict:
+    report = read_json(root / "results/core_features/baseline_integrity.json")
+    hashes = report.get("files", {})
+    expected_records = {name for name in chosen if any(name.startswith(f"results/{group}/records/") and name.endswith(".json") for group in FORMAL_COUNTS)}
+    if report.get("formal_records") != sum(FORMAL_COUNTS.values()) or not expected_records <= set(hashes):
+        raise ValueError("Feature baseline does not bind every preserved formal record")
+    for name, expected in hashes.items():
+        rel = local_reference(root, name)
+        if rel is None or rel.as_posix() not in chosen or sha(root / rel) != expected:
+            raise ValueError("Preserved formal/runtime bytes changed: " + name)
+    return {"passed": True, "formal_records": len(expected_records), "bound_files": len(hashes), "scope": "Compared with the saved start-of-update baseline; not a rerun of formal experiments."}
+
+
+def validate_feature_measurement(root: Path) -> dict:
+    report = read_json(root / "results/core_features/performance_summary.json")
+    samples_path = root / "results/core_features/process_memory_public.jsonl"
+    if report.get("formal_experiment") is not False or report.get("included_in_ASR") is not False or report.get("public_samples_sha256") != sha(samples_path):
+        raise ValueError("Feature performance evidence is not clearly separated or its public samples are stale")
+    samples = [json.loads(line) for line in samples_path.read_text(encoding="utf-8").splitlines() if line.strip()]
+    allowed = {"seconds_from_start", "phase", "role", "working_set_bytes", "private_commit_bytes"}
+    if not samples or any(set(sample) != allowed for sample in samples) or report.get("projection", {}).get("rows") != len(samples):
+        raise ValueError("Public process memory rows contain private/unexpected fields or count mismatch")
+    canary = read_json(root / "results/core_features/canary_selftest.json")
+    cases = canary.get("cases", [])
+    if canary.get("all_passed") is not True or canary.get("formal_experiment") is not False or canary.get("included_in_ASR") is not False or canary.get("model_called") is not False:
+        raise ValueError("Canary mechanism self-test is incomplete or confused with formal model evidence")
+    if not cases or not {True, False} <= {case.get("expected_found") for case in cases} or any(case.get("matches_synthetic_expectation") is not True or case.get("expected_found") != case.get("detector_result", {}).get("found") for case in cases):
+        raise ValueError("Canary mechanism positive/negative results do not match their declared synthetic controls")
+    detector = root / "src/taintlab/evaluation/canary.py"
+    if canary.get("detector", {}).get("source_sha256") != sha(detector):
+        raise ValueError("Canary self-test detector source hash is stale")
+    return {"passed": True, "memory_rows": len(samples), "canary_controls": len(cases), "formal_experiment": False, "scope": "Checks saved public measurement/self-test bindings; no new model inference."}
 
 
 def validate_delivery(root: Path, profile: str, selected: list[Path]) -> dict[str, int]:
@@ -624,6 +761,9 @@ def validate_delivery(root: Path, profile: str, selected: list[Path]) -> dict[st
         raise ValueError("Document Markdown validation is stale")
     validate_production_evidence(root, chosen, project_version)
     validate_manual(root, chosen, project_version)
+    validate_feature_documents(root, chosen, project_version)
+    validate_preserved_feature_baseline(root, chosen)
+    validate_feature_measurement(root)
     validate_browser_evidence(root, chosen, project_version)
     validate_frontend(root, chosen)
     for parent in (Path("data"), Path("data/v2")):
@@ -709,12 +849,17 @@ def build(root: Path = ROOT, profile: str = "light", preview: bool = False) -> d
     manifest = {
         "schema_version": 3, "builder_version": BUILDER_VERSION, "profile": profile,
         "project_version": project["version"], "created_at": datetime.now(timezone.utc).isoformat(), **git_metadata(root),
+        "release_version": read_json(root / "docs/core_features_qa/validation.json")["release_version"],
+        "original_source_commit": read_json(root / "configs/publication.json").get("source_commit") if (root / "configs/publication.json").is_file() else None,
         "runtime_sha256": read_json(root / "results/v2/baseline/experiment_manifest.json")["runtime_sha256"] if "v2/baseline" in counts else read_json(root / "results/main/experiment_manifest.json")["runtime_sha256"],
         "campaign_runtime_hashes": {group: read_json(root / f"results/{group}/experiment_manifest.json")["runtime_sha256"] for group in counts},
         "current_source": current_source_manifest(root, selected), "frontend_static_validation": validate_frontend(root, chosen),
         "demo_evidence_validation": validate_demo_evidence(root, chosen, project["version"]),
         "production_evidence_validation": validate_production_evidence(root, chosen, project["version"]),
         "manual_evidence_validation": validate_manual(root, chosen, project["version"]),
+        "feature_document_validation": validate_feature_documents(root, chosen, project["version"]),
+        "preserved_formal_runtime_validation": validate_preserved_feature_baseline(root, chosen),
+        "feature_measurement_validation": validate_feature_measurement(root),
         "browser_evidence_validation": validate_browser_evidence(root, chosen, project["version"]),
         "weights_included": False, "inference_binaries_included": False, "dependency_environment_included": False,
         "first_preparation_requires_network": True, "formal_record_counts": counts,
@@ -732,7 +877,8 @@ def build(root: Path = ROOT, profile: str = "light", preview: bool = False) -> d
     manifest["previous_light_backup"] = backup_previous_light(root, paths) if profile == "light" else None
     manifest["archive"] = write_verified_archive(root, selected, manifest, paths["archive"])
     paths["manifest"].write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    checksum_paths = [paths["archive"], paths["manifest"], root / "dist/project_report.docx", root / "dist/project_report.pdf", root / "demo/demo.mp4"]
+    checksum_paths = [paths["archive"], paths["manifest"], root / "dist/project_report.docx", root / "dist/project_report.pdf", root / "demo/demo.mp4", root / "demo/demo_subtitles.srt"]
+    checksum_paths += [root / f"docs/{stem}.{suffix}" for stem in (*FEATURE_DOCUMENTS, "USER_MANUAL") for suffix in ("md", "pdf", "docx")]
     paths["sha256"].write_text("".join(sha(path) + "  " + path.relative_to(root).as_posix() + "\n" for path in checksum_paths), encoding="utf-8")
     return manifest["archive"] | {"profile": profile, "manifest": paths["manifest"].relative_to(root).as_posix(), "checksums": paths["sha256"].relative_to(root).as_posix(), "formal_record_counts": counts}
 
@@ -753,17 +899,18 @@ def main(argv=None):
         if args.public:
             if args.profile != "light" or args.prepare_frontend:
                 raise ValueError("--public is the public light entrypoint; compile frontend separately first")
-            from prepare_publication import plan, prepare, verify_tracking
+            from prepare_publication import plan, prepare, verify_tracking, verify_public_main
             if args.preview:
                 payload, report = plan(ROOT, validate=False)
                 result = {"public_preview_only": True, "files": len(payload), "formal_record_counts": report["formal_record_counts"], "credential_candidate_paths": sorted(report["credential_candidates"]), "missing_required_files": [p for p in required_files("light") if p not in payload]}
             elif (ROOT / "PUBLICATION_MANIFEST.json").is_file():
+                binding = verify_public_main(ROOT) if (ROOT / ".git").exists() else {"status": "anonymous_source_archive_without_git", "main_commit_not_claimed": True}
                 tracking = verify_tracking(ROOT) if (ROOT / ".git").exists() else {"status": "anonymous_source_archive_without_git", "tracking_not_claimed": True}
-                result = build(ROOT, "light") | {"public_distribution": True, "git_tracking": tracking, "absolute_archive": str(ROOT / "dist/taintlab_project_light.zip")}
+                result = build(ROOT, "light") | {"public_distribution": True, "git_tracking": tracking, "public_commit_binding": binding, "absolute_archive": str(ROOT / "dist/taintlab_project_light.zip")}
             else:
                 destination = ROOT / "dist/publication" / ("public_" + datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S%fZ"))
                 prepared = prepare(ROOT, destination)
-                result = {"public_snapshot": prepared, "archive_built": False, "next_step": "Review the snapshot, initialize/commit/tag it explicitly, then run scripts/build_package.py --public inside that snapshot. Source SHA metadata is not rewritten after the commit."}
+                result = {"public_staging": prepared, "archive_built": False, "next_step": "Use prepare_publication.py --staging <snapshot> --sync-target <existing public branch> --sync-plan <plan.json>; review/apply it without new Git history, then commit, PR and squash-merge. Build --public only from the merged main commit. Source SHA metadata is not rewritten after the commit."}
             print(json.dumps(result, ensure_ascii=False, indent=2))
             return
         if args.prepare_frontend and args.preview:

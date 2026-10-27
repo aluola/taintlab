@@ -1,4 +1,4 @@
-"""Prepare an independently reviewed public snapshot without Git mutations.
+"""Prepare reviewed staging and synchronize an existing public history safely.
 
 The source checkout and its history/evidence remain unchanged. Private diagnostics
 are excluded or replaced in the new tree by explicitly labelled public summaries.
@@ -93,6 +93,18 @@ def public_value(value):
 
 
 def project_file(name: str, content: bytes) -> tuple[bytes, str]:
+    if name.startswith("results/core_features/") and name.endswith(".xml"):
+        original = ET.fromstring(content)
+        suites = [original] if original.tag == "testsuite" else list(original.findall("testsuite"))
+        result = ET.Element("testsuites", {"publication_summary": "true", "source_evidence_path": name, "original_evidence_sha256": digest(content), "disclosure": "Saved JUnit counts/case identities; hostnames, properties and console/failure output omitted. Not a new test run."})
+        for suite in suites:
+            public = ET.SubElement(result, "testsuite", {key: value for key, value in suite.attrib.items() if key in {"name", "errors", "failures", "skipped", "tests", "time", "timestamp"}})
+            for case in suite.findall("testcase"):
+                child = ET.SubElement(public, "testcase", {key: value for key, value in case.attrib.items() if key in {"name", "classname", "time"}})
+                for status in ("failure", "error", "skipped"):
+                    if case.find(status) is not None:
+                        ET.SubElement(child, status, {"message": "See saved original evidence; details omitted from public summary"})
+        return ET.tostring(result, encoding="utf-8", xml_declaration=True), "explicit_public_junit_summary"
     if name == "AGENTS.md":
         text = content.decode("utf-8-sig")
         heading = "# 项目维护与交付约定"
@@ -115,8 +127,8 @@ def project_file(name: str, content: bytes) -> tuple[bytes, str]:
 
 def public_test_summary(root: Path) -> dict:
     sources = []
-    primary = "results/publication/pytest.xml" if (root / "results/publication/pytest.xml").exists() else "results/v2/validation/pytest.xml"
-    packaging = "results/publication/packaging_tests.xml" if (root / "results/publication/packaging_tests.xml").exists() else "results/v2/validation/pytest_packaging.xml"
+    primary = next((p for p in ("results/core_features/validation/pytest_release.xml", "results/core_features/pytest.xml", "results/core_features/validation/pytest.xml", "results/publication/pytest.xml") if (root / p).exists()), "results/v2/validation/pytest.xml")
+    packaging = next((p for p in ("results/core_features/packaging_tests.xml", "results/core_features/validation/packaging_tests.xml", "results/publication/packaging_tests.xml") if (root / p).exists()), "results/v2/validation/pytest_packaging.xml")
     for name in (primary, packaging, "results/publication/pytest_installation.xml"):
         path = root / name
         if not path.exists():
@@ -142,10 +154,13 @@ def public_acceptance_summary(root: Path) -> dict:
     }
     for name, keep in fields.items():
         path = root / "results/publication" / name
+        if name == "video_playback.json" and (root / "demo/core_features/visual_review.json").exists():
+            path = root / "demo/playback_validation.json"
         if not path.is_file():
             continue
         raw = path.read_bytes(); value = json.loads(raw.decode("utf-8-sig"))
-        summary = summary_origin("results/publication/" + name, raw)
+        summary = summary_origin(path.relative_to(root).as_posix(), raw)
+        summary["evidence_context"] = "current_feature_demo" if name == "video_playback.json" and path.parent.name == "demo" else "saved_prior_publication_evidence"
         summary.update({key: public_value(child) for key, child in value.items() if key in keep})
         for collection in ("checks", "tests", "samples"):
             if isinstance(summary.get(collection), (list, dict)):
@@ -153,7 +168,7 @@ def public_acceptance_summary(root: Path) -> dict:
         if name == "video_playback.json" and summary.get("video_sha256") != digest((root / "demo/demo.mp4").read_bytes()):
             raise ValueError("Current publication video playback report is stale")
         reports[name] = summary
-    return {"publication_summary": True, "reports": reports, "scope": "Actual current video playback, copied-directory prepublication checks and resource reuse. These do not claim anonymous release download validation or new formal model experiments."}
+    return {"publication_summary": True, "reports": reports, "scope": "The playback entry binds the currently delivered video. Prior publication preflight/install evidence is explicitly marked as historical; summary generation performs no new acceptance or formal model runs."}
 
 
 def readme_links(payload: dict[str, bytes]) -> dict:
@@ -176,6 +191,52 @@ def readme_links(payload: dict[str, bytes]) -> dict:
     return {"all_passed": not missing, "checked_file_links": sorted(set(checked)), "directory_links": sorted(set(directories)), "missing_links": sorted(set(missing)), "scope": "README relative links in the public source ZIP; web URLs are not tested by this filesystem check."}
 
 
+def rebind_feature_review_references(payload: dict[str, bytes], entries: dict) -> None:
+    """Bind published review references to the explicit public summaries.
+
+    Original source hashes remain visible, and source files are never rewritten.
+    A stale source reference is rejected before any public hash is substituted.
+    """
+    name = "demo/core_features/visual_review.json"
+    if name not in payload:
+        return
+    review = json.loads(payload[name])
+    references = review.get("technical_evidence")
+    if not references:
+        return
+    if not isinstance(references, dict):
+        raise ValueError("Feature visual review technical evidence must be an object")
+    source_review_sha256 = entries[name]["source_sha256"]
+    for item in references.values():
+        target = item.get("path") if isinstance(item, dict) else None
+        if target not in payload:
+            raise ValueError("Feature visual review public target is missing: " + str(target))
+        expected_source = entries[target].get("source_sha256")
+        if item.get("sha256") != expected_source:
+            raise ValueError("Feature visual review source evidence hash is stale: " + target)
+        item["original_source_sha256"] = expected_source
+        item["sha256"] = digest(payload[target])
+    review["publication_reference_projection"] = {
+        "source_review_sha256": source_review_sha256,
+        "scope": "Reference SHA256 values bind the published evidence bytes; original_source_sha256 retains the saved local evidence identity. Review observations are unchanged. This is not a new visual review.",
+    }
+    payload[name] = encoded(review)
+    entries[name].update(bytes=len(payload[name]), sha256=digest(payload[name]), kind="public_review_reference_projection")
+
+    # The current final-recording index uses a path without a review hash, but
+    # preserve correctness when a source index explicitly binds that hash.
+    index_name = "demo/final_recording_metadata.json"
+    if index_name in payload:
+        index = json.loads(payload[index_name])
+        if index.get("visual_review") == name and "visual_review_sha256" in index:
+            if index["visual_review_sha256"] != source_review_sha256:
+                raise ValueError("Final recording source visual review hash is stale")
+            index["visual_review_original_source_sha256"] = source_review_sha256
+            index["visual_review_sha256"] = digest(payload[name])
+            payload[index_name] = encoded(index)
+            entries[index_name].update(bytes=len(payload[index_name]), sha256=digest(payload[index_name]), kind="public_review_index_reference_projection")
+
+
 def plan(root: Path, validate: bool = True) -> tuple[dict[str, bytes], dict]:
     builder = module("build_package")
     selected = builder.select_files(root, "light")[0]
@@ -184,6 +245,9 @@ def plan(root: Path, validate: bool = True) -> tuple[dict[str, bytes], dict]:
     payload, entries, excluded = {}, {}, {}
     for path in selected:
         name = path.relative_to(root).as_posix()
+        if name == "PUBLICATION_MANIFEST.json":
+            excluded[name] = "regenerated_manifest_does_not_hash_itself"
+            continue
         reason = public_exclusion(name)
         if reason:
             excluded[name] = reason
@@ -208,6 +272,7 @@ def plan(root: Path, validate: bool = True) -> tuple[dict[str, bytes], dict]:
             item["sha256"] = digest(payload[name]); item["bytes"] = len(payload[name])
         payload[index_name] = encoded(index)
         entries[index_name].update(bytes=len(payload[index_name]), sha256=digest(payload[index_name]))
+    rebind_feature_review_references(payload, entries)
     test_name = "results/publication/test_summary.json"
     payload[test_name] = encoded(public_test_summary(root))
     entries[test_name] = {"bytes": len(payload[test_name]), "sha256": digest(payload[test_name]), "kind": "explicit_public_test_summary"}
@@ -223,7 +288,7 @@ def plan(root: Path, validate: bool = True) -> tuple[dict[str, bytes], dict]:
         source_commit, tracked, modified = old.get("source_commit"), set(), set()
     for name, info in entries.items():
         info["source_tracking"] = "modified_since_source_commit" if name in modified else "tracked_at_source_commit" if name in tracked else "additional_working_tree_artifact"
-    marker = {"public_distribution": True, "source_commit": source_commit, "history_strategy": "independent_allowlist_snapshot_original_history_preserved", "default_repackage": ".venv/Scripts/python.exe scripts/build_package.py", "source_audit": "results/publication/history_audit_public.json"}
+    marker = {"public_distribution": True, "source_commit": source_commit, "history_strategy": "allowlist_staging_for_existing_public_history", "default_repackage": ".venv/Scripts/python.exe scripts/build_package.py", "source_audit": "results/publication/history_audit_public.json", "release_commit_binding": "The delivery manifest records the existing merged public main commit; source_commit continues to identify the original source checkout."}
     payload["configs/publication.json"] = encoded(marker)
     entries["configs/publication.json"] = {"sha256": digest(payload["configs/publication.json"]), "bytes": len(payload["configs/publication.json"]), "kind": "public_snapshot_marker"}
     counts = {group: sum(name.startswith(f"results/{group}/records/") and name.endswith(".json") for name in payload) for group in builder.FORMAL_COUNTS}
@@ -298,7 +363,149 @@ def verify_tracking(root: Path) -> dict:
         git_digest = hashlib.new(object_format, b"blob " + str(len(raw)).encode("ascii") + b"\0" + raw).hexdigest()
         if staged.get(name) != git_digest:
             raise ValueError("Git index bytes differ from the public artifact (stage current exact bytes): " + name)
+    manifest_raw = (root / "PUBLICATION_MANIFEST.json").read_bytes()
+    manifest_oid = hashlib.new(object_format, b"blob " + str(len(manifest_raw)).encode("ascii") + b"\0" + manifest_raw).hexdigest()
+    if staged.get("PUBLICATION_MANIFEST.json") != manifest_oid:
+        raise ValueError("Git index bytes differ from the current PUBLICATION_MANIFEST.json")
     return {"all_passed": True, "tracked_files": len(expected), "formal_record_counts": manifest["formal_record_counts"], "scope": "Git index identities match actual manifest-bound bytes; remote push verification is separate."}
+
+
+def git_read(root: Path, *arguments: str) -> bytes:
+    """Only callers using explicit read-only Git commands are defined here."""
+    return subprocess.check_output(["git", *arguments], cwd=root, stderr=subprocess.PIPE)
+
+
+def verify_public_main(root: Path) -> dict:
+    head = git_read(root, "rev-parse", "HEAD").decode().strip()
+    main = git_read(root, "rev-parse", "refs/remotes/origin/main^{commit}").decode().strip()
+    if head != main:
+        raise ValueError("Public release packaging requires the fetched origin/main commit after PR merge")
+    if git_read(root, "status", "--porcelain", "--untracked-files=all", "-z"):
+        raise ValueError("Public release packaging requires committed files and a clean checkout")
+    return {"head": head, "fetched_origin_main": main, "matches_fetched_main": True, "clean_checkout": True, "remote_pr_merge_verified_here": False, "scope": "Local read-only Git binding. Fetching and checking the actual merged PR and remote tree are separate publication steps."}
+
+
+def safe_public_name(name: str) -> Path:
+    path = Path(name)
+    if not name or "\\" in name or ":" in name or path.is_absolute() or ".." in path.parts or any(ord(c) < 32 for c in name):
+        raise ValueError("Unsafe publication path")
+    if module("build_package").global_file_exclusion(path) or public_exclusion(name):
+        raise ValueError("Excluded publication path: " + name)
+    return path
+
+
+def synchronization_plan(staging: Path, target: Path, base_ref: str = "origin/main", baseline_ref: str = "v2.0.0") -> dict:
+    """Three-way compare the last published manifest, desired staging and branch.
+
+    No deletion is inferred. A remote-only edit survives; a dual edit is a
+    conflict. Even a byte-for-byte desired formal-record change is prohibited.
+    This does not fetch, create branches, stage, commit, tag, merge or push.
+    """
+    staging, target = staging.resolve(), target.resolve()
+    if staging == target or staging.is_relative_to(target) or target.is_relative_to(staging):
+        raise ValueError("Staging and public checkout must be separate directories")
+    manifest_path = staging / "PUBLICATION_MANIFEST.json"
+    desired = json.loads(manifest_path.read_text(encoding="utf-8"))
+    head = git_read(target, "rev-parse", "HEAD").decode().strip()
+    base = git_read(target, "rev-parse", base_ref + "^{commit}").decode().strip()
+    baseline = git_read(target, "rev-parse", baseline_ref + "^{commit}").decode().strip()
+    # A branch must actually descend from the fetched public main. Fetching is
+    # deliberately a separate maintainer action so this script is offline.
+    if subprocess.run(["git", "merge-base", "--is-ancestor", base, head], cwd=target, stdout=subprocess.PIPE, stderr=subprocess.PIPE).returncode:
+        raise ValueError("Public checkout is not based on the requested public main")
+    if git_read(target, "status", "--porcelain", "--untracked-files=all", "-z"):
+        raise ValueError("Public checkout must have no staged, modified or untracked work before synchronization")
+    old = json.loads(git_read(target, "show", baseline + ":PUBLICATION_MANIFEST.json"))
+    tracked = {p for p in git_read(target, "ls-files", "-z").decode("utf-8").split("\0") if p}
+    builder = module("build_package")
+    changes, conflicts, current, resulting = [], [], {}, {}
+    for name in sorted(tracked | set(desired["files"])):
+        if name == "PUBLICATION_MANIFEST.json":
+            continue
+        rel = safe_public_name(name)
+        existing = target / rel
+        if not existing.resolve().is_relative_to(target) or not (staging / rel).resolve().is_relative_to(staging):
+            raise ValueError("Publication path traverses a directory outside its checkout")
+        if existing.is_symlink() or (existing.exists() and not existing.is_file()):
+            raise ValueError("Nonregular public artifact: " + name)
+        current_hash = digest(existing.read_bytes()) if existing.is_file() else None
+        current[name] = current_hash
+        wanted = desired["files"].get(name)
+        previous = old["files"].get(name)
+        wanted_hash = wanted.get("sha256") if wanted else None
+        old_hash = previous.get("sha256") if previous else None
+        if wanted:
+            source = staging / rel
+            if source.is_symlink() or not source.is_file() or digest(source.read_bytes()) != wanted_hash:
+                raise ValueError("Staging file differs from reviewed manifest: " + name)
+        protected = any(name.startswith(f"results/{group}/records/") for group in builder.FORMAL_COUNTS)
+        if protected and (not previous or current_hash != old_hash or wanted_hash != old_hash):
+            conflicts.append({"path": name, "reason": "formal_record_bytes_are_immutable"}); continue
+        if wanted_hash == current_hash and wanted_hash is not None:
+            action = "unchanged"
+        elif wanted is None:
+            # Remote additions and previously published files are never deleted.
+            action = "preserve_remote"
+        elif wanted_hash == old_hash and current_hash is not None:
+            action = "preserve_remote"
+        elif current_hash == old_hash:
+            action = "add" if current_hash is None else "update"
+        else:
+            conflicts.append({"path": name, "reason": "both_source_and_public_branch_changed"}); continue
+        if action == "preserve_remote":
+            if current_hash is None:
+                conflicts.append({"path": name, "reason": "public_branch_removed_requested_artifact"}); continue
+            if builder.light_reason(rel, set()) is None:
+                conflicts.append({"path": name, "reason": "remote_file_needs_explicit_allowlist_review"}); continue
+            raw = existing.read_bytes()
+            candidates = module("audit_publication").scan_content(raw)
+            if any(key.startswith("credential_candidate:") for key in candidates):
+                conflicts.append({"path": name, "reason": "remote_credential_pattern_requires_review"}); continue
+            resulting[name] = {"bytes": len(raw), "sha256": current_hash, "kind": "preserved_public_branch_file", "public_branch_commit": head}
+        else:
+            resulting[name] = dict(wanted)
+        changes.append({"path": name, "action": action, "previous_published_sha256": old_hash, "branch_sha256": current_hash, "staging_sha256": wanted_hash})
+    return {"schema_version": 1, "kind": "existing_public_history_three_way_sync", "staging_directory": str(staging), "target_directory": str(target), "staging_manifest_sha256": digest(manifest_path.read_bytes()), "target_head": head, "base_ref": base_ref, "base_commit": base, "baseline_ref": baseline_ref, "baseline_commit": baseline, "source_commit": desired.get("source_commit"), "current_files": current, "files": resulting, "changes": changes, "conflicts": conflicts, "all_passed": not conflicts, "deletions": [], "git_mutations": False, "scope": "Read-only comparison. Remote-only changes are retained; dual edits and formal-record changes require manual resolution. Final package must be built after the PR is merged into public main."}
+
+
+def apply_synchronization(reviewed: dict) -> dict:
+    """Apply an unchanged reviewed plan to files only, leaving Git to the caller."""
+    staging, target = Path(reviewed["staging_directory"]), Path(reviewed["target_directory"])
+    fresh = synchronization_plan(staging, target, reviewed["base_ref"], reviewed["baseline_ref"])
+    if fresh != reviewed:
+        raise ValueError("Synchronization inputs changed after review; produce a new plan")
+    if not fresh["all_passed"]:
+        raise ValueError("Synchronization has unresolved conflicts; no files were changed")
+    source_manifest = json.loads((staging / "PUBLICATION_MANIFEST.json").read_text(encoding="utf-8"))
+    report = dict(source_manifest)
+    report.update(files=fresh["files"], synchronization={key: fresh[key] for key in ("kind", "source_commit", "target_head", "base_ref", "base_commit", "baseline_ref", "baseline_commit", "changes", "deletions", "git_mutations")})
+    report["synchronization"]["history_strategy"] = "existing_public_main_branch_pr_squash_merge"
+    # Validate the complete proposed result in a fresh non-Git tree before any
+    # target file is written. No half-applied invalid delivery is accepted.
+    import tempfile
+    with tempfile.TemporaryDirectory(prefix="taintlab-sync-validation-") as temporary:
+        check = Path(temporary)
+        for item in fresh["changes"]:
+            name = item["path"]
+            source = target / name if item["action"] == "preserve_remote" else staging / name
+            out = check / name; out.parent.mkdir(parents=True, exist_ok=True); out.write_bytes(source.read_bytes())
+        (check / "PUBLICATION_MANIFEST.json").write_bytes(encoded(report))
+        builder = module("build_package")
+        builder.validate_delivery(check, "light", builder.select_files(check, "light")[0])
+        links = readme_links({name: (check / name).read_bytes() for name in report["files"]})
+        if not links["all_passed"]:
+            raise ValueError("Synchronized README relative links are missing")
+        report["readme_source_zip_links"] = links
+        # Recheck immediately before mutation, including branch/status and hashes.
+        if synchronization_plan(staging, target, reviewed["base_ref"], reviewed["baseline_ref"]) != reviewed:
+            raise ValueError("Synchronization inputs changed during validation")
+        for item in fresh["changes"]:
+            if item["action"] in {"add", "update"}:
+                out = target / item["path"]; out.parent.mkdir(parents=True, exist_ok=True)
+                out.write_bytes((check / item["path"]).read_bytes())
+        (target / "PUBLICATION_MANIFEST.json").write_bytes(encoded(report))
+    names = sorted(set(report["files"]) | {"PUBLICATION_MANIFEST.json"})
+    return {"all_passed": True, "source_commit": report["source_commit"], "public_base_commit": fresh["base_commit"], "files": len(names), "updated": sum(c["action"] in {"add", "update"} for c in fresh["changes"]), "preserved_remote": sum(c["action"] == "preserve_remote" for c in fresh["changes"]), "git_initialized": False, "git_staged": False, "git_committed": False, "git_pushed": False, "next_step": "Stage exactly PUBLICATION_MANIFEST files, run --check-tracked, commit/push the existing branch, create and squash-merge the PR, then build --public at the merged main commit."}
 
 
 def main(argv=None):
@@ -307,8 +514,22 @@ def main(argv=None):
     parser.add_argument("--destination", type=Path)
     parser.add_argument("--preview", action="store_true")
     parser.add_argument("--check-tracked", action="store_true")
+    parser.add_argument("--staging", type=Path, help="Reviewed staging prepared by this script; never a newly initialized Git history")
+    parser.add_argument("--sync-target", type=Path, help="Existing clean public branch based on fetched origin/main")
+    parser.add_argument("--base-ref", default="origin/main")
+    parser.add_argument("--baseline-ref", default="v2.0.0")
+    parser.add_argument("--sync-plan", type=Path, help="Write a read-only three-way comparison plan")
+    parser.add_argument("--apply-sync", type=Path, help="Apply a previously reviewed plan to files, without Git mutations")
     args = parser.parse_args(argv)
-    if args.check_tracked:
+    if args.apply_sync:
+        result = apply_synchronization(json.loads(args.apply_sync.read_text(encoding="utf-8")))
+    elif args.sync_target:
+        if not args.staging or not args.sync_plan:
+            parser.error("--sync-target requires --staging and --sync-plan")
+        result = synchronization_plan(args.staging, args.sync_target, args.base_ref, args.baseline_ref)
+        args.sync_plan.parent.mkdir(parents=True, exist_ok=True); args.sync_plan.write_bytes(encoded(result))
+        result = {key: result[key] for key in ("kind", "target_head", "base_commit", "baseline_commit", "source_commit", "conflicts", "all_passed", "deletions", "git_mutations")}
+    elif args.check_tracked:
         result = verify_tracking(args.root.resolve())
     elif args.preview:
         payload, report = plan(args.root.resolve(), validate=False)

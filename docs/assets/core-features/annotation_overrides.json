@@ -1,0 +1,310 @@
+{
+  "f01_read": {
+    "annotations": [
+      {
+        "number": 1,
+        "label": "实际read_document与网关结果",
+        "rect": [
+          524,
+          226,
+          1380,
+          551
+        ],
+        "style": "number_rectangle_arrow"
+      },
+      {
+        "number": 2,
+        "label": "最终答复的关键事实",
+        "rect": [
+          524,
+          613,
+          1380,
+          648
+        ],
+        "style": "number_rectangle_arrow"
+      }
+    ]
+  },
+  "f01_query": {
+    "annotations": [
+      {
+        "number": 1,
+        "label": "实际检索query参数",
+        "rect": [
+          524,
+          257,
+          1380,
+          582
+        ],
+        "style": "number_rectangle_arrow"
+      },
+      {
+        "number": 2,
+        "label": "最终答复的关键事实",
+        "rect": [
+          524,
+          644,
+          1380,
+          679
+        ],
+        "style": "number_rectangle_arrow"
+      }
+    ]
+  },
+  "f05_direct_run": {
+    "annotations": [
+      {
+        "number": 1,
+        "label": "实际工具与接触事件",
+        "rect": [
+          524,
+          304,
+          1380,
+          629
+        ],
+        "style": "number_rectangle_arrow"
+      }
+    ],
+    "annotation_review_note": "Final status is below the viewport behind the composer. Removed misleading offscreen mark; use saved safe record for final assessment. Visible first tool event retained."
+  },
+  "f05_indirect_run": {
+    "annotations": [
+      {
+        "number": 1,
+        "label": "实际工具与接触事件",
+        "rect": [
+          524,
+          252,
+          1380,
+          577
+        ],
+        "style": "number_rectangle_arrow"
+      }
+    ],
+    "annotation_review_note": "Final status is below the viewport behind the composer. Removed misleading offscreen mark; use saved safe record for final assessment. Visible first tool event retained."
+  },
+  "f05_encoding_run": {
+    "annotations": [
+      {
+        "number": 1,
+        "label": "实际工具与接触事件",
+        "rect": [
+          524,
+          252,
+          1380,
+          577
+        ],
+        "style": "number_rectangle_arrow"
+      }
+    ],
+    "annotation_review_note": "Final status is below the viewport behind the composer. Removed misleading offscreen mark; use saved safe record for final assessment. Visible first tool event retained."
+  },
+  "f05_segmented_run": {
+    "annotations": [
+      {
+        "number": 1,
+        "label": "实际工具与接触事件",
+        "rect": [
+          524,
+          252,
+          1380,
+          577
+        ],
+        "style": "number_rectangle_arrow"
+      }
+    ],
+    "annotation_review_note": "Final status is below the viewport behind the composer. Removed misleading offscreen mark; use saved safe record for final assessment. Visible first tool event retained."
+  },
+  "f03_flow_denied": {
+    "annotations": [
+      {
+        "number": 1,
+        "label": "sensitivity_flow_denied而非白名单拒绝",
+        "rect": [
+          524,
+          301,
+          1380,
+          626
+        ],
+        "style": "number_rectangle_arrow"
+      }
+    ],
+    "annotation_review_note": "Visible flow-denial event; final success/failure is independently recorded. Offscreen terminal-status mark removed."
+  },
+  "f02_upload_registered": {
+    "annotations": [
+      {
+        "number": 1,
+        "label": "服务端返回的新文档ID",
+        "rect": [
+          499,
+          613,
+          913,
+          645
+        ],
+        "style": "number_rectangle_arrow"
+      }
+    ],
+    "annotation_review_note": "Newly uploaded document now scrolled into view with actual doc_id. Upload notice outside this crop is retained in full raw PNG; no arrow points to clipped notice."
+  },
+  "f05_direct_preview": {
+    "annotations": [
+      {
+        "number": 1,
+        "label": "模板参数与种子",
+        "rect": [
+          355,
+          126,
+          600,
+          855
+        ],
+        "style": "number_rectangle_arrow"
+      },
+      {
+        "number": 2,
+        "label": "程序生成的注入前后内容",
+        "rect": [
+          642,
+          298,
+          1483,
+          474
+        ],
+        "style": "number_rectangle_arrow",
+        "number_placement": "before_target_in_column_gap"
+      },
+      {
+        "number": 3,
+        "label": "预览之后须另行真实运行",
+        "rect": [
+          642,
+          551,
+          1483,
+          627
+        ],
+        "style": "number_rectangle_arrow",
+        "number_placement": "before_target_in_column_gap"
+      }
+    ],
+    "annotation_review_note": "Right-column markers moved into the clear column gap so no horizontal annotation arrow crosses left-column parameter labels or values."
+  },
+  "f05_indirect_preview": {
+    "annotations": [
+      {
+        "number": 1,
+        "label": "模板参数与种子",
+        "rect": [
+          355,
+          126,
+          600,
+          855
+        ],
+        "style": "number_rectangle_arrow"
+      },
+      {
+        "number": 2,
+        "label": "程序生成的注入前后内容",
+        "rect": [
+          642,
+          275,
+          1483,
+          451
+        ],
+        "style": "number_rectangle_arrow",
+        "number_placement": "before_target_in_column_gap"
+      },
+      {
+        "number": 3,
+        "label": "预览之后须另行真实运行",
+        "rect": [
+          642,
+          528,
+          1483,
+          604
+        ],
+        "style": "number_rectangle_arrow",
+        "number_placement": "before_target_in_column_gap"
+      }
+    ],
+    "annotation_review_note": "Right-column markers moved into the clear column gap so no horizontal annotation arrow crosses left-column parameter labels or values."
+  },
+  "f05_encoding_preview": {
+    "annotations": [
+      {
+        "number": 1,
+        "label": "模板参数与种子",
+        "rect": [
+          355,
+          126,
+          600,
+          855
+        ],
+        "style": "number_rectangle_arrow"
+      },
+      {
+        "number": 2,
+        "label": "程序生成的注入前后内容",
+        "rect": [
+          642,
+          275,
+          1483,
+          516
+        ],
+        "style": "number_rectangle_arrow",
+        "number_placement": "before_target_in_column_gap"
+      },
+      {
+        "number": 3,
+        "label": "预览之后须另行真实运行",
+        "rect": [
+          642,
+          593,
+          1483,
+          669
+        ],
+        "style": "number_rectangle_arrow",
+        "number_placement": "before_target_in_column_gap"
+      }
+    ],
+    "annotation_review_note": "Right-column markers moved into the clear column gap so no horizontal annotation arrow crosses left-column parameter labels or values."
+  },
+  "f05_segmented_preview": {
+    "annotations": [
+      {
+        "number": 1,
+        "label": "模板参数与种子",
+        "rect": [
+          355,
+          82,
+          600,
+          811
+        ],
+        "style": "number_rectangle_arrow"
+      },
+      {
+        "number": 2,
+        "label": "程序生成的注入前后内容",
+        "rect": [
+          642,
+          254,
+          1483,
+          521
+        ],
+        "style": "number_rectangle_arrow",
+        "number_placement": "before_target_in_column_gap"
+      },
+      {
+        "number": 3,
+        "label": "不同来源的两段内容",
+        "rect": [
+          642,
+          541,
+          1483,
+          734
+        ],
+        "style": "number_rectangle_arrow",
+        "number_placement": "before_target_in_column_gap"
+      }
+    ],
+    "annotation_review_note": "Right-column markers moved into the clear column gap so no horizontal annotation arrow crosses left-column parameter labels or values."
+  }
+}

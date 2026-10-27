@@ -1,0 +1,19 @@
+{
+  "release_version": "2.0.1",
+  "runtime_version": "2.0.0",
+  "built_at_utc": "2026-10-27T05:58:31.127424+00:00",
+  "source_sha256": "332d9c59a655d8ed941f1dfdcdc51ef33ea3e04e0c5bfdaaa57388ca1e397072",
+  "docx_sha256": "666e62d51bb38b7950d4ca7838ce50c1c321dac33e216405d2f24f5e38e67f83",
+  "chapters": [
+    "1 需求分析与技术选型",
+    "2 环境搭建与结构化设计",
+    "3 迭代开发与代码规范",
+    "4 集成测试与优化",
+    "5 打包部署与文档编写",
+    "6 持续维护与迭代"
+  ],
+  "assets": {
+    "docs/assets/development-delivery/architecture.png": "05d18ad8cb819f5cd78fa7db4f9d7ccb3feb138ad04e5604b9cf54a873f36411"
+  },
+  "layout": "A4, dedicated landscape pages for dense full UI screenshots; real crops retain original content"
+}

@@ -1,37 +1,41 @@
 {
   "publication_summary": true,
   "source_evidence_path": "docs/publication/manual_qa/first_visual_review.json",
-  "original_evidence_sha256": "4427799fe3c3db758635f1f4353ef37a280fcee0e0c0669e5a8859095ee06a48",
+  "original_evidence_sha256": "938dc992198ebc69d44856370472316773282131d0a9d5b939c5c45014ede569",
   "disclosure": "Explicit public summary of saved local evidence. Machine paths, process identities, browser credentials and uploaded runtime bodies are not redistributed. This is not a newly executed acceptance test.",
   "project_version": "2.0.0",
-  "reviewed_at_utc": "2026-10-27T02:23:11.573800+00:00",
+  "reviewed_at_utc": "2026-10-27T06:01:16.153758+00:00",
   "all_passed": false,
   "pages": [
     {
       "page": 1,
       "png_path": "docs/publication/manual_qa/render/page-1.png",
-      "png_sha256": "bb021fab8ccbc7ee0091980af1dd4fe8351dcdaa26f751d202c4d27196b2f03f",
+      "png_sha256": "318c1e6f5d739717b68ab852cc08e11af8dfd887f1d5d6bd671893f7f1306e43",
       "dimensions": [
         1414,
         2000
       ],
-      "review_method": "view_image(detail=original); each page inspected individually, not montage",
+      "review_method": "view_image(detail=original); every page was actually opened and visually inspected, not a montage",
       "visually_inspected": true,
-      "layout_passed": false,
-      "observations": "首页主标题、日期、版本、模拟范围和链接均可读，页脚为1；主标题下仍有蓝色横线，违反文档技能的无标题装饰线要求，已提交修复。"
+      "layout_passed": true,
+      "observations": "黑色主标题、版本说明与导航链接清楚；新增v2.0.1专题入口和旧240秒/旧截图范围说明完整，无截字。页眉保留v2.0.0，正文明确本轮只增补导航。",
+      "previous_publication_png_sha256": "4925a7816a3c9b506fb61e1e397f65dcdf6e6ca3f8c884b9958d53e4c25b74de",
+      "unchanged_from_previous_publication": false
     },
     {
       "page": 2,
       "png_path": "docs/publication/manual_qa/render/page-2.png",
-      "png_sha256": "778c8495d07b30a9f2dd90669b4da2f6a64e1ae786b6207cf459bea96365d177",
+      "png_sha256": "688b4a2b9c677393e20bfd19f7ae116f5e42288aecd09f6cfe3f1d95a417274b",
       "dimensions": [
         1414,
         2000
       ],
-      "review_method": "view_image(detail=original); each page inspected individually, not montage",
+      "review_method": "view_image(detail=original); every page was actually opened and visually inspected, not a montage",
       "visually_inspected": true,
       "layout_passed": true,
-      "observations": "真实目录文件列表中frontend、scripts和两个CMD清晰，4个编号与说明对应，页脚为2；两条较长安装命令自然折行未截字，建议改独立代码段便于复制。"
+      "observations": "项目目录原图、四个标号和两行安装命令完整；长状态命令自然换行，未越界，页码2正确。",
+      "previous_publication_png_sha256": "318c39c95dffcc77c5778e8dedc7510f1eb471d80bce1450303ad6cb9ab9c53d",
+      "unchanged_from_previous_publication": false
     },
     {
       "page": 3,
@@ -41,192 +45,222 @@
         2000,
         1414
       ],
-      "review_method": "view_image(detail=original); each page inspected individually, not montage",
+      "review_method": "view_image(detail=original); every page was actually opened and visually inspected, not a montage",
       "visually_inspected": true,
       "layout_passed": true,
-      "observations": "横向首页大图完整保留主导航、四快捷入口和输入区；编号不遮挡控制文字，图注与第3页页脚均完整。"
+      "observations": "横向首页原图与三组编号清楚，图注和页脚完整；仍作为v2.0.0已保存界面说明。",
+      "previous_publication_png_sha256": "3a580f293598d65f58d9483b22290ce4f1c3bcf3614a498e1848319c9f60b627",
+      "unchanged_from_previous_publication": true
     },
     {
       "page": 4,
       "png_path": "docs/publication/manual_qa/render/page-4.png",
-      "png_sha256": "8107d6852be143f887f00a85c218d0a761c97184e917e5afc49eb944d09bd175",
+      "png_sha256": "800ce04fc159aa0b2d8fff2c99d5791f1dc789ce77eff0a7b5a9567b0e881275",
       "dimensions": [
         1414,
         2000
       ],
-      "review_method": "view_image(detail=original); each page inspected individually, not montage",
+      "review_method": "view_image(detail=original); every page was actually opened and visually inspected, not a montage",
       "visually_inspected": true,
       "layout_passed": true,
-      "observations": "首页操作说明与上一页图示对应，实际通过的查询任务文本及停止语义可读；独立说明页留白属排版设计，无跨页孤行，页脚为4。"
+      "observations": "首页操作、停止语义及模型声明不能替代真实状态的说明可读；独立说明页留白合理，未出现跨页孤行或裁切。",
+      "previous_publication_png_sha256": "8107d6852be143f887f00a85c218d0a761c97184e917e5afc49eb944d09bd175",
+      "unchanged_from_previous_publication": false
     },
     {
       "page": 5,
       "png_path": "docs/publication/manual_qa/render/page-5.png",
-      "png_sha256": "5bfa69f513c50222fcc8d278f2b649891bda09c17557d94ae8afe3fc771a58cc",
+      "png_sha256": "61726a18d697eacbeb1aedb639650f8e12a2d346023e47c12f36c0bb72b4e40d",
       "dimensions": [
         1414,
         2000
       ],
-      "review_method": "view_image(detail=original); each page inspected individually, not montage",
+      "review_method": "view_image(detail=original); every page was actually opened and visually inspected, not a montage",
       "visually_inspected": true,
       "layout_passed": true,
-      "observations": "读取前的任务授权图显示meeting选择和未授予的通知/导出；3处编号与正文一致，图片、段落和第5页页脚无重叠。"
+      "observations": "授权参数截图的meeting选择、通知/导出未授权和上传提示完整；正文解释TaskGrant与敏感等级，无正文压图或缺字。",
+      "previous_publication_png_sha256": "5bfa69f513c50222fcc8d278f2b649891bda09c17557d94ae8afe3fc771a58cc",
+      "unchanged_from_previous_publication": false
     },
     {
       "page": 6,
       "png_path": "docs/publication/manual_qa/render/page-6.png",
-      "png_sha256": "d92c2ec0a53a40d5672123453cb0bbac22e4ea8fa07ecc8e340f02b0faf18ce7",
+      "png_sha256": "7995431cbb62eea1b1344e09ef1f6c5e6ed2ff7efc8e542c1efc50bfeb7e8699",
       "dimensions": [
         1414,
         2000
       ],
-      "review_method": "view_image(detail=original); each page inspected individually, not montage",
+      "review_method": "view_image(detail=original); every page was actually opened and visually inspected, not a montage",
       "visually_inspected": true,
       "layout_passed": true,
-      "observations": "读取后图显示真实read_document允许和15:00/A301答复，未评定状态保留；正文区分completed与合法成功，页脚为6。"
+      "observations": "读取结果图保留read_document允许、15:00/A301和未自动评定状态；正文区分工具执行和模型自述，图注/页脚清楚。",
+      "previous_publication_png_sha256": "d92c2ec0a53a40d5672123453cb0bbac22e4ea8fa07ecc8e340f02b0faf18ce7",
+      "unchanged_from_previous_publication": false
     },
     {
       "page": 7,
       "png_path": "docs/publication/manual_qa/render/page-7.png",
-      "png_sha256": "7ad01fef8099a3f4f8fc05c1c47102bd58535adcb332d97db51f55b2fa4981ff",
+      "png_sha256": "da98672bf0eab04e89641e8e77d5404d50f21a40785e4cdcc005901bcab28860",
       "dimensions": [
         1414,
         2000
       ],
-      "review_method": "view_image(detail=original); each page inspected individually, not montage",
+      "review_method": "view_image(detail=original); every page was actually opened and visually inspected, not a montage",
       "visually_inspected": true,
       "layout_passed": true,
-      "observations": "查询图保留真实search_info允许及11月8日/11月3日答复；操作说明使用已验证任务原文，中文及第7页页脚可读。"
+      "observations": "本地检索结果及11月8日/11月3日关键值可读；来源传播与事实污染限制保持，段落未越界。",
+      "previous_publication_png_sha256": "7ad01fef8099a3f4f8fc05c1c47102bd58535adcb332d97db51f55b2fa4981ff",
+      "unchanged_from_previous_publication": false
     },
     {
       "page": 8,
       "png_path": "docs/publication/manual_qa/render/page-8.png",
-      "png_sha256": "663ff3705cb78dd47db4a188c82f6dd826ad2d5379d91a6cc8ffac13456f2858",
+      "png_sha256": "d0672d4db46a614e4626f0eb4c68d3b9523ef9cddb28afb96e9b339ddf341444",
       "dimensions": [
         1414,
         2000
       ],
-      "review_method": "view_image(detail=original); each page inspected individually, not montage",
+      "review_method": "view_image(detail=original); every page was actually opened and visually inspected, not a montage",
       "visually_inspected": true,
       "layout_passed": true,
-      "observations": "通知确认图可读team_A、完整待发送正文、哈希/来源/有效期及两个确认按钮；pending和确认限制描述完整，页脚为8。"
+      "observations": "通知pending卡片的目标、正文、来源/运行/哈希/有效期及两种按钮完整；正文准确说明确认前无副作用，整页可读。",
+      "previous_publication_png_sha256": "663ff3705cb78dd47db4a188c82f6dd826ad2d5379d91a6cc8ffac13456f2858",
+      "unchanged_from_previous_publication": false
     },
     {
       "page": 9,
       "png_path": "docs/publication/manual_qa/render/page-9.png",
-      "png_sha256": "81d4980eb72937bad684c7fa2a3d14833b42e429e43d9f261b6ef641dbb93a4e",
+      "png_sha256": "6ac1e327548848cbef1335d3f2b58da4c66769af6fdd554d6e3e85c88b096ae6",
       "dimensions": [
         1414,
         2000
       ],
-      "review_method": "view_image(detail=original); each page inspected individually, not montage",
+      "review_method": "view_image(detail=original); every page was actually opened and visually inspected, not a montage",
       "visually_inspected": true,
       "layout_passed": true,
-      "observations": "确认后模拟收件箱显示1条真实通知、team_A及15:00/A301；2处编号与说明对应，当前运行ID可见，页脚为9。"
+      "observations": "模拟收件箱1条、team_A及关键正文完整，确认后副作用说明与幂等边界排版清楚，无截图或文字裁切。",
+      "previous_publication_png_sha256": "81d4980eb72937bad684c7fa2a3d14833b42e429e43d9f261b6ef641dbb93a4e",
+      "unchanged_from_previous_publication": false
     },
     {
       "page": 10,
       "png_path": "docs/publication/manual_qa/render/page-10.png",
-      "png_sha256": "653fab4cd2ab03e8f863cff076468491324382e7a22f68629c03d80600ea2067",
+      "png_sha256": "4a3f7f47cc5553da5678b6fc58d04d8e0482bd64e24b97eddcb163791aa4e07a",
       "dimensions": [
         1414,
         2000
       ],
-      "review_method": "view_image(detail=original); each page inspected individually, not montage",
+      "review_method": "view_image(detail=original); every page was actually opened and visually inspected, not a montage",
       "visually_inspected": true,
       "layout_passed": true,
-      "observations": "独立拒绝运行保留先pending后block及用户拒绝原因，不把拒绝当成发送；正文和第10页页脚完整，参数区真实横向滚动状态未被伪造。"
+      "observations": "拒绝事件、用户拒绝原因和可审计原参数可读；独立拒绝运行与停止区别说明完整，未将拒绝解释为成功恢复。",
+      "previous_publication_png_sha256": "653fab4cd2ab03e8f863cff076468491324382e7a22f68629c03d80600ea2067",
+      "unchanged_from_previous_publication": false
     },
     {
       "page": 11,
       "png_path": "docs/publication/manual_qa/render/page-11.png",
-      "png_sha256": "6763efc5d0aed3bb943020c1c71a4979235e20c8e480581c8ec4125df57f1286",
+      "png_sha256": "f537933141d400905ca6a8b42b676efc3746c95361ec2eb6995cbf1fb06d2ca3",
       "dimensions": [
         1414,
         2000
       ],
-      "review_method": "view_image(detail=original); each page inspected individually, not montage",
+      "review_method": "view_image(detail=original); every page was actually opened and visually inspected, not a montage",
       "visually_inspected": true,
       "layout_passed": true,
-      "observations": "导出确认图显示/exports/report.txt及15:00/A301正文，按钮未遮挡；PDF文本另行核实正文两处完整路径，无缺少exports，页脚为11。"
+      "observations": "导出pending图显示/exports/report.txt、正文与确认按钮；虚拟路径和宿主隔离说明可读，无溢出。",
+      "previous_publication_png_sha256": "6763efc5d0aed3bb943020c1c71a4979235e20c8e480581c8ec4125df57f1286",
+      "unchanged_from_previous_publication": false
     },
     {
       "page": 12,
       "png_path": "docs/publication/manual_qa/render/page-12.png",
-      "png_sha256": "8c3c77e9a0f8dfbcc79bcc02f3b161be4d62b44d6b5a69bde1e7a3d6be7eac33",
+      "png_sha256": "a93677ac0aa92328da3e21b68358326499c99b4db3628833d1734d93f5046169",
       "dimensions": [
         1414,
         2000
       ],
-      "review_method": "view_image(detail=original); each page inspected individually, not montage",
+      "review_method": "view_image(detail=original); every page was actually opened and visually inspected, not a montage",
       "visually_inspected": true,
       "layout_passed": true,
-      "observations": "虚拟文件图显示1个文件与实际下载按钮；正文明确144字节取证结果及虚拟执行/下载边界，图注与第12页页脚完整。"
+      "observations": "导出物条目、内容及下载按钮清楚；144字节属于已保存旧截图流程，首页版本范围说明仍适用。页脚和正文未重叠。",
+      "previous_publication_png_sha256": "8c3c77e9a0f8dfbcc79bcc02f3b161be4d62b44d6b5a69bde1e7a3d6be7eac33",
+      "unchanged_from_previous_publication": false
     },
     {
       "page": 13,
       "png_path": "docs/publication/manual_qa/render/page-13.png",
-      "png_sha256": "772cad65de51e3881320b49ef553cfb95548c6e0eb6fc556b162818cbf79ee4c",
+      "png_sha256": "df37a932270f515e6c95ac1970eaf79640e8949b41193f417a92f0b512887d42",
       "dimensions": [
         1414,
         2000
       ],
-      "review_method": "view_image(detail=original); each page inspected individually, not montage",
+      "review_method": "view_image(detail=original); every page was actually opened and visually inspected, not a montage",
       "visually_inspected": true,
       "layout_passed": true,
-      "observations": "TXT登记图显示真实新增文档、未勾选状态和上传提示；正文明确这是独立登记会话，与次页不同，3编号对应，页脚为13。"
+      "observations": "上传登记图、未勾选状态和三处编号完整；正文明确登记与下一页读取来自两个会话，没有冒充连续过程；格式/长度限制可读。",
+      "previous_publication_png_sha256": "772cad65de51e3881320b49ef553cfb95548c6e0eb6fc556b162818cbf79ee4c",
+      "unchanged_from_previous_publication": false
     },
     {
       "page": 14,
       "png_path": "docs/publication/manual_qa/render/page-14.png",
-      "png_sha256": "29af87af0824e020a5f7312b2050123a17c0e936c50cf4ad69d31f7fef9fa2dc",
+      "png_sha256": "2a7da3716b0a66c4b2d86b2dac0fa9593511b5f4ae4d4c669756a26fd8163626",
       "dimensions": [
         1414,
         2000
       ],
-      "review_method": "view_image(detail=original); each page inspected individually, not montage",
+      "review_method": "view_image(detail=original); every page was actually opened and visually inspected, not a montage",
       "visually_inspected": true,
       "layout_passed": true,
-      "observations": "TXT来源图显示doc_id、来源、untrusted/internal、父节点、内容哈希及B202/10:30；正文保留首次失败和二次真实读取差异，最后单字自然换行仍在同页，页脚为14。"
+      "observations": "来源详情中的untrusted_content、upload、节点、父来源、哈希和模拟正文完整；失败后另建任务的说明与标签边界保持，无版式问题。",
+      "previous_publication_png_sha256": "29af87af0824e020a5f7312b2050123a17c0e936c50cf4ad69d31f7fef9fa2dc",
+      "unchanged_from_previous_publication": false
     },
     {
       "page": 15,
       "png_path": "docs/publication/manual_qa/render/page-15.png",
-      "png_sha256": "96025fa58ea3dc929a57bce8354f48df720468a6a5f089cd0f853ba3e3a0db12",
+      "png_sha256": "db21f0c2b0e36acfb36a7e6509d5dee5c8c6332474c2cac8d6d31ecc44b70b3a",
       "dimensions": [
         1414,
         2000
       ],
-      "review_method": "view_image(detail=original); each page inspected individually, not montage",
+      "review_method": "view_image(detail=original); every page was actually opened and visually inspected, not a montage",
       "visually_inspected": true,
       "layout_passed": true,
-      "observations": "权限图清晰显示工具白名单、文档/收件人/路径、总额6/已用4/余2及运行绑定；高图与正文均在页内，页脚为15。"
+      "observations": "TaskGrant面板的计数、白名单、配额和运行绑定能读；正文区分授权必要条件与敏感依赖，行间留白和页脚正常。",
+      "previous_publication_png_sha256": "96025fa58ea3dc929a57bce8354f48df720468a6a5f089cd0f853ba3e3a0db12",
+      "unchanged_from_previous_publication": false
     },
     {
       "page": 16,
       "png_path": "docs/publication/manual_qa/render/page-16.png",
-      "png_sha256": "8ab36991be3970d935763172ea02bf8c6a441bb77742765e21aabd0cb26b136a",
+      "png_sha256": "69ec61b5d4cc5e3413f55d3f929ca3a5b3fadbf7e0f246701222415e70754a25",
       "dimensions": [
         1414,
         2000
       ],
-      "review_method": "view_image(detail=original); each page inspected individually, not montage",
+      "review_method": "view_image(detail=original); every page was actually opened and visually inspected, not a montage",
       "visually_inspected": true,
       "layout_passed": true,
-      "observations": "当前2.0真实回放的被阻断动作、潜在依赖说明和来源图可读；图左侧节点是原UI横向窗口视野边界，未追加文档裁切；正文明确非精确因果，页脚为16。"
+      "observations": "真实回放标签、选中block动作和来源依赖图可见；图中局部节点是UI聚焦视口，正文明确潜在依赖非精确因果、阻断不等于安全完成。无文档裁切。",
+      "previous_publication_png_sha256": "8ab36991be3970d935763172ea02bf8c6a441bb77742765e21aabd0cb26b136a",
+      "unchanged_from_previous_publication": false
     },
     {
       "page": 17,
       "png_path": "docs/publication/manual_qa/render/page-17.png",
-      "png_sha256": "1b4d7c1dc5705b0cda9ec047b421dd1d283a95c3291d13952d7b41ba7c2c346e",
+      "png_sha256": "a7e6f6e201796a16f7d8d887f23fc004e360a19dbdb5b58cb14aa58356ac729d",
       "dimensions": [
         1414,
         2000
       ],
-      "review_method": "view_image(detail=original); each page inspected individually, not montage",
+      "review_method": "view_image(detail=original); every page was actually opened and visually inspected, not a montage",
       "visually_inspected": true,
       "layout_passed": true,
-      "observations": "Canary图显示当前2.0回放、未发现、敏感资料未读及检测范围；正文明确零泄露不能归因防御，原值未展示，页脚为17。"
+      "observations": "Canary未发现与未读取敏感资料的状态清楚；正文保留none也零泄露、不能归因于防御及有界检测限制，图注/数字无截断。",
+      "previous_publication_png_sha256": "1b4d7c1dc5705b0cda9ec047b421dd1d283a95c3291d13952d7b41ba7c2c346e",
+      "unchanged_from_previous_publication": false
     },
     {
       "page": 18,
@@ -236,23 +270,27 @@
         2000,
         1414
       ],
-      "review_method": "view_image(detail=original); each page inspected individually, not montage",
+      "review_method": "view_image(detail=original); every page was actually opened and visually inspected, not a montage",
       "visually_inspected": true,
       "layout_passed": true,
-      "observations": "横向直接注入预览图显示用户入口、伪造授权正文前后、尚未执行及另行运行按钮；3编号不遮挡参数，页脚为18。"
+      "observations": "横向直接注入预览图完整显示参数、注入前后和运行按钮；尚未执行标签可见，未将预览伪装为模型运行。",
+      "previous_publication_png_sha256": "edc6d2558358817af0f77a398dfa1d26b24e4e327ae39f115b0bc3985f9cc716",
+      "unchanged_from_previous_publication": true
     },
     {
       "page": 19,
       "png_path": "docs/publication/manual_qa/render/page-19.png",
-      "png_sha256": "10faa9ec38e65805814605eea109ce19b92e9ff3958b2f65726c803ec826eb24",
+      "png_sha256": "d6526d4f7e49defae23b962da1d9abface3f7a29601c622d774d1050254c93be",
       "dimensions": [
         1414,
         2000
       ],
-      "review_method": "view_image(detail=original); each page inspected individually, not montage",
+      "review_method": "view_image(detail=original); every page was actually opened and visually inspected, not a montage",
       "visually_inspected": true,
       "layout_passed": true,
-      "observations": "直接注入说明明确其与间接威胁模型不同，预览不调用模型且不计成功分母；独立说明页段落完整，页脚为19。"
+      "observations": "直接注入操作说明完整、层次清楚，区分规则预览和实际运行、直接与间接威胁模型；页码19正常。",
+      "previous_publication_png_sha256": "10faa9ec38e65805814605eea109ce19b92e9ff3958b2f65726c803ec826eb24",
+      "unchanged_from_previous_publication": false
     },
     {
       "page": 20,
@@ -262,23 +300,27 @@
         2000,
         1414
       ],
-      "review_method": "view_image(detail=original); each page inspected individually, not montage",
+      "review_method": "view_image(detail=original); every page was actually opened and visually inspected, not a montage",
       "visually_inspected": true,
       "layout_passed": true,
-      "observations": "横向间接注入预览保留patch原始事实并展示插入的伪造授权，文档入口、尚未执行和运行按钮可读；页脚为20。"
+      "observations": "横向间接注入图保留文档入口及正文前后对照，控制字段和按钮都在页内；预览元数据与尚未执行状态可读。",
+      "previous_publication_png_sha256": "246d27ad6330d461775c1bcc1c2be450510f694a232e0b7303a428e4ab1f25df",
+      "unchanged_from_previous_publication": true
     },
     {
       "page": 21,
       "png_path": "docs/publication/manual_qa/render/page-21.png",
-      "png_sha256": "2b36a010912a5c708b8b47d2d7a24353e8620383dd7e037469735d812c124c4e",
+      "png_sha256": "5cb01977885fd0af0e1d234a30a712341ed987680d752022ac454ff073ec2ffe",
       "dimensions": [
         1414,
         2000
       ],
-      "review_method": "view_image(detail=original); each page inspected individually, not montage",
+      "review_method": "view_image(detail=original); every page was actually opened and visually inspected, not a montage",
       "visually_inspected": true,
       "layout_passed": true,
-      "observations": "间接注入说明覆盖实际接触、危险提议、网关决策和已经执行的区分；中文、链接与第21页页脚完整，无截字或孤段。"
+      "observations": "间接注入操作说明完整，明确入口内容与攻击接触/实际执行判定的区别；未接触或能力不足不计防御收益，蓝色代码链接和页脚清楚。",
+      "previous_publication_png_sha256": "2b36a010912a5c708b8b47d2d7a24353e8620383dd7e037469735d812c124c4e",
+      "unchanged_from_previous_publication": false
     },
     {
       "page": 22,
@@ -288,23 +330,27 @@
         2000,
         1414
       ],
-      "review_method": "view_image(detail=original); each page inspected individually, not montage",
+      "review_method": "view_image(detail=original); every page was actually opened and visually inspected, not a montage",
       "visually_inspected": true,
       "layout_passed": true,
-      "observations": "横向编码预览显示Base64选择、编码后的完整可见正文和未执行标识；编号区不遮挡生成/运行按钮，图注与页脚22完整。"
+      "observations": "横向编码变形图显示Base64配置、文档入口及注入前后全文，尚未执行与运行按钮可读；图注和三处编号完整，无溢出。",
+      "previous_publication_png_sha256": "2c4ea2c91bd545ba3bebb258dbb14ae71f8dc1316fb48161f292e3b940736d2f",
+      "unchanged_from_previous_publication": true
     },
     {
       "page": 23,
       "png_path": "docs/publication/manual_qa/render/page-23.png",
-      "png_sha256": "1c44ff2be4da2163ca39487cc3f23302415a12c4f8baab40d973320297fadbaf",
+      "png_sha256": "69fa670f1d2d366a85af4d39e47dc80d66a9086dd74a77c54a1c339a64bc4984",
       "dimensions": [
         1414,
         2000
       ],
-      "review_method": "view_image(detail=original); each page inspected individually, not montage",
+      "review_method": "view_image(detail=original); every page was actually opened and visually inspected, not a montage",
       "visually_inspected": true,
       "layout_passed": true,
-      "observations": "编码说明明确有限编码、标签保留及预览不是实际攻击；长英文标识自然换行未越界，独立说明页页脚为23。"
+      "observations": "编码说明准确保留有限规范化/解码边界、标签不自动降低及正常编码对照；预览不计真实运行的限制可读，版面无重叠。",
+      "previous_publication_png_sha256": "1c44ff2be4da2163ca39487cc3f23302415a12c4f8baab40d973320297fadbaf",
+      "unchanged_from_previous_publication": false
     },
     {
       "page": 24,
@@ -314,23 +360,27 @@
         2000,
         1414
       ],
-      "review_method": "view_image(detail=original); each page inspected individually, not montage",
+      "review_method": "view_image(detail=original); every page was actually opened and visually inspected, not a montage",
       "visually_inspected": true,
       "layout_passed": true,
-      "observations": "横向分段预览显示patch和continuation两个来源、前后正文及两个分片；主体编号区域完整，底部非焦点辅助提示沿原截图裁边，未遮挡关键事实，页脚为24。"
+      "observations": "横向分段图的patch/continuation正文、两个分片来源和顺序完整；图像为实际UI视口，底部辅助说明在视口边界结束，所有本页标注对象与图注均完整。",
+      "previous_publication_png_sha256": "45518dd83f281a80ebcfbc41647c5120196568f8cc142fee92feec823955fb8a",
+      "unchanged_from_previous_publication": true
     },
     {
       "page": 25,
       "png_path": "docs/publication/manual_qa/render/page-25.png",
-      "png_sha256": "926273a23eb40301cace3d8e10f1bcfc3f398053628b5fb903815f480f27af32",
+      "png_sha256": "e105a9aefcb804d1bc2d5471f114c3433b6b3caf4d712650316820a80d165e51",
       "dimensions": [
         1414,
         2000
       ],
-      "review_method": "view_image(detail=original); each page inspected individually, not montage",
+      "review_method": "view_image(detail=original); every page was actually opened and visually inspected, not a montage",
       "visually_inspected": true,
       "layout_passed": true,
-      "observations": "分段说明明确读取顺序须由真实事件验证、未读取第二来源时不能宣称完整接触；段落与第25页页脚完整。"
+      "observations": "分段操作说明清楚区分预定分片与真实读取顺序；第二来源未读取须报告未完整接触、历史摘要保留敏感度的限制均在页内，页码正确。",
+      "previous_publication_png_sha256": "926273a23eb40301cace3d8e10f1bcfc3f398053628b5fb903815f480f27af32",
+      "unchanged_from_previous_publication": false
     },
     {
       "page": 26,
@@ -340,23 +390,27 @@
         2000,
         1414
       ],
-      "review_method": "view_image(detail=original); each page inspected individually, not montage",
+      "review_method": "view_image(detail=original); every page was actually opened and visually inspected, not a montage",
       "visually_inspected": true,
       "layout_passed": true,
-      "observations": "横向当前2.0基线结果显示1296保存运行、3主配置及ASR13/216、9/216、8/216和正常71/108、60/108、77/108；全部列、分母、图注与页脚26可读。"
+      "observations": "横向正式结果图的版本、1296保存运行、三配置指标及分子分母均可读；13/216、9/216、8/216与正常71/108、60/108、77/108一致，未把三个种子写成独立样本。",
+      "previous_publication_png_sha256": "8bb56955cc4fb51edfffb7920bd673f5e9db88b028cce9497289c667ed43a6f2",
+      "unchanged_from_previous_publication": true
     },
     {
       "page": 27,
       "png_path": "docs/publication/manual_qa/render/page-27.png",
-      "png_sha256": "bb8f0e5fbdf4a8b557943dea6e1808cb1b3ef86ed7b93d9e7676b83a359378e4",
+      "png_sha256": "4ee1a1d8ae97c2930a209fe5d8bc03bb2843771da8ec9232e1e945a8aeb8f320",
       "dimensions": [
         1414,
         2000
       ],
-      "review_method": "view_image(detail=original); each page inspected individually, not montage",
+      "review_method": "view_image(detail=original); every page was actually opened and visually inspected, not a montage",
       "visually_inspected": true,
       "layout_passed": true,
-      "observations": "指标说明区分1296基线与1080扩展、自动与确认辅助、completed与合法完成；明确扩展C未降低ASR和重复种子边界，页脚为27。"
+      "observations": "评测说明列出当前1296+1080、扩展ASR与自动/确认辅助拆分，明确公开来源适配非完整基准、完整策略未降低扩展ASR；所有段落与链接可读。",
+      "previous_publication_png_sha256": "bb8f0e5fbdf4a8b557943dea6e1808cb1b3ef86ed7b93d9e7676b83a359378e4",
+      "unchanged_from_previous_publication": false
     },
     {
       "page": 28,
@@ -366,74 +420,79 @@
         2000,
         1414
       ],
-      "review_method": "view_image(detail=original); each page inspected individually, not montage",
+      "review_method": "view_image(detail=original); every page was actually opened and visually inspected, not a montage",
       "visually_inspected": true,
       "layout_passed": true,
-      "observations": "横向扩展结果图显示1080、4配置及policy_only已展开；C和仅权限均34/180=18.89%，正常67/90与66/90及零Canary列可读，页脚为28。"
+      "observations": "横向四配置扩展表的1080总数、31/180、29/180、34/180、34/180及正常67/90、59/90、67/90、66/90清楚，消融勾选与图注完整。",
+      "previous_publication_png_sha256": "7a76fe47904c4c0fed8fd1a2fac71670b65e3cb1f5666503facb569810f0ba31",
+      "unchanged_from_previous_publication": true
     },
     {
       "page": 29,
       "png_path": "docs/publication/manual_qa/render/page-29.png",
-      "png_sha256": "d3f8b3dc879299e76819863c43a16c3d7b442c64fd5abfcb5d80d1c175466604",
+      "png_sha256": "908ebbd391d3a302e8d25e57928be898dd5cc94255c8045fbf4c4cc5de90507a",
       "dimensions": [
         1414,
         2000
       ],
-      "review_method": "view_image(detail=original); each page inspected individually, not montage",
+      "review_method": "view_image(detail=original); every page was actually opened and visually inspected, not a montage",
       "visually_inspected": true,
       "layout_passed": true,
-      "observations": "消融说明保留61+6和60+6自动/辅助口径，明确尚未证明独立污点安全收益；链接与第29页页脚可读，未溢出。"
+      "observations": "消融说明清楚列出C/仅权限同为34/180及自动/辅助分拆；独立安全收益未获证明和机制测试的范围说明完整，无排版缺陷。",
+      "previous_publication_png_sha256": "d3f8b3dc879299e76819863c43a16c3d7b442c64fd5abfcb5d80d1c175466604",
+      "unchanged_from_previous_publication": false
     },
     {
       "page": 30,
       "png_path": "docs/publication/manual_qa/render/page-30.png",
-      "png_sha256": "68504fa72031daa679e3972b052d9905db930d27a9ff9e8dd630fbce27766e1f",
+      "png_sha256": "6dc5102e45307b5f99e4e05792958acad031a64dc8bf64d5cec21226f97b5174",
       "dimensions": [
         1414,
         2000
       ],
-      "review_method": "view_image(detail=original); each page inspected individually, not montage",
+      "review_method": "view_image(detail=original); every page was actually opened and visually inspected, not a montage",
       "visually_inspected": true,
       "layout_passed": true,
-      "observations": "历史回放图明确真实回放、预算耗尽和只读，正文标记旧版与当前3672正式记录合计；不把旧恢复轨迹当作当前成功，图注与第30页页脚完整。"
+      "observations": "历史回放图的真实回放、预算耗尽、只读标识清楚；正文保留3672记录数量与development_v3不能替代当前恢复证据的限制，长路径与页脚均未溢出。",
+      "previous_publication_png_sha256": "68504fa72031daa679e3972b052d9905db930d27a9ff9e8dd630fbce27766e1f",
+      "unchanged_from_previous_publication": false
     },
     {
       "page": 31,
       "png_path": "docs/publication/manual_qa/render/page-31.png",
-      "png_sha256": "4023dd42c85854b01836979dd2b07964cffdb25acf3af8c721965d6f2e9378e1",
+      "png_sha256": "ca49da2e4132f0b7113bbe8f6476059640a64bfd88d6b2accb9cb7ee177e02b6",
       "dimensions": [
         1414,
         2000
       ],
-      "review_method": "view_image(detail=original); each page inspected individually, not montage",
+      "review_method": "view_image(detail=original); every page was actually opened and visually inspected, not a montage",
       "visually_inspected": true,
       "layout_passed": true,
-      "observations": "模型弹窗清晰显示qwen3-0.6b、本机URL、4096/512、0.2和固定非思考；正文明确Q8_0需在lock中核对且弹窗不显示该字段，恢复/排错段完整，页脚为31。"
+      "observations": "模型配置图的localhost、4096/512、temperature 0.2及非思考模式可读；正文诚实说明Q8_0从锁文件核对，排错/恢复与本机边界完整，无页面溢出。",
+      "previous_publication_png_sha256": "4023dd42c85854b01836979dd2b07964cffdb25acf3af8c721965d6f2e9378e1",
+      "unchanged_from_previous_publication": false
     },
     {
       "page": 32,
       "png_path": "docs/publication/manual_qa/render/page-32.png",
-      "png_sha256": "cb9b8ac9abfa192e2cc9b9a46eed9fdab12267d59c979d7e50d9050651194be9",
+      "png_sha256": "dd7d2a33cb11ccf16919f0b24e71ed61b36055a6d45838b2f996cfafdc31c053",
       "dimensions": [
         1414,
         2000
       ],
-      "review_method": "view_image(detail=original); each page inspected individually, not montage",
+      "review_method": "view_image(detail=original); every page was actually opened and visually inspected, not a montage",
       "visually_inspected": true,
       "layout_passed": true,
-      "observations": "最后一页的截图来源、复现、许可及验收口径完整；程序控制流明确为示意而非模型思维，成员信息待补充且不冒充工时，链接自然换行，页脚为32。"
+      "observations": "复现、许可、验收及AI辅助说明完整，公开来源/白名单链接可读；240秒原样发布描述按第1页声明属于v2.0.0保存说明，当前六章需循新版专题导航，不冒充本轮新运行。",
+      "previous_publication_png_sha256": "cb9b8ac9abfa192e2cc9b9a46eed9fdab12267d59c979d7e50d9050651194be9",
+      "unchanged_from_previous_publication": false
     }
   ],
   "findings": [
     {
-      "page": 1,
-      "severity": "repair_required",
-      "description": "Blue Title-style horizontal paragraph border remains; remove and rerender."
-    },
-    {
-      "page": 2,
-      "severity": "usability_improvement",
-      "description": "Long installation commands wrap naturally without clipping; requested separate command blocks."
+      "page": 32,
+      "severity": "needs_correction",
+      "description": "Old wording says the 240-second Demo is published unchanged but its relative link targets the current Demo; root will distinguish the v2.0.0 historical video and the current six-chapter video."
     }
   ]
 }

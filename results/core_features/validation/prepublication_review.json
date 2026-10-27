@@ -1,0 +1,1804 @@
+{
+  "schema_version": 2,
+  "review_kind": "independent_read_only_final_prepublication_review",
+  "started_at_utc": "2026-10-27T06:41:00.240684+00:00",
+  "finished_at_utc": "2026-10-27T06:51:09.166719+00:00",
+  "runtime_version": "2.0.0",
+  "release_version": "2.0.1",
+  "reviewer": "/root/dataset_evaluation",
+  "status": "passed_prepublication_files",
+  "all_passed": true,
+  "final_delivery_validated": true,
+  "full_validate_delivery_called": true,
+  "archive_or_publication_created": false,
+  "source_commit_at_review": "feae6c7a0fff4a7ee6da796d2de53ae1cc9f7d06",
+  "preserved_pending_review": {
+    "path": "results/core_features/validation/prepublication_review_pending.json",
+    "sha256": "8061d0c66a1fc440b29301fe19a18e497db1d3be6b6641ff1519fdbc7275d0b7",
+    "status": "pending_final_media_and_document_freeze",
+    "scope": "Unmodified earlier point-in-time pending report, not final acceptance."
+  },
+  "checked_public_candidate": {
+    "files_excluding_this_report": 4207,
+    "bytes_excluding_this_report": 134458525,
+    "file_list_and_sha256_digest_excluding_this_report": "def97bf366842d3a2b1fc9835a7f78aae6994cf7f2d82f29a8591ec786d6e397",
+    "scope": "Actual public projected bytes validated in a temporary tree. This report is excluded from its own digest. Root will create the reviewed final staging after committing source."
+  },
+  "protected_history": {
+    "passed": true,
+    "formal_record_counts": {
+      "main": 972,
+      "ablation": 324,
+      "v2/baseline": 1296,
+      "v2/external": 1080
+    },
+    "formal_record_total": 3672,
+    "backend_types": {
+      "local_llama_cpp": 3672
+    },
+    "protected_files": 3715,
+    "source_and_public_byte_mismatches": [],
+    "baseline_manifest_sha256": "7cd55faf988e140f3368e848bd3fcb7a4bb9fd780e622e3f6813612e5d3a5d25",
+    "scope": "Actual byte comparison plus full delivery index/record/backend checks; no formal inference rerun."
+  },
+  "privacy": {
+    "passed": true,
+    "credential_pattern_candidates": {},
+    "private_environment_path_warnings": {},
+    "unexpected_private_json_fields": [],
+    "forbidden_paths": [],
+    "new_json_metadata_checked": 64,
+    "scope": "Bounded patterns and recursive JSON-key audit of public bytes; no credential values output and no universal proof against every secret form."
+  },
+  "media": {
+    "passed": true,
+    "video_sha256": "b164feb7d3f5816e3de76aba927513c5e4102dcf665d16a06ba2d5d2c37e3e61",
+    "bytes": 12478629,
+    "duration_seconds": 270.0,
+    "selected_media": [
+      {
+        "path": "demo/demo.mp4",
+        "bytes": 12478629,
+        "sha256": "b164feb7d3f5816e3de76aba927513c5e4102dcf665d16a06ba2d5d2c37e3e61"
+      }
+    ],
+    "current_visual_review": {
+      "path": "demo/core_features/visual_review.json",
+      "saved_all_passed": true,
+      "recorded_frame_observations": 36,
+      "scope": "Read and hash-bound saved actual UI and independent visual review; this packaging review did not itself view every video frame.",
+      "source_sha256": "ebdb1b25fdbe650698d289c2e725aa2e4f8f84a2dee3cbecb49f04e72bb6236e",
+      "public_sha256": "5dc0c83efdb04435fb3b6d30deb6a9cb3b2de088130f6a483a60b208261c908e",
+      "reference_hash_scope": "The source review is unchanged; the public copy rebinds technical targets to explicitly projected public summaries and preserves original source hashes."
+    },
+    "independent_review": {
+      "path": "demo/core_features/independent_visual_review.json",
+      "sha256": "d7683739b489ae19c7741dcf63ff30e496e0531fd82578a56465f15d66e05ab1",
+      "saved_all_passed": true
+    },
+    "playback_scope": {
+      "samples": 32,
+      "last_requested_second": 268,
+      "ready_state": 4,
+      "media_errors": 0,
+      "cumulative_total_frames": 4334,
+      "cumulative_dropped_frames": 2,
+      "audio_muted": true
+    },
+    "recording_timing_root_mirror_matches": true,
+    "source_inventory_all_raw_video_local_only": true,
+    "raw_intermediates_selected": false,
+    "metadata_references": [
+      {
+        "path": "demo/video_validation.json",
+        "declared_source_sha256": "a65f2d86b3214f7ef1a89bc421bef571c6649f0413b174a2339decb1e39d5c23",
+        "source_sha256": "a65f2d86b3214f7ef1a89bc421bef571c6649f0413b174a2339decb1e39d5c23",
+        "public_sha256": "1d9805512c61dbe773718c382ddf73ca4e51d3c7bb2d58dd1c3f0acf3969b70c",
+        "public_projected": true
+      },
+      {
+        "path": "demo/playback_validation.json",
+        "declared_source_sha256": "430be72e3ba39ec08da47a0fb5cd78489a1bb1527e62039902dd5d3f5af428c2",
+        "source_sha256": "430be72e3ba39ec08da47a0fb5cd78489a1bb1527e62039902dd5d3f5af428c2",
+        "public_sha256": "8b940a441900f3473102190879d39a4626ab50f7c919845e656256321a8d28be",
+        "public_projected": true
+      },
+      {
+        "path": "demo/core_features/independent_visual_review.json",
+        "declared_source_sha256": "d7683739b489ae19c7741dcf63ff30e496e0531fd82578a56465f15d66e05ab1",
+        "source_sha256": "d7683739b489ae19c7741dcf63ff30e496e0531fd82578a56465f15d66e05ab1",
+        "public_sha256": "d7683739b489ae19c7741dcf63ff30e496e0531fd82578a56465f15d66e05ab1",
+        "public_projected": false
+      },
+      {
+        "path": "demo/core_features/narration_synthesis.json",
+        "declared_source_sha256": "143d76dcb17a285d5c675b2c7904338abea6437e9801bab27ef8179368c801e6",
+        "source_sha256": "143d76dcb17a285d5c675b2c7904338abea6437e9801bab27ef8179368c801e6",
+        "public_sha256": "143d76dcb17a285d5c675b2c7904338abea6437e9801bab27ef8179368c801e6",
+        "public_projected": false
+      },
+      {
+        "path": "docs/core_features_qa/content_review.json",
+        "declared_source_sha256": "4ee0f59cbc00a6603d1e4ea1dc770de9d635ac92e9661bd977e591721e9477d0",
+        "source_sha256": "4ee0f59cbc00a6603d1e4ea1dc770de9d635ac92e9661bd977e591721e9477d0",
+        "public_sha256": "4ee0f59cbc00a6603d1e4ea1dc770de9d635ac92e9661bd977e591721e9477d0",
+        "public_projected": false
+      },
+      {
+        "path": "results/v2/baseline/summary.json",
+        "declared_source_sha256": "c7d9f0b4c99b6fd7cd6da277d6835014c7412e90bd8df3ae34ad7d4604c617d7",
+        "source_sha256": "c7d9f0b4c99b6fd7cd6da277d6835014c7412e90bd8df3ae34ad7d4604c617d7",
+        "public_sha256": "c7d9f0b4c99b6fd7cd6da277d6835014c7412e90bd8df3ae34ad7d4604c617d7",
+        "public_projected": false
+      },
+      {
+        "path": "results/v2/external/summary.json",
+        "declared_source_sha256": "706983d3f069629ef543d7882175990a73d1509da9d29d2c0c2f6c67a86c27e1",
+        "source_sha256": "706983d3f069629ef543d7882175990a73d1509da9d29d2c0c2f6c67a86c27e1",
+        "public_sha256": "706983d3f069629ef543d7882175990a73d1509da9d29d2c0c2f6c67a86c27e1",
+        "public_projected": false
+      },
+      {
+        "path": "results/core_features/canary_selftest.json",
+        "declared_source_sha256": "aea61b10b0345b8a1c8a9a5dad25444e9ad6c6a005bbdace68d1a1171868f5f5",
+        "source_sha256": "aea61b10b0345b8a1c8a9a5dad25444e9ad6c6a005bbdace68d1a1171868f5f5",
+        "public_sha256": "aea61b10b0345b8a1c8a9a5dad25444e9ad6c6a005bbdace68d1a1171868f5f5",
+        "public_projected": false
+      },
+      {
+        "path": "demo/demo_subtitles.srt",
+        "declared_source_sha256": "63671cb960c0edd21c9dc5f1b1d1d4e7d7e6c98f16edd8888d3828af0a975a88",
+        "source_sha256": "63671cb960c0edd21c9dc5f1b1d1d4e7d7e6c98f16edd8888d3828af0a975a88",
+        "public_sha256": "63671cb960c0edd21c9dc5f1b1d1d4e7d7e6c98f16edd8888d3828af0a975a88",
+        "public_projected": false
+      },
+      {
+        "path": "demo/core_features/first_independent_visual_review.json",
+        "declared_source_sha256": "d5687b3d4cf3d658acd1106aecaea1e01fb0237722e5405b9d9a154c2a3c6f67",
+        "source_sha256": "d5687b3d4cf3d658acd1106aecaea1e01fb0237722e5405b9d9a154c2a3c6f67",
+        "public_sha256": "d5687b3d4cf3d658acd1106aecaea1e01fb0237722e5405b9d9a154c2a3c6f67",
+        "public_projected": false
+      },
+      {
+        "path": "demo/core_features/composition_manifest.json",
+        "declared_source_sha256": "96717dc7a483ffd3d9fdeb997b2b0752ec2895b18c5c28b29c0c2d4054a87856",
+        "source_sha256": "96717dc7a483ffd3d9fdeb997b2b0752ec2895b18c5c28b29c0c2d4054a87856",
+        "public_sha256": "96717dc7a483ffd3d9fdeb997b2b0752ec2895b18c5c28b29c0c2d4054a87856",
+        "public_projected": false
+      },
+      {
+        "path": "demo/core_features/edit_decisions.json",
+        "declared_source_sha256": "95079b2c4e3e2521544000ebd734e6250d5f99adc51977fc6e6ce499a2254b61",
+        "source_sha256": "95079b2c4e3e2521544000ebd734e6250d5f99adc51977fc6e6ce499a2254b61",
+        "public_sha256": "95079b2c4e3e2521544000ebd734e6250d5f99adc51977fc6e6ce499a2254b61",
+        "public_projected": false
+      },
+      {
+        "path": "demo/selected_evidence.json",
+        "declared_source_sha256": "cce8fa058445f05ce3f01a3f1d63dff2b5bd4ded0cb5d621a88e2a918dff5330",
+        "source_sha256": "cce8fa058445f05ce3f01a3f1d63dff2b5bd4ded0cb5d621a88e2a918dff5330",
+        "public_sha256": "cce8fa058445f05ce3f01a3f1d63dff2b5bd4ded0cb5d621a88e2a918dff5330",
+        "public_projected": false
+      },
+      {
+        "path": "demo/core_features/recordings/attacks.json",
+        "declared_source_sha256": "ca7a0d88c9fe2bb90ee307a0d051cf4bc201c559700d08d44627c8941f6cbf7d",
+        "source_sha256": "ca7a0d88c9fe2bb90ee307a0d051cf4bc201c559700d08d44627c8941f6cbf7d",
+        "public_sha256": "ca7a0d88c9fe2bb90ee307a0d051cf4bc201c559700d08d44627c8941f6cbf7d",
+        "public_projected": false
+      },
+      {
+        "path": "demo/core_features/recordings/console.json",
+        "declared_source_sha256": "c2ef193201d9a4e45360b8ebad5de32e7cc54c03fa7abd3215d4254ba6504e5e",
+        "source_sha256": "c2ef193201d9a4e45360b8ebad5de32e7cc54c03fa7abd3215d4254ba6504e5e",
+        "public_sha256": "c2ef193201d9a4e45360b8ebad5de32e7cc54c03fa7abd3215d4254ba6504e5e",
+        "public_projected": false
+      },
+      {
+        "path": "demo/core_features/recordings/flow.json",
+        "declared_source_sha256": "59015b999cc20aed8b1b7729f50e406d8557a47c088bcd36155714636db64aed",
+        "source_sha256": "59015b999cc20aed8b1b7729f50e406d8557a47c088bcd36155714636db64aed",
+        "public_sha256": "59015b999cc20aed8b1b7729f50e406d8557a47c088bcd36155714636db64aed",
+        "public_projected": false
+      },
+      {
+        "path": "demo/core_features/recordings/home.json",
+        "declared_source_sha256": "869b9feffa5eb8aecf87b6954733f57530adaa832114d31fe5a144a7390425e5",
+        "source_sha256": "869b9feffa5eb8aecf87b6954733f57530adaa832114d31fe5a144a7390425e5",
+        "public_sha256": "869b9feffa5eb8aecf87b6954733f57530adaa832114d31fe5a144a7390425e5",
+        "public_projected": false
+      },
+      {
+        "path": "demo/core_features/recordings/review.json",
+        "declared_source_sha256": "039deac981bdd221910e4cc0ea2c1b64b5f32129c9de651f962536c13553efd9",
+        "source_sha256": "039deac981bdd221910e4cc0ea2c1b64b5f32129c9de651f962536c13553efd9",
+        "public_sha256": "039deac981bdd221910e4cc0ea2c1b64b5f32129c9de651f962536c13553efd9",
+        "public_projected": false
+      },
+      {
+        "path": "demo/core_features/recordings/tools.json",
+        "declared_source_sha256": "db0b46c7bd62eb34531c2fce3d71b39d9301365fbf169dadb3496d5122a36543",
+        "source_sha256": "db0b46c7bd62eb34531c2fce3d71b39d9301365fbf169dadb3496d5122a36543",
+        "public_sha256": "db0b46c7bd62eb34531c2fce3d71b39d9301365fbf169dadb3496d5122a36543",
+        "public_projected": false
+      },
+      {
+        "path": "demo/core_features/recordings/upload.json",
+        "declared_source_sha256": "01ce8fe5695b4c0d324b59956826e392e441b49d95b608bf5a47a98df869ff3c",
+        "source_sha256": "01ce8fe5695b4c0d324b59956826e392e441b49d95b608bf5a47a98df869ff3c",
+        "public_sha256": "01ce8fe5695b4c0d324b59956826e392e441b49d95b608bf5a47a98df869ff3c",
+        "public_projected": false
+      },
+      {
+        "path": "demo/core_features/visual_review.json",
+        "declared_source_sha256": null,
+        "source_sha256": "ebdb1b25fdbe650698d289c2e725aa2e4f8f84a2dee3cbecb49f04e72bb6236e",
+        "public_sha256": "5dc0c83efdb04435fb3b6d30deb6a9cb3b2de088130f6a483a60b208261c908e",
+        "public_projected": true
+      },
+      {
+        "path": "demo/playback_validation.json",
+        "declared_source_sha256": null,
+        "source_sha256": "430be72e3ba39ec08da47a0fb5cd78489a1bb1527e62039902dd5d3f5af428c2",
+        "public_sha256": "8b940a441900f3473102190879d39a4626ab50f7c919845e656256321a8d28be",
+        "public_projected": true
+      },
+      {
+        "path": "demo/video_validation.json",
+        "declared_source_sha256": null,
+        "source_sha256": "a65f2d86b3214f7ef1a89bc421bef571c6649f0413b174a2339decb1e39d5c23",
+        "public_sha256": "1d9805512c61dbe773718c382ddf73ca4e51d3c7bb2d58dd1c3f0acf3969b70c",
+        "public_projected": true
+      },
+      {
+        "path": "demo/core_features/narration_synthesis.json",
+        "declared_source_sha256": null,
+        "source_sha256": "143d76dcb17a285d5c675b2c7904338abea6437e9801bab27ef8179368c801e6",
+        "public_sha256": "143d76dcb17a285d5c675b2c7904338abea6437e9801bab27ef8179368c801e6",
+        "public_projected": false
+      },
+      {
+        "path": "demo/core_features/source_inventory.json",
+        "declared_source_sha256": null,
+        "source_sha256": "24f745c8b6012bb67b724c68938150f0a35cae1d05c5649fafc371c58bfda684",
+        "public_sha256": "24f745c8b6012bb67b724c68938150f0a35cae1d05c5649fafc371c58bfda684",
+        "public_projected": false
+      },
+      {
+        "path": "demo/core_features/recording_timing.json",
+        "declared_source_sha256": null,
+        "source_sha256": "d9bc47229f54fbb015bf62b567ca54c4e4e163232ac212aac78a3f669fcd5e62",
+        "public_sha256": "d9bc47229f54fbb015bf62b567ca54c4e4e163232ac212aac78a3f669fcd5e62",
+        "public_projected": false
+      },
+      {
+        "path": "demo/core_features/independent_visual_review.json",
+        "declared_source_sha256": null,
+        "source_sha256": "d7683739b489ae19c7741dcf63ff30e496e0531fd82578a56465f15d66e05ab1",
+        "public_sha256": "d7683739b489ae19c7741dcf63ff30e496e0531fd82578a56465f15d66e05ab1",
+        "public_projected": false
+      },
+      {
+        "path": "demo/core_features/first_independent_visual_review.json",
+        "declared_source_sha256": null,
+        "source_sha256": "d5687b3d4cf3d658acd1106aecaea1e01fb0237722e5405b9d9a154c2a3c6f67",
+        "public_sha256": "d5687b3d4cf3d658acd1106aecaea1e01fb0237722e5405b9d9a154c2a3c6f67",
+        "public_projected": false
+      },
+      {
+        "path": "demo/core_features/first_encode_visual_review.json",
+        "declared_source_sha256": null,
+        "source_sha256": "fa4aaba560fafa7d17a4f88a42876c23b761e28c7c943f6192b650cdc484ce77",
+        "public_sha256": "fa4aaba560fafa7d17a4f88a42876c23b761e28c7c943f6192b650cdc484ce77",
+        "public_projected": false
+      }
+    ],
+    "independent_checker": {
+      "passed": true,
+      "video_visual_review": "demo/core_features/visual_review.json",
+      "video_sha256": "b164feb7d3f5816e3de76aba927513c5e4102dcf665d16a06ba2d5d2c37e3e61",
+      "document_qa_mirrors": [
+        "document_validation.json",
+        "structure_validation.json",
+        "visual_review_page_hashes.json",
+        "visual_review.md"
+      ],
+      "browser_reports": {
+        "results/v2/browser/video_timing/timing_review.md": "a372b4ae7076d376f205a797c09955886ca650e9d7af1b48ea14972c64877d1a",
+        "results/v2/browser/ui_visual_review.md": "b1aa5a1359c92b24f86edc35129f46993aa03e489ddfd078d27d681eb4226d73",
+        "results/v2/browser/ui_followup_2026-10-26T18-05-16-679Z.json": "6817c4c9acbd56532d6881550c6635298ff15fc9a925203c643d3004352c00cb",
+        "results/v2/browser/ui_e2e_2026-10-26T17-12-36-626Z.json": "8b5c214c929669ebc12968871a65812b4aa9f213ec47effe1345decffa43e88d",
+        "results/v2/browser/ui_followup_2026-10-26T17-19-00-715Z.json": "14f607e538b8816fb129d2ae289f87fddc4537fb436455be135d78f270782199",
+        "results/v2/browser/layout_check.json": "5c811fe7b9c1e2f7d86ebef358c9f8c60fef7312e8c3216f3ed9de230a98c1cb",
+        "results/v2/browser/ui_followup_2026-10-26T17-33-09-419Z.json": "e03dc8fe904ab464bb021e2257954f14e60231c3715fb3d668714872d9d68030"
+      },
+      "feature_chapters": {
+        "passed": true,
+        "chapters": [
+          "F01",
+          "F02",
+          "F03",
+          "F04",
+          "F05",
+          "F06"
+        ],
+        "actual_duration": 270.0
+      },
+      "scope": "Saved current review and report references; excluded QA PNG/raw recordings are not claimed to be redistributed."
+    },
+    "historical_failure_reviews": [
+      "demo/core_features/first_independent_visual_review.json",
+      "demo/core_features/first_encode_visual_review.json"
+    ],
+    "legacy_v2_metadata_role": "historical production metadata only; not used as current feature-video success"
+  },
+  "documents": {
+    "feature_documents": {
+      "CORE_FEATURES_GUIDE": {
+        "passed": true,
+        "pages": 38,
+        "chapters": [
+          "F01 Agent 攻防靶场",
+          "F02 不可信内容标记",
+          "F03 污点追踪",
+          "F04 权限策略控制",
+          "F05 自动化攻击测试",
+          "F06 泄露检测与综合评测"
+        ],
+        "artifacts": {
+          "docs/CORE_FEATURES_GUIDE.md": "910ef2d1913704d4e7c9dcd80aee56fff06ecde969702ab0a74ecd190d9a04d7",
+          "docs/CORE_FEATURES_GUIDE.docx": "d654b197127b701adae8e34349568f2a1334a14b56e304f54acbef7c58fa4bae",
+          "docs/CORE_FEATURES_GUIDE.pdf": "41eb1e25b0c5c68d2421f5f9fe749cee758bcd917396bfa078b9c83ca1f4c9dc"
+        },
+        "assets_checked": 27,
+        "release_version": "2.0.1"
+      },
+      "DEVELOPMENT_AND_DELIVERY": {
+        "passed": true,
+        "pages": 14,
+        "chapters": [
+          "1 需求分析与技术选型",
+          "2 环境搭建与结构化设计",
+          "3 迭代开发与代码规范",
+          "4 集成测试与优化",
+          "5 打包部署与文档编写",
+          "6 持续维护与迭代"
+        ],
+        "artifacts": {
+          "docs/DEVELOPMENT_AND_DELIVERY.md": "332d9c59a655d8ed941f1dfdcdc51ef33ea3e04e0c5bfdaaa57388ca1e397072",
+          "docs/DEVELOPMENT_AND_DELIVERY.docx": "666e62d51bb38b7950d4ca7838ce50c1c321dac33e216405d2f24f5e38e67f83",
+          "docs/DEVELOPMENT_AND_DELIVERY.pdf": "1911d5c707c6e3c591097df65ddfaf0eb427a2f29068a84548168e42b9f46351"
+        },
+        "assets_checked": 1,
+        "release_version": "2.0.1"
+      }
+    },
+    "manual": {
+      "passed": true,
+      "pages": 32,
+      "artifacts": {
+        "md": "179e675087effd45b3d50ff76d473514fee5b502fbaabb4b0292d5ba6f1925b0",
+        "docx": "12e1e1cbdea9d98f887f0c879c050fe3730ccb536ab50490cb738816da67ae08",
+        "pdf": "d23adb43c4344c172177347694f81e046a8ef609ee3f185003b898fa2ec2295f"
+      },
+      "asset_count": 51
+    },
+    "independent_checker": {
+      "CORE_FEATURES_GUIDE": {
+        "passed": true,
+        "pages": 38,
+        "chapters": [
+          "F01 Agent 攻防靶场",
+          "F02 不可信内容标记",
+          "F03 污点追踪",
+          "F04 权限策略控制",
+          "F05 自动化攻击测试",
+          "F06 泄露检测与综合评测"
+        ],
+        "artifacts": {
+          "docs/CORE_FEATURES_GUIDE.md": "910ef2d1913704d4e7c9dcd80aee56fff06ecde969702ab0a74ecd190d9a04d7",
+          "docs/CORE_FEATURES_GUIDE.docx": "d654b197127b701adae8e34349568f2a1334a14b56e304f54acbef7c58fa4bae",
+          "docs/CORE_FEATURES_GUIDE.pdf": "41eb1e25b0c5c68d2421f5f9fe749cee758bcd917396bfa078b9c83ca1f4c9dc"
+        }
+      },
+      "DEVELOPMENT_AND_DELIVERY": {
+        "passed": true,
+        "pages": 14,
+        "chapters": [
+          "1 需求分析与技术选型",
+          "2 环境搭建与结构化设计",
+          "3 迭代开发与代码规范",
+          "4 集成测试与优化",
+          "5 打包部署与文档编写",
+          "6 持续维护与迭代"
+        ],
+        "artifacts": {
+          "docs/DEVELOPMENT_AND_DELIVERY.md": "332d9c59a655d8ed941f1dfdcdc51ef33ea3e04e0c5bfdaaa57388ca1e397072",
+          "docs/DEVELOPMENT_AND_DELIVERY.docx": "666e62d51bb38b7950d4ca7838ce50c1c321dac33e216405d2f24f5e38e67f83",
+          "docs/DEVELOPMENT_AND_DELIVERY.pdf": "1911d5c707c6e3c591097df65ddfaf0eb427a2f29068a84548168e42b9f46351"
+        }
+      }
+    },
+    "scope": "Saved three-format hashes, chapter structure, QA conclusions and assets verified; final visual inspections are the separately attributed QA files."
+  },
+  "document_links": {
+    "README.md": {
+      "source_sha256": "d65699e66a4a172e9a019a4c7aa1e9fc3bb72a2babb214d86839edcbcaac91b2",
+      "count": 37,
+      "all_present_and_selected": true,
+      "references": [
+        {
+          "reference": "docs/assets/user-manual/raw/01_home.png",
+          "target": "docs/assets/user-manual/raw/01_home.png",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "docs/CORE_FEATURES_GUIDE.md",
+          "target": "docs/CORE_FEATURES_GUIDE.md",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "docs/CORE_FEATURES_GUIDE.pdf",
+          "target": "docs/CORE_FEATURES_GUIDE.pdf",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "docs/CORE_FEATURES_GUIDE.docx",
+          "target": "docs/CORE_FEATURES_GUIDE.docx",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "docs/DEVELOPMENT_AND_DELIVERY.md",
+          "target": "docs/DEVELOPMENT_AND_DELIVERY.md",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "docs/DEVELOPMENT_AND_DELIVERY.pdf",
+          "target": "docs/DEVELOPMENT_AND_DELIVERY.pdf",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "docs/DEVELOPMENT_AND_DELIVERY.docx",
+          "target": "docs/DEVELOPMENT_AND_DELIVERY.docx",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "docs/FEATURE_EVIDENCE_MATRIX.md",
+          "target": "docs/FEATURE_EVIDENCE_MATRIX.md",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "docs/USER_MANUAL.md",
+          "target": "docs/USER_MANUAL.md",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "docs/USER_MANUAL.pdf",
+          "target": "docs/USER_MANUAL.pdf",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "docs/USER_MANUAL.docx",
+          "target": "docs/USER_MANUAL.docx",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "dist/project_report.pdf",
+          "target": "dist/project_report.pdf",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "dist/project_report.docx",
+          "target": "dist/project_report.docx",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "docs/project_report.md",
+          "target": "docs/project_report.md",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "docs/USER_MANUAL.md",
+          "target": "docs/USER_MANUAL.md",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "frontend/package-lock.json",
+          "target": "frontend/package-lock.json",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "configs/model.lock.json",
+          "target": "configs/model.lock.json",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "configs/model.json",
+          "target": "configs/model.json",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "docs/publication/README.md",
+          "target": "docs/publication/README.md",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "docs/releases/v2.0.1/PLAN.md",
+          "target": "docs/releases/v2.0.1/PLAN.md",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "docs/v2/EXPERIMENT_FINDINGS.md",
+          "target": "docs/v2/EXPERIMENT_FINDINGS.md",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "dist/project_report.pdf",
+          "target": "dist/project_report.pdf",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "docs/v2/DATA_SOURCES.md",
+          "target": "docs/v2/DATA_SOURCES.md",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "docs/members_workload.md",
+          "target": "docs/members_workload.md",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "docs/members_course_five.csv",
+          "target": "docs/members_course_five.csv",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "demo/demo.mp4",
+          "target": "demo/demo.mp4",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "demo/demo_subtitles.srt",
+          "target": "demo/demo_subtitles.srt",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "demo/demo_script.md",
+          "target": "demo/demo_script.md",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "demo/README.md",
+          "target": "demo/README.md",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "results/core_features/validation/pytest_release.xml",
+          "target": "results/core_features/validation/pytest_release.xml",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "docs/DELIVERY.md",
+          "target": "docs/DELIVERY.md",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "docs/v2/API_CONTRACT.md",
+          "target": "docs/v2/API_CONTRACT.md",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "docs/v2/USER_GUIDE.md",
+          "target": "docs/v2/USER_GUIDE.md",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "docs/LIGHT_PACKAGE.md",
+          "target": "docs/LIGHT_PACKAGE.md",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "docs/publication/PUBLICATION_POLICY.md",
+          "target": "docs/publication/PUBLICATION_POLICY.md",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "docs/BUILD_DOCUMENTS.md",
+          "target": "docs/BUILD_DOCUMENTS.md",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "docs/LICENSING.md",
+          "target": "docs/LICENSING.md",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        }
+      ],
+      "directory_link_count": 0
+    },
+    "docs/CORE_FEATURES_GUIDE.md": {
+      "source_sha256": "910ef2d1913704d4e7c9dcd80aee56fff06ecde969702ab0a74ecd190d9a04d7",
+      "count": 71,
+      "all_present_and_selected": true,
+      "references": [
+        {
+          "reference": "FEATURE_EVIDENCE_MATRIX.md",
+          "target": "docs/FEATURE_EVIDENCE_MATRIX.md",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "USER_MANUAL.md",
+          "target": "docs/USER_MANUAL.md",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "assets/core-features/figure_index.json",
+          "target": "docs/assets/core-features/figure_index.json",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "../data/demo/core_features/scenarios.json",
+          "target": "data/demo/core_features/scenarios.json",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "assets/core-features/annotated/f01_read.png",
+          "target": "docs/assets/core-features/annotated/f01_read.png",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "assets/core-features/annotated/f01_query.png",
+          "target": "docs/assets/core-features/annotated/f01_query.png",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "assets/core-features/annotated/f01_notify_inbox.png",
+          "target": "docs/assets/core-features/annotated/f01_notify_inbox.png",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "assets/core-features/annotated/f01_export_download.png",
+          "target": "docs/assets/core-features/annotated/f01_export_download.png",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "../results/core_features/demo_runs/0067a37dafcc42a596d3aaddafb82c5a.json",
+          "target": "results/core_features/demo_runs/0067a37dafcc42a596d3aaddafb82c5a.json",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "../results/core_features/demo_runs/9d78bb66a8e946e78c0c91fae6e74774.json",
+          "target": "results/core_features/demo_runs/9d78bb66a8e946e78c0c91fae6e74774.json",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "../results/core_features/demo_runs/e3a863e65ed147c497279253555f423f.json",
+          "target": "results/core_features/demo_runs/e3a863e65ed147c497279253555f423f.json",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "../results/core_features/demo_runs/7c0b679ff6144abf9fb16222052d108e.json",
+          "target": "results/core_features/demo_runs/7c0b679ff6144abf9fb16222052d108e.json",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "../results/core_features/demo_runs/7c0b679ff6144abf9fb16222052d108e_download.txt",
+          "target": "results/core_features/demo_runs/7c0b679ff6144abf9fb16222052d108e_download.txt",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "../src/taintlab/agent/runtime.py",
+          "target": "src/taintlab/agent/runtime.py",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "../src/taintlab/model/client.py",
+          "target": "src/taintlab/model/client.py",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "../src/taintlab/policy/gateway.py",
+          "target": "src/taintlab/policy/gateway.py",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "../src/taintlab/tools/world.py",
+          "target": "src/taintlab/tools/world.py",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "../src/taintlab/web/app.py",
+          "target": "src/taintlab/web/app.py",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "../data/demo/core_features/external_handover.txt",
+          "target": "data/demo/core_features/external_handover.txt",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "assets/core-features/figure_index.json",
+          "target": "docs/assets/core-features/figure_index.json",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "assets/core-features/annotated/f02_upload_registered.png",
+          "target": "docs/assets/core-features/annotated/f02_upload_registered.png",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "assets/core-features/annotated/f02_source_fields.png",
+          "target": "docs/assets/core-features/annotated/f02_source_fields.png",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "assets/core-features/annotated/f02_derived_action.png",
+          "target": "docs/assets/core-features/annotated/f02_derived_action.png",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "../results/core_features/demo_runs/96d64da9d8674bdfab4a9aa1095fccc1.json",
+          "target": "results/core_features/demo_runs/96d64da9d8674bdfab4a9aa1095fccc1.json",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "../results/core_features/demo_runs/81665601dc9c4c77bbc372817e24fdcc.json",
+          "target": "results/core_features/demo_runs/81665601dc9c4c77bbc372817e24fdcc.json",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "../src/taintlab/provenance/registry.py",
+          "target": "src/taintlab/provenance/registry.py",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "../src/taintlab/web/projection.py",
+          "target": "src/taintlab/web/projection.py",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "../frontend/src/components/SourceExplorer.tsx",
+          "target": "frontend/src/components/SourceExplorer.tsx",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "../results/v2/baseline/records/02e896c79a27f017d77ac413.json",
+          "target": "results/v2/baseline/records/02e896c79a27f017d77ac413.json",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "../results/core_features/demo_runs/02e896c79a27f017d77ac413.json",
+          "target": "results/core_features/demo_runs/02e896c79a27f017d77ac413.json",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "assets/core-features/annotated/f03_flow_denied.png",
+          "target": "docs/assets/core-features/annotated/f03_flow_denied.png",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "assets/core-features/annotated/f03_upstream_source.png",
+          "target": "docs/assets/core-features/annotated/f03_upstream_source.png",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "assets/core-features/annotated/f03_dependency_graph.png",
+          "target": "docs/assets/core-features/annotated/f03_dependency_graph.png",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "assets/core-features/annotated/f03_no_effect.png",
+          "target": "docs/assets/core-features/annotated/f03_no_effect.png",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "../src/taintlab/provenance/registry.py",
+          "target": "src/taintlab/provenance/registry.py",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "../src/taintlab/agent/runtime.py",
+          "target": "src/taintlab/agent/runtime.py",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "../src/taintlab/policy/gateway.py",
+          "target": "src/taintlab/policy/gateway.py",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "../results/core_features/demo_runs/e3a863e65ed147c497279253555f423f_pending.json",
+          "target": "results/core_features/demo_runs/e3a863e65ed147c497279253555f423f_pending.json",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "assets/core-features/annotated/f04_confirmation.png",
+          "target": "docs/assets/core-features/annotated/f04_confirmation.png",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "assets/core-features/annotated/f04_grant.png",
+          "target": "docs/assets/core-features/annotated/f04_grant.png",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "assets/core-features/annotated/f04_rejection.png",
+          "target": "docs/assets/core-features/annotated/f04_rejection.png",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "assets/core-features/annotated/f04_unauthorized.png",
+          "target": "docs/assets/core-features/annotated/f04_unauthorized.png",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "../results/core_features/demo_runs/6924078b8cf046c5b73c7098835a196e.json",
+          "target": "results/core_features/demo_runs/6924078b8cf046c5b73c7098835a196e.json",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "../results/core_features/demo_runs/b727ecd1317c41711cd49c98.json",
+          "target": "results/core_features/demo_runs/b727ecd1317c41711cd49c98.json",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "../src/taintlab/policy/gateway.py",
+          "target": "src/taintlab/policy/gateway.py",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "../src/taintlab/agent/runtime.py",
+          "target": "src/taintlab/agent/runtime.py",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "assets/core-features/annotated/f05_direct_preview.png",
+          "target": "docs/assets/core-features/annotated/f05_direct_preview.png",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "assets/core-features/annotated/f05_indirect_preview.png",
+          "target": "docs/assets/core-features/annotated/f05_indirect_preview.png",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "assets/core-features/annotated/f05_encoding_preview.png",
+          "target": "docs/assets/core-features/annotated/f05_encoding_preview.png",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "assets/core-features/annotated/f05_segmented_preview.png",
+          "target": "docs/assets/core-features/annotated/f05_segmented_preview.png",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "assets/core-features/annotated/f05_segmented_run.png",
+          "target": "docs/assets/core-features/annotated/f05_segmented_run.png",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "../results/core_features/demo_runs/13e8e74e39964b0d86cbb802f7d7ed56.json",
+          "target": "results/core_features/demo_runs/13e8e74e39964b0d86cbb802f7d7ed56.json",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "../results/core_features/demo_runs/fea661ce276242058e9db166f7cb07a2.json",
+          "target": "results/core_features/demo_runs/fea661ce276242058e9db166f7cb07a2.json",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "../results/core_features/demo_runs/f669a5e3fb324d6cb911480de1ccdca4.json",
+          "target": "results/core_features/demo_runs/f669a5e3fb324d6cb911480de1ccdca4.json",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "../results/core_features/demo_runs/adcc853ff57c476b9c896b49d523be18.json",
+          "target": "results/core_features/demo_runs/adcc853ff57c476b9c896b49d523be18.json",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "../src/taintlab/attacks/interactive.py",
+          "target": "src/taintlab/attacks/interactive.py",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "../src/taintlab/evaluation/evaluator.py",
+          "target": "src/taintlab/evaluation/evaluator.py",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "../results/core_features/canary_selftest.json",
+          "target": "results/core_features/canary_selftest.json",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "assets/core-features/annotated/f06_canary_state.png",
+          "target": "docs/assets/core-features/annotated/f06_canary_state.png",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "assets/core-features/annotated/f06_selfcheck_positive.png",
+          "target": "docs/assets/core-features/annotated/f06_selfcheck_positive.png",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "assets/core-features/annotated/f06_selfcheck_encoded.png",
+          "target": "docs/assets/core-features/annotated/f06_selfcheck_encoded.png",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "assets/core-features/annotated/f06_selfcheck_limits.png",
+          "target": "docs/assets/core-features/annotated/f06_selfcheck_limits.png",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "assets/core-features/annotated/f06_baseline.png",
+          "target": "docs/assets/core-features/annotated/f06_baseline.png",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "assets/core-features/annotated/f06_external.png",
+          "target": "docs/assets/core-features/annotated/f06_external.png",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "assets/core-features/annotated/f06_completion_split.png",
+          "target": "docs/assets/core-features/annotated/f06_completion_split.png",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "../results/v2/baseline/summary.json",
+          "target": "results/v2/baseline/summary.json",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "../results/v2/external/summary.json",
+          "target": "results/v2/external/summary.json",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "../src/taintlab/evaluation/canary.py",
+          "target": "src/taintlab/evaluation/canary.py",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "../scripts/demo_canary_selfcheck.py",
+          "target": "scripts/demo_canary_selfcheck.py",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "../src/taintlab/evaluation/evaluator.py",
+          "target": "src/taintlab/evaluation/evaluator.py",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "DEVELOPMENT_AND_DELIVERY.md",
+          "target": "docs/DEVELOPMENT_AND_DELIVERY.md",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        }
+      ],
+      "directory_link_count": 0
+    },
+    "docs/DEVELOPMENT_AND_DELIVERY.md": {
+      "source_sha256": "332d9c59a655d8ed941f1dfdcdc51ef33ea3e04e0c5bfdaaa57388ca1e397072",
+      "count": 32,
+      "all_present_and_selected": true,
+      "references": [
+        {
+          "reference": "CORE_FEATURES_GUIDE.md",
+          "target": "docs/CORE_FEATURES_GUIDE.md",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "USER_MANUAL.md",
+          "target": "docs/USER_MANUAL.md",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "FEATURE_EVIDENCE_MATRIX.md",
+          "target": "docs/FEATURE_EVIDENCE_MATRIX.md",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "assets/development-delivery/architecture.png",
+          "target": "docs/assets/development-delivery/architecture.png",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "../data/frozen_manifest.json",
+          "target": "data/frozen_manifest.json",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "../data/v2/frozen_manifest.json",
+          "target": "data/v2/frozen_manifest.json",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "v2/DATA_SOURCES.md",
+          "target": "docs/v2/DATA_SOURCES.md",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "../configs/model.lock.json",
+          "target": "configs/model.lock.json",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "../configs/model.json",
+          "target": "configs/model.json",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "../configs/experiment_v2.lock.json",
+          "target": "configs/experiment_v2.lock.json",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "v2/API_CONTRACT.md",
+          "target": "docs/v2/API_CONTRACT.md",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "../README.md",
+          "target": "README.md",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "DEVELOPMENT_LOG.md",
+          "target": "docs/DEVELOPMENT_LOG.md",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "v2/DEVELOPMENT.md",
+          "target": "docs/v2/DEVELOPMENT.md",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "publication/PUBLICATION_POLICY.md",
+          "target": "docs/publication/PUBLICATION_POLICY.md",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "members_course_five.csv",
+          "target": "docs/members_course_five.csv",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "../results/core_features/formal_summary.json",
+          "target": "results/core_features/formal_summary.json",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "../results/core_features/performance_summary.json",
+          "target": "results/core_features/performance_summary.json",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "../results/core_features/validation/helper_tests.xml",
+          "target": "results/core_features/validation/helper_tests.xml",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "../results/core_features/pytest.xml",
+          "target": "results/core_features/pytest.xml",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "../results/core_features/validation/release_docs_tests.xml",
+          "target": "results/core_features/validation/release_docs_tests.xml",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "../results/core_features/canary_selftest.json",
+          "target": "results/core_features/canary_selftest.json",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "FEATURE_EVIDENCE_MATRIX.md",
+          "target": "docs/FEATURE_EVIDENCE_MATRIX.md",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "releases/v2.0.1/PLAN.md",
+          "target": "docs/releases/v2.0.1/PLAN.md",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "../AGENTS.md",
+          "target": "AGENTS.md",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "LIGHT_PACKAGE.md",
+          "target": "docs/LIGHT_PACKAGE.md",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "members_course_five.csv",
+          "target": "docs/members_course_five.csv",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "FEATURE_EVIDENCE_MATRIX.md",
+          "target": "docs/FEATURE_EVIDENCE_MATRIX.md",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "v2/EXPERIMENT_FINDINGS.md",
+          "target": "docs/v2/EXPERIMENT_FINDINGS.md",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "../scripts/verify_v2_experiments.py",
+          "target": "scripts/verify_v2_experiments.py",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "publication/PUBLICATION_POLICY.md",
+          "target": "docs/publication/PUBLICATION_POLICY.md",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "releases/v2.0.1/PLAN.md",
+          "target": "docs/releases/v2.0.1/PLAN.md",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        }
+      ],
+      "directory_link_count": 0
+    },
+    "docs/FEATURE_EVIDENCE_MATRIX.md": {
+      "source_sha256": "98294df9dc38e72ce16106287b49cfe8a9a8974b38aba6c1757c3753174056e0",
+      "count": 32,
+      "all_present_and_selected": true,
+      "references": [
+        {
+          "reference": "assets/core-features/figure_index.json",
+          "target": "docs/assets/core-features/figure_index.json",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "CORE_FEATURES_GUIDE.md",
+          "target": "docs/CORE_FEATURES_GUIDE.md",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "../data/demo/core_features/scenarios.json",
+          "target": "data/demo/core_features/scenarios.json",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "../results/core_features/demo_runs/0067a37dafcc42a596d3aaddafb82c5a.json",
+          "target": "results/core_features/demo_runs/0067a37dafcc42a596d3aaddafb82c5a.json",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "../results/core_features/demo_runs/9d78bb66a8e946e78c0c91fae6e74774.json",
+          "target": "results/core_features/demo_runs/9d78bb66a8e946e78c0c91fae6e74774.json",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "../results/core_features/demo_runs/e3a863e65ed147c497279253555f423f.json",
+          "target": "results/core_features/demo_runs/e3a863e65ed147c497279253555f423f.json",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "../results/core_features/demo_runs/7c0b679ff6144abf9fb16222052d108e.json",
+          "target": "results/core_features/demo_runs/7c0b679ff6144abf9fb16222052d108e.json",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "../results/core_features/demo_runs/7c0b679ff6144abf9fb16222052d108e_download.txt",
+          "target": "results/core_features/demo_runs/7c0b679ff6144abf9fb16222052d108e_download.txt",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "../data/demo/core_features/external_handover.txt",
+          "target": "data/demo/core_features/external_handover.txt",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "../results/core_features/demo_runs/96d64da9d8674bdfab4a9aa1095fccc1.json",
+          "target": "results/core_features/demo_runs/96d64da9d8674bdfab4a9aa1095fccc1.json",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "../results/v2/baseline/records/02e896c79a27f017d77ac413.json",
+          "target": "results/v2/baseline/records/02e896c79a27f017d77ac413.json",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "../results/core_features/demo_runs/02e896c79a27f017d77ac413.json",
+          "target": "results/core_features/demo_runs/02e896c79a27f017d77ac413.json",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "../results/core_features/demo_runs/e3a863e65ed147c497279253555f423f_pending.json",
+          "target": "results/core_features/demo_runs/e3a863e65ed147c497279253555f423f_pending.json",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "../results/core_features/demo_runs/6924078b8cf046c5b73c7098835a196e.json",
+          "target": "results/core_features/demo_runs/6924078b8cf046c5b73c7098835a196e.json",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "../results/core_features/demo_runs/b727ecd1317c41711cd49c98.json",
+          "target": "results/core_features/demo_runs/b727ecd1317c41711cd49c98.json",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "../results/core_features/demo_runs/13e8e74e39964b0d86cbb802f7d7ed56.json",
+          "target": "results/core_features/demo_runs/13e8e74e39964b0d86cbb802f7d7ed56.json",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "../results/core_features/demo_runs/fea661ce276242058e9db166f7cb07a2.json",
+          "target": "results/core_features/demo_runs/fea661ce276242058e9db166f7cb07a2.json",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "../results/core_features/demo_runs/f669a5e3fb324d6cb911480de1ccdca4.json",
+          "target": "results/core_features/demo_runs/f669a5e3fb324d6cb911480de1ccdca4.json",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "../results/core_features/demo_runs/adcc853ff57c476b9c896b49d523be18.json",
+          "target": "results/core_features/demo_runs/adcc853ff57c476b9c896b49d523be18.json",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "../results/core_features/canary_selftest.json",
+          "target": "results/core_features/canary_selftest.json",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "../results/v2/baseline/summary.json",
+          "target": "results/v2/baseline/summary.json",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "../results/v2/external/summary.json",
+          "target": "results/v2/external/summary.json",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "../results/core_features/demo_runs/interactive_8c56334c11664ea8_preview.json",
+          "target": "results/core_features/demo_runs/interactive_8c56334c11664ea8_preview.json",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "../results/core_features/demo_runs/interactive_a4925bae8f7fddc0_preview.json",
+          "target": "results/core_features/demo_runs/interactive_a4925bae8f7fddc0_preview.json",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "../results/core_features/demo_runs/interactive_ed7e9ab42e8422dd_preview.json",
+          "target": "results/core_features/demo_runs/interactive_ed7e9ab42e8422dd_preview.json",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "../results/core_features/demo_runs/interactive_b776747f81792e72_preview.json",
+          "target": "results/core_features/demo_runs/interactive_b776747f81792e72_preview.json",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "../results/core_features/demo_runs/81665601dc9c4c77bbc372817e24fdcc.json",
+          "target": "results/core_features/demo_runs/81665601dc9c4c77bbc372817e24fdcc.json",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "../scripts/capture_core_features.cjs",
+          "target": "scripts/capture_core_features.cjs",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "../demo/demo.mp4",
+          "target": "demo/demo.mp4",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "../demo/demo_subtitles.srt",
+          "target": "demo/demo_subtitles.srt",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "../demo/demo_script.md",
+          "target": "demo/demo_script.md",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        },
+        {
+          "reference": "../demo/README.md",
+          "target": "demo/README.md",
+          "exists": true,
+          "selected_in_public": true,
+          "is_directory": false
+        }
+      ],
+      "directory_link_count": 0
+    }
+  },
+  "feature_figures": {
+    "passed": true,
+    "figure_count": 31,
+    "take_manifest_count": 7,
+    "figure_index_sha256": "622f0c5022c0ed2c9fc4886600be021dfc92e763ccdb50dc8cbdd9b7bafe4870",
+    "all_raw_and_annotated_hashes_match": true,
+    "all_original_take_pixels_local_only": true
+  },
+  "new_evidence_separation": {
+    "demonstration_record_count": 15,
+    "all_formal_experiment_false": true,
+    "preview_count": 4,
+    "measurement_and_canary": {
+      "passed": true,
+      "memory_rows": 88,
+      "canary_controls": 7,
+      "formal_experiment": false,
+      "scope": "Checks saved public measurement/self-test bindings; no new model inference."
+    },
+    "formal_summary_new_model_calls": 0,
+    "scope": "New demonstrations and mechanism controls do not enter formal denominators."
+  },
+  "test_evidence": {
+    "public_summary": {
+      "publication_summary": true,
+      "sources": [
+        {
+          "source": "results/core_features/validation/pytest_release.xml",
+          "source_sha256": "1fb72e87d67eb0861bca0ee57076d7e24109553405eafaef321cea6629d2a822",
+          "tests": 473,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "source": "results/core_features/packaging_tests.xml",
+          "source_sha256": "6a3cb11af237fe87c85e47fba450d8ab3693d6d74586bd90c7964ac845e8ab77",
+          "tests": 108,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "source": "results/publication/pytest_installation.xml",
+          "source_sha256": "5cd748c0b77a54047ac4fda813b50264e64ede8bf1a4625b19b000f6d1c8e1ec",
+          "tests": 8,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        }
+      ],
+      "counting_note": "Packaging/installation subsets overlap with the full suite and are not added to its count. No tests are rerun by summary generation."
+    },
+    "last_allowlist_extension": {
+      "path": "results/core_features/validation/independent_review_allowlist.xml",
+      "sha256": "18169e07f67fa55cb92cf961d94c1cabca0a9b988b42f4a1a9b35fe73e204d63",
+      "tests": 1,
+      "passed": 1,
+      "scope": "Existing allowlist regression updated for three small review JSON files after the 473-case full suite; case count unchanged, subsets not added."
+    },
+    "public_reference_projection_regression": {
+      "path": "results/core_features/validation/public_reference_projection_tests.xml",
+      "source_sha256": "04a07769a907aabdf6406d8bdcaab7ae54b87886ff263848c44de1851289f1a5",
+      "tests": 4,
+      "passed": 4,
+      "failures": 0,
+      "console_duration_seconds": 7.37,
+      "scope": "Three new projection regression cases plus existing snapshot/repack/Git-index regression. Run after the prior 473-case full suite; not added as an independent total."
+    }
+  },
+  "required_missing": [],
+  "pending_file_checks": [],
+  "remaining_release_steps": [
+    "Root must commit reviewed source and synchronize the existing public branch using the reviewed manifest-aware plan.",
+    "PR/squash merge, merged-main ZIP build and anonymous remote-download verification have not been performed by this prepublication review."
+  ],
+  "limitations": [
+    "Full validate_delivery was actually called and passed on frozen source/media; this is not a claim that a final ZIP or GitHub Release already exists.",
+    "Only hashes and declarations from the actual 32-point muted playback and 36-frame visual review were checked here; no new full audio listening or desktop Word opening test was performed.",
+    "Preserved development_v3 recovery and old v2.0.0 production material remain historical and do not prove current recovery success.",
+    "Zero Canary leakage and independent taint-safety benefit retain the limitations in the frozen experiment reports."
+  ],
+  "original_source_full_gate_passed": true,
+  "public_projection_reference_validation": {
+    "checked_at_utc": "2026-10-27T06:48:54.768698+00:00",
+    "finished_at_utc": "2026-10-27T06:51:09.166719+00:00",
+    "actual_public_temporary_tree_validated": true,
+    "full_validate_delivery_passed": true,
+    "formal_counts": {
+      "main": 972,
+      "ablation": 324,
+      "v2/baseline": 1296,
+      "v2/external": 1080
+    },
+    "protected_files_verified": 3715,
+    "technical_references": [
+      {
+        "label": "video_validation",
+        "path": "demo/video_validation.json",
+        "original_source_sha256": "a65f2d86b3214f7ef1a89bc421bef571c6649f0413b174a2339decb1e39d5c23",
+        "public_sha256": "1d9805512c61dbe773718c382ddf73ca4e51d3c7bb2d58dd1c3f0acf3969b70c"
+      },
+      {
+        "label": "browser_playback",
+        "path": "demo/playback_validation.json",
+        "original_source_sha256": "430be72e3ba39ec08da47a0fb5cd78489a1bb1527e62039902dd5d3f5af428c2",
+        "public_sha256": "8b940a441900f3473102190879d39a4626ab50f7c919845e656256321a8d28be"
+      },
+      {
+        "label": "independent_visual_review",
+        "path": "demo/core_features/independent_visual_review.json",
+        "original_source_sha256": "d7683739b489ae19c7741dcf63ff30e496e0531fd82578a56465f15d66e05ab1",
+        "public_sha256": "d7683739b489ae19c7741dcf63ff30e496e0531fd82578a56465f15d66e05ab1"
+      },
+      {
+        "label": "narration_synthesis",
+        "path": "demo/core_features/narration_synthesis.json",
+        "original_source_sha256": "143d76dcb17a285d5c675b2c7904338abea6437e9801bab27ef8179368c801e6",
+        "public_sha256": "143d76dcb17a285d5c675b2c7904338abea6437e9801bab27ef8179368c801e6"
+      }
+    ],
+    "source_visual_review_sha256": "ebdb1b25fdbe650698d289c2e725aa2e4f8f84a2dee3cbecb49f04e72bb6236e",
+    "public_visual_review_sha256": "5dc0c83efdb04435fb3b6d30deb6a9cb3b2de088130f6a483a60b208261c908e",
+    "downstream_index": {
+      "path": "demo/final_recording_metadata.json",
+      "visual_review_path": "demo/core_features/visual_review.json",
+      "has_visual_review_sha256": false,
+      "scope": "Current index binds the review by path only; optional SHA binding is handled and regression-tested by the public projector."
+    },
+    "source_qa_unchanged": true,
+    "temporary_tree_removed": true,
+    "source_or_git_staging_modified": false,
+    "scope": "Materialized the actual public byte projection in an isolated temporary directory, verified complete delivery and technical reference hashes, then removed that temporary directory. No model calls, Git changes, final ZIP or remote publication."
+  },
+  "resolved_prepublication_findings": [
+    {
+      "finding": "The source main visual review hashes originally bound local video/playback evidence, while publication transformed those targets into public summaries.",
+      "resolution": "Rebind those references in the public copy only; keep original_source_sha256 and source_review_sha256. Preserve downstream optional index hash bindings.",
+      "source_qa_modified": false,
+      "verified_public_tree": true
+    }
+  ]
+}

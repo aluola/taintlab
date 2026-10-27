@@ -4,7 +4,11 @@
 
 ![2.0 真实对话界面](docs/assets/user-manual/raw/01_home.png)
 
-**下载与阅读**：[公开发行版](https://github.com/aluola/taintlab/releases/tag/v2.0.0) · [轻量包](https://github.com/aluola/taintlab/releases/download/v2.0.0/taintlab_project_light.zip) · [图文操作与实现手册](docs/USER_MANUAL.md)（[PDF](docs/USER_MANUAL.pdf) / [DOCX](docs/USER_MANUAL.docx)） · [观看或下载 4 分钟 Demo](https://github.com/aluola/taintlab/releases/download/v2.0.0/demo.mp4) · [项目过程报告](dist/project_report.pdf)（[可编辑版](dist/project_report.docx) / [Markdown](docs/project_report.md)）。视频链接提供原始 MP4，不假设所有 GitHub 客户端均支持内嵌播放。
+**当前发布 v2.0.1，冻结运行核心 2.0.0。** 本轮聚焦六项核心功能的操作验证、六章节 Demo 与开发交付说明，正式实验及模型配置未改变。
+
+**下载与阅读**：[新版 Release](https://github.com/aluola/taintlab/releases/tag/v2.0.1) · [轻量包](https://github.com/aluola/taintlab/releases/download/v2.0.1/taintlab_project_light.zip) · [六项核心功能操作与验证手册](docs/CORE_FEATURES_GUIDE.md)（[PDF](docs/CORE_FEATURES_GUIDE.pdf) / [DOCX](docs/CORE_FEATURES_GUIDE.docx)） · [六章节 Demo](https://github.com/aluola/taintlab/releases/download/v2.0.1/demo.mp4) · [开发与交付过程说明](docs/DEVELOPMENT_AND_DELIVERY.md)（[PDF](docs/DEVELOPMENT_AND_DELIVERY.pdf) / [DOCX](docs/DEVELOPMENT_AND_DELIVERY.docx)） · [功能证据对照表](docs/FEATURE_EVIDENCE_MATRIX.md)。
+
+综合操作细节仍见 [USER_MANUAL](docs/USER_MANUAL.md)（[PDF](docs/USER_MANUAL.pdf) / [DOCX](docs/USER_MANUAL.docx)）；研究过程与正式结果见 [项目报告](dist/project_report.pdf)（[可编辑版](dist/project_report.docx) / [Markdown](docs/project_report.md)）。视频提供原始 MP4 下载，不假设所有 GitHub 客户端均能内嵌播放。
 
 ## 最短上手路径
 
@@ -68,18 +72,18 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\install.ps1
 Invoke-RestMethod http://127.0.0.1:8080/health
 ```
 
-业务模型只访问回环地址；页面不加载 CDN、远程字体或云端接口。既有离线验证使用应用进程通信守卫，不等同整机物理断网。新目录安装、远程下载与已有文件复用边界见 [本轮公开发布验收](docs/publication/README.md)，不以旧验收替代本轮证据。
+业务模型只访问回环地址；页面不加载 CDN、远程字体或云端接口。既有离线验证使用应用进程通信守卫，不等同整机物理断网。首次公开的独立目录安装和缓存复用边界见 [v2.0.0 发布验收](docs/publication/README.md)；本轮新材料、验证和下载记录见 [v2.0.1 交付记录](docs/releases/v2.0.1/PLAN.md)，不以旧包验收代替新包证据。
 
 ## 六项核心功能
 
 | 能力 | 入口与实际依据 |
 | --- | --- |
-| Agent 攻防靶场 | 对话和四个快捷按钮复用 `run_case` / `resume_run`；通知、导出以实际模拟状态核验 |
-| 不可信内容标记 | 上传 TXT/MD/文本型 PDF/DOCX；服务端登记来源、哈希、完整性、敏感度，正文不能签发授权 |
-| 污点追踪 | 工具卡 → 安全审计 → 来源；区分确定性派生与模型上下文潜在依赖 |
-| 权限与确认 | 明确选定资料和目标形成 TaskGrant；白名单、调用额度、信息流与一次性确认在副作用前检查 |
-| 自动攻击测试 | 四种视图生成规则模板，预览后交给真实本地 Agent；预览不计作攻击运行 |
-| Canary 与评测 | 审计中查看有界检测；评测按版本加载真实记录、分子分母、确认辅助统计 |
+| F01 Agent 攻防靶场 | 对话和四个快捷按钮复用 `run_case` / `resume_run`；通知、导出以实际模拟状态核验 |
+| F02 不可信内容标记 | 上传 TXT/MD/文本型 PDF/DOCX；服务端登记来源、哈希、完整性、敏感度，正文不能签发授权 |
+| F03 污点追踪 | 工具卡 → 安全审计 → 来源；区分确定性派生与模型上下文潜在依赖 |
+| F04 权限策略控制 | 明确选定资料和目标形成 TaskGrant；白名单、调用额度、信息流与一次性确认在副作用前检查 |
+| F05 自动化攻击测试 | 四种视图生成规则模板，预览后交给真实本地 Agent；预览不计作攻击运行 |
+| F06 泄露检测与综合评测 | 审计中查看有界检测；评测按版本加载真实记录、分子分母、确认辅助统计 |
 
 三主配置为 `none`、`input_filter`、`taint_policy`，默认完整策略；`policy_only` 为权限消融。模型、任务、协议和预算共享；none 仍保留模拟宿主隔离。所有配置均保留正常工具使用能力。
 
@@ -104,20 +108,26 @@ Invoke-RestMethod http://127.0.0.1:8080/health
 - 当前没有完整策略阻断后安全完成全部合法任务的成功实例；旧 `development_v3` 不替代当前成功证据。
 - 小模型可能不使用工具、错误回答或耗尽预算；pending、失败、超时保留在分母中。自由对话没有预设答案，标“未自动评定”。
 - 保守上下文依赖不解释模型内部精确因果，也不覆盖全部侧信道及自然语言事实污染。扫描 PDF 不支持 OCR。
-- 成员姓名、学号、实际分工与真实人工工时仍待补充，见 [成员工作量模板](docs/members_workload.md)。
+- 成员姓名、学号、实际分工与真实人工工时仍待补充，见 [原工作包说明](docs/members_workload.md)及 [课程五人位置模板](docs/members_course_five.csv)；建议职责不代表已确认的实际贡献。
 
 ## Demo 时间索引
 
-[MP4](demo/demo.mp4) · [中文字幕](demo/demo_subtitles.srt) · [演示稿](demo/demo_script.md) · [制作说明](demo/README.md)。240 秒，当前真实操作与明确标注的真实记录回放；等待过程有剪辑。
+[MP4](demo/demo.mp4) · [中文字幕](demo/demo_subtitles.srt) · [演示稿](demo/demo_script.md) · [制作说明](demo/README.md)。新版实测 **270 秒（4 分 30 秒）**，按六功能组织实际操作与可观察结果。真实模型、当前真实回放、规则预览和检测器合成自检分别标注，等待剪辑不作为性能数据。
 
-| 时间 | 内容 |
+| 时间 | 章节与可观察证据 |
 | --- | --- |
-| 00:00–00:20 | 问题、模型和模拟边界 |
-| 00:20–01:25 | 实时通知、确认、上传与来源 |
-| 01:25–02:00 | 直接攻击基线、间接事实污染回放 |
-| 02:00–02:35 | 完整策略阻断及合法任务仍失败的限制 |
-| 02:35–03:20 | 四类规则模板生成预览 |
-| 03:20–04:00 | 基线、扩展、消融与适用范围 |
+| 00:00–00:10 | 项目目的、模拟边界与六项功能 |
+| 00:10–00:55 | F01 Agent 攻防靶场：读取、查询、模拟通知与虚拟导出 |
+| 00:55–01:30 | F02 不可信内容标记：上传、实际读取、来源与派生节点 |
+| 01:30–02:15 | F03 污点追踪：真实正常任务回放、敏感度信息流拒绝及合法任务失败 |
+| 02:15–02:55 | F04 权限策略控制：TaskGrant、确认、拒绝和直接越权阻断 |
+| 02:55–03:40 | F05 自动化攻击测试：四视图生成与本轮实际运行，保留失败与接触边界 |
+| 03:40–04:20 | F06 泄露检测与综合评测：真实 Canary 状态、合成自检、三配置分母 |
+| 04:20–04:30 | 文档、下载与研究限制 |
+
+Canary 自检直接调用现有检测器，展示阳性、阴性和有界编码/分片结果；它不是模型正式攻击，不计入 ASR。F03 使用正常任务中真实 sensitivity_flow_denied 记录，合法任务失败仍保留，不伪装成攻击防御恢复成功。
+
+v2.0.1 发布前完整 Python 回归 **473 项通过、0 失败**，见[本次 JUnit](results/core_features/validation/pytest_release.xml)和[交付清单](docs/DELIVERY.md)。核心专题38页、开发流程说明14页、综合手册32页均实际渲染并检查；过程文档记录的先前465项测试仍保留对应证据，不能与后续回归相加。
 
 ## 常见问题
 
@@ -135,7 +145,7 @@ Invoke-RestMethod http://127.0.0.1:8080/health
 
 ## 开发与维护入口
 
-[API 与信任边界](docs/v2/API_CONTRACT.md) · [详细界面说明](docs/v2/USER_GUIDE.md) · [轻量打包约定](docs/LIGHT_PACKAGE.md) · [公开白名单](docs/publication/PUBLICATION_POLICY.md)。禁止提交 `results/v2/web_private`、上传会话、认证数据、模型与推理二进制。
+[API 与信任边界](docs/v2/API_CONTRACT.md) · [详细界面说明](docs/v2/USER_GUIDE.md) · [轻量打包约定](docs/LIGHT_PACKAGE.md) · [公开白名单](docs/publication/PUBLICATION_POLICY.md) · [文档构建环境与逐页验收](docs/BUILD_DOCUMENTS.md)。禁止提交 `results/v2/web_private`、上传会话、认证数据、模型与推理二进制。
 
 ```powershell
 .\.venv\Scripts\python.exe -m pytest

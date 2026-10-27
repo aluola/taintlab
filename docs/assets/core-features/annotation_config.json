@@ -1,0 +1,2238 @@
+{
+  "f01_export_download": {
+    "crop": [
+      1062,
+      0,
+      1600,
+      900
+    ],
+    "white_annotation_margin_px": 48,
+    "marks": [
+      {
+        "number": 1,
+        "label": "实际虚拟文件与内容",
+        "rect": [
+          1115,
+          382,
+          1575,
+          535
+        ],
+        "style": "number_rectangle_arrow",
+        "output_rect": [
+          101,
+          430,
+          561,
+          583
+        ],
+        "number_center": [
+          22,
+          446
+        ],
+        "arrow_start": [
+          41,
+          446
+        ],
+        "arrow_end": [
+          101,
+          446
+        ]
+      },
+      {
+        "number": 2,
+        "label": "已实际点击下载",
+        "rect": [
+          1130,
+          486,
+          1273,
+          520
+        ],
+        "style": "number_rectangle_arrow",
+        "output_rect": [
+          116,
+          534,
+          259,
+          568
+        ],
+        "number_center": [
+          22,
+          550
+        ],
+        "arrow_start": [
+          41,
+          550
+        ],
+        "arrow_end": [
+          116,
+          550
+        ]
+      }
+    ],
+    "method": "Pillow deterministic crop and rectangle/arrow/number only; no generative image operation"
+  },
+  "f01_notify_inbox": {
+    "crop": [
+      1062,
+      0,
+      1600,
+      900
+    ],
+    "white_annotation_margin_px": 48,
+    "marks": [
+      {
+        "number": 1,
+        "label": "已执行通知的实际正文",
+        "rect": [
+          1115,
+          272,
+          1575,
+          374
+        ],
+        "style": "number_rectangle_arrow",
+        "output_rect": [
+          101,
+          320,
+          561,
+          422
+        ],
+        "number_center": [
+          22,
+          336
+        ],
+        "arrow_start": [
+          41,
+          336
+        ],
+        "arrow_end": [
+          101,
+          336
+        ]
+      },
+      {
+        "number": 2,
+        "label": "本次运行与版本",
+        "rect": [
+          1090,
+          92,
+          1600,
+          173
+        ],
+        "style": "number_rectangle_arrow",
+        "output_rect": [
+          76,
+          140,
+          586,
+          221
+        ],
+        "number_center": [
+          22,
+          156
+        ],
+        "arrow_start": [
+          41,
+          156
+        ],
+        "arrow_end": [
+          76,
+          156
+        ]
+      }
+    ],
+    "method": "Pillow deterministic crop and rectangle/arrow/number only; no generative image operation"
+  },
+  "f01_query": {
+    "crop": [
+      452,
+      89,
+      1408,
+      735
+    ],
+    "white_annotation_margin_px": 48,
+    "marks": [
+      {
+        "number": 1,
+        "label": "实际检索query参数",
+        "rect": [
+          524,
+          257,
+          1380,
+          582
+        ],
+        "style": "number_rectangle_arrow",
+        "output_rect": [
+          120,
+          216,
+          976,
+          541
+        ],
+        "number_center": [
+          22,
+          232
+        ],
+        "arrow_start": [
+          41,
+          232
+        ],
+        "arrow_end": [
+          120,
+          232
+        ]
+      },
+      {
+        "number": 2,
+        "label": "最终答复的关键事实",
+        "rect": [
+          524,
+          644,
+          1380,
+          679
+        ],
+        "style": "number_rectangle_arrow",
+        "output_rect": [
+          120,
+          603,
+          976,
+          638
+        ],
+        "number_center": [
+          22,
+          619
+        ],
+        "arrow_start": [
+          41,
+          619
+        ],
+        "arrow_end": [
+          120,
+          619
+        ]
+      }
+    ],
+    "method": "Pillow deterministic crop and rectangle/arrow/number only; no generative image operation"
+  },
+  "f01_read": {
+    "crop": [
+      452,
+      58,
+      1408,
+      704
+    ],
+    "white_annotation_margin_px": 48,
+    "marks": [
+      {
+        "number": 1,
+        "label": "实际read_document与网关结果",
+        "rect": [
+          524,
+          226,
+          1380,
+          551
+        ],
+        "style": "number_rectangle_arrow",
+        "output_rect": [
+          120,
+          216,
+          976,
+          541
+        ],
+        "number_center": [
+          22,
+          232
+        ],
+        "arrow_start": [
+          41,
+          232
+        ],
+        "arrow_end": [
+          120,
+          232
+        ]
+      },
+      {
+        "number": 2,
+        "label": "最终答复的关键事实",
+        "rect": [
+          524,
+          613,
+          1380,
+          648
+        ],
+        "style": "number_rectangle_arrow",
+        "output_rect": [
+          120,
+          603,
+          976,
+          638
+        ],
+        "number_center": [
+          22,
+          619
+        ],
+        "arrow_start": [
+          41,
+          619
+        ],
+        "arrow_end": [
+          120,
+          619
+        ]
+      }
+    ],
+    "method": "Pillow deterministic crop and rectangle/arrow/number only; no generative image operation"
+  },
+  "f02_derived_action": {
+    "crop": [
+      1062,
+      0,
+      1600,
+      900
+    ],
+    "white_annotation_margin_px": 48,
+    "marks": [
+      {
+        "number": 1,
+        "label": "所选动作继承实际上下文标签",
+        "rect": [
+          1115,
+          307,
+          1575,
+          394
+        ],
+        "style": "number_rectangle_arrow",
+        "output_rect": [
+          101,
+          355,
+          561,
+          442
+        ],
+        "number_center": [
+          22,
+          371
+        ],
+        "arrow_start": [
+          41,
+          371
+        ],
+        "arrow_end": [
+          101,
+          371
+        ]
+      },
+      {
+        "number": 2,
+        "label": "原始来源与后续派生关系",
+        "rect": [
+          1115,
+          473,
+          1575,
+          863
+        ],
+        "style": "number_rectangle_arrow",
+        "output_rect": [
+          101,
+          521,
+          561,
+          911
+        ],
+        "number_center": [
+          22,
+          537
+        ],
+        "arrow_start": [
+          41,
+          537
+        ],
+        "arrow_end": [
+          101,
+          537
+        ]
+      }
+    ],
+    "method": "Pillow deterministic crop and rectangle/arrow/number only; no generative image operation"
+  },
+  "f02_source_fields": {
+    "crop": [
+      1087,
+      345,
+      1600,
+      900
+    ],
+    "white_annotation_margin_px": 48,
+    "marks": [
+      {
+        "number": 1,
+        "label": "来源类型、标签、父节点和内容哈希",
+        "rect": [
+          1128,
+          428,
+          1562,
+          620
+        ],
+        "style": "number_rectangle_arrow",
+        "output_rect": [
+          89,
+          131,
+          523,
+          323
+        ],
+        "number_center": [
+          22,
+          147
+        ],
+        "arrow_start": [
+          41,
+          147
+        ],
+        "arrow_end": [
+          89,
+          147
+        ]
+      },
+      {
+        "number": 2,
+        "label": "正文trusted等字样不修改标签",
+        "rect": [
+          1128,
+          632,
+          1562,
+          887
+        ],
+        "style": "number_rectangle_arrow",
+        "output_rect": [
+          89,
+          335,
+          523,
+          590
+        ],
+        "number_center": [
+          22,
+          351
+        ],
+        "arrow_start": [
+          41,
+          351
+        ],
+        "arrow_end": [
+          89,
+          351
+        ]
+      }
+    ],
+    "method": "Pillow deterministic crop and rectangle/arrow/number only; no generative image operation"
+  },
+  "f02_upload_registered": {
+    "crop": [
+      452,
+      366,
+      1408,
+      723
+    ],
+    "white_annotation_margin_px": 48,
+    "marks": [
+      {
+        "number": 1,
+        "label": "服务端返回的新文档ID",
+        "rect": [
+          499,
+          613,
+          913,
+          645
+        ],
+        "style": "number_rectangle_arrow",
+        "output_rect": [
+          95,
+          295,
+          509,
+          327
+        ],
+        "number_center": [
+          22,
+          311
+        ],
+        "arrow_start": [
+          41,
+          311
+        ],
+        "arrow_end": [
+          95,
+          311
+        ]
+      }
+    ],
+    "method": "Pillow deterministic crop and rectangle/arrow/number only; no generative image operation"
+  },
+  "f03_dependency_graph": {
+    "crop": [
+      1062,
+      0,
+      1600,
+      900
+    ],
+    "white_annotation_margin_px": 48,
+    "marks": [
+      {
+        "number": 1,
+        "label": "聚焦实际信息流拒绝动作",
+        "rect": [
+          1115,
+          235,
+          1575,
+          293
+        ],
+        "style": "number_rectangle_arrow",
+        "output_rect": [
+          101,
+          283,
+          561,
+          341
+        ],
+        "number_center": [
+          22,
+          299
+        ],
+        "arrow_start": [
+          41,
+          299
+        ],
+        "arrow_end": [
+          101,
+          299
+        ]
+      },
+      {
+        "number": 2,
+        "label": "secret敏感度及潜在上下文说明",
+        "rect": [
+          1115,
+          307,
+          1575,
+          374
+        ],
+        "style": "number_rectangle_arrow",
+        "output_rect": [
+          101,
+          355,
+          561,
+          422
+        ],
+        "number_center": [
+          22,
+          371
+        ],
+        "arrow_start": [
+          41,
+          371
+        ],
+        "arrow_end": [
+          101,
+          371
+        ]
+      },
+      {
+        "number": 3,
+        "label": "实线/虚线关系与动作节点",
+        "rect": [
+          1115,
+          453,
+          1575,
+          843
+        ],
+        "style": "number_rectangle_arrow",
+        "output_rect": [
+          101,
+          501,
+          561,
+          891
+        ],
+        "number_center": [
+          22,
+          517
+        ],
+        "arrow_start": [
+          41,
+          517
+        ],
+        "arrow_end": [
+          101,
+          517
+        ]
+      }
+    ],
+    "method": "Pillow deterministic crop and rectangle/arrow/number only; no generative image operation"
+  },
+  "f03_flow_denied": {
+    "crop": [
+      452,
+      58,
+      1408,
+      877
+    ],
+    "white_annotation_margin_px": 48,
+    "marks": [
+      {
+        "number": 1,
+        "label": "sensitivity_flow_denied而非白名单拒绝",
+        "rect": [
+          524,
+          301,
+          1380,
+          626
+        ],
+        "style": "number_rectangle_arrow",
+        "output_rect": [
+          120,
+          291,
+          976,
+          616
+        ],
+        "number_center": [
+          22,
+          307
+        ],
+        "arrow_start": [
+          41,
+          307
+        ],
+        "arrow_end": [
+          120,
+          307
+        ]
+      }
+    ],
+    "method": "Pillow deterministic crop and rectangle/arrow/number only; no generative image operation"
+  },
+  "f03_no_effect": {
+    "crop": [
+      1062,
+      0,
+      1600,
+      900
+    ],
+    "white_annotation_margin_px": 48,
+    "marks": [
+      {
+        "number": 1,
+        "label": "同一真实回放run_id",
+        "rect": [
+          1090,
+          92,
+          1600,
+          173
+        ],
+        "style": "number_rectangle_arrow",
+        "output_rect": [
+          76,
+          140,
+          586,
+          221
+        ],
+        "number_center": [
+          22,
+          156
+        ],
+        "arrow_start": [
+          41,
+          156
+        ],
+        "arrow_end": [
+          76,
+          156
+        ]
+      },
+      {
+        "number": 2,
+        "label": "没有通知或导出副作用",
+        "rect": [
+          1090,
+          212,
+          1600,
+          900
+        ],
+        "style": "number_rectangle_arrow",
+        "output_rect": [
+          76,
+          260,
+          586,
+          948
+        ],
+        "number_center": [
+          22,
+          276
+        ],
+        "arrow_start": [
+          41,
+          276
+        ],
+        "arrow_end": [
+          76,
+          276
+        ]
+      }
+    ],
+    "method": "Pillow deterministic crop and rectangle/arrow/number only; no generative image operation"
+  },
+  "f03_upstream_source": {
+    "crop": [
+      1062,
+      0,
+      1600,
+      900
+    ],
+    "white_annotation_margin_px": 48,
+    "marks": [
+      {
+        "number": 1,
+        "label": "上游vault来源与派生边",
+        "rect": [
+          1115,
+          453,
+          1575,
+          843
+        ],
+        "style": "number_rectangle_arrow",
+        "output_rect": [
+          101,
+          501,
+          561,
+          891
+        ],
+        "number_center": [
+          22,
+          517
+        ],
+        "arrow_start": [
+          41,
+          517
+        ],
+        "arrow_end": [
+          101,
+          517
+        ]
+      },
+      {
+        "number": 2,
+        "label": "实线确定性、虚线潜在依赖",
+        "rect": [
+          1115,
+          854,
+          1575,
+          890
+        ],
+        "style": "number_rectangle_arrow",
+        "output_rect": [
+          101,
+          902,
+          561,
+          938
+        ],
+        "number_center": [
+          22,
+          918
+        ],
+        "arrow_start": [
+          41,
+          918
+        ],
+        "arrow_end": [
+          101,
+          918
+        ]
+      }
+    ],
+    "method": "Pillow deterministic crop and rectangle/arrow/number only; no generative image operation"
+  },
+  "f04_confirmation": {
+    "crop": [
+      496,
+      232,
+      1408,
+      698
+    ],
+    "white_annotation_margin_px": 48,
+    "marks": [
+      {
+        "number": 1,
+        "label": "允许的目标",
+        "rect": [
+          542,
+          334,
+          1362,
+          352
+        ],
+        "style": "number_rectangle_arrow",
+        "output_rect": [
+          94,
+          150,
+          914,
+          168
+        ],
+        "number_center": [
+          22,
+          166
+        ],
+        "arrow_start": [
+          41,
+          166
+        ],
+        "arrow_end": [
+          94,
+          166
+        ]
+      },
+      {
+        "number": 2,
+        "label": "待执行正文",
+        "rect": [
+          542,
+          362,
+          1362,
+          432
+        ],
+        "style": "number_rectangle_arrow",
+        "output_rect": [
+          94,
+          178,
+          914,
+          248
+        ],
+        "number_center": [
+          22,
+          238
+        ],
+        "arrow_start": [
+          41,
+          238
+        ],
+        "arrow_end": [
+          94,
+          194
+        ]
+      },
+      {
+        "number": 3,
+        "label": "运行/哈希/有效期",
+        "rect": [
+          542,
+          473,
+          1362,
+          581
+        ],
+        "style": "number_rectangle_arrow",
+        "output_rect": [
+          94,
+          289,
+          914,
+          397
+        ],
+        "number_center": [
+          22,
+          305
+        ],
+        "arrow_start": [
+          41,
+          305
+        ],
+        "arrow_end": [
+          94,
+          305
+        ]
+      },
+      {
+        "number": 4,
+        "label": "真实确认或拒绝",
+        "rect": [
+          542,
+          596,
+          1362,
+          628
+        ],
+        "style": "number_rectangle_arrow",
+        "output_rect": [
+          94,
+          412,
+          914,
+          444
+        ],
+        "number_center": [
+          22,
+          428
+        ],
+        "arrow_start": [
+          41,
+          428
+        ],
+        "arrow_end": [
+          94,
+          428
+        ]
+      }
+    ],
+    "method": "Pillow deterministic crop and rectangle/arrow/number only; no generative image operation"
+  },
+  "f04_grant": {
+    "crop": [
+      1062,
+      0,
+      1600,
+      900
+    ],
+    "white_annotation_margin_px": 48,
+    "marks": [
+      {
+        "number": 1,
+        "label": "只读TaskGrant及额度",
+        "rect": [
+          1115,
+          341,
+          1575,
+          845
+        ],
+        "style": "number_rectangle_arrow",
+        "output_rect": [
+          101,
+          389,
+          561,
+          893
+        ],
+        "number_center": [
+          22,
+          405
+        ],
+        "arrow_start": [
+          41,
+          405
+        ],
+        "arrow_end": [
+          101,
+          405
+        ]
+      },
+      {
+        "number": 2,
+        "label": "本次实际决策计数",
+        "rect": [
+          1115,
+          235,
+          1575,
+          319
+        ],
+        "style": "number_rectangle_arrow",
+        "output_rect": [
+          101,
+          283,
+          561,
+          367
+        ],
+        "number_center": [
+          22,
+          299
+        ],
+        "arrow_start": [
+          41,
+          299
+        ],
+        "arrow_end": [
+          101,
+          299
+        ]
+      }
+    ],
+    "method": "Pillow deterministic crop and rectangle/arrow/number only; no generative image operation"
+  },
+  "f04_rejection": {
+    "crop": [
+      1062,
+      0,
+      1600,
+      900
+    ],
+    "white_annotation_margin_px": 48,
+    "marks": [
+      {
+        "number": 1,
+        "label": "拒绝所在独立运行",
+        "rect": [
+          1090,
+          92,
+          1600,
+          173
+        ],
+        "style": "number_rectangle_arrow",
+        "output_rect": [
+          76,
+          140,
+          586,
+          221
+        ],
+        "number_center": [
+          22,
+          156
+        ],
+        "arrow_start": [
+          41,
+          156
+        ],
+        "arrow_end": [
+          76,
+          156
+        ]
+      },
+      {
+        "number": 2,
+        "label": "检查真实模拟状态为空",
+        "rect": [
+          1090,
+          212,
+          1600,
+          900
+        ],
+        "style": "number_rectangle_arrow",
+        "output_rect": [
+          76,
+          260,
+          586,
+          948
+        ],
+        "number_center": [
+          22,
+          276
+        ],
+        "arrow_start": [
+          41,
+          276
+        ],
+        "arrow_end": [
+          76,
+          276
+        ]
+      }
+    ],
+    "method": "Pillow deterministic crop and rectangle/arrow/number only; no generative image operation"
+  },
+  "f04_unauthorized": {
+    "crop": [
+      452,
+      58,
+      1408,
+      900
+    ],
+    "white_annotation_margin_px": 48,
+    "marks": [
+      {
+        "number": 1,
+        "label": "recipient_not_granted程序拒绝",
+        "rect": [
+          524,
+          353,
+          1380,
+          698
+        ],
+        "style": "number_rectangle_arrow",
+        "output_rect": [
+          120,
+          343,
+          976,
+          688
+        ],
+        "number_center": [
+          22,
+          359
+        ],
+        "arrow_start": [
+          41,
+          359
+        ],
+        "arrow_end": [
+          120,
+          359
+        ]
+      }
+    ],
+    "method": "Pillow deterministic crop and rectangle/arrow/number only; no generative image operation"
+  },
+  "f05_direct_preview": {
+    "crop": [
+      327,
+      102,
+      1533,
+      879
+    ],
+    "white_annotation_margin_px": 48,
+    "marks": [
+      {
+        "number": 1,
+        "label": "模板参数与种子",
+        "rect": [
+          355,
+          126,
+          600,
+          855
+        ],
+        "style": "number_rectangle_arrow",
+        "output_rect": [
+          76,
+          72,
+          321,
+          801
+        ],
+        "number_center": [
+          22,
+          88
+        ],
+        "arrow_start": [
+          41,
+          88
+        ],
+        "arrow_end": [
+          76,
+          88
+        ]
+      },
+      {
+        "number": 2,
+        "label": "程序生成的注入前后内容",
+        "rect": [
+          642,
+          298,
+          1483,
+          474
+        ],
+        "style": "number_rectangle_arrow",
+        "number_placement": "before_target_in_column_gap",
+        "output_rect": [
+          363,
+          244,
+          1204,
+          420
+        ],
+        "number_center": [
+          339,
+          260
+        ],
+        "arrow_start": [
+          358,
+          260
+        ],
+        "arrow_end": [
+          363,
+          260
+        ]
+      },
+      {
+        "number": 3,
+        "label": "预览之后须另行真实运行",
+        "rect": [
+          642,
+          551,
+          1483,
+          627
+        ],
+        "style": "number_rectangle_arrow",
+        "number_placement": "before_target_in_column_gap",
+        "output_rect": [
+          363,
+          497,
+          1204,
+          573
+        ],
+        "number_center": [
+          339,
+          513
+        ],
+        "arrow_start": [
+          358,
+          513
+        ],
+        "arrow_end": [
+          363,
+          513
+        ]
+      }
+    ],
+    "method": "Pillow deterministic crop and rectangle/arrow/number only; no generative image operation"
+  },
+  "f05_direct_run": {
+    "crop": [
+      452,
+      58,
+      1408,
+      900
+    ],
+    "white_annotation_margin_px": 48,
+    "marks": [
+      {
+        "number": 1,
+        "label": "实际工具与接触事件",
+        "rect": [
+          524,
+          304,
+          1380,
+          629
+        ],
+        "style": "number_rectangle_arrow",
+        "output_rect": [
+          120,
+          294,
+          976,
+          619
+        ],
+        "number_center": [
+          22,
+          310
+        ],
+        "arrow_start": [
+          41,
+          310
+        ],
+        "arrow_end": [
+          120,
+          310
+        ]
+      }
+    ],
+    "method": "Pillow deterministic crop and rectangle/arrow/number only; no generative image operation"
+  },
+  "f05_encoding_preview": {
+    "crop": [
+      327,
+      102,
+      1533,
+      879
+    ],
+    "white_annotation_margin_px": 48,
+    "marks": [
+      {
+        "number": 1,
+        "label": "模板参数与种子",
+        "rect": [
+          355,
+          126,
+          600,
+          855
+        ],
+        "style": "number_rectangle_arrow",
+        "output_rect": [
+          76,
+          72,
+          321,
+          801
+        ],
+        "number_center": [
+          22,
+          88
+        ],
+        "arrow_start": [
+          41,
+          88
+        ],
+        "arrow_end": [
+          76,
+          88
+        ]
+      },
+      {
+        "number": 2,
+        "label": "程序生成的注入前后内容",
+        "rect": [
+          642,
+          275,
+          1483,
+          516
+        ],
+        "style": "number_rectangle_arrow",
+        "number_placement": "before_target_in_column_gap",
+        "output_rect": [
+          363,
+          221,
+          1204,
+          462
+        ],
+        "number_center": [
+          339,
+          237
+        ],
+        "arrow_start": [
+          358,
+          237
+        ],
+        "arrow_end": [
+          363,
+          237
+        ]
+      },
+      {
+        "number": 3,
+        "label": "预览之后须另行真实运行",
+        "rect": [
+          642,
+          593,
+          1483,
+          669
+        ],
+        "style": "number_rectangle_arrow",
+        "number_placement": "before_target_in_column_gap",
+        "output_rect": [
+          363,
+          539,
+          1204,
+          615
+        ],
+        "number_center": [
+          339,
+          555
+        ],
+        "arrow_start": [
+          358,
+          555
+        ],
+        "arrow_end": [
+          363,
+          555
+        ]
+      }
+    ],
+    "method": "Pillow deterministic crop and rectangle/arrow/number only; no generative image operation"
+  },
+  "f05_encoding_run": {
+    "crop": [
+      452,
+      58,
+      1408,
+      806
+    ],
+    "white_annotation_margin_px": 48,
+    "marks": [
+      {
+        "number": 1,
+        "label": "实际工具与接触事件",
+        "rect": [
+          524,
+          252,
+          1380,
+          577
+        ],
+        "style": "number_rectangle_arrow",
+        "output_rect": [
+          120,
+          242,
+          976,
+          567
+        ],
+        "number_center": [
+          22,
+          258
+        ],
+        "arrow_start": [
+          41,
+          258
+        ],
+        "arrow_end": [
+          120,
+          258
+        ]
+      }
+    ],
+    "method": "Pillow deterministic crop and rectangle/arrow/number only; no generative image operation"
+  },
+  "f05_indirect_preview": {
+    "crop": [
+      327,
+      102,
+      1533,
+      879
+    ],
+    "white_annotation_margin_px": 48,
+    "marks": [
+      {
+        "number": 1,
+        "label": "模板参数与种子",
+        "rect": [
+          355,
+          126,
+          600,
+          855
+        ],
+        "style": "number_rectangle_arrow",
+        "output_rect": [
+          76,
+          72,
+          321,
+          801
+        ],
+        "number_center": [
+          22,
+          88
+        ],
+        "arrow_start": [
+          41,
+          88
+        ],
+        "arrow_end": [
+          76,
+          88
+        ]
+      },
+      {
+        "number": 2,
+        "label": "程序生成的注入前后内容",
+        "rect": [
+          642,
+          275,
+          1483,
+          451
+        ],
+        "style": "number_rectangle_arrow",
+        "number_placement": "before_target_in_column_gap",
+        "output_rect": [
+          363,
+          221,
+          1204,
+          397
+        ],
+        "number_center": [
+          339,
+          237
+        ],
+        "arrow_start": [
+          358,
+          237
+        ],
+        "arrow_end": [
+          363,
+          237
+        ]
+      },
+      {
+        "number": 3,
+        "label": "预览之后须另行真实运行",
+        "rect": [
+          642,
+          528,
+          1483,
+          604
+        ],
+        "style": "number_rectangle_arrow",
+        "number_placement": "before_target_in_column_gap",
+        "output_rect": [
+          363,
+          474,
+          1204,
+          550
+        ],
+        "number_center": [
+          339,
+          490
+        ],
+        "arrow_start": [
+          358,
+          490
+        ],
+        "arrow_end": [
+          363,
+          490
+        ]
+      }
+    ],
+    "method": "Pillow deterministic crop and rectangle/arrow/number only; no generative image operation"
+  },
+  "f05_indirect_run": {
+    "crop": [
+      452,
+      58,
+      1408,
+      806
+    ],
+    "white_annotation_margin_px": 48,
+    "marks": [
+      {
+        "number": 1,
+        "label": "实际工具与接触事件",
+        "rect": [
+          524,
+          252,
+          1380,
+          577
+        ],
+        "style": "number_rectangle_arrow",
+        "output_rect": [
+          120,
+          242,
+          976,
+          567
+        ],
+        "number_center": [
+          22,
+          258
+        ],
+        "arrow_start": [
+          41,
+          258
+        ],
+        "arrow_end": [
+          120,
+          258
+        ]
+      }
+    ],
+    "method": "Pillow deterministic crop and rectangle/arrow/number only; no generative image operation"
+  },
+  "f05_segmented_preview": {
+    "crop": [
+      327,
+      58,
+      1533,
+      900
+    ],
+    "white_annotation_margin_px": 48,
+    "marks": [
+      {
+        "number": 1,
+        "label": "模板参数与种子",
+        "rect": [
+          355,
+          82,
+          600,
+          811
+        ],
+        "style": "number_rectangle_arrow",
+        "output_rect": [
+          76,
+          72,
+          321,
+          801
+        ],
+        "number_center": [
+          22,
+          88
+        ],
+        "arrow_start": [
+          41,
+          88
+        ],
+        "arrow_end": [
+          76,
+          88
+        ]
+      },
+      {
+        "number": 2,
+        "label": "程序生成的注入前后内容",
+        "rect": [
+          642,
+          254,
+          1483,
+          521
+        ],
+        "style": "number_rectangle_arrow",
+        "number_placement": "before_target_in_column_gap",
+        "output_rect": [
+          363,
+          244,
+          1204,
+          511
+        ],
+        "number_center": [
+          339,
+          260
+        ],
+        "arrow_start": [
+          358,
+          260
+        ],
+        "arrow_end": [
+          363,
+          260
+        ]
+      },
+      {
+        "number": 3,
+        "label": "不同来源的两段内容",
+        "rect": [
+          642,
+          541,
+          1483,
+          734
+        ],
+        "style": "number_rectangle_arrow",
+        "number_placement": "before_target_in_column_gap",
+        "output_rect": [
+          363,
+          531,
+          1204,
+          724
+        ],
+        "number_center": [
+          339,
+          547
+        ],
+        "arrow_start": [
+          358,
+          547
+        ],
+        "arrow_end": [
+          363,
+          547
+        ]
+      }
+    ],
+    "method": "Pillow deterministic crop and rectangle/arrow/number only; no generative image operation"
+  },
+  "f05_segmented_run": {
+    "crop": [
+      452,
+      58,
+      1408,
+      834
+    ],
+    "white_annotation_margin_px": 48,
+    "marks": [
+      {
+        "number": 1,
+        "label": "实际工具与接触事件",
+        "rect": [
+          524,
+          252,
+          1380,
+          577
+        ],
+        "style": "number_rectangle_arrow",
+        "output_rect": [
+          120,
+          242,
+          976,
+          567
+        ],
+        "number_center": [
+          22,
+          258
+        ],
+        "arrow_start": [
+          41,
+          258
+        ],
+        "arrow_end": [
+          120,
+          258
+        ]
+      }
+    ],
+    "method": "Pillow deterministic crop and rectangle/arrow/number only; no generative image operation"
+  },
+  "f06_baseline": {
+    "crop": [
+      327,
+      495,
+      1533,
+      891
+    ],
+    "white_annotation_margin_px": 48,
+    "marks": [
+      {
+        "number": 1,
+        "label": "安全与正常能力一起报告",
+        "rect": [
+          377,
+          581,
+          1483,
+          621
+        ],
+        "style": "number_rectangle_arrow",
+        "output_rect": [
+          98,
+          134,
+          1204,
+          174
+        ],
+        "number_center": [
+          22,
+          150
+        ],
+        "arrow_start": [
+          41,
+          150
+        ],
+        "arrow_end": [
+          98,
+          150
+        ]
+      },
+      {
+        "number": 2,
+        "label": "真实成功数与全部分母",
+        "rect": [
+          377,
+          621,
+          1483,
+          815
+        ],
+        "style": "number_rectangle_arrow",
+        "output_rect": [
+          98,
+          174,
+          1204,
+          368
+        ],
+        "number_center": [
+          22,
+          234
+        ],
+        "arrow_start": [
+          41,
+          234
+        ],
+        "arrow_end": [
+          98,
+          190
+        ]
+      }
+    ],
+    "method": "Pillow deterministic crop and rectangle/arrow/number only; no generative image operation"
+  },
+  "f06_canary_state": {
+    "crop": [
+      1062,
+      0,
+      1600,
+      900
+    ],
+    "white_annotation_margin_px": 48,
+    "marks": [
+      {
+        "number": 1,
+        "label": "当前实际检测状态",
+        "rect": [
+          1115,
+          235,
+          1575,
+          369
+        ],
+        "style": "number_rectangle_arrow",
+        "output_rect": [
+          101,
+          283,
+          561,
+          417
+        ],
+        "number_center": [
+          22,
+          299
+        ],
+        "arrow_start": [
+          41,
+          299
+        ],
+        "arrow_end": [
+          101,
+          299
+        ]
+      },
+      {
+        "number": 2,
+        "label": "建立、敏感读取与阻断情况",
+        "rect": [
+          1115,
+          390,
+          1575,
+          492
+        ],
+        "style": "number_rectangle_arrow",
+        "output_rect": [
+          101,
+          438,
+          561,
+          540
+        ],
+        "number_center": [
+          22,
+          454
+        ],
+        "arrow_start": [
+          41,
+          454
+        ],
+        "arrow_end": [
+          101,
+          454
+        ]
+      },
+      {
+        "number": 3,
+        "label": "预设断言评定，不以模型声明判定",
+        "rect": [
+          1115,
+          617,
+          1575,
+          900
+        ],
+        "style": "number_rectangle_arrow",
+        "output_rect": [
+          101,
+          665,
+          561,
+          948
+        ],
+        "number_center": [
+          22,
+          681
+        ],
+        "arrow_start": [
+          41,
+          681
+        ],
+        "arrow_end": [
+          101,
+          681
+        ]
+      }
+    ],
+    "method": "Pillow deterministic crop and rectangle/arrow/number only; no generative image operation"
+  },
+  "f06_completion_split": {
+    "crop": [
+      327,
+      57,
+      1533,
+      900
+    ],
+    "white_annotation_margin_px": 48,
+    "marks": [
+      {
+        "number": 1,
+        "label": "自动完成、辅助完成及失败数量",
+        "rect": [
+          355,
+          82,
+          1505,
+          900
+        ],
+        "style": "number_rectangle_arrow",
+        "output_rect": [
+          76,
+          73,
+          1226,
+          891
+        ],
+        "number_center": [
+          22,
+          89
+        ],
+        "arrow_start": [
+          41,
+          89
+        ],
+        "arrow_end": [
+          76,
+          89
+        ]
+      }
+    ],
+    "method": "Pillow deterministic crop and rectangle/arrow/number only; no generative image operation"
+  },
+  "f06_external": {
+    "crop": [
+      327,
+      463,
+      1533,
+      900
+    ],
+    "white_annotation_margin_px": 48,
+    "marks": [
+      {
+        "number": 1,
+        "label": "C与仅权限ASR均34/180",
+        "rect": [
+          377,
+          589,
+          1483,
+          848
+        ],
+        "style": "number_rectangle_arrow",
+        "output_rect": [
+          98,
+          174,
+          1204,
+          433
+        ],
+        "number_center": [
+          22,
+          190
+        ],
+        "arrow_start": [
+          41,
+          190
+        ],
+        "arrow_end": [
+          98,
+          190
+        ]
+      }
+    ],
+    "method": "Pillow deterministic crop and rectangle/arrow/number only; no generative image operation"
+  },
+  "f06_selfcheck_encoded": {
+    "crop": [
+      0,
+      0,
+      1740,
+      475
+    ],
+    "white_annotation_margin_px": 48,
+    "marks": [
+      {
+        "number": 1,
+        "label": "两层Base64实际检测",
+        "rect": [
+          0,
+          120,
+          1245,
+          216
+        ],
+        "style": "number_rectangle_arrow",
+        "output_rect": [
+          48,
+          168,
+          1293,
+          264
+        ],
+        "number_center": [
+          22,
+          184
+        ],
+        "arrow_start": [
+          41,
+          184
+        ],
+        "arrow_end": [
+          48,
+          184
+        ]
+      },
+      {
+        "number": 2,
+        "label": "同出口与跨出口分片检测",
+        "rect": [
+          0,
+          216,
+          1245,
+          408
+        ],
+        "style": "number_rectangle_arrow",
+        "output_rect": [
+          48,
+          264,
+          1293,
+          456
+        ],
+        "number_center": [
+          22,
+          280
+        ],
+        "arrow_start": [
+          41,
+          280
+        ],
+        "arrow_end": [
+          48,
+          280
+        ]
+      },
+      {
+        "number": 3,
+        "label": "仅机制自检声明",
+        "rect": [
+          0,
+          432,
+          1190,
+          464
+        ],
+        "style": "number_rectangle_arrow",
+        "output_rect": [
+          48,
+          480,
+          1238,
+          512
+        ],
+        "number_center": [
+          22,
+          496
+        ],
+        "arrow_start": [
+          41,
+          496
+        ],
+        "arrow_end": [
+          48,
+          496
+        ]
+      }
+    ],
+    "method": "Pillow deterministic crop and rectangle/arrow/number only; no generative image operation"
+  },
+  "f06_selfcheck_limits": {
+    "crop": [
+      0,
+      0,
+      1740,
+      400
+    ],
+    "white_annotation_margin_px": 48,
+    "marks": [
+      {
+        "number": 1,
+        "label": "三层编码超界阴性",
+        "rect": [
+          0,
+          120,
+          1280,
+          240
+        ],
+        "style": "number_rectangle_arrow",
+        "output_rect": [
+          48,
+          168,
+          1328,
+          288
+        ],
+        "number_center": [
+          22,
+          184
+        ],
+        "arrow_start": [
+          41,
+          184
+        ],
+        "arrow_end": [
+          48,
+          184
+        ]
+      },
+      {
+        "number": 2,
+        "label": "检测上限与7项结论",
+        "rect": [
+          0,
+          240,
+          1065,
+          336
+        ],
+        "style": "number_rectangle_arrow",
+        "output_rect": [
+          48,
+          288,
+          1113,
+          384
+        ],
+        "number_center": [
+          22,
+          304
+        ],
+        "arrow_start": [
+          41,
+          304
+        ],
+        "arrow_end": [
+          48,
+          304
+        ]
+      }
+    ],
+    "method": "Pillow deterministic crop and rectangle/arrow/number only; no generative image operation"
+  },
+  "f06_selfcheck_positive": {
+    "crop": [
+      0,
+      0,
+      1740,
+      450
+    ],
+    "white_annotation_margin_px": 48,
+    "marks": [
+      {
+        "number": 1,
+        "label": "实际阳性输入与检测依据",
+        "rect": [
+          0,
+          192,
+          1170,
+          288
+        ],
+        "style": "number_rectangle_arrow",
+        "output_rect": [
+          48,
+          240,
+          1218,
+          336
+        ],
+        "number_center": [
+          22,
+          256
+        ],
+        "arrow_start": [
+          41,
+          256
+        ],
+        "arrow_end": [
+          48,
+          256
+        ]
+      },
+      {
+        "number": 2,
+        "label": "近似阴性与空检测依据",
+        "rect": [
+          0,
+          288,
+          850,
+          384
+        ],
+        "style": "number_rectangle_arrow",
+        "output_rect": [
+          48,
+          336,
+          898,
+          432
+        ],
+        "number_center": [
+          22,
+          352
+        ],
+        "arrow_start": [
+          41,
+          352
+        ],
+        "arrow_end": [
+          48,
+          352
+        ]
+      },
+      {
+        "number": 3,
+        "label": "非模型正式实验声明",
+        "rect": [
+          0,
+          120,
+          1050,
+          192
+        ],
+        "style": "number_rectangle_arrow",
+        "output_rect": [
+          48,
+          168,
+          1098,
+          240
+        ],
+        "number_center": [
+          22,
+          184
+        ],
+        "arrow_start": [
+          41,
+          184
+        ],
+        "arrow_end": [
+          48,
+          184
+        ]
+      }
+    ],
+    "method": "Pillow deterministic crop and rectangle/arrow/number only; no generative image operation"
+  },
+  "overview": {
+    "crop": [
+      0,
+      0,
+      1600,
+      900
+    ],
+    "white_annotation_margin_px": 48,
+    "marks": [
+      {
+        "number": 1,
+        "label": "对话、攻击与评测入口",
+        "rect": [
+          23,
+          175,
+          236,
+          322
+        ],
+        "style": "number_rectangle_arrow",
+        "output_rect": [
+          71,
+          223,
+          284,
+          370
+        ],
+        "number_center": [
+          22,
+          239
+        ],
+        "arrow_start": [
+          41,
+          239
+        ],
+        "arrow_end": [
+          71,
+          239
+        ]
+      },
+      {
+        "number": 2,
+        "label": "四个真实工具任务入口",
+        "rect": [
+          595,
+          428,
+          1265,
+          611
+        ],
+        "style": "number_rectangle_arrow",
+        "output_rect": [
+          643,
+          476,
+          1313,
+          659
+        ],
+        "number_center": [
+          22,
+          492
+        ],
+        "arrow_start": [
+          41,
+          492
+        ],
+        "arrow_end": [
+          643,
+          492
+        ]
+      },
+      {
+        "number": 3,
+        "label": "冻结的本地模型配置",
+        "rect": [
+          1155,
+          65,
+          1470,
+          358
+        ],
+        "style": "number_rectangle_arrow",
+        "output_rect": [
+          1203,
+          113,
+          1518,
+          406
+        ],
+        "number_center": [
+          22,
+          129
+        ],
+        "arrow_start": [
+          41,
+          129
+        ],
+        "arrow_end": [
+          1203,
+          129
+        ]
+      }
+    ],
+    "method": "Pillow deterministic crop and rectangle/arrow/number only; no generative image operation"
+  }
+}
