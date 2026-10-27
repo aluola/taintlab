@@ -1,0 +1,7 @@
+{
+  "public_distribution": true,
+  "source_commit": "feae6c7a0fff4a7ee6da796d2de53ae1cc9f7d06",
+  "history_strategy": "independent_allowlist_snapshot_original_history_preserved",
+  "default_repackage": ".venv/Scripts/python.exe scripts/build_package.py",
+  "source_audit": "results/publication/history_audit_public.json"
+}

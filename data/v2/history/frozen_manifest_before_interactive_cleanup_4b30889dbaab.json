@@ -1,0 +1,20 @@
+{
+  "version": "2.0.0",
+  "frozen": true,
+  "selection_before_model_results": true,
+  "files": {
+    "test.jsonl": "78be45bfd9ae16df1ea842395a4edbb4b7a450c7cf2295f693f4b55474ad1ebb",
+    "dev.jsonl": "ac752b160413871befee881ea5e26398315368e97f4c0e2bf847ad640b43585a",
+    "coverage.json": "3826deda6b39abe9ad3ce146099c3ffe9c31e04bd66ff24313bd520e37ae0b02",
+    "selection_rules.json": "a0b4cf2fd799d2c603a759fe38355483df0bc02bdbfcaab1902500b0cb2c2803",
+    "upstream/source_payloads.json": "a38c206df8b395f67f0396e77bdd2ce779a8156dd53d7bff7be48dd865e1274a",
+    "upstream/BIPIA_LICENSE.txt": "57cf81c45e0929899bc18051cf90134f00e55963ddecc7b37cfc5ea1494b1e8b",
+    "upstream/InjecAgent_LICENCE.txt": "b48589499dbb84caa796b00b4ea652b0443e49660282c44d890fd473b8c0674e"
+  },
+  "fingerprint": "9d69be3161fe0f642e40684d0df9987b6a47d2455403689728abf34a5fb401e3",
+  "adapter_sha256": "1e1c310123ddbe7ecc67210cb7d25a2320e855dcb70fb193bf9212ba9c496abd",
+  "interactive_sha256": "1d4da6c2d043c039dbf196e9b910affb2593c47c1f95a6e4d9af7d7ff0fcaa58",
+  "formal_cases": 90,
+  "development_cases": 13,
+  "provenance": "60 source-mapped attacks + 30 self-authored local controls. This is not an official upstream benchmark reproduction."
+}

@@ -1,0 +1,24 @@
+{
+  "project_version": "2.0.0",
+  "captured_at_utc": "2026-10-27T01:56:30.354Z",
+  "viewport": {
+    "width": 1280,
+    "height": 820
+  },
+  "origin": "http://127.0.0.1:8501",
+  "browser_session": "new isolated browser context; cookie and ownership identity not exported",
+  "backend_required": "local_llama_cpp",
+  "figures": [],
+  "scenarios": [],
+  "errors": [
+    {
+      "scenario": "fatal",
+      "error": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:8501/\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:8501/\", waiting until \"networkidle\"\u001b[22m\n"
+    }
+  ],
+  "blocked_external": [],
+  "assurance": "Actual UI only. No injected DOM, mock response or experiment-state edit. All data and actions are simulated. Screenshots omit browser account and desktop surfaces.",
+  "finished_at_utc": "2026-10-27T01:56:33.017Z",
+  "figure_count": 0,
+  "all_scenarios_completed": true
+}

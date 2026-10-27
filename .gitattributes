@@ -1,0 +1,27 @@
+# Frozen experiment inputs must keep their exact bytes on Windows checkout.
+*.py text eol=lf
+configs/*.json text eol=lf
+data/*.jsonl -text
+data/*.json -text
+data/v2/** -text
+# These release inputs/metadata are bound by exact-byte hashes.
+frontend/** -text
+configs/experiment_v2.lock.json -text
+demo/** -text
+docs/project_report.md -text
+docs/v2/qa/** -text
+docs/qa/*.json -text
+docs/qa/visual_review.md -text
+
+# Public docs and evidence hashes must survive Windows checkout unchanged.
+README.md text eol=lf
+AGENTS.md text eol=lf
+docs/LIGHT_PACKAGE.md text eol=lf
+scripts/*.cjs text eol=lf
+scripts/install.ps1 text eol=lf
+docs/USER_MANUAL.* -text
+docs/assets/user-manual/** -text
+docs/publication/** -text
+
+# Publication snapshot: preserve all manifest-bound bytes
+* -text

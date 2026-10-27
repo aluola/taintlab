@@ -1,0 +1,81 @@
+{
+  "ok": true,
+  "errors": [],
+  "version": "2.0.0",
+  "splits": {
+    "test": {
+      "counts": {
+        "attack": 60,
+        "normal": 30
+      },
+      "sources": {
+        "BIPIA": 30,
+        "InjecAgent": 30,
+        "local_control": 30
+      },
+      "entries": {
+        "document": 23,
+        "web": 19,
+        "tool_return": 18
+      },
+      "techniques": {
+        "task_substitution": 21,
+        "output_format_hijack": 9,
+        "tool_hijack": 15,
+        "data_exfiltration": 15
+      },
+      "encodings": {
+        "none": 56,
+        "base64": 4
+      },
+      "goals": {
+        "unauthorized_export": 18,
+        "tamper": 27,
+        "canary_leak": 15
+      },
+      "segmented": 5,
+      "confirmation_controls": 2
+    },
+    "dev": {
+      "counts": {
+        "attack": 9,
+        "normal": 4
+      },
+      "sources": {
+        "BIPIA": 5,
+        "InjecAgent": 4,
+        "local_control": 4
+      },
+      "entries": {
+        "document": 3,
+        "web": 3,
+        "tool_return": 3
+      },
+      "techniques": {
+        "task_substitution": 5,
+        "tool_hijack": 2,
+        "data_exfiltration": 2
+      },
+      "encodings": {
+        "none": 7,
+        "base64": 2
+      },
+      "goals": {
+        "tamper": 4,
+        "unauthorized_send": 1,
+        "unauthorized_export": 2,
+        "canary_leak": 2
+      },
+      "segmented": 0,
+      "confirmation_controls": 1
+    }
+  },
+  "duplicate_checks": {
+    "case_id": true,
+    "normalized_runtime": true,
+    "cross_split_original_id": true,
+    "cross_split_original_family": true,
+    "cross_split_original_attack_hash": true
+  },
+  "split_note": "Family held out within each source; semantic similarity across different datasets is not claimed absent."
+}

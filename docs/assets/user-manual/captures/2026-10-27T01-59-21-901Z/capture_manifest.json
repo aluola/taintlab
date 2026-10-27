@@ -1,0 +1,95 @@
+{
+  "project_version": "2.0.0",
+  "captured_at_utc": "2026-10-27T01:59:21.902Z",
+  "viewport": {
+    "width": 1280,
+    "height": 820
+  },
+  "origin": "http://127.0.0.1:8501",
+  "browser_session": "new isolated browser context; cookie and ownership identity not exported",
+  "backend_required": "local_llama_cpp",
+  "figures": [
+    {
+      "id": "10_txt_registered",
+      "title": "上传TXT后仍需显式授权",
+      "captured_at_utc": "2026-10-27T01:59:25.074Z",
+      "version": "2.0.0",
+      "viewport": {
+        "width": 1280,
+        "height": 820
+      },
+      "page": "对话靶场",
+      "case_id": null,
+      "run_id": null,
+      "mode": null,
+      "seed": null,
+      "live_or_replay": "live_ui",
+      "raw_path": "docs/assets/user-manual/captures/2026-10-27T01-59-21-901Z/10_txt_registered.png",
+      "raw_sha256": "724b557073bcee38dccadfed0e6621d314b245800902dfbdc3792f0e787da7dc",
+      "crop": {
+        "x": 333,
+        "y": 292,
+        "width": 854,
+        "height": 347
+      },
+      "annotations": [
+        {
+          "number": 1,
+          "label": "实际新文档与程序分配ID",
+          "shape": "rectangle_with_number",
+          "rect": [
+            374,
+            533,
+            743,
+            565
+          ],
+          "color": "#c66b29",
+          "border_width": 2,
+          "fill": null
+        },
+        {
+          "number": 2,
+          "label": "上传不等于授权读取",
+          "shape": "rectangle_with_number",
+          "rect": [
+            374,
+            584,
+            1146,
+            601
+          ],
+          "color": "#c66b29",
+          "border_width": 2,
+          "fill": null
+        }
+      ],
+      "steps": [
+        "新建对话，点击输入框附件按钮。",
+        "选择本地manual_sample.txt。",
+        "在文档列表内滚动到新文档；确认登记成功后，再勾选。"
+      ],
+      "observed_result": "真实登记doc_id=doc_4a1659a36662；上传后默认未勾选，未自动进入模型上下文。",
+      "assertions_passed": true,
+      "run_evidence": null,
+      "preview_metadata": null
+    }
+  ],
+  "scenarios": [
+    {
+      "name": "upload",
+      "started_at_utc": "2026-10-27T01:59:23.944Z",
+      "completed": true,
+      "finished_at_utc": "2026-10-27T01:59:25.080Z"
+    }
+  ],
+  "errors": [],
+  "blocked_external": [],
+  "assurance": "Actual UI only. No injected DOM, mock response or experiment-state edit. All data and actions are simulated. Screenshots omit browser account and desktop surfaces.",
+  "health": {
+    "status": "ok",
+    "service": "taintlab-web",
+    "version": "2.0.0"
+  },
+  "finished_at_utc": "2026-10-27T01:59:25.081Z",
+  "figure_count": 1,
+  "all_scenarios_completed": true
+}

@@ -1,0 +1,204 @@
+{
+  "publication_summary": true,
+  "source_evidence_path": "results/v2/browser/ui_acceptance.json",
+  "original_evidence_sha256": "752a023ca4649c887f897b5185adce85b5ce54aee4bead3d5a823d213102870e",
+  "disclosure": "Explicit public summary of saved local evidence. Machine paths, process identities, browser credentials and uploaded runtime bodies are not redistributed. This is not a newly executed acceptance test.",
+  "generated_at": "2026-10-26T18:11:37.461017+00:00",
+  "version": "2.0.0",
+  "scope": "Production React UI and real local API browser acceptance; not formal experiment metrics",
+  "production_assets": [
+    {
+      "path": "frontend/dist/index.html",
+      "bytes": 635,
+      "sha256": "bcb3416782e0521d2af0508e668aaa5d9266f142c1d7d69a4455f693915ec350",
+      "matches_frozen_clean_build": true
+    },
+    {
+      "path": "frontend/dist/assets/index-C4yPfbP-.js",
+      "bytes": 287289,
+      "sha256": "4dcfa6cb38cfc9fd1904b346bda0dbb50c88f7a4bcdfb52ca82e3e1beeb25bc8",
+      "matches_frozen_clean_build": true
+    },
+    {
+      "path": "frontend/dist/assets/index-DumuwBOQ.css",
+      "bytes": 45495,
+      "sha256": "5706c3e0adac5161d0f40c29f1a1ab7171ad52430c9c4a6577f2d8f16495a7fe",
+      "matches_frozen_clean_build": true
+    }
+  ],
+  "browser_reports": [
+    {
+      "path": "results/v2/browser/ui_e2e_2026-10-26T17-12-36-626Z.json",
+      "bytes": 591,
+      "sha256": "8802cb469ceadcf64e54a0948f7948f821ff12c12508c1e918b72e2da7346b31",
+      "started_at": "2026-10-26T17:12:36.626Z",
+      "checks": 15,
+      "passed": 13,
+      "all_passed_at_that_time": false,
+      "page_errors": [],
+      "external_requests": []
+    },
+    {
+      "path": "results/v2/browser/ui_followup_2026-10-26T17-19-00-715Z.json",
+      "bytes": 595,
+      "sha256": "1fd24a498a2660a7b9740fb329c2a12dbfc258daec37c39a90f4393f34dfcf9f",
+      "started_at": "2026-10-26T17:19:00.715Z",
+      "checks": 2,
+      "passed": 2,
+      "all_passed_at_that_time": true,
+      "page_errors": [],
+      "external_requests": []
+    },
+    {
+      "path": "results/v2/browser/ui_followup_2026-10-26T17-33-09-419Z.json",
+      "bytes": 595,
+      "sha256": "f124fddf820855327e951128ab9b1d29a49444d845d0effcfc179d7590ea5e1b",
+      "started_at": "2026-10-26T17:33:09.419Z",
+      "checks": 1,
+      "passed": 1,
+      "all_passed_at_that_time": true,
+      "page_errors": [],
+      "external_requests": []
+    },
+    {
+      "path": "results/v2/browser/ui_followup_2026-10-26T18-05-16-679Z.json",
+      "bytes": 585,
+      "sha256": "8602072d926e0a5dcdb93ff6e24bd900ea1fd6283fa9e897609be45d08925626",
+      "started_at": "2026-10-26T18:05:16.679Z",
+      "checks": 3,
+      "passed": 3,
+      "all_passed_at_that_time": true,
+      "page_errors": [],
+      "external_requests": []
+    }
+  ],
+  "latest_evidence_by_unique_check": [
+    {
+      "name": "three_navigation_and_four_quick_entries",
+      "passed": true,
+      "evidence_report": "results/v2/browser/ui_followup_2026-10-26T18-05-16-679Z.json"
+    },
+    {
+      "name": "laptop_1366x768_no_horizontal_overflow",
+      "passed": true,
+      "evidence_report": "results/v2/browser/ui_followup_2026-10-26T18-05-16-679Z.json"
+    },
+    {
+      "name": "mobile_390x844_navigation_and_composer",
+      "passed": true,
+      "evidence_report": "results/v2/browser/ui_followup_2026-10-26T18-05-16-679Z.json"
+    },
+    {
+      "name": "normal_document_quick_entry_uses_real_model",
+      "passed": true,
+      "evidence_report": "results/v2/browser/ui_e2e_2026-10-26T17-12-36-626Z.json"
+    },
+    {
+      "name": "query_shortcut_reaches_search_tool",
+      "passed": true,
+      "evidence_report": "results/v2/browser/ui_followup_2026-10-26T17-19-00-715Z.json"
+    },
+    {
+      "name": "notification_confirmation_and_refresh_resume",
+      "passed": true,
+      "evidence_report": "results/v2/browser/ui_e2e_2026-10-26T17-12-36-626Z.json"
+    },
+    {
+      "name": "confirmation_refusal_has_no_side_effect",
+      "passed": true,
+      "evidence_report": "results/v2/browser/ui_e2e_2026-10-26T17-12-36-626Z.json"
+    },
+    {
+      "name": "export_confirmation_and_actual_download",
+      "passed": true,
+      "evidence_report": "results/v2/browser/ui_e2e_2026-10-26T17-12-36-626Z.json"
+    },
+    {
+      "name": "upload_registered_then_explicitly_read",
+      "passed": true,
+      "evidence_report": "results/v2/browser/ui_followup_2026-10-26T17-19-00-715Z.json"
+    },
+    {
+      "name": "stop_does_not_create_false_completed_state",
+      "passed": true,
+      "evidence_report": "results/v2/browser/ui_e2e_2026-10-26T17-12-36-626Z.json"
+    },
+    {
+      "name": "attack_preview_and_real_run_direct",
+      "passed": true,
+      "evidence_report": "results/v2/browser/ui_e2e_2026-10-26T17-12-36-626Z.json"
+    },
+    {
+      "name": "attack_preview_and_real_run_indirect",
+      "passed": true,
+      "evidence_report": "results/v2/browser/ui_e2e_2026-10-26T17-12-36-626Z.json"
+    },
+    {
+      "name": "attack_preview_and_real_run_encoding",
+      "passed": true,
+      "evidence_report": "results/v2/browser/ui_e2e_2026-10-26T17-12-36-626Z.json"
+    },
+    {
+      "name": "attack_preview_and_real_run_segmented",
+      "passed": true,
+      "evidence_report": "results/v2/browser/ui_e2e_2026-10-26T17-12-36-626Z.json"
+    },
+    {
+      "name": "real_results_and_readonly_historical_replay",
+      "passed": true,
+      "evidence_report": "results/v2/browser/ui_e2e_2026-10-26T17-12-36-626Z.json"
+    },
+    {
+      "name": "readable_grant_focused_sources_and_metric_denominators",
+      "passed": true,
+      "evidence_report": "results/v2/browser/ui_followup_2026-10-26T17-33-09-419Z.json"
+    }
+  ],
+  "unique_check_count": 16,
+  "latest_unique_checks_passed": 16,
+  "all_targeted_checks_passed_latest_evidence": true,
+  "counting_note": "16 distinct checks are supported by one initial 15-check run and targeted follow-ups. This is not a claim that a new single 16-check model batch was executed. Repeated layout checks and repeated 31-test fresh-install runs are not additional unique tests.",
+  "preserved_failures": [
+    {
+      "report": "results/v2/browser/layout_check.json",
+      "problem": "Initial mobile automation clicked the center of the full-screen mask, where the sidebar intercepted input; initial screenshots captured transitions.",
+      "resolution": "Click the visible mask area; disable animations only during screenshot capture; real desktop/laptop/mobile recheck passed.",
+      "follow_up": "results/v2/browser/ui_followup_2026-10-26T18-05-16-679Z.json"
+    },
+    {
+      "report": "results/v2/browser/ui_e2e_2026-10-26T17-12-36-626Z.json",
+      "check": "query_shortcut_reaches_search_tool",
+      "problem": "Real model searched but its final content did not contain the two required dates.",
+      "resolution": "Clarified the shortcut's natural-language task, retained the failed run, and reran the actual model; no answer was substituted.",
+      "follow_up": "results/v2/browser/ui_followup_2026-10-26T17-19-00-715Z.json"
+    },
+    {
+      "report": "results/v2/browser/ui_e2e_2026-10-26T17-12-36-626Z.json",
+      "check": "upload_registered_then_explicitly_read",
+      "problem": "The initial assertion incorrectly required an upload-prefixed document ID; the actual service issues opaque doc IDs. The original observed model result also lacked the requested concrete answer.",
+      "resolution": "Use the actual registered ID in the explicit task and inspect real state plus answer; targeted local-model rerun passed.",
+      "follow_up": "results/v2/browser/ui_followup_2026-10-26T17-19-00-715Z.json"
+    }
+  ],
+  "narrow_screen": {
+    "passed": true,
+    "report": "results/v2/browser/ui_followup_2026-10-26T18-05-16-679Z.json",
+    "checks": "No document horizontal overflow; navigation opened and closed with visible-area click; task textarea remained visible. Actual images visually reviewed."
+  },
+  "visual_review": {
+    "reviewed_at": "2026-10-26T18:11:37.518181+00:00",
+    "status": "passed_for_named_screenshots",
+    "notes": "Chinese text, current-version badge, source selection, graph legend, narrow-screen navigation and composer inspected. Historical source graph remains preserved under its original filename and is not evidence of a current run.",
+    "review_record": "results/v2/browser/ui_visual_review.md",
+    "review_sha256": "b1aa5a1359c92b24f86edc35129f46993aa03e489ddfd078d27d681eb4226d73"
+  },
+  "limitations": [
+    "UI browser runs are acceptance tasks, not additions to frozen ASR or normal-completion denominators.",
+    "The actual browser upload flow exercised Markdown; other parser formats require the backend acceptance evidence and are not claimed by this index.",
+    "31 component tests use structured fixtures and do not prove local-model capability.",
+    "The narrow-screen check is an actual Chromium viewport test, not a physical phone or cross-browser certification.",
+    "No claim is made of a full accessibility audit, all natural-language tasks succeeding, precise semantic causal tracking, or complete injection resistance.",
+    "The latest full video and its playback validation are owned by the final delivery process; raw recordings alone are not a playable final MP4 claim."
+  ],
+  "recording_timing_review": "results/v2/browser/video_timing/timing_review.md"
+}

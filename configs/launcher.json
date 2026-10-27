@@ -1,0 +1,6 @@
+{
+  "ui_port": 8501,
+  "startup_timeout_seconds": 60,
+  "stop_timeout_seconds": 10,
+  "operation_lock_timeout_seconds": 90
+}

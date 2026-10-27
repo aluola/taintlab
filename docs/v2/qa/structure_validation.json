@@ -1,0 +1,24 @@
+{
+  "project_version": "2.0.0",
+  "checked_at": "2026-10-26T18:33:30.664879+00:00",
+  "pages": 24,
+  "figures": 5,
+  "checks": {
+    "current_version": true,
+    "docx_zip_crc": true,
+    "docx_hash": true,
+    "pdf_hash": true,
+    "markdown_hash": true,
+    "page_count": true,
+    "all_pages_text_and_chinese": true,
+    "no_replacement_character": true,
+    "page_field": true,
+    "black_headings": true,
+    "toc_headings_and_pages": true,
+    "rendered_pages_exact": true,
+    "all_markdown_images_embedded": true,
+    "current_video_and_playback": true
+  },
+  "all_passed": true,
+  "scope": "Actual container/XML/PDF/text/font/page/hash checks. Separate per-page visual review is required; no claim of new model runs."
+}

@@ -1,0 +1,84 @@
+{
+  "started_at": "2026-10-26T18:01:30.523Z",
+  "version": "2.0.0",
+  "target_seconds": 28,
+  "recording_kind": "actual_ui_pickup_results",
+  "selection_file": "results\\v2\\demo_selection.json",
+  "selection_sha256": "defb55e1fe4840007b7978896b099d1f7035f215d03c4b327b9f0d295a2b0313",
+  "upload_file": "demo\\v2\\demo_upload.md",
+  "upload_sha256": "c3bde809a3b78cb127fb42a908faf1d7d2c331ddd9a9916eb594641fccf0a609",
+  "viewport": {
+    "width": 1600,
+    "height": 900
+  },
+  "backend_required": "local_llama_cpp",
+  "assurance": "Actual browser recording. No injected DOM, mock responses, invented output, or state edits. Browser automation clicks the genuine confirmation UI; the model cannot mint confirmation.",
+  "timing_basis": "Monotonic timestamps relative to newPage call; inspect raw-video frame timing before final trimming. Target segment durations and actual durations are both preserved.",
+  "segments": [
+    {
+      "id": "pickup_external_metrics",
+      "seconds": 12,
+      "mode": "saved_real_metrics_pickup",
+      "description": "真实v2_external主表，C的18.89%与次数分母",
+      "start_seconds": 2.2026286999999996,
+      "outcome": "recorded",
+      "action_finished_seconds": 2.203806,
+      "end_seconds": 14.2091272,
+      "actual_seconds": 12.0064985,
+      "overran_target": false
+    },
+    {
+      "id": "pickup_external_ablation",
+      "seconds": 6,
+      "mode": "saved_real_metrics_pickup",
+      "description": "扩展集policy_only真实消融对比",
+      "start_seconds": 14.3269284,
+      "outcome": "recorded",
+      "action_finished_seconds": 14.3277304,
+      "end_seconds": 20.331906200000002,
+      "actual_seconds": 6.0049778000000025,
+      "overran_target": false
+    },
+    {
+      "id": "pickup_external_cost_limits",
+      "seconds": 10,
+      "mode": "saved_real_metrics_pickup",
+      "description": "真实耗时、token、工具与确认开销及测量限制",
+      "start_seconds": 20.4409616,
+      "outcome": "recorded",
+      "action_finished_seconds": 20.443177300000002,
+      "end_seconds": 30.450061500000004,
+      "actual_seconds": 10.009099900000002,
+      "overran_target": false
+    }
+  ],
+  "errors": [],
+  "blocked_external": [],
+  "real_run_ids": [],
+  "replay_records": [],
+  "screenshots": [
+    {
+      "name": "pickup_external_metrics.png",
+      "sha256": "5b62ed25818b65350c12e8b5ddce22e8540b6d7ed8619058bcde3180b2c66c1e",
+      "at_seconds": 2.2656715999999997
+    },
+    {
+      "name": "pickup_external_ablation.png",
+      "sha256": "2cd8be07651ab9950f66be61ddf37f0b6d2e9b9e475268014ec04437ab2d0018",
+      "at_seconds": 14.4101718
+    },
+    {
+      "name": "pickup_external_cost_limits.png",
+      "sha256": "12b2b362864f3afce7ad2302d9288fa093ba421aa247814fe3f05dd3e7d3c41c",
+      "at_seconds": 20.550385600000002
+    }
+  ],
+  "lead_in_seconds": 1.9526920999999997,
+  "stable_start_seconds": 2.2024712999999996,
+  "status": "recorded_actual_ui_pickup",
+  "finished_at": "2026-10-26T18:02:01.313Z",
+  "monotonic_capture_seconds": 30.451136700000003,
+  "source_video": "demo\\v2\\raw\\2026-10-26T18-01-30-521Z\\page@1e0a00a10dddb20c87ad095965aa2a4d.webm",
+  "source_video_bytes": 2491058,
+  "source_video_sha256": "4b2380928b5521655ca6fe049c17ed6b2f19c4b5f4a03f205976dff788c8de4f"
+}

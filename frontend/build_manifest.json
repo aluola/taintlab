@@ -1,0 +1,173 @@
+{
+  "schema_version": 1,
+  "built_at_utc": "2026-10-26T18:13:32.671269+00:00",
+  "build_command": [
+    "npm",
+    "run",
+    "build"
+  ],
+  "build_returncode": 0,
+  "source_files": {
+    "frontend/index.html": {
+      "sha256": "c6f35ebd4848f32353891a1721a9898f74298d7a549ca6690d0da977b2213d1c",
+      "bytes": 537
+    },
+    "frontend/package-lock.json": {
+      "sha256": "352f68c9a75fb845e6299a37b6cd953648f1a7fef320235e22af83c4373cdb0d",
+      "bytes": 75556
+    },
+    "frontend/package.json": {
+      "sha256": "febebfbe63bd7c3ef1cbec03d73210f847850295631ff9bf922763150ebba19c",
+      "bytes": 623
+    },
+    "frontend/src/api.test.ts": {
+      "sha256": "de0530af42771f9344909b695ececafdff724cae617e59f9555f9c6b15115816",
+      "bytes": 1886
+    },
+    "frontend/src/api.ts": {
+      "sha256": "ef92c807e5fba8f58f11bf2f51e804db8c980b78164c51c4306fe5e8f386007e",
+      "bytes": 3365
+    },
+    "frontend/src/App.test.tsx": {
+      "sha256": "6bc74da748153aad16830dbb3d4d22e865be0807ab9c4d74651c021302169057",
+      "bytes": 4113
+    },
+    "frontend/src/App.tsx": {
+      "sha256": "43070c5736d494a7d69949875df060d80354e9fb87ea53c277f78d48c9ed2b8b",
+      "bytes": 24258
+    },
+    "frontend/src/audit.test.tsx": {
+      "sha256": "e1948ac9e2c78e2207712647275ae872f6b9996ef6cce54aa5de9a697b1a7fb6",
+      "bytes": 3703
+    },
+    "frontend/src/components/AttackPanel.tsx": {
+      "sha256": "844455b3797ebf61b8eef1e10675f723c80a6d3e34e038eb2c99248022cb5658",
+      "bytes": 7598
+    },
+    "frontend/src/components/Composer.tsx": {
+      "sha256": "bd5099e2599d586efa2057826144860e66b42e3e58f7e7c7e90bf8d8ff8cf087",
+      "bytes": 3501
+    },
+    "frontend/src/components/ConfirmationCard.tsx": {
+      "sha256": "e41cac8c8cee4d1ca5a921dace7d86471c2c335251934f62fa0f247bd2c38ea5",
+      "bytes": 2484
+    },
+    "frontend/src/components/GrantSummary.tsx": {
+      "sha256": "33bdc6df6e7fccd13dee189a05cac510b43e2499cfeea1ae6249983d814459f2",
+      "bytes": 2258
+    },
+    "frontend/src/components/Icon.tsx": {
+      "sha256": "449bdc3e951c2e71669b1bc0e5efebd2b8a6eca085b08d85033a70c021a2ce49",
+      "bytes": 2403
+    },
+    "frontend/src/components/MetricDetails.tsx": {
+      "sha256": "12f1035c24f35e82fb89ec1b97e4bf83ac80e43d1b1647edd89e1bba442a7446",
+      "bytes": 3684
+    },
+    "frontend/src/components/ParameterPanel.tsx": {
+      "sha256": "e2467c8efbdcb6c9b25b84f332b0848bfbdbaa8d0a46cdd1733413aa34434570",
+      "bytes": 3713
+    },
+    "frontend/src/components/results.test.tsx": {
+      "sha256": "8737735ae295eac3e9fd2417af4b4d6b940285a10be32cb1b64fc8734b67c968",
+      "bytes": 1843
+    },
+    "frontend/src/components/ResultsPanel.tsx": {
+      "sha256": "f59fee9a1a6ee6b8408e31e35b775f34c3ddab15e5d178aa16f985a53a520d4a",
+      "bytes": 8201
+    },
+    "frontend/src/components/security.test.tsx": {
+      "sha256": "7302170010dca94b19d49840126ae05dac053aa0f7e90e9ed4729b8d64d96fcd",
+      "bytes": 7772
+    },
+    "frontend/src/components/SecurityDrawer.tsx": {
+      "sha256": "8c1d4ffcc1afe0ffc7e4c3ba5f97c1512b95be03ad3ee326e3aecb5b989874a6",
+      "bytes": 6471
+    },
+    "frontend/src/components/SourceExplorer.tsx": {
+      "sha256": "8b9c23b10c3e0a176e45a88124d2a4f1fa6812bcd232b149f72c6670f9826303",
+      "bytes": 6973
+    },
+    "frontend/src/components/ToolCard.tsx": {
+      "sha256": "e7ca24cd8fda8f31d644d043f67207138da9c435b10518a58c1cf7c6da0a7dd1",
+      "bytes": 1714
+    },
+    "frontend/src/format.test.ts": {
+      "sha256": "7bb27e7bfde4a63c89e953a22a2675ae504dc837ed26a9aa709612e2b4f3b5e7",
+      "bytes": 1696
+    },
+    "frontend/src/format.ts": {
+      "sha256": "d1b1847e29d3ae1d12d10704a11a259478a85e966269315ad65c72e8f10e2ef8",
+      "bytes": 3070
+    },
+    "frontend/src/main.tsx": {
+      "sha256": "35f6687f0047963874af0e81a5f450fd4c7508e519c9e1d8558c9b88ca5568a0",
+      "bytes": 158
+    },
+    "frontend/src/metrics.ts": {
+      "sha256": "45e40ebab0655c32a9c8227fdad3bdb0c72f0bdf5c0d497881de6304b6ad02ca",
+      "bytes": 1032
+    },
+    "frontend/src/provenanceView.ts": {
+      "sha256": "8a5c47dee567efd9ed629a86785e23d658eda7c1015ea234fed65fa40cdef843",
+      "bytes": 725
+    },
+    "frontend/src/styles.css": {
+      "sha256": "e061462d655c48254c52147bb49b974362306053698af876d0ae0734fd7f155a",
+      "bytes": 45963
+    },
+    "frontend/src/testFixtures.ts": {
+      "sha256": "ad4e6cac6f32385baec5a3a717382d164c9f7b5b8a14b70c65f5b950fa2b3cf2",
+      "bytes": 2031
+    },
+    "frontend/src/types.ts": {
+      "sha256": "4bbb82219960802fa80591c1ed4eabee6707eb528e258861bd04461b51d252d2",
+      "bytes": 4319
+    },
+    "frontend/src/vite-env.d.ts": {
+      "sha256": "65996936fbb042915f7b74a200fcdde7e410f32a669b1ab9597cfaa4b0faddb5",
+      "bytes": 38
+    },
+    "frontend/tsconfig.json": {
+      "sha256": "0c30224d102176c8aff5f8bed938bfec35be7998ad2674f33f5208ff7411a437",
+      "bytes": 552
+    },
+    "frontend/vite.config.ts": {
+      "sha256": "ac1093b6b5005393ea77eb6e429fa6cc317b4a2a237ca488ae95962c93f5a764",
+      "bytes": 423
+    }
+  },
+  "artifact_files": {
+    "frontend/dist/assets/index-C4yPfbP-.js": {
+      "sha256": "4dcfa6cb38cfc9fd1904b346bda0dbb50c88f7a4bcdfb52ca82e3e1beeb25bc8",
+      "bytes": 287289
+    },
+    "frontend/dist/assets/index-DumuwBOQ.css": {
+      "sha256": "5706c3e0adac5161d0f40c29f1a1ab7171ad52430c9c4a6577f2d8f16495a7fe",
+      "bytes": 45495
+    },
+    "frontend/dist/index.html": {
+      "sha256": "bcb3416782e0521d2af0508e668aaa5d9266f142c1d7d69a4455f693915ec350",
+      "bytes": 635
+    }
+  },
+  "source_fingerprint": "972f5fad3890a1d98ae75d4096949b644cd6d90d6b4052a16d769f9b816fe39e",
+  "static_assets": {
+    "passed": true,
+    "references": [
+      {
+        "source": "frontend/dist/index.html",
+        "reference": "/assets/index-C4yPfbP-.js",
+        "target": "frontend/dist/assets/index-C4yPfbP-.js",
+        "sha256": "4dcfa6cb38cfc9fd1904b346bda0dbb50c88f7a4bcdfb52ca82e3e1beeb25bc8"
+      },
+      {
+        "source": "frontend/dist/index.html",
+        "reference": "/assets/index-DumuwBOQ.css",
+        "target": "frontend/dist/assets/index-DumuwBOQ.css",
+        "sha256": "5706c3e0adac5161d0f40c29f1a1ab7171ad52430c9c4a6577f2d8f16495a7fe"
+      }
+    ],
+    "external_auto_loaded_resources": []
+  }
+}

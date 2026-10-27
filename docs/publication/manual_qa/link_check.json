@@ -1,0 +1,7 @@
+{
+  "publication_summary": true,
+  "source_evidence_path": "docs/publication/manual_qa/link_check.json",
+  "original_evidence_sha256": "c4e920c5a20531da6f07afebd77242d207616207b6936a1c41c759d0a6fff353",
+  "disclosure": "Explicit public summary of saved local evidence. Machine paths, process identities, browser credentials and uploaded runtime bodies are not redistributed. This is not a newly executed acceptance test.",
+  "all_passed": true
+}

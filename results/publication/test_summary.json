@@ -1,0 +1,30 @@
+{
+  "publication_summary": true,
+  "sources": [
+    {
+      "source": "results/publication/pytest.xml",
+      "source_sha256": "5002af07d1a812cc96fea367cc1b382132ae9faa2d6d262bfd9b8bc73162ca0b",
+      "tests": 413,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "source": "results/publication/packaging_tests.xml",
+      "source_sha256": "9f12bde2fc5567be233df26ee0aef05b311bfad78a52fffbd4bad37978bba971",
+      "tests": 71,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "source": "results/publication/pytest_installation.xml",
+      "source_sha256": "5cd748c0b77a54047ac4fda813b50264e64ede8bf1a4625b19b000f6d1c8e1ec",
+      "tests": 8,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  ],
+  "counting_note": "Packaging/installation subsets overlap with the full suite and are not added to its count. No tests are rerun by summary generation."
+}

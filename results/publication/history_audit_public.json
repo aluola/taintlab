@@ -1,0 +1,348 @@
+{
+  "created_at_utc": "2026-10-27T01:42:00.291187+00:00",
+  "scope": "All reachable refs and every commit tree; each unique blob scanned once as bytes. No history mutation, no remote access, no credential values in output.",
+  "reachable_commits": 5,
+  "unique_blobs": 302,
+  "unique_paths": 244,
+  "unique_blob_bytes": 3828411,
+  "finding_counts": {
+    "noncontact_browser_recording_filename": 49,
+    "nonsecret_cookie_name": 1,
+    "private_environment_path": 73,
+    "simulated_canary": 254
+  },
+  "paths_requiring_review": {
+    "src/taintlab/evaluation/evaluator.py": {
+      "categories": [
+        "simulated_canary"
+      ]
+    },
+    "data/manifest.json": {
+      "categories": [
+        "simulated_canary"
+      ]
+    },
+    "frontend/qa/clean_install_tests.json": {
+      "categories": [
+        "private_environment_path"
+      ]
+    },
+    "docs/qa/render_log.txt": {
+      "categories": [
+        "private_environment_path"
+      ]
+    },
+    "demo/patch_recording_metadata.json": {
+      "categories": [
+        "noncontact_browser_recording_filename"
+      ]
+    },
+    "demo/composition_manifest.json": {
+      "categories": [
+        "noncontact_browser_recording_filename"
+      ]
+    },
+    "docs/qa/document_validation.json": {
+      "categories": [
+        "private_environment_path"
+      ]
+    },
+    "docs/v2/qa/document_validation.json": {
+      "categories": [
+        "private_environment_path"
+      ]
+    },
+    "scripts/verify_video_playback.cjs": {
+      "categories": [
+        "private_environment_path"
+      ]
+    },
+    "docs/interface_contract.md": {
+      "categories": [
+        "simulated_canary"
+      ]
+    },
+    "data/frozen_manifest.json": {
+      "categories": [
+        "simulated_canary"
+      ]
+    },
+    "demo/recording_timing_first_take.json": {
+      "categories": [
+        "noncontact_browser_recording_filename"
+      ]
+    },
+    "docs/v2/qa/render_log.txt": {
+      "categories": [
+        "private_environment_path"
+      ]
+    },
+    "frontend/dist/assets/index-DumuwBOQ.css": {
+      "categories": [
+        "simulated_canary"
+      ]
+    },
+    "data/test.jsonl": {
+      "categories": [
+        "simulated_canary"
+      ]
+    },
+    "data/dev.jsonl": {
+      "categories": [
+        "simulated_canary"
+      ]
+    },
+    "src/taintlab/ui/app.py": {
+      "categories": [
+        "simulated_canary"
+      ]
+    },
+    "docs/qa/structure_validation.json": {
+      "categories": [
+        "private_environment_path"
+      ]
+    },
+    "tests/test_evaluation.py": {
+      "categories": [
+        "simulated_canary"
+      ]
+    },
+    "scripts/build_documents.py": {
+      "categories": [
+        "simulated_canary"
+      ]
+    },
+    "demo/v2/edit_decisions.json": {
+      "categories": [
+        "noncontact_browser_recording_filename"
+      ]
+    },
+    "tests/test_security.py": {
+      "categories": [
+        "simulated_canary"
+      ]
+    },
+    "scripts/browser_smoke.cjs": {
+      "categories": [
+        "private_environment_path"
+      ]
+    },
+    "demo/README.md": {
+      "categories": [
+        "noncontact_browser_recording_filename"
+      ]
+    },
+    "frontend/src/components/AttackPanel.tsx": {
+      "categories": [
+        "simulated_canary"
+      ]
+    },
+    "demo/v2/composition_manifest.json": {
+      "categories": [
+        "noncontact_browser_recording_filename"
+      ]
+    },
+    "frontend/src/components/ResultsPanel.tsx": {
+      "categories": [
+        "simulated_canary"
+      ]
+    },
+    "scripts/record_v2_demo.cjs": {
+      "categories": [
+        "private_environment_path"
+      ]
+    },
+    "data/v2/coverage.json": {
+      "categories": [
+        "simulated_canary"
+      ]
+    },
+    "src/taintlab/web/app.py": {
+      "categories": [
+        "nonsecret_cookie_name"
+      ]
+    },
+    "docs/qa/render_initial_missing_dependency.txt": {
+      "categories": [
+        "private_environment_path"
+      ]
+    },
+    "demo/final_recording_metadata_before_patch.json": {
+      "categories": [
+        "noncontact_browser_recording_filename"
+      ]
+    },
+    "demo/final_recording_metadata.json": {
+      "categories": [
+        "noncontact_browser_recording_filename"
+      ]
+    },
+    "scripts/verify_v2_experiments.py": {
+      "categories": [
+        "simulated_canary"
+      ]
+    },
+    "frontend/dist/assets/index-C4yPfbP-.js": {
+      "categories": [
+        "simulated_canary"
+      ]
+    },
+    "data/v2/test.jsonl": {
+      "categories": [
+        "simulated_canary"
+      ]
+    },
+    "demo/v2/recordings/full_take.json": {
+      "categories": [
+        "noncontact_browser_recording_filename"
+      ]
+    },
+    "frontend/qa/unit_tests.json": {
+      "categories": [
+        "private_environment_path"
+      ]
+    },
+    "frontend/scripts/capture_current_sources.cjs": {
+      "categories": [
+        "private_environment_path"
+      ]
+    },
+    "tests/test_additional_security.py": {
+      "categories": [
+        "simulated_canary"
+      ]
+    },
+    "demo/video_validation.json": {
+      "categories": [
+        "private_environment_path"
+      ]
+    },
+    "demo/recording_timing.json": {
+      "categories": [
+        "noncontact_browser_recording_filename"
+      ]
+    },
+    "tests/test_web_security_review.py": {
+      "categories": [
+        "simulated_canary"
+      ]
+    },
+    "src/taintlab/attacks/external_adapter.py": {
+      "categories": [
+        "simulated_canary"
+      ]
+    },
+    "demo/v2/recordings/results_pickup.json": {
+      "categories": [
+        "noncontact_browser_recording_filename"
+      ]
+    },
+    "frontend/src/styles.css": {
+      "categories": [
+        "simulated_canary"
+      ]
+    },
+    "scripts/write_v2_delivery.py": {
+      "categories": [
+        "simulated_canary"
+      ]
+    },
+    "tests/test_external_canary_controls.py": {
+      "categories": [
+        "simulated_canary"
+      ]
+    },
+    "scripts/record_demo_pickups.cjs": {
+      "categories": [
+        "private_environment_path"
+      ]
+    },
+    "src/taintlab/attacks/interactive.py": {
+      "categories": [
+        "simulated_canary"
+      ]
+    },
+    "frontend/scripts/browser_check.cjs": {
+      "categories": [
+        "private_environment_path"
+      ]
+    },
+    "docs/qa/renderer_environment.json": {
+      "categories": [
+        "private_environment_path"
+      ]
+    },
+    "demo/video_validation_before_patch.json": {
+      "categories": [
+        "noncontact_browser_recording_filename",
+        "private_environment_path"
+      ]
+    },
+    "scripts/verify_model_offline_ui.cjs": {
+      "categories": [
+        "private_environment_path"
+      ]
+    },
+    "demo/recording_timing_second_take.json": {
+      "categories": [
+        "noncontact_browser_recording_filename"
+      ]
+    },
+    "scripts/verify_launcher_ui.cjs": {
+      "categories": [
+        "private_environment_path"
+      ]
+    },
+    "src/taintlab/web/projection.py": {
+      "categories": [
+        "simulated_canary"
+      ]
+    },
+    "data/v2/dev.jsonl": {
+      "categories": [
+        "simulated_canary"
+      ]
+    },
+    "demo/v2/recordings/indirect_pickup.json": {
+      "categories": [
+        "noncontact_browser_recording_filename"
+      ]
+    },
+    "frontend/src/components/SecurityDrawer.tsx": {
+      "categories": [
+        "simulated_canary"
+      ]
+    },
+    "demo/recording_third_take.log": {
+      "categories": [
+        "noncontact_browser_recording_filename",
+        "private_environment_path",
+        "runtime_or_intermediate_evidence_path"
+      ]
+    },
+    "demo/v2/narration_synthesis.json": {
+      "categories": [
+        "private_environment_path"
+      ]
+    },
+    "scripts/record_demo.cjs": {
+      "categories": [
+        "private_environment_path"
+      ]
+    },
+    "src/taintlab/attacks/generator.py": {
+      "categories": [
+        "simulated_canary"
+      ]
+    }
+  },
+  "credential_candidates": 0,
+  "verified_active_credentials": "not_tested_no_network_auth_attempts",
+  "recommendation_reason": "Use a reviewed allowlist snapshot to avoid publishing historical private-environment diagnostics; local paths are not credentials.",
+  "recommendation": "independently_reviewed_snapshot",
+  "limitations": [
+    "Pattern detection does not prove absence of every credential type or secrets hidden in compressed/media data.",
+    "A credential candidate is not a verified active credential. Simulation and obvious fixture values are counted separately.",
+    "Original Git history is preserved; this audit does not authorize pushing it."
+  ]
+}

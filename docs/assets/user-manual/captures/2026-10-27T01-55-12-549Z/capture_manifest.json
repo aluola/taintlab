@@ -1,0 +1,25 @@
+{
+  "project_version": "2.0.0",
+  "captured_at_utc": "2026-10-27T01:55:12.555Z",
+  "viewport": {
+    "width": 1280,
+    "height": 820
+  },
+  "origin": "http://127.0.0.1:8501",
+  "browser_session": "new isolated browser context; cookie and ownership identity not exported",
+  "backend_required": "local_llama_cpp",
+  "figures": [],
+  "scenarios": [],
+  "errors": [
+    {
+      "scenario": "fatal",
+      "error": "Error: browserType.launch: Executable doesn't exist at <USER_HOME>\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1234\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔════════════════════════════════════════════════════════════╗\n║ Looks like Playwright was just installed or updated.       ║\n║ Please run the following command to download new browsers: ║\n║                                                            ║\n║     npx playwright install                                 ║\n║                                                            ║\n║ <3 Playwright Team                                         ║\n╚════════════════════════════════════════════════════════════╝"
+    }
+  ],
+  "blocked_external": [],
+  "assurance": "Actual UI only. No injected DOM, mock response or experiment-state edit. All data and actions are simulated. Screenshots omit browser account and desktop surfaces.",
+  "finished_at_utc": "2026-10-27T01:55:12.573Z",
+  "figure_count": 0,
+  "all_scenarios_completed": true,
+  "privacy_note": "Local user-home prefix in browser installation error redacted; failure preserved."
+}

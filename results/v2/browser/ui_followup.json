@@ -1,0 +1,11 @@
+{
+  "publication_summary": true,
+  "source_evidence_path": "results/v2/browser/ui_followup.json",
+  "original_evidence_sha256": "6817c4c9acbd56532d6881550c6635298ff15fc9a925203c643d3004352c00cb",
+  "disclosure": "Explicit public summary of saved local evidence. Machine paths, process identities, browser credentials and uploaded runtime bodies are not redistributed. This is not a newly executed acceptance test.",
+  "started_at": "2026-10-26T18:05:16.679Z",
+  "scope": "production_UI_layout",
+  "errors": [],
+  "blocked_external": [],
+  "all_passed": true
+}

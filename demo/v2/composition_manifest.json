@@ -1,0 +1,92 @@
+{
+  "project_version": "2.0.0",
+  "created_at": "2026-10-26T18:09:16.436333+00:00",
+  "edl_sha256": "eeb4b504079bc47b01c066c3ad985a816661a3eaeed5a4aacde3ba4be1a76e42",
+  "output": "demo/v2/intermediate/composed.mp4",
+  "output_sha256": "a323617b8ada16583d173283a1e92f7ea2b61519a933a9ffd4141f9544136d46",
+  "duration": 240.0,
+  "cuts": [
+    {
+      "source": "demo/v2/raw/2026-10-26T17-49-45-922Z/page@495c5eb321b5beb3c38e1380c7989e49.webm",
+      "source_sha256": "840a1267cd3fec063c9677ee8feec4949c3f007cea6778743bf58c430c16cb04",
+      "start": 1.96,
+      "duration": 106,
+      "purpose": "Actual UI introduction, real model notification and upload, actual direct attack replay",
+      "output_start": 0,
+      "output_end": 106.0,
+      "actual_source_duration": 248.44
+    },
+    {
+      "source": "demo/v2/raw/2026-10-26T18-00-28-710Z/page@1930a70c07ac3c9207c060177d77e26b.webm",
+      "source_sha256": "e13c2eba0048a596e48af6bd80d0f1a6c5004ff533eff01e6d782f0dbf999158",
+      "start": 4.68,
+      "duration": 6,
+      "purpose": "Actual indirect injection source body replay pickup",
+      "output_start": 106.0,
+      "output_end": 112.0,
+      "actual_source_duration": 24.64
+    },
+    {
+      "source": "demo/v2/raw/2026-10-26T18-00-28-710Z/page@1930a70c07ac3c9207c060177d77e26b.webm",
+      "source_sha256": "e13c2eba0048a596e48af6bd80d0f1a6c5004ff533eff01e6d782f0dbf999158",
+      "start": 10.76,
+      "duration": 8,
+      "purpose": "Same actual run simulated inbox contamination replay pickup",
+      "output_start": 112.0,
+      "output_end": 120.0,
+      "actual_source_duration": 24.64
+    },
+    {
+      "source": "demo/v2/raw/2026-10-26T17-49-45-922Z/page@495c5eb321b5beb3c38e1380c7989e49.webm",
+      "source_sha256": "840a1267cd3fec063c9677ee8feec4949c3f007cea6778743bf58c430c16cb04",
+      "start": 121.96,
+      "duration": 92,
+      "purpose": "Current direct C replay, provenance, actual template previews and baseline metrics",
+      "output_start": 120.0,
+      "output_end": 212.0,
+      "actual_source_duration": 248.44
+    },
+    {
+      "source": "demo/v2/raw/2026-10-26T18-01-30-521Z/page@1e0a00a10dddb20c87ad095965aa2a4d.webm",
+      "source_sha256": "4b2380928b5521655ca6fe049c17ed6b2f19c4b5f4a03f205976dff788c8de4f",
+      "start": 1.96,
+      "duration": 12,
+      "purpose": "Actual completed external campaign metrics pickup",
+      "output_start": 212.0,
+      "output_end": 224.0,
+      "actual_source_duration": 36.16
+    },
+    {
+      "source": "demo/v2/raw/2026-10-26T18-01-30-521Z/page@1e0a00a10dddb20c87ad095965aa2a4d.webm",
+      "source_sha256": "4b2380928b5521655ca6fe049c17ed6b2f19c4b5f4a03f205976dff788c8de4f",
+      "start": 14.08,
+      "duration": 6,
+      "purpose": "Actual policy_only ablation metrics pickup",
+      "output_start": 224.0,
+      "output_end": 230.0,
+      "actual_source_duration": 36.16
+    },
+    {
+      "source": "demo/v2/raw/2026-10-26T18-01-30-521Z/page@1e0a00a10dddb20c87ad095965aa2a4d.webm",
+      "source_sha256": "4b2380928b5521655ca6fe049c17ed6b2f19c4b5f4a03f205976dff788c8de4f",
+      "start": 20.24,
+      "duration": 10,
+      "purpose": "Actual costs and limits pickup",
+      "output_start": 230.0,
+      "output_end": 240.0,
+      "actual_source_duration": 36.16
+    }
+  ],
+  "assurance": "Actual UI recording and explicitly marked actual replay pickups. Navigation waits trimmed; no speed changes, state edits, fabricated frames or artificial extension.",
+  "final_caption_revision": {
+    "checked_at_utc": "2026-10-26T18:31:01.965812+00:00",
+    "composition_time_edl_sha256": "5fe73d7b7d2daf9cf742bfa207a0b47455fb827783089b28e16c3815a0336fb9",
+    "final_edl_sha256": "eeb4b504079bc47b01c066c3ad985a816661a3eaeed5a4aacde3ba4be1a76e42",
+    "changed_fields": [
+      "caption_placements"
+    ],
+    "verified_cuts_identical": true,
+    "verified_composed_media_unchanged": true,
+    "explanation": "After inspecting the first encoded video, the subtitle in 224–230 s was moved to top_y=82 to keep the policy_only row visible. This is a final encoding overlay change, not a new source edit. All 7 cut dictionaries match the composition log and the composed MP4 retains its SHA256. Final video was re-encoded, revalidated and replayed."
+  }
+}

@@ -1,0 +1,6 @@
+node_modules/
+*.tsbuildinfo
+.vite/
+coverage/
+.validation-build/
+.validation-target.txt

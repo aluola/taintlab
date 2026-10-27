@@ -1,0 +1,11 @@
+{
+  "publication_summary": true,
+  "source_evidence_path": "frontend/qa/unit_tests.json",
+  "original_evidence_sha256": "534657be6033b8c2f8567ba7e3a7d70d5c8c4799ffc7b6e5d81247db77596914",
+  "disclosure": "Explicit public summary of saved local evidence. Machine paths, process identities, browser credentials and uploaded runtime bodies are not redistributed. This is not a newly executed acceptance test.",
+  "numTotalTests": 31,
+  "numPassedTests": 31,
+  "numFailedTests": 0,
+  "numPendingTests": 0,
+  "success": true
+}

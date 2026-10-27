@@ -1,0 +1,85 @@
+{
+  "publication_summary": true,
+  "source_evidence_path": "demo/playback_validation.json",
+  "original_evidence_sha256": "fb6543070c6b01ae7d74e3255125c07f254765757b4336607e39fb1e073e650f",
+  "disclosure": "Explicit public summary of saved local evidence. Machine paths, process identities, browser credentials and uploaded runtime bodies are not redistributed. This is not a newly executed acceptance test.",
+  "checked_at": "2026-10-26T18:20:39.612Z",
+  "metadata": {
+    "duration": 240,
+    "width": 1600,
+    "height": 900,
+    "h264Support": "probably"
+  },
+  "samples": [
+    {
+      "requested": 0.5,
+      "time": 1.020618,
+      "readyState": 4,
+      "paused": false,
+      "error": null,
+      "quality": {
+        "totalVideoFrames": 35,
+        "droppedVideoFrames": 0
+      }
+    },
+    {
+      "requested": 75,
+      "time": 75.516542,
+      "readyState": 4,
+      "paused": false,
+      "error": null,
+      "quality": {
+        "totalVideoFrames": 57,
+        "droppedVideoFrames": 0
+      }
+    },
+    {
+      "requested": 130,
+      "time": 130.508028,
+      "readyState": 4,
+      "paused": false,
+      "error": null,
+      "quality": {
+        "totalVideoFrames": 128,
+        "droppedVideoFrames": 0
+      }
+    },
+    {
+      "requested": 169,
+      "time": 169.510036,
+      "readyState": 4,
+      "paused": false,
+      "error": null,
+      "quality": {
+        "totalVideoFrames": 369,
+        "droppedVideoFrames": 0
+      }
+    },
+    {
+      "requested": 190,
+      "time": 190.513236,
+      "readyState": 4,
+      "paused": false,
+      "error": null,
+      "quality": {
+        "totalVideoFrames": 490,
+        "droppedVideoFrames": 0
+      }
+    },
+    {
+      "requested": 238,
+      "time": 238.508964,
+      "readyState": 4,
+      "paused": false,
+      "error": null,
+      "quality": {
+        "totalVideoFrames": 651,
+        "droppedVideoFrames": 0
+      }
+    }
+  ],
+  "blocked_external_origins": [],
+  "video_sha256": "5c93923145546a05b09f2e9eb6d4f82d25a306fed81badab16eb37a9baa1fc27",
+  "all_passed": true,
+  "project_version": "2.0.0"
+}

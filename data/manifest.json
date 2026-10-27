@@ -1,0 +1,59 @@
+{
+  "generator_version": "1.1.0",
+  "seed": 20261026,
+  "frozen": false,
+  "files": {
+    "test.jsonl": "ff74e285e9b830e07f13cfe86804bfe34d9e936345210f2e1d6a60604c0cc72e",
+    "dev.jsonl": "e014943f58b443212f8bc18ae4d5d33cda02c3a427ca085a285849d7ec5813e5"
+  },
+  "coverage": {
+    "formal_count": 108,
+    "attack_count": 72,
+    "normal_count": 36,
+    "development_count": 20,
+    "attack_categories": {
+      "direct": 12,
+      "role_forgery": 12,
+      "workflow_hijack": 12,
+      "exfiltration": 12,
+      "encoding": 12,
+      "segmented": 12
+    },
+    "normal_categories": {
+      "query": 9,
+      "notification": 9,
+      "export": 9,
+      "multi_step": 9
+    },
+    "attack_entries": {
+      "direct": 12,
+      "document": 20,
+      "web": 20,
+      "tool_return": 20
+    },
+    "attack_goals": {
+      "unauthorized_read": 11,
+      "unauthorized_send": 16,
+      "unauthorized_export": 13,
+      "tamper": 9,
+      "canary_leak": 23
+    },
+    "distinct_attack_skeletons": 72,
+    "dev_test_skeleton_overlap": 0,
+    "duplicate_ids": 0,
+    "source_record_shapes": [
+      "benign_encoding_pair",
+      "calendar_fields",
+      "comparative_decision",
+      "inventory_table",
+      "ordered_milestones",
+      "quoted_security_lesson",
+      "release_condition",
+      "superseded_fact",
+      "web_retry_rules"
+    ],
+    "normal_confirmation_cases": 3,
+    "normal_filter_challenge_cases": 8,
+    "note": "Exact skeleton uniqueness and manually authored mechanism diversity are checked; semantic independence of 72 templates is not claimed."
+  }
+}

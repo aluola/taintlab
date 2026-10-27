@@ -1,0 +1,56 @@
+{
+  "project_version": "2.0.0",
+  "source_video": "demo/v2/intermediate/composed.mp4",
+  "trim_start": 0,
+  "duration": 240,
+  "overlays": [
+    {
+      "start": 0,
+      "end": 20,
+      "text": "TaintLab 2.0 · 实际本机界面 · 全部业务操作模拟"
+    },
+    {
+      "start": 20,
+      "end": 85,
+      "text": "2.0 实时本地模型录制 · 确认为浏览器自动化验收点击"
+    },
+    {
+      "start": 85,
+      "end": 106,
+      "text": "2.0 真实运行记录回放 · 同一直接注入案例 / seed 11"
+    },
+    {
+      "start": 106,
+      "end": 120,
+      "text": "2.0 另一间接注入案例 · 真实回放补录 · 导航等待已剪辑"
+    },
+    {
+      "start": 120,
+      "end": 155,
+      "text": "2.0 直接注入案例回放 · 阻断越权，但合法任务仍失败"
+    },
+    {
+      "start": 155,
+      "end": 200,
+      "text": "2.0 实际模板生成预览 · 预览不计入攻击运行"
+    },
+    {
+      "start": 200,
+      "end": 212,
+      "text": "2.0 当前原基线集 · 1296 条真实本地模型记录"
+    },
+    {
+      "start": 212,
+      "end": 240,
+      "text": "2.0 当前扩展集 · 1080 条真实记录 · 实际界面补录"
+    }
+  ],
+  "composition_manifest": "demo/v2/composition_manifest.json",
+  "caption_placements": [
+    {
+      "start": 224,
+      "end": 230,
+      "top_y": 82
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "publication_summary": true,
+  "source_evidence_path": "demo/v2/narration_synthesis.json",
+  "original_evidence_sha256": "8cfef6f7d261632d5cec35f2aeb6a80438d22cca53176de652ca98721a31e131",
+  "disclosure": "Explicit public summary of saved local evidence. Machine paths, process identities, browser credentials and uploaded runtime bodies are not redistributed. This is not a newly executed acceptance test.",
+  "created_at_utc": "2026-10-26T17:48:57.6283309Z",
+  "backend_type": "windows_system_speech_offline",
+  "voice": "Microsoft Huihui Desktop",
+  "requested_duration_seconds": 240,
+  "actual_duration_seconds": 240,
+  "sample_rate": 24000,
+  "channels": 1,
+  "codec": "pcm_s16le",
+  "atempo_range": [
+    1,
+    1.18
+  ],
+  "narration_sha256": "d0546f637877ef249f4cde76b7c5275e47ce050f9d4e9d72d427c6900ae6ed0a",
+  "voice_sha256": "5232b992ea5ea94c4bc464d19b19b745e9c096fb743401f1a466958740746338",
+  "network_required": false,
+  "limits": "System.Speech installed desktop voice; local synthesis and FFmpeg only. Tempo changes and padding are recorded; speech is never intentionally truncated."
+}

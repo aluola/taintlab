@@ -1,0 +1,433 @@
+{
+  "project_version": "2.0.0",
+  "reviewed_at_utc": "2026-10-26T18:34:55.675124+00:00",
+  "all_passed": true,
+  "total_pages": 24,
+  "reviewed_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24
+  ],
+  "changed_pages_reopened": [
+    20
+  ],
+  "unchanged_reviewed_pages_reused": 23,
+  "artifact_hashes": {
+    "docx_sha256": "1223f4fa9dde5cc161b5b41d576710eaa61d0f68c2a4ec830f70b02309fb007a",
+    "pdf_sha256": "f248704c0f8263b7cabcdc7ca08c17f2e50c42b8ac12900a1f0e5ba7c074439f",
+    "source_markdown_sha256": "5e974738c9c1771c232ba02cc18475d53db40dc6485b8cead0dfd2b6505878f4"
+  },
+  "method": "Two agents inspected all 24 rendered pages individually at original detail. The final test-count-only render changed page 20; primary agent re-opened that complete page. Other 23 PNGs are byte-identical to the reviewed pages. Structural checks are separate.",
+  "pages": [
+    {
+      "page": 1,
+      "file": "docs/v2/qa/render/page-1.png",
+      "sha256": "d581da42186408e02afa36988f6866f47ba3d125527573fb9b1c2751c62144b4",
+      "width": 1414,
+      "height": 2000,
+      "view_detail": "original",
+      "inspected_entire_page": true,
+      "conclusion": "pass",
+      "observations": [
+        "完整标题、2.0副标题、版本日期、成员待补充和范围声明均可读。",
+        "黑色双行标题未裁切；页脚第1页正常。"
+      ],
+      "previous_sha256": "d581da42186408e02afa36988f6866f47ba3d125527573fb9b1c2751c62144b4",
+      "unchanged_since_previous_review": true,
+      "review_action": "Identical PNG SHA256: reuse the documented actual original-size visual review."
+    },
+    {
+      "page": 2,
+      "file": "docs/v2/qa/render/page-2.png",
+      "sha256": "2ba91e744c741490d435291657a746bbde71e459280e8f47045c107362591804",
+      "width": 1414,
+      "height": 2000,
+      "view_detail": "original",
+      "inspected_entire_page": true,
+      "conclusion": "pass",
+      "observations": [
+        "已重新逐张original查看24页版目录；第12至15章起始页依次更新为21、22、23、24。",
+        "15项点引导和页码清楚，无溢出；另逐项与最新PDF对应页正文标题核对一致。"
+      ],
+      "previous_sha256": "2ba91e744c741490d435291657a746bbde71e459280e8f47045c107362591804",
+      "unchanged_since_previous_review": false,
+      "review_action": "Identical PNG SHA256: reuse the documented actual original-size visual review."
+    },
+    {
+      "page": 3,
+      "file": "docs/v2/qa/render/page-3.png",
+      "sha256": "b5cd674ee0eb50863d6291a8e79bcffab3d0c3ae28e5c148ac7c76d5d4ceb7da",
+      "width": 1414,
+      "height": 2000,
+      "view_detail": "original",
+      "inspected_entire_page": true,
+      "conclusion": "pass",
+      "observations": [
+        "六项能力映射表标题和单元格完整；换行未压住边框。",
+        "本地模拟边界正文和页脚第3页清楚。"
+      ],
+      "previous_sha256": "b5cd674ee0eb50863d6291a8e79bcffab3d0c3ae28e5c148ac7c76d5d4ceb7da",
+      "unchanged_since_previous_review": true,
+      "review_action": "Identical PNG SHA256: reuse the documented actual original-size visual review."
+    },
+    {
+      "page": 4,
+      "file": "docs/v2/qa/render/page-4.png",
+      "sha256": "cd8ef6c6d67baf085e636011353e8c4b11fd4617efc31ab5bd81e5fd6e84915e",
+      "width": 1414,
+      "height": 2000,
+      "view_detail": "original",
+      "inspected_entire_page": true,
+      "conclusion": "pass",
+      "observations": [
+        "模型文件、实际参数量、revision、权重SHA256和模板SHA256均完整显示；长串合理换行。",
+        "权重SHA256另与固定模型配置文本核对一致；表格无截行，工具链交叉引用已改第11章。"
+      ],
+      "previous_sha256": "cd8ef6c6d67baf085e636011353e8c4b11fd4617efc31ab5bd81e5fd6e84915e",
+      "unchanged_since_previous_review": true,
+      "review_action": "Identical PNG SHA256: reuse the documented actual original-size visual review."
+    },
+    {
+      "page": 5,
+      "file": "docs/v2/qa/render/page-5.png",
+      "sha256": "4fb67e67c77fdf0bf13223524901533cb9a063f375ab46d27abf246a64b31b75",
+      "width": 1414,
+      "height": 2000,
+      "view_detail": "original",
+      "inspected_entire_page": true,
+      "conclusion": "pass_with_scope_note",
+      "observations": [
+        "硬件与非官方界面参考说明可读，无缺字；页脚第5页正常。",
+        "本页为第2章续页，只有两段，保留章起新页版式导致较大空白；未发现内容丢失。"
+      ],
+      "previous_sha256": "4fb67e67c77fdf0bf13223524901533cb9a063f375ab46d27abf246a64b31b75",
+      "unchanged_since_previous_review": true,
+      "review_action": "Identical PNG SHA256: reuse the documented actual original-size visual review."
+    },
+    {
+      "page": 6,
+      "file": "docs/v2/qa/render/page-6.png",
+      "sha256": "ea2d2b7bc0e762abe93871c4a0199e79386a679b5ad959f03e9aea9d0c24400e",
+      "width": 1414,
+      "height": 2000,
+      "view_detail": "original",
+      "inspected_entire_page": true,
+      "conclusion": "pass_with_scope_note",
+      "observations": [
+        "会话、停止与历史标签说明完整；图1整体布局及主要导航/快捷工具清楚。",
+        "图注和图像留在同页，无拉伸或越界；截图中的次要UI小字较小，不用其承担独立技术细节。"
+      ],
+      "previous_sha256": "ea2d2b7bc0e762abe93871c4a0199e79386a679b5ad959f03e9aea9d0c24400e",
+      "unchanged_since_previous_review": true,
+      "review_action": "Identical PNG SHA256: reuse the documented actual original-size visual review."
+    },
+    {
+      "page": 7,
+      "file": "docs/v2/qa/render/page-7.png",
+      "sha256": "240279472d4e61a6060b10b958f3c4866ba18db8436093321cfba9bf42559ca0",
+      "width": 1414,
+      "height": 2000,
+      "view_detail": "original",
+      "inspected_entire_page": true,
+      "conclusion": "pass_with_scope_note",
+      "observations": [
+        "实际pending通知截图中team_A、待确认状态和两个操作按钮可识别；图注说明尚未执行。",
+        "图像为真实宽屏页面缩放，细正文小于报告正文字号；作为状态示例，不替代第6章机制说明。"
+      ],
+      "previous_sha256": "240279472d4e61a6060b10b958f3c4866ba18db8436093321cfba9bf42559ca0",
+      "unchanged_since_previous_review": true,
+      "review_action": "Identical PNG SHA256: reuse the documented actual original-size visual review."
+    },
+    {
+      "page": 8,
+      "file": "docs/v2/qa/render/page-8.png",
+      "sha256": "4a14b6c1151b64e093718c44b40c59e71d79873ed2816afc3ec305a02ad890da",
+      "width": 1414,
+      "height": 2000,
+      "view_detail": "original",
+      "inspected_entire_page": true,
+      "conclusion": "pass",
+      "observations": [
+        "上传限制表的2MiB、8MiB/128条目、8秒、50页、10000/1200字符均完整可读。",
+        "标签字段及继承说明无溢出或缺字，页脚第8页正确。"
+      ],
+      "previous_sha256": "4a14b6c1151b64e093718c44b40c59e71d79873ed2816afc3ec305a02ad890da",
+      "unchanged_since_previous_review": true,
+      "review_action": "Identical PNG SHA256: reuse the documented actual original-size visual review."
+    },
+    {
+      "page": 9,
+      "file": "docs/v2/qa/render/page-9.png",
+      "sha256": "962806b1d31e429bf962ad97f2bb937a3f0d08e994291e2bfe5057046aefefde",
+      "width": 1414,
+      "height": 2000,
+      "view_detail": "original",
+      "inspected_entire_page": true,
+      "conclusion": "pass_with_scope_note",
+      "observations": [
+        "已重新逐张original查看，正文和截图没有新增裁切或排版变化。",
+        "图3标题已明确“当前2.0来源图的横向可滚动局部”，且潜在依赖不等于内部因果；符合截图只含局部节点的实际范围。"
+      ],
+      "previous_sha256": "962806b1d31e429bf962ad97f2bb937a3f0d08e994291e2bfe5057046aefefde",
+      "unchanged_since_previous_review": false,
+      "review_action": "Identical PNG SHA256: reuse the documented actual original-size visual review."
+    },
+    {
+      "page": 10,
+      "file": "docs/v2/qa/render/page-10.png",
+      "sha256": "b3728fe5e902ce704363ef6e802b127fcb15dcd6985dcb8e404454e97da65c43",
+      "width": 1414,
+      "height": 2000,
+      "view_detail": "original",
+      "inspected_entire_page": true,
+      "conclusion": "pass",
+      "observations": [
+        "确认仅限启用权限策略且TaskGrant要求确认，none/input_filter例外和预览脱敏说明均已修正。",
+        "参数哈希、一次性确认、浏览器边界和投影用途文字可读，无排版碰撞。"
+      ],
+      "previous_sha256": "b3728fe5e902ce704363ef6e802b127fcb15dcd6985dcb8e404454e97da65c43",
+      "unchanged_since_previous_review": true,
+      "review_action": "Identical PNG SHA256: reuse the documented actual original-size visual review."
+    },
+    {
+      "page": 11,
+      "file": "docs/v2/qa/render/page-11.png",
+      "sha256": "12f8b480c29965195278c62a457e8f268d2767a576925a6b9bb1fc74c634cc94",
+      "width": 1414,
+      "height": 2000,
+      "view_detail": "original",
+      "inspected_entire_page": true,
+      "conclusion": "pass",
+      "observations": [
+        "72/36、60/30、9/4样本表清楚，正式数据SHA256完整且未超出边距。",
+        "BIPIA范围、InjecAgent机制映射及local_control区分清楚；许可与独立样本限制没有被分页截断。"
+      ],
+      "previous_sha256": "12f8b480c29965195278c62a457e8f268d2767a576925a6b9bb1fc74c634cc94",
+      "unchanged_since_previous_review": true,
+      "review_action": "Identical PNG SHA256: reuse the documented actual original-size visual review."
+    },
+    {
+      "page": 12,
+      "file": "docs/v2/qa/render/page-12.png",
+      "sha256": "51fc4169a478bf096cb7b73e51bf9a391790888ec84cd17f5950ef1e4dfc6358",
+      "width": 1414,
+      "height": 2000,
+      "view_detail": "original",
+      "inspected_entire_page": true,
+      "conclusion": "pass",
+      "observations": [
+        "Canary放置、配对、检测边界及分母口径完整可读。",
+        "自动与确认辅助、失败/pending排除口径明确，页脚第12页正常。"
+      ],
+      "previous_sha256": "51fc4169a478bf096cb7b73e51bf9a391790888ec84cd17f5950ef1e4dfc6358",
+      "unchanged_since_previous_review": true,
+      "review_action": "Identical PNG SHA256: reuse the documented actual original-size visual review."
+    },
+    {
+      "page": 13,
+      "file": "docs/v2/qa/render/page-13.png",
+      "sha256": "3fa51f2c932bb4c32f4cdd06c230c9e6bcdfd9ce1dbeda4141fcebfa311057a0",
+      "width": 1414,
+      "height": 2000,
+      "view_detail": "original",
+      "inspected_entire_page": true,
+      "conclusion": "pass",
+      "observations": [
+        "主指标表、ASR分母和正常完成统计可读。"
+      ],
+      "previous_sha256": "3fa51f2c932bb4c32f4cdd06c230c9e6bcdfd9ce1dbeda4141fcebfa311057a0",
+      "review_action": "Identical PNG SHA256: reuse the documented actual original-size visual review."
+    },
+    {
+      "page": 14,
+      "file": "docs/v2/qa/render/page-14.png",
+      "sha256": "c8c785914725888a4d41433377695ad13760586b7a375c46659c9472f11e3985",
+      "width": 1414,
+      "height": 2000,
+      "view_detail": "original",
+      "inspected_entire_page": true,
+      "conclusion": "pass",
+      "observations": [
+        "分种子表及开销完整，续表保留表头。"
+      ],
+      "previous_sha256": "c8c785914725888a4d41433377695ad13760586b7a375c46659c9472f11e3985",
+      "review_action": "Identical PNG SHA256: reuse the documented actual original-size visual review."
+    },
+    {
+      "page": 15,
+      "file": "docs/v2/qa/render/page-15.png",
+      "sha256": "d993a22409d61574a56fe25d9d9d16ebfda7eb49c0f4f8ed2903908d871c1df4",
+      "width": 1414,
+      "height": 2000,
+      "view_detail": "original",
+      "inspected_entire_page": true,
+      "conclusion": "pass",
+      "observations": [
+        "分种子续表末行和基线图表可读，图注完整。"
+      ],
+      "previous_sha256": "d993a22409d61574a56fe25d9d9d16ebfda7eb49c0f4f8ed2903908d871c1df4",
+      "review_action": "Identical PNG SHA256: reuse the documented actual original-size visual review."
+    },
+    {
+      "page": 16,
+      "file": "docs/v2/qa/render/page-16.png",
+      "sha256": "f509cfce94a2fd78708baa058154d018de866caa8a4e219d4bb01e848489564c",
+      "width": 1414,
+      "height": 2000,
+      "view_detail": "original",
+      "inspected_entire_page": true,
+      "conclusion": "pass",
+      "observations": [
+        "扩展三配置及消融指标表完整。"
+      ],
+      "previous_sha256": "f509cfce94a2fd78708baa058154d018de866caa8a4e219d4bb01e848489564c",
+      "review_action": "Identical PNG SHA256: reuse the documented actual original-size visual review."
+    },
+    {
+      "page": 17,
+      "file": "docs/v2/qa/render/page-17.png",
+      "sha256": "2a75bbbb7a9938541766d84ae142e7ea163e3bec5d46e1b22df776b19bf0584c",
+      "width": 1414,
+      "height": 2000,
+      "view_detail": "original",
+      "inspected_entire_page": true,
+      "conclusion": "pass",
+      "observations": [
+        "扩展分种子和开销表无溢出。"
+      ],
+      "previous_sha256": "2a75bbbb7a9938541766d84ae142e7ea163e3bec5d46e1b22df776b19bf0584c",
+      "review_action": "Identical PNG SHA256: reuse the documented actual original-size visual review."
+    },
+    {
+      "page": 18,
+      "file": "docs/v2/qa/render/page-18.png",
+      "sha256": "7045a479fb15436485e5cee24e91233fb8c7aaea4fc77bb5dbe262372767e1f5",
+      "width": 1414,
+      "height": 2000,
+      "view_detail": "original",
+      "inspected_entire_page": true,
+      "conclusion": "pass",
+      "observations": [
+        "扩展图和独立收益限制可读。"
+      ],
+      "previous_sha256": "7045a479fb15436485e5cee24e91233fb8c7aaea4fc77bb5dbe262372767e1f5",
+      "review_action": "Identical PNG SHA256: reuse the documented actual original-size visual review."
+    },
+    {
+      "page": 19,
+      "file": "docs/v2/qa/render/page-19.png",
+      "sha256": "55d775b4218f42cacb65c8fc5d1adcaf2bb182e02c45c7a34ea292533dfddcc1",
+      "width": 1414,
+      "height": 2000,
+      "view_detail": "original",
+      "inspected_entire_page": true,
+      "conclusion": "pass",
+      "observations": [
+        "实际开发与修复记录可读。"
+      ],
+      "previous_sha256": "55d775b4218f42cacb65c8fc5d1adcaf2bb182e02c45c7a34ea292533dfddcc1",
+      "review_action": "Identical PNG SHA256: reuse the documented actual original-size visual review."
+    },
+    {
+      "page": 20,
+      "file": "docs/v2/qa/render/page-20.png",
+      "sha256": "71d8d2f6cb4336c04220da127405b4a195c0442b79a76b4ce7a0687a467cf4f8",
+      "width": 1414,
+      "height": 2000,
+      "view_detail": "original",
+      "inspected_entire_page": true,
+      "conclusion": "pass",
+      "observations": [
+        "最终397项通过、0失败0错误0跳过与JUnit一致；完整页可读，表格与页脚没有溢出。"
+      ],
+      "previous_sha256": "c7f5713b95a4edf18fd181f1d8de607931d821b47816dfb0af03573b0991e159",
+      "review_action": "Re-opened final 397-test page at original detail; full text/table/footer checked after final render."
+    },
+    {
+      "page": 21,
+      "file": "docs/v2/qa/render/page-21.png",
+      "sha256": "9f500dc804773c986e8601d3d1693a002c606753e4e2dc2df5d450be412c9876",
+      "width": 1414,
+      "height": 2000,
+      "view_detail": "original",
+      "inspected_entire_page": true,
+      "conclusion": "pass",
+      "observations": [
+        "视频交付及运行命令完整，页脚正确。"
+      ],
+      "previous_sha256": "9f500dc804773c986e8601d3d1693a002c606753e4e2dc2df5d450be412c9876",
+      "review_action": "Identical PNG SHA256: reuse the documented actual original-size visual review."
+    },
+    {
+      "page": 22,
+      "file": "docs/v2/qa/render/page-22.png",
+      "sha256": "49d3cda07c67a00e3bb725247e8a674a99fd486d31068aa932e53fc5fa435655",
+      "width": 1414,
+      "height": 2000,
+      "view_detail": "original",
+      "inspected_entire_page": true,
+      "conclusion": "pass",
+      "observations": [
+        "轻量交付、哈希sidecar与版本边界可读。"
+      ],
+      "previous_sha256": "49d3cda07c67a00e3bb725247e8a674a99fd486d31068aa932e53fc5fa435655",
+      "review_action": "Identical PNG SHA256: reuse the documented actual original-size visual review."
+    },
+    {
+      "page": 23,
+      "file": "docs/v2/qa/render/page-23.png",
+      "sha256": "39c25b9d3ee6364e8230ec32d02550268e42d935daf5526932905cf2e03abab8",
+      "width": 1414,
+      "height": 2000,
+      "view_detail": "original",
+      "inspected_entire_page": true,
+      "conclusion": "pass",
+      "observations": [
+        "成员待补充表格完整，没有虚构姓名或工时。"
+      ],
+      "previous_sha256": "39c25b9d3ee6364e8230ec32d02550268e42d935daf5526932905cf2e03abab8",
+      "review_action": "Identical PNG SHA256: reuse the documented actual original-size visual review."
+    },
+    {
+      "page": 24,
+      "file": "docs/v2/qa/render/page-24.png",
+      "sha256": "6c83c997c21d689dc589f325bb8918dca828779d20eb937011a494270afceb37",
+      "width": 1414,
+      "height": 2000,
+      "view_detail": "original",
+      "inspected_entire_page": true,
+      "conclusion": "pass",
+      "observations": [
+        "研究限制及参考来源清楚，无裁切。"
+      ],
+      "previous_sha256": "6c83c997c21d689dc589f325bb8918dca828779d20eb937011a494270afceb37",
+      "review_action": "Identical PNG SHA256: reuse the documented actual original-size visual review."
+    }
+  ],
+  "limitations": [
+    "Screenshots demonstrate actual layout; secondary small UI text does not replace the written technical explanation.",
+    "The source graph figure is explicitly a horizontally scrollable partial view.",
+    "Some chapters start on a new page, so continuation pages can have substantial white space; no content was missing."
+  ]
+}

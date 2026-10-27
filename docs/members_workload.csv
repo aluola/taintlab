@@ -1,0 +1,5 @@
+工作包,姓名,学号,计划负责人,实际贡献者,预计工时,真实工时,任务证据,AI辅助说明
+核心运行时与模拟工具,待补充,待补充,待补充,待补充,待补充,待补充,src/taintlab/agent src/taintlab/model src/taintlab/tools,实际实现由Codex辅助 人工贡献待填写
+安全机制与安全测试,待补充,待补充,待补充,待补充,待补充,待补充,src/taintlab/policy src/taintlab/provenance tests/test_security.py,实际实现由Codex辅助 人工贡献待填写
+数据集与实验评测,待补充,待补充,待补充,待补充,待补充,待补充,data src/taintlab/evaluation results,实际实现由Codex辅助 人工贡献待填写
+界面文档与演示交付,待补充,待补充,待补充,待补充,待补充,待补充,src/taintlab/ui docs demo,实际实现由Codex辅助 人工贡献待填写

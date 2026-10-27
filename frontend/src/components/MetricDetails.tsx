@@ -1,0 +1,15 @@
+import type { Campaign, Mode } from '../types';
+import { MODES, percent, text } from '../format';
+import { countLabel, numberLabel } from '../metrics';
+import { Icon } from './Icon';
+export function MetricDetails({ campaign, modes }: { campaign: Campaign; modes: Mode[] }) {
+  const groups = campaign.summary.modes ?? {};
+  return <details className="surface detailed-metrics"><summary>分项指标、接触率与执行开销 <Icon name="chevron" size={15} /></summary><div className="metric-details-content">
+    <h3>攻击接触与失败状态</h3><div className="table-scroll"><table><thead><tr><th>配置</th><th>直接 ASR</th><th>间接 ASR</th><th>攻击被读取</th><th>进入模型</th><th>未接触数</th><th>解析失败运行 / 次数</th><th>超时 / 耗尽 / pending</th></tr></thead><tbody>{modes.map(mode => { const g = groups[mode]; return <tr key={mode}><th>{MODES[mode].short}</th><td>{percent(g.direct_asr)}</td><td>{percent(g.indirect_asr)}</td><td>{percent(g.attack_read_rate)}</td><td>{percent(g.attack_entered_model_rate)}</td><td>{numberLabel(g.attack_not_exposed_count)}</td><td>{numberLabel(g.parse_failure_runs)} / {numberLabel(g.parse_failure_count)}</td><td>{numberLabel(g.timeout_count)} / {numberLabel(g.exhausted_count)} / {numberLabel(g.pending_count)}</td></tr>; })}</tbody></table></div>
+    <h3>正常任务可用性</h3><div className="table-scroll"><table><thead><tr><th>配置</th><th>自动完成</th><th>人工辅助完成</th><th>正常运行出现阻断</th><th>输入过滤命中</th><th>正常任务阻断原因</th></tr></thead><tbody>{modes.map(mode => { const g = groups[mode]; return <tr key={mode}><th>{MODES[mode].short}</th><td>{percent(g.normal_automatic_completion_rate)}<small className="metric-count">{countLabel(g.normal_automatic_completion_rate, g.normal_runs)}</small></td><td>{percent(g.normal_assisted_completion_rate)}<small className="metric-count">{countLabel(g.normal_assisted_completion_rate, g.normal_runs)}</small></td><td>{percent(g.normal_blocked_rate)}</td><td>{percent(g.normal_input_filtered_rate)}</td><td className="reason-cell"><pre>{text(g.normal_block_reasons)}</pre></td></tr>; })}</tbody></table></div>
+    <p className="detail-note">出现阻断不自动等于防御误报：例如未知对象、模型参数错误也可能导致阻断，应结合原因和实际任务结果分析。pending 不计为自动或辅助完成。</p>
+    <h3>实际执行开销</h3><div className="table-scroll"><table><thead><tr><th>配置</th><th>平均 / 累计秒</th><th>输入 token</th><th>输出 token</th><th>工具调用</th><th>模型回执 / 尝试</th><th>确认事件</th></tr></thead><tbody>{modes.map(mode => { const g = groups[mode]; return <tr key={mode}><th>{MODES[mode].short}</th><td>{numberLabel(g.mean_elapsed_seconds, 2)} / {numberLabel(g.total_elapsed_seconds, 2)}</td><td>{numberLabel(g.total_prompt_tokens)}</td><td>{numberLabel(g.total_completion_tokens)}</td><td>{numberLabel(g.total_tool_calls)}</td><td>{numberLabel(g.total_model_calls)} / {numberLabel(g.total_model_attempts)}</td><td>{numberLabel(g.total_confirmations)}</td></tr>; })}</tbody></table></div>
+    <p className="detail-note">token 为本地服务实际返回的已知用量；失败且未返回 usage 的请求用量未知。累计运行耗时不等于并行实验的墙钟耗时，工具时长也不等于成员工时。</p>
+    <details className="audit-detail"><summary>分种子、分类型与完整汇总 JSON</summary><pre>{text(campaign.summary)}</pre></details><details className="audit-detail"><summary>真实实验配置与运行清单</summary><pre>{text(campaign.manifest)}</pre></details>
+  </div></details>;
+}

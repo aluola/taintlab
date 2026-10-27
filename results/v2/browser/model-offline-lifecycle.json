@@ -1,0 +1,9 @@
+{
+  "publication_summary": true,
+  "source_evidence_path": "results/v2/browser/model-offline-lifecycle.json",
+  "original_evidence_sha256": "c2b0056f04f154a64b616e2c7ab98267f0acc726d8b687367e3dd6a47f69ed0e",
+  "disclosure": "Explicit public summary of saved local evidence. Machine paths, process identities, browser credentials and uploaded runtime bodies are not redistributed. This is not a newly executed acceptance test.",
+  "started_at": "2026-10-26T17:47:17.348071+00:00",
+  "all_passed": true,
+  "scope": "Stop fully identified project model only, inspect real isolated browser UI, restore model while retaining UI process. No mock inference or system network changes."
+}

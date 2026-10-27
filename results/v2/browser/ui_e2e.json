@@ -1,0 +1,11 @@
+{
+  "publication_summary": true,
+  "source_evidence_path": "results/v2/browser/ui_e2e.json",
+  "original_evidence_sha256": "8b5c214c929669ebc12968871a65812b4aa9f213ec47effe1345decffa43e88d",
+  "disclosure": "Explicit public summary of saved local evidence. Machine paths, process identities, browser credentials and uploaded runtime bodies are not redistributed. This is not a newly executed acceptance test.",
+  "started_at": "2026-10-26T17:12:36.626Z",
+  "scope": "production_UI_real_local_model",
+  "errors": [],
+  "blocked_external": [],
+  "all_passed": false
+}

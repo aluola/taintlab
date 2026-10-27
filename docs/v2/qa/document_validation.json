@@ -1,0 +1,37 @@
+{
+  "publication_summary": true,
+  "source_evidence_path": "docs/qa/document_validation.json",
+  "original_evidence_sha256": "8adb9a7f6c134d76e88c9717ed77cf9c5b8c26d4c0dd7b49ca4f1ddbb55504ef",
+  "disclosure": "Explicit public summary of saved local evidence. Machine paths, process identities, browser credentials and uploaded runtime bodies are not redistributed. This is not a newly executed acceptance test.",
+  "project_version": "2.0.0",
+  "generated_at": "2026-10-26T18:32:54.150728+00:00",
+  "pages": 24,
+  "toc_pages": {
+    "1 项目目标与交付范围": 3,
+    "2 架构与模型配置": 4,
+    "3 对话使用与会话边界": 6,
+    "4 上传与来源标签": 8,
+    "5 污点传播与权限网关": 9,
+    "6 人工确认与浏览器安全": 10,
+    "7 攻击生成与公开来源适配": 11,
+    "8 Canary与独立判定": 12,
+    "9 当前可比实验与结果": 13,
+    "10 开发过程与问题修复": 19,
+    "11 测试与端到端验收": 20,
+    "12 演示视频与运行复现": 21,
+    "13 交付与维护": 22,
+    "14 成员分工与工作量": 23,
+    "15 局限与参考资料": 24
+  },
+  "docx_sha256": "1223f4fa9dde5cc161b5b41d576710eaa61d0f68c2a4ec830f70b02309fb007a",
+  "pdf_sha256": "f248704c0f8263b7cabcdc7ca08c17f2e50c42b8ac12900a1f0e5ba7c074439f",
+  "source_markdown_sha256": "5e974738c9c1771c232ba02cc18475d53db40dc6485b8cead0dfd2b6505878f4",
+  "visual_review": {
+    "status": "completed",
+    "pages": 24,
+    "all_passed": true,
+    "record": "docs/v2/qa/visual_review_page_hashes.json",
+    "record_sha256": "a064a1ddbcef65ae8f96db040fb1f447da86b20cb36c097483a0da27b4ff927d",
+    "scope": "Actual original-size per-page review with unchanged-byte reuse; changed page 20 re-opened after final test count update."
+  }
+}

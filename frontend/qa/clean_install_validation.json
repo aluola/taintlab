@@ -1,0 +1,35 @@
+{
+  "publication_summary": true,
+  "source_evidence_path": "frontend/qa/clean_install_validation.json",
+  "original_evidence_sha256": "9762f95b23a863ce50f9da388379ba89374d890eeb4be1e152214892c81fde4d",
+  "disclosure": "Explicit public summary of saved local evidence. Machine paths, process identities, browser credentials and uploaded runtime bodies are not redistributed. This is not a newly executed acceptance test.",
+  "generated_at": "2026-10-26T17:48:20.3417449Z",
+  "install_exit_code": 0,
+  "installed_packages": 94,
+  "tests_passed": 31,
+  "package_lock_sha256": "352f68c9a75fb845e6299a37b6cd953648f1a7fef320235e22af83c4373cdb0d",
+  "all_assets_identical": true,
+  "assets": [
+    {
+      "path": "index.html",
+      "bytes": 635,
+      "sha256": "bcb3416782e0521d2af0508e668aaa5d9266f142c1d7d69a4455f693915ec350",
+      "clean_sha256": "bcb3416782e0521d2af0508e668aaa5d9266f142c1d7d69a4455f693915ec350",
+      "match": true
+    },
+    {
+      "path": "assets\\index-C4yPfbP-.js",
+      "bytes": 287289,
+      "sha256": "4dcfa6cb38cfc9fd1904b346bda0dbb50c88f7a4bcdfb52ca82e3e1beeb25bc8",
+      "clean_sha256": "4dcfa6cb38cfc9fd1904b346bda0dbb50c88f7a4bcdfb52ca82e3e1beeb25bc8",
+      "match": true
+    },
+    {
+      "path": "assets\\index-DumuwBOQ.css",
+      "bytes": 45495,
+      "sha256": "5706c3e0adac5161d0f40c29f1a1ab7171ad52430c9c4a6577f2d8f16495a7fe",
+      "clean_sha256": "5706c3e0adac5161d0f40c29f1a1ab7171ad52430c9c4a6577f2d8f16495a7fe",
+      "match": true
+    }
+  ]
+}

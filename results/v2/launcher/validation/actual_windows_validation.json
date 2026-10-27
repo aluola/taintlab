@@ -1,0 +1,45 @@
+{
+  "publication_summary": true,
+  "source_evidence_path": "results/v2/launcher/validation/actual_windows_validation.json",
+  "original_evidence_sha256": "3607412efad4cc5b4c12d4fdce154d93a434f1e11ae44154382d8aba87897e40",
+  "disclosure": "Explicit public summary of saved local evidence. Machine paths, process identities, browser credentials and uploaded runtime bodies are not redistributed. This is not a newly executed acceptance test.",
+  "started_at": "2026-10-26T17:42:31.683521+00:00",
+  "kind": "actual_windows_CMD_lifecycle",
+  "version": "2.0.0",
+  "checks": {
+    "initial_ports_have_no_unknown_owners": true,
+    "initial_model_absent_or_verified_healthy": true,
+    "initial_services_closed_by_v2_CMD": true,
+    "foreground_start_ui_uses_verified_v2_API": true,
+    "foreground_v2_UI_closed_by_CMD": true,
+    "cold_CMD_start_from_unrelated_cwd": true,
+    "services_survive_launcher_exit": true,
+    "sequential_start_reuses_processes": true,
+    "concurrent_start_no_duplicates": true,
+    "CMD_stop_both_exit": true,
+    "repeated_stop_is_success": true,
+    "model_foreign_port_rejected_without_kill": true,
+    "model_foreign_listener_survives_stop": true,
+    "ui_foreign_port_rejected_without_kill": true,
+    "ui_foreign_listener_survives_stop": true,
+    "missing_venv_message_and_nonzero_exit": true,
+    "restart_and_leave_healthy": true,
+    "frozen_data_and_all_v1_v2_records_unchanged": true
+  },
+  "all_passed": true,
+  "completed_v2_campaigns": {
+    "baseline": {
+      "planned": 1296,
+      "records": 1296,
+      "metrics": 1296,
+      "runtime_sha256": "920e27e30483f7f62ea38a7252d400ff0fb903435eaaefce50df582e37218cec"
+    },
+    "external": {
+      "planned": 1080,
+      "records": 1080,
+      "metrics": 1080,
+      "runtime_sha256": "920e27e30483f7f62ea38a7252d400ff0fb903435eaaefce50df582e37218cec"
+    }
+  },
+  "finished_at": "2026-10-26T17:45:41.943397+00:00"
+}

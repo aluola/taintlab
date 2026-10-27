@@ -1,0 +1,19 @@
+{
+  "publication_summary": true,
+  "source_evidence_path": "results/v2/browser/focused-source-graph-v2.json",
+  "original_evidence_sha256": "289a354c0ee4626e4654ef3a0a2e40a5c2636e605c354d7bc7a485b2be790586",
+  "disclosure": "Explicit public summary of saved local evidence. Machine paths, process identities, browser credentials and uploaded runtime bodies are not redistributed. This is not a newly executed acceptance test.",
+  "captured_at": "2026-10-26T18:09:44.543Z",
+  "errors": [],
+  "blocked_external": [],
+  "version": "2.0.0",
+  "backend_type": "local_llama_cpp",
+  "selected_event": {
+    "step": 2,
+    "tool": "send_notification",
+    "decision": "block",
+    "reason": "recipient_not_granted",
+    "node_id": "n_a21272e4340c495a"
+  },
+  "visible_nodes": 8
+}

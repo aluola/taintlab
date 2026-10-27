@@ -1,0 +1,25 @@
+{
+  "project_version": "2.0.0",
+  "output": "demo/v2/intermediate/composed.mp4",
+  "timing_evidence": "results/v2/browser/video_timing/frame_alignment.json",
+  "cuts": [
+    {"source":"demo/v2/raw/2026-10-26T17-49-45-922Z/page@495c5eb321b5beb3c38e1380c7989e49.webm","source_sha256":"840a1267cd3fec063c9677ee8feec4949c3f007cea6778743bf58c430c16cb04","start":1.96,"duration":106,"purpose":"Actual UI introduction, real model notification and upload, actual direct attack replay"},
+    {"source":"demo/v2/raw/2026-10-26T18-00-28-710Z/page@1930a70c07ac3c9207c060177d77e26b.webm","source_sha256":"e13c2eba0048a596e48af6bd80d0f1a6c5004ff533eff01e6d782f0dbf999158","start":4.68,"duration":6,"purpose":"Actual indirect injection source body replay pickup"},
+    {"source":"demo/v2/raw/2026-10-26T18-00-28-710Z/page@1930a70c07ac3c9207c060177d77e26b.webm","source_sha256":"e13c2eba0048a596e48af6bd80d0f1a6c5004ff533eff01e6d782f0dbf999158","start":10.76,"duration":8,"purpose":"Same actual run simulated inbox contamination replay pickup"},
+    {"source":"demo/v2/raw/2026-10-26T17-49-45-922Z/page@495c5eb321b5beb3c38e1380c7989e49.webm","source_sha256":"840a1267cd3fec063c9677ee8feec4949c3f007cea6778743bf58c430c16cb04","start":121.96,"duration":92,"purpose":"Current direct C replay, provenance, actual template previews and baseline metrics"},
+    {"source":"demo/v2/raw/2026-10-26T18-01-30-521Z/page@1e0a00a10dddb20c87ad095965aa2a4d.webm","source_sha256":"4b2380928b5521655ca6fe049c17ed6b2f19c4b5f4a03f205976dff788c8de4f","start":1.96,"duration":12,"purpose":"Actual completed external campaign metrics pickup"},
+    {"source":"demo/v2/raw/2026-10-26T18-01-30-521Z/page@1e0a00a10dddb20c87ad095965aa2a4d.webm","source_sha256":"4b2380928b5521655ca6fe049c17ed6b2f19c4b5f4a03f205976dff788c8de4f","start":14.08,"duration":6,"purpose":"Actual policy_only ablation metrics pickup"},
+    {"source":"demo/v2/raw/2026-10-26T18-01-30-521Z/page@1e0a00a10dddb20c87ad095965aa2a4d.webm","source_sha256":"4b2380928b5521655ca6fe049c17ed6b2f19c4b5f4a03f205976dff788c8de4f","start":20.24,"duration":10,"purpose":"Actual costs and limits pickup"}
+  ],
+  "caption_placements": [{"start":224,"end":230,"top_y":82}],
+  "overlays": [
+    {"start":0,"end":20,"text":"TaintLab 2.0 · 实际本机界面 · 全部业务操作模拟"},
+    {"start":20,"end":85,"text":"2.0 实时本地模型录制 · 确认为浏览器自动化验收点击"},
+    {"start":85,"end":106,"text":"2.0 真实运行记录回放 · 同一直接注入案例 / seed 11"},
+    {"start":106,"end":120,"text":"2.0 另一间接注入案例 · 真实回放补录 · 导航等待已剪辑"},
+    {"start":120,"end":155,"text":"2.0 直接注入案例回放 · 阻断越权，但合法任务仍失败"},
+    {"start":155,"end":200,"text":"2.0 实际模板生成预览 · 预览不计入攻击运行"},
+    {"start":200,"end":212,"text":"2.0 当前原基线集 · 1296 条真实本地模型记录"},
+    {"start":212,"end":240,"text":"2.0 当前扩展集 · 1080 条真实记录 · 实际界面补录"}
+  ]
+}

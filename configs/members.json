@@ -1,0 +1,11 @@
+{
+  "members": [],
+  "status": "姓名、学号、实际分工、实际工时待补充；工作包数不代表真实人数",
+  "work_packages": [
+    {"name": "核心运行时与模拟工具", "planned_owner": "待补充", "actual_contributor": "待补充", "estimated_hours": null, "actual_hours": null, "evidence": ["src/taintlab/agent", "src/taintlab/tools"]},
+    {"name": "安全机制与安全测试", "planned_owner": "待补充", "actual_contributor": "待补充", "estimated_hours": null, "actual_hours": null, "evidence": ["src/taintlab/policy", "src/taintlab/provenance", "tests/test_security.py"]},
+    {"name": "数据集与实验评测", "planned_owner": "待补充", "actual_contributor": "待补充", "estimated_hours": null, "actual_hours": null, "evidence": ["data", "src/taintlab/evaluation", "results"]},
+    {"name": "界面文档与演示交付", "planned_owner": "待补充", "actual_contributor": "待补充", "estimated_hours": null, "actual_hours": null, "evidence": ["src/taintlab/ui", "docs", "demo"]}
+  ],
+  "ai_assistance": "本次实现、测试和交付由Codex协助完成，不能归因为未提供姓名的成员独立工作。工具运行时长不是成员工时。"
+}

@@ -1,0 +1,10 @@
+{
+  "publication_summary": true,
+  "source_evidence_path": "results/v2/browser/model-restored.json",
+  "original_evidence_sha256": "9265828f6b0c2f9f8785b727c1f9511fa91b99c729d9fca842ca59d2f073ccf7",
+  "disclosure": "Explicit public summary of saved local evidence. Machine paths, process identities, browser credentials and uploaded runtime bodies are not redistributed. This is not a newly executed acceptance test.",
+  "started_at": "2026-10-26T17:47:44.005Z",
+  "all_passed": true,
+  "blocked_external": [],
+  "scope": "Actual UI and bootstrap response while the separate local model service is genuinely stopped or restored. No physical whole-machine network disconnection."
+}

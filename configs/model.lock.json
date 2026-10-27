@@ -1,0 +1,41 @@
+{
+  "model_id": "Qwen/Qwen3-0.6B-GGUF",
+  "model_card": "https://huggingface.co/Qwen/Qwen3-0.6B",
+  "original_model_revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+  "model_revision": "23749fefcc72300e3a2ad315e1317431b06b590a",
+  "model_file": "models/Qwen3-0.6B-Q8_0.gguf",
+  "model_size_bytes": 639446688,
+  "model_sha256": "9465e63a22add5354d9bb4b99e90117043c7124007664907259bd16d043bb031",
+  "model_url": "https://huggingface.co/Qwen/Qwen3-0.6B-GGUF/resolve/23749fefcc72300e3a2ad315e1317431b06b590a/Qwen3-0.6B-Q8_0.gguf",
+  "llama_release": "b11889",
+  "platform": "Windows x64 CUDA 13.4",
+  "server_file": "vendor/llama.cpp/llama-server.exe",
+  "archives": [
+    {
+      "name": "llama-b11889-bin-win-cuda-13.4-x64.zip",
+      "size_bytes": 164718677,
+      "url": "https://github.com/ggml-org/llama.cpp/releases/download/b11889/llama-b11889-bin-win-cuda-13.4-x64.zip",
+      "sha256": "2001a5f37de39dced918cfb8d5b8f699822137c85cf58cb1a0d97e530f4f3363"
+    },
+    {
+      "name": "cudart-llama-bin-win-cuda-13.4-x64.zip",
+      "size_bytes": 423535356,
+      "url": "https://github.com/ggml-org/llama.cpp/releases/download/b11889/cudart-llama-bin-win-cuda-13.4-x64.zip",
+      "sha256": "738f8c251ac22b70c3ae6f83a10cf222725df0395246a2cf58f32bdb85fbe668"
+    }
+  ],
+  "endpoint": "http://127.0.0.1:8080/v1/chat/completions",
+  "context_size": 4096,
+  "max_tokens": 512,
+  "temperature": 0.2,
+  "top_p": 0.9,
+  "top_k": 40,
+  "min_p": 0.05,
+  "repeat_penalty": 1.0,
+  "seed": 17,
+  "thinking": false,
+  "chat_template": "GGUF embedded tokenizer.chat_template; enable_thinking=false via server --chat-template-kwargs",
+  "gpu_layers": 99,
+  "parallel_slots": 4,
+  "server_context_size": 16384
+}

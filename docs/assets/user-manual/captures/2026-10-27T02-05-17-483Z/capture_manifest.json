@@ -1,0 +1,73 @@
+{
+  "project_version": "2.0.0",
+  "captured_at_utc": "2026-10-27T02:05:17.484Z",
+  "viewport": {
+    "width": 1280,
+    "height": 820
+  },
+  "origin": "native file directory index of project root; absolute path omitted",
+  "browser_session": "new isolated browser context; cookie and ownership identity not exported",
+  "backend_required": null,
+  "figures": [
+    {
+      "id": "00_project_files",
+      "title": "项目根目录的实际文件列表",
+      "captured_at_utc": "2026-10-27T02:05:18.577Z",
+      "version": "2.0.0",
+      "viewport": {
+        "width": 1280,
+        "height": 820
+      },
+      "page": "系统Edge的原生file目录索引",
+      "case_id": null,
+      "run_id": null,
+      "mode": null,
+      "seed": null,
+      "live_or_replay": "live_native_file_directory",
+      "raw_path": "docs/assets/user-manual/captures/2026-10-27T02-05-17-483Z/00_project_files.png",
+      "raw_sha256": "d925e3d9cf2be96fcf1a485ee3ce48d2f7eb61306c9879f3eaf15c409543e4b2",
+      "crop": {
+        "x": 0,
+        "y": 268,
+        "width": 467,
+        "height": 269
+      },
+      "annotations": [],
+      "steps": [
+        "定位已解压的项目根目录。",
+        "本取证使用系统浏览器原生file目录索引显示真实文件，未注入HTML。",
+        "核对启动项目.cmd、关闭项目.cmd以及scripts、frontend目录。"
+      ],
+      "observed_result": "四个实际目录项/文件均存在并显示；仅保存连续文件列表，不显示个人绝对路径。此图不是资源管理器截图。",
+      "assertions_passed": true,
+      "run_evidence": null,
+      "original_capture": {
+        "method": "native browser table element screenshot",
+        "channel": "msedge",
+        "table_size": {
+          "width": 467,
+          "height": 622
+        },
+        "excluded_before_save": [
+          "native page heading with absolute path",
+          "browser chrome",
+          "account and desktop surfaces"
+        ]
+      }
+    }
+  ],
+  "scenarios": [
+    {
+      "name": "project_files",
+      "started_at_utc": "2026-10-27T02:05:17.484Z",
+      "completed": true,
+      "finished_at_utc": "2026-10-27T02:05:18.582Z"
+    }
+  ],
+  "errors": [],
+  "blocked_external": [],
+  "assurance": "Actual UI only. No injected DOM, mock response or experiment-state edit. All data and actions are simulated. Screenshots omit browser account and desktop surfaces.",
+  "finished_at_utc": "2026-10-27T02:05:18.582Z",
+  "figure_count": 1,
+  "all_scenarios_completed": true
+}

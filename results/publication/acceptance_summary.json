@@ -1,0 +1,210 @@
+{
+  "publication_summary": true,
+  "reports": {
+    "video_playback.json": {
+      "publication_summary": true,
+      "source_evidence_path": "results/publication/video_playback.json",
+      "original_evidence_sha256": "6fecd55092208ac4228ca49fa55ffad604a16898c1cb94b0ef13e46d4c790226",
+      "disclosure": "Explicit public summary of saved local evidence. Machine paths, process identities, browser credentials and uploaded runtime bodies are not redistributed. This is not a newly executed acceptance test.",
+      "checked_at": "2026-10-27T02:02:23.719Z",
+      "kind": "actual_isolated_browser_playback",
+      "metadata": {
+        "duration": 240,
+        "width": 1600,
+        "height": 900,
+        "h264Support": "probably"
+      },
+      "samples": [
+        {
+          "requested": 0.5,
+          "time": 1.008558,
+          "readyState": 4,
+          "paused": false,
+          "error": null,
+          "quality": {
+            "totalVideoFrames": 35,
+            "droppedVideoFrames": 0
+          }
+        },
+        {
+          "requested": 75,
+          "time": 75.507564,
+          "readyState": 4,
+          "paused": false,
+          "error": null,
+          "quality": {
+            "totalVideoFrames": 56,
+            "droppedVideoFrames": 0
+          }
+        },
+        {
+          "requested": 130,
+          "time": 130.509337,
+          "readyState": 4,
+          "paused": false,
+          "error": null,
+          "quality": {
+            "totalVideoFrames": 127,
+            "droppedVideoFrames": 0
+          }
+        },
+        {
+          "requested": 169,
+          "time": 169.508752,
+          "readyState": 4,
+          "paused": false,
+          "error": null,
+          "quality": {
+            "totalVideoFrames": 368,
+            "droppedVideoFrames": 0
+          }
+        },
+        {
+          "requested": 190,
+          "time": 190.510087,
+          "readyState": 4,
+          "paused": false,
+          "error": null,
+          "quality": {
+            "totalVideoFrames": 489,
+            "droppedVideoFrames": 0
+          }
+        },
+        {
+          "requested": 238,
+          "time": 238.50904,
+          "readyState": 4,
+          "paused": false,
+          "error": null,
+          "quality": {
+            "totalVideoFrames": 650,
+            "droppedVideoFrames": 0
+          }
+        }
+      ],
+      "blocked_external_origins": [],
+      "video_sha256": "5c93923145546a05b09f2e9eb6d4f82d25a306fed81badab16eb37a9baa1fc27",
+      "all_passed": true,
+      "project_version": "2.0.0-publication",
+      "samples_count": 6
+    },
+    "preflight_windows.json": {
+      "publication_summary": true,
+      "source_evidence_path": "results/publication/preflight_windows.json",
+      "original_evidence_sha256": "8916792171115ef05b93f220bdebaebb6204d39451711529e86d702521427f43",
+      "disclosure": "Explicit public summary of saved local evidence. Machine paths, process identities, browser credentials and uploaded runtime bodies are not redistributed. This is not a newly executed acceptance test.",
+      "started_at_utc": "2026-10-27T01:54:54.917610+00:00",
+      "kind": "copied_runtime_prepublication_validation",
+      "not_final_release_or_remote_download": true,
+      "checks": {
+        "original_verified_healthy_before_switch": true,
+        "original_CMD_stopped_before_migration": true,
+        "new_root_CMD_started_own_model_and_UI": true,
+        "repeat_CMD_reused_same_processes": true,
+        "four_real_browser_tasks_and_download": true,
+        "new_root_CMD_stopped": true,
+        "repeat_stop_safe": true,
+        "new_root_restart_after_close": true,
+        "migration_services_closed_for_restore": true,
+        "original_project_restored_healthy": true,
+        "formal_evidence_unchanged": true
+      },
+      "all_passed": true,
+      "confirmation": "automated real browser clicks, not human labor",
+      "finished_at_utc": "2026-10-27T01:57:43.075243+00:00",
+      "checks_count": 11
+    },
+    "preflight_browser.json": {
+      "publication_summary": true,
+      "source_evidence_path": "results/publication/preflight_browser.json",
+      "original_evidence_sha256": "3119165f171e4878235deca229414d75e0e413dc76d69ceb5c574c971e9dc398",
+      "disclosure": "Explicit public summary of saved local evidence. Machine paths, process identities, browser credentials and uploaded runtime bodies are not redistributed. This is not a newly executed acceptance test.",
+      "started_at": "2026-10-27T01:55:58.693Z",
+      "scope": "production_UI_real_local_model",
+      "tests": [
+        {
+          "name": "normal_document_quick_entry_uses_real_model",
+          "passed": true,
+          "elapsed_seconds": 2.093
+        },
+        {
+          "name": "query_shortcut_reaches_search_tool",
+          "passed": true,
+          "elapsed_seconds": 2.005
+        },
+        {
+          "name": "notification_confirmation_and_refresh_resume",
+          "passed": true,
+          "elapsed_seconds": 5.086
+        },
+        {
+          "name": "export_confirmation_and_actual_download",
+          "passed": true,
+          "elapsed_seconds": 4.211
+        }
+      ],
+      "errors": [],
+      "blocked_external": [],
+      "finished_at": "2026-10-27T01:56:15.813Z",
+      "all_passed": true,
+      "tests_count": 4
+    },
+    "preflight_install.json": {
+      "publication_summary": true,
+      "source_evidence_path": "results/publication/preflight_install.json",
+      "original_evidence_sha256": "a8a506237bae6f16b46d5e49aaf9e01e0828fc5fe74341d6a7f4916d322e51db",
+      "disclosure": "Explicit public summary of saved local evidence. Machine paths, process identities, browser credentials and uploaded runtime bodies are not redistributed. This is not a newly executed acceptance test.",
+      "at_utc": "2026-10-27T01:54:18.735305+00:00",
+      "python_version": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+      "fresh_venv": true,
+      "copied_venv": false,
+      "installation_command": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/install.ps1",
+      "cache_policy": "UV_OFFLINE=1; real lock installation from existing uv cache; no package download",
+      "checks_passed": true
+    },
+    "preflight_artifact_verification.json": {
+      "publication_summary": true,
+      "source_evidence_path": "results/publication/preflight_artifact_verification.json",
+      "original_evidence_sha256": "5c97bc04a110982b759ffeba155a00f262b06d17e373c3b49c66a65e1ae25b38",
+      "disclosure": "Explicit public summary of saved local evidence. Machine paths, process identities, browser credentials and uploaded runtime bodies are not redistributed. This is not a newly executed acceptance test.",
+      "verified_at_utc": "2026-10-27T01:53:05Z",
+      "offline": true,
+      "artifacts": [
+        {
+          "path": "models\\Qwen3-0.6B-Q8_0.gguf",
+          "sha256": "9465e63a22add5354d9bb4b99e90117043c7124007664907259bd16d043bb031",
+          "bytes": 639446688
+        },
+        {
+          "path": "vendor\\downloads\\llama-b11889-bin-win-cuda-13.4-x64.zip",
+          "sha256": "2001a5f37de39dced918cfb8d5b8f699822137c85cf58cb1a0d97e530f4f3363",
+          "bytes": 164718677
+        },
+        {
+          "path": "vendor\\downloads\\cudart-llama-bin-win-cuda-13.4-x64.zip",
+          "sha256": "738f8c251ac22b70c3ae6f83a10cf222725df0395246a2cf58f32bdb85fbe668",
+          "bytes": 423535356
+        }
+      ]
+    },
+    "preflight_resource_reuse.json": {
+      "publication_summary": true,
+      "source_evidence_path": "results/publication/preflight_resource_reuse.json",
+      "original_evidence_sha256": "75a2948effbc68da82d303fb9e30bcefa84c9003e0ebe726ee64ef5bba721716",
+      "disclosure": "Explicit public summary of saved local evidence. Machine paths, process identities, browser credentials and uploaded runtime bodies are not redistributed. This is not a newly executed acceptance test.",
+      "at_utc": "2026-10-27T01:51:46.029637+00:00",
+      "method": "Copy existing local static resources after pinned SHA256 verification; not a fresh network download",
+      "all_passed": true
+    },
+    "preflight_visual_review.json": {
+      "publication_summary": true,
+      "source_evidence_path": "results/publication/preflight_visual_review.json",
+      "original_evidence_sha256": "06ba17c9393b091cae95f0a0efabbff381f866994be52c1c9cc559cfed08d3c4",
+      "disclosure": "Explicit public summary of saved local evidence. Machine paths, process identities, browser credentials and uploaded runtime bodies are not redistributed. This is not a newly executed acceptance test.",
+      "at_utc": "2026-10-27T01:57:40.599463+00:00",
+      "scope": "prepublication copied runtime; real isolated browser UI screenshots, no mock and no modifications",
+      "all_passed": true
+    }
+  },
+  "scope": "Actual current video playback, copied-directory prepublication checks and resource reuse. These do not claim anonymous release download validation or new formal model experiments."
+}

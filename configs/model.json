@@ -1,0 +1,19 @@
+{
+  "endpoint": "http://127.0.0.1:8080/v1/chat/completions",
+  "model": "qwen3-0.6b",
+  "temperature": 0.2,
+  "top_p": 0.9,
+  "top_k": 40,
+  "min_p": 0.05,
+  "max_tokens": 512,
+  "context_size": 4096,
+  "max_rounds": 9,
+  "format_retries": 1,
+  "timeout_seconds": 120,
+  "task_timeout_seconds": 240,
+  "repeat_penalty": 1.0,
+  "backend_type": "local_llama_cpp",
+  "enable_thinking": false,
+  "server_parallel_slots": 4,
+  "model_lock": "configs/model.lock.json"
+}

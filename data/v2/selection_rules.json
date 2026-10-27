@@ -1,0 +1,23 @@
+{
+  "version": "2.0.0",
+  "declared_before_model_evaluation": true,
+  "selection_basis": "Fixed source families and original row indices; no model outcomes are consulted. All subsequent adapter checks concern structural validity, provenance and redistribution only.",
+  "bipia_revision": "a004b69ec0dd446e0afd461d98cb5e96e120a5d0",
+  "injecagent_revision": "f19c9f2c79a41046eb13c03c51a24c567a8ffa07",
+  "agentdojo_reference_revision": "089ed468cf3ed0322acc66b0211f26d9d90dbf60",
+  "bipia_test_families": ["Task Automation", "Business Intelligence", "Conversational Agent", "Research Assistance", "Base Encoding", "Reverse Text", "Information Dissemination", "Marketing & Advertising", "Misinformation & Propaganda", "Substitution Ciphers"],
+  "bipia_test_indices": [0, 1, 2],
+  "bipia_dev_families": ["Sentiment Analysis", "Emoji Substitution", "Language Translation", "Entertainment", "Scams & Fraud"],
+  "bipia_dev_indices": [0],
+  "injecagent_test_dh_indices": [2, 3, 4, 5, 6, 7, 8, 9, 14, 15, 16, 17, 20, 21, 22],
+  "injecagent_test_ds_indices": [3, 4, 5, 6, 8, 9, 13, 14, 15, 16, 17, 18, 19, 20, 31],
+  "injecagent_dev_dh_indices": [0, 18],
+  "injecagent_dev_ds_indices": [0, 10],
+  "formal_local_controls": 30,
+  "development_local_controls": 4,
+  "formal_expected": {"attack": 60, "normal": 30},
+  "development_expected": {"attack": 9, "normal": 4},
+  "family_isolation": "BIPIA category; InjecAgent primary tool ecosystem prefix, excluding the generic second-stage GmailSendEmail sink; local controls use distinct content families. Original IDs and raw instruction hashes must not cross splits.",
+  "redistribution": "Only reviewed author-provided attack templates, notices and self-authored local controls. No BIPIA third-party context datasets, InjecAgent user cases/tool definitions, AgentDojo assets or fetched web contents are included.",
+  "formal_freeze": "Freeze only after deterministic structural tests, before formal model runs. Failures after freeze remain in the denominator. Generate any later version in a new directory."
+}

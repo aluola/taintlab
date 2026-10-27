@@ -1,0 +1,11 @@
+{
+  "publication_summary": true,
+  "source_evidence_path": "results/v2/browser/model-offline-visual-review.json",
+  "original_evidence_sha256": "01c8dcc22392f801f0ac6e37f6e5f3a1424b08b049a48bc2c6e998fc36977f56",
+  "disclosure": "Explicit public summary of saved local evidence. Machine paths, process identities, browser credentials and uploaded runtime bodies are not redistributed. This is not a newly executed acceptance test.",
+  "reviewed_at_utc": "2026-10-26T17:49:27.923837+00:00",
+  "limitations": [
+    "离线指本地模型服务真实停止，不是整机物理断网。",
+    "此检查未提交推理任务；真实3案见offline_validation.json。"
+  ]
+}

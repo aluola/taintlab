@@ -1,0 +1,6 @@
+{
+  "publication_summary": true,
+  "source_evidence_path": "results/v2/browser/video_timing/frame_alignment.json",
+  "original_evidence_sha256": "e810a3ca8d7f6ed03f69d6678a056fd719700ab192da21d0e0e4d17b08042731",
+  "disclosure": "Explicit public summary of saved local evidence. Machine paths, process identities, browser credentials and uploaded runtime bodies are not redistributed. This is not a newly executed acceptance test."
+}

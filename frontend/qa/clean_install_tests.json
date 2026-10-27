@@ -1,0 +1,11 @@
+{
+  "publication_summary": true,
+  "source_evidence_path": "frontend/qa/clean_install_tests.json",
+  "original_evidence_sha256": "83b137fc9ef36efd31d0c597c59e2829ac0f64e510c01888d81047b5a5c8f502",
+  "disclosure": "Explicit public summary of saved local evidence. Machine paths, process identities, browser credentials and uploaded runtime bodies are not redistributed. This is not a newly executed acceptance test.",
+  "numTotalTests": 31,
+  "numPassedTests": 31,
+  "numFailedTests": 0,
+  "numPendingTests": 0,
+  "success": true
+}

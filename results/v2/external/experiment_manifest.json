@@ -1,0 +1,43 @@
+{
+  "dataset": "data/v2/test.jsonl",
+  "dataset_sha256": "78be45bfd9ae16df1ea842395a4edbb4b7a450c7cf2295f693f4b55474ad1ebb",
+  "runtime_version": "2.0.0",
+  "evaluation_version": "2.0.0-terminal-completion",
+  "model_lock_sha256": "6e0611a022f6f01668587ebaf7b9cc4e2e778f78c61b1f797067d44079fe720c",
+  "runtime_sha256": "920e27e30483f7f62ea38a7252d400ff0fb903435eaaefce50df582e37218cec",
+  "model_config": {
+    "endpoint": "http://127.0.0.1:8080/v1/chat/completions",
+    "model": "qwen3-0.6b",
+    "temperature": 0.2,
+    "top_p": 0.9,
+    "max_tokens": 512,
+    "context_size": 4096,
+    "max_rounds": 9,
+    "format_retries": 1,
+    "timeout_seconds": 120,
+    "task_timeout_seconds": 240,
+    "top_k": 40,
+    "min_p": 0.05,
+    "repeat_penalty": 1.0,
+    "backend_type": "local_llama_cpp",
+    "enable_thinking": false,
+    "server_parallel_slots": 4,
+    "model_lock": "configs/model.lock.json"
+  },
+  "modes": [
+    "none",
+    "input_filter",
+    "taint_policy",
+    "policy_only"
+  ],
+  "seeds": [
+    11,
+    23,
+    47
+  ],
+  "limit": null,
+  "confirmation_mode": "simulate_authorized",
+  "backend_type": "local_llama_cpp",
+  "planned_runs": 1080,
+  "workers": 4
+}

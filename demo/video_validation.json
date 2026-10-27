@@ -1,0 +1,26 @@
+{
+  "publication_summary": true,
+  "source_evidence_path": "demo/video_validation.json",
+  "original_evidence_sha256": "3cae315d0957e672ad010931fac382fd7555c763f8e8175371722ab42c2f74f2",
+  "disclosure": "Explicit public summary of saved local evidence. Machine paths, process identities, browser credentials and uploaded runtime bodies are not redistributed. This is not a newly executed acceptance test.",
+  "created_at_utc": "2026-10-26T18:18:22.499456+00:00",
+  "valid": true,
+  "checks": {
+    "duration_180_to_300": true,
+    "duration_matches_plan": true,
+    "video_h264": true,
+    "pixel_format_yuv420p": true,
+    "resolution": true,
+    "audio_aac": true,
+    "audio_duration_matches_plan": true,
+    "sample_frames_not_black": true,
+    "audio_not_silent": true,
+    "no_black_interval_over_one_second": true
+  },
+  "encoder_version": "ffmpeg version 9.0.2-essentials_build-www.gyan.dev Copyright (c) 2000-2026 the FFmpeg developers",
+  "requested_duration": 240.0,
+  "actual_duration": 240.0,
+  "srt_sha256": "64c7a99e462997e8ec1aa6362f61eb94cc692ec0bcc9cd71b824fae4414400e1",
+  "video_sha256": "5c93923145546a05b09f2e9eb6d4f82d25a306fed81badab16eb37a9baa1fc27",
+  "project_version": "2.0.0"
+}

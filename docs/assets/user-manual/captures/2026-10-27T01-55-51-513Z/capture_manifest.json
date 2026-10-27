@@ -1,0 +1,24 @@
+{
+  "project_version": "2.0.0",
+  "captured_at_utc": "2026-10-27T01:55:51.514Z",
+  "viewport": {
+    "width": 1280,
+    "height": 820
+  },
+  "origin": "http://127.0.0.1:8501",
+  "browser_session": "new isolated browser context; cookie and ownership identity not exported",
+  "backend_required": "local_llama_cpp",
+  "figures": [],
+  "scenarios": [],
+  "errors": [
+    {
+      "scenario": "fatal",
+      "error": "Error: browserType.launch: spawn UNKNOWN\nCall log:\n\u001b[2m  - <launching> <USER_HOME>\\AppData\\Local\\ms-playwright\\chromium-1228\\chrome-win64\\chrome.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,BoundaryEventDispatchTracksNodeRemoval,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,Translate,AutoDeElevate,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --user-data-dir=<USER_HOME>\\AppData\\Local\\Temp\\playwright_chromiumdev_profile-J0mpqu --remote-debugging-pipe --no-startup-window\u001b[22m\n"
+    }
+  ],
+  "blocked_external": [],
+  "assurance": "Actual UI only. No injected DOM, mock response or experiment-state edit. All data and actions are simulated. Screenshots omit browser account and desktop surfaces.",
+  "finished_at_utc": "2026-10-27T01:55:51.843Z",
+  "figure_count": 0,
+  "all_scenarios_completed": true
+}

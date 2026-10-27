@@ -1,0 +1,203 @@
+{
+  "project_version": "2.0.0",
+  "reviewed_at_utc": "2026-10-26T18:34:55.675124+00:00",
+  "reviewer": "AI-assisted direct original-size visual review by primary agent",
+  "document_pages": 24,
+  "assigned_pages": [
+    13,
+    24
+  ],
+  "all_passed": true,
+  "artifact_hashes": {
+    "docx_sha256": "1223f4fa9dde5cc161b5b41d576710eaa61d0f68c2a4ec830f70b02309fb007a",
+    "pdf_sha256": "f248704c0f8263b7cabcdc7ca08c17f2e50c42b8ac12900a1f0e5ba7c074439f",
+    "source_markdown_sha256": "5e974738c9c1771c232ba02cc18475d53db40dc6485b8cead0dfd2b6505878f4"
+  },
+  "method": "Each page 13–24 was individually opened at original 1414×2000 detail and read; no thumbnail or structural-only substitute.",
+  "pages": [
+    {
+      "page": 13,
+      "file": "docs/v2/qa/render/page-13.png",
+      "sha256": "3fa51f2c932bb4c32f4cdd06c230c9e6bcdfd9ce1dbeda4141fcebfa311057a0",
+      "width": 1414,
+      "height": 2000,
+      "view_detail": "original",
+      "inspected_entire_page": true,
+      "conclusion": "pass",
+      "observations": [
+        "主指标表、ASR分母和正常完成统计可读。"
+      ],
+      "previous_sha256": "3fa51f2c932bb4c32f4cdd06c230c9e6bcdfd9ce1dbeda4141fcebfa311057a0",
+      "review_action": "Identical PNG SHA256: reuse the documented actual original-size visual review."
+    },
+    {
+      "page": 14,
+      "file": "docs/v2/qa/render/page-14.png",
+      "sha256": "c8c785914725888a4d41433377695ad13760586b7a375c46659c9472f11e3985",
+      "width": 1414,
+      "height": 2000,
+      "view_detail": "original",
+      "inspected_entire_page": true,
+      "conclusion": "pass",
+      "observations": [
+        "分种子表及开销完整，续表保留表头。"
+      ],
+      "previous_sha256": "c8c785914725888a4d41433377695ad13760586b7a375c46659c9472f11e3985",
+      "review_action": "Identical PNG SHA256: reuse the documented actual original-size visual review."
+    },
+    {
+      "page": 15,
+      "file": "docs/v2/qa/render/page-15.png",
+      "sha256": "d993a22409d61574a56fe25d9d9d16ebfda7eb49c0f4f8ed2903908d871c1df4",
+      "width": 1414,
+      "height": 2000,
+      "view_detail": "original",
+      "inspected_entire_page": true,
+      "conclusion": "pass",
+      "observations": [
+        "分种子续表末行和基线图表可读，图注完整。"
+      ],
+      "previous_sha256": "d993a22409d61574a56fe25d9d9d16ebfda7eb49c0f4f8ed2903908d871c1df4",
+      "review_action": "Identical PNG SHA256: reuse the documented actual original-size visual review."
+    },
+    {
+      "page": 16,
+      "file": "docs/v2/qa/render/page-16.png",
+      "sha256": "f509cfce94a2fd78708baa058154d018de866caa8a4e219d4bb01e848489564c",
+      "width": 1414,
+      "height": 2000,
+      "view_detail": "original",
+      "inspected_entire_page": true,
+      "conclusion": "pass",
+      "observations": [
+        "扩展三配置及消融指标表完整。"
+      ],
+      "previous_sha256": "f509cfce94a2fd78708baa058154d018de866caa8a4e219d4bb01e848489564c",
+      "review_action": "Identical PNG SHA256: reuse the documented actual original-size visual review."
+    },
+    {
+      "page": 17,
+      "file": "docs/v2/qa/render/page-17.png",
+      "sha256": "2a75bbbb7a9938541766d84ae142e7ea163e3bec5d46e1b22df776b19bf0584c",
+      "width": 1414,
+      "height": 2000,
+      "view_detail": "original",
+      "inspected_entire_page": true,
+      "conclusion": "pass",
+      "observations": [
+        "扩展分种子和开销表无溢出。"
+      ],
+      "previous_sha256": "2a75bbbb7a9938541766d84ae142e7ea163e3bec5d46e1b22df776b19bf0584c",
+      "review_action": "Identical PNG SHA256: reuse the documented actual original-size visual review."
+    },
+    {
+      "page": 18,
+      "file": "docs/v2/qa/render/page-18.png",
+      "sha256": "7045a479fb15436485e5cee24e91233fb8c7aaea4fc77bb5dbe262372767e1f5",
+      "width": 1414,
+      "height": 2000,
+      "view_detail": "original",
+      "inspected_entire_page": true,
+      "conclusion": "pass",
+      "observations": [
+        "扩展图和独立收益限制可读。"
+      ],
+      "previous_sha256": "7045a479fb15436485e5cee24e91233fb8c7aaea4fc77bb5dbe262372767e1f5",
+      "review_action": "Identical PNG SHA256: reuse the documented actual original-size visual review."
+    },
+    {
+      "page": 19,
+      "file": "docs/v2/qa/render/page-19.png",
+      "sha256": "55d775b4218f42cacb65c8fc5d1adcaf2bb182e02c45c7a34ea292533dfddcc1",
+      "width": 1414,
+      "height": 2000,
+      "view_detail": "original",
+      "inspected_entire_page": true,
+      "conclusion": "pass",
+      "observations": [
+        "实际开发与修复记录可读。"
+      ],
+      "previous_sha256": "55d775b4218f42cacb65c8fc5d1adcaf2bb182e02c45c7a34ea292533dfddcc1",
+      "review_action": "Identical PNG SHA256: reuse the documented actual original-size visual review."
+    },
+    {
+      "page": 20,
+      "file": "docs/v2/qa/render/page-20.png",
+      "sha256": "71d8d2f6cb4336c04220da127405b4a195c0442b79a76b4ce7a0687a467cf4f8",
+      "width": 1414,
+      "height": 2000,
+      "view_detail": "original",
+      "inspected_entire_page": true,
+      "conclusion": "pass",
+      "observations": [
+        "最终397项通过、0失败0错误0跳过与JUnit一致；完整页可读，表格与页脚没有溢出。"
+      ],
+      "previous_sha256": "c7f5713b95a4edf18fd181f1d8de607931d821b47816dfb0af03573b0991e159",
+      "review_action": "Re-opened final 397-test page at original detail; full text/table/footer checked after final render."
+    },
+    {
+      "page": 21,
+      "file": "docs/v2/qa/render/page-21.png",
+      "sha256": "9f500dc804773c986e8601d3d1693a002c606753e4e2dc2df5d450be412c9876",
+      "width": 1414,
+      "height": 2000,
+      "view_detail": "original",
+      "inspected_entire_page": true,
+      "conclusion": "pass",
+      "observations": [
+        "视频交付及运行命令完整，页脚正确。"
+      ],
+      "previous_sha256": "9f500dc804773c986e8601d3d1693a002c606753e4e2dc2df5d450be412c9876",
+      "review_action": "Identical PNG SHA256: reuse the documented actual original-size visual review."
+    },
+    {
+      "page": 22,
+      "file": "docs/v2/qa/render/page-22.png",
+      "sha256": "49d3cda07c67a00e3bb725247e8a674a99fd486d31068aa932e53fc5fa435655",
+      "width": 1414,
+      "height": 2000,
+      "view_detail": "original",
+      "inspected_entire_page": true,
+      "conclusion": "pass",
+      "observations": [
+        "轻量交付、哈希sidecar与版本边界可读。"
+      ],
+      "previous_sha256": "49d3cda07c67a00e3bb725247e8a674a99fd486d31068aa932e53fc5fa435655",
+      "review_action": "Identical PNG SHA256: reuse the documented actual original-size visual review."
+    },
+    {
+      "page": 23,
+      "file": "docs/v2/qa/render/page-23.png",
+      "sha256": "39c25b9d3ee6364e8230ec32d02550268e42d935daf5526932905cf2e03abab8",
+      "width": 1414,
+      "height": 2000,
+      "view_detail": "original",
+      "inspected_entire_page": true,
+      "conclusion": "pass",
+      "observations": [
+        "成员待补充表格完整，没有虚构姓名或工时。"
+      ],
+      "previous_sha256": "39c25b9d3ee6364e8230ec32d02550268e42d935daf5526932905cf2e03abab8",
+      "review_action": "Identical PNG SHA256: reuse the documented actual original-size visual review."
+    },
+    {
+      "page": 24,
+      "file": "docs/v2/qa/render/page-24.png",
+      "sha256": "6c83c997c21d689dc589f325bb8918dca828779d20eb937011a494270afceb37",
+      "width": 1414,
+      "height": 2000,
+      "view_detail": "original",
+      "inspected_entire_page": true,
+      "conclusion": "pass",
+      "observations": [
+        "研究限制及参考来源清楚，无裁切。"
+      ],
+      "previous_sha256": "6c83c997c21d689dc589f325bb8918dca828779d20eb937011a494270afceb37",
+      "review_action": "Identical PNG SHA256: reuse the documented actual original-size visual review."
+    }
+  ],
+  "final_render_binding": {
+    "generated_at": "2026-10-26T18:32:54.150728+00:00",
+    "method": "All page image hashes compared with the prior actual view; changed page 20 re-opened by primary."
+  }
+}
